@@ -5,10 +5,14 @@
   "version": "0.1.0",
   "author": "Nicolas Erny",
   "dependencies": {
-    "gatsby": "^2.23.7",
+    "gatsby": "^2.23.11",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^3.3.6",
     "prettier": "^2.0.5",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {},
   "keywords": [
