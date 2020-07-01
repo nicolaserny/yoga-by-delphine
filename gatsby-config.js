@@ -13,5 +13,6 @@ module.exports = {
         fonts: [`Montserrat`, `Merriweather`],
       },
     },
+    `gatsby-plugin-postcss`,
   ],
 };

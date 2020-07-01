@@ -17,7 +17,8 @@
     "michelemelluso.code-beautifier",
     "felipe.nasc-touchbar",
     "jpoissonnier.vscode-styled-components",
-    "visualstudioexptteam.vscodeintellicode"
+    "visualstudioexptteam.vscodeintellicode",
+    "bradlc.vscode-tailwindcss"
   ],
   "postCreateCommand": "npm install",
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
