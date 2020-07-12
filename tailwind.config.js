@@ -48,8 +48,11 @@ module.exports = {
         sans: "Montserrat, sans-serif",
         serif: "Merriweather, serif",
       },
+      height: {
+        real: "calc(100vh - 6rem)",
+      },
       gridTemplateRows: {
-        layout: "100px minmax(0, 1fr) 100px",
+        layout: "46px minmax(0, 1fr) 26px",
       },
     },
   },
