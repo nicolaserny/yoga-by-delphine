@@ -4,8 +4,8 @@ import { Link } from "gatsby";
 const NavLink = ({ children, to }) => (
   <Link
     to={to}
-    className="mr-8 text-lg font-medium no-underline hover:font-bold"
-    activeClassName="font-bold border-b-2 border-purple-500"
+    className="mr-8 text-lg font-medium no-underline hover:text-black text-gray-800"
+    activeClassName="font-bold border-b-2 border-purple-500 hover:text-gray-800"
   >
     {children}
   </Link>
