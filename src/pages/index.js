@@ -4,7 +4,9 @@ import { Layout, SEO } from "../components";
 const Index = () => (
   <Layout>
     <SEO title="Accueil" />
-    <h1 className="text-lg text-blue-800">🏗 Work in progress</h1>
+    <span>header</span>
+    <h1 className="font-serif text-lg text-gray-1000">🏗 Work in progress</h1>
+    <span> footer</span>
   </Layout>
 );
 
