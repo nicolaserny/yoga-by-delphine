@@ -1,0 +1,13 @@
+.secondary {
+  @apply bg-transparent text-lg text-red-600 font-semibold  py-2 px-4 border border-red-600  rounded-lg;
+}
+
+.secondary:hover {
+  @apply bg-red-500 text-white border-transparent;
+}
+
+.secondary:focus,
+.secondary:active {
+  @apply outline-none;
+  box-shadow: 0 0 0 2px theme("colors.red.300");
+}

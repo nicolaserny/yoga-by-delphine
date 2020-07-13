@@ -1,3 +1,10 @@
 html {
   @apply antialiased bg-white text-gray-800;
 }
+
+*:focus {
+  outline-color: theme("colors.purple.400");
+}
+*:active {
+  outline-color: theme("colors.purple.400");
+}

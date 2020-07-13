@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const NavLink = ({ children, to }) => (
   <Link
     to={to}
-    className="mr-8 text-lg font-medium no-underline hover:text-black text-gray-800"
+    className="mr-6 p-1 text-lg font-medium no-underline hover:text-black text-gray-800"
     activeClassName="font-bold border-b-2 border-purple-500 hover:text-gray-800"
   >
     {children}
@@ -31,6 +31,9 @@ const NavBar = () => (
       </li>
       <li>
         <NavLink to="/contact">Contact</NavLink>
+      </li>
+      <li>
+        <button className="secondary">Réserver</button>
       </li>
     </ul>
   </nav>
