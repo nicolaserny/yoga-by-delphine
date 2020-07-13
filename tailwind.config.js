@@ -49,7 +49,7 @@ module.exports = {
         serif: "Merriweather, serif",
       },
       height: {
-        real: "calc(100vh - 6rem)",
+        real: "calc(100vh - theme('margin.24'))",
       },
       gridTemplateRows: {
         layout: "46px minmax(0, 1fr) 26px",
