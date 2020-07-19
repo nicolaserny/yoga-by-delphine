@@ -1,0 +1,12 @@
+.active-nav-link {
+  @apply relative;
+}
+
+.active-nav-link::after {
+  content: "";
+  bottom: 3px;
+  left: 4px;
+  width: calc(100% - 0.5rem);
+  height: 2px;
+  @apply block absolute m-0 bg-purple-500;
+}
