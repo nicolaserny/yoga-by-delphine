@@ -1,5 +1,19 @@
 module.exports = {
-  purge: ["./src/**/*.js", "./src/**/*.jsx"],
+  purge: {
+    content: ["./src/**/*.js", "./src/**/*.jsx"],
+    options: {
+      whitelist: [
+        "fill-gray-200",
+        "fill-gray-500",
+        "fill-gray-800",
+        "fill-gray-900",
+        "fill-gray-1000",
+        "fill-purple-100",
+        "fill-purple-700",
+        "fill-red-200",
+      ],
+    },
+  },
   theme: {
     extend: {
       fontFamily: {
