@@ -1,10 +1,10 @@
 import React from "react";
-import { Layout, SEO } from "../components";
+import { Layout, SEO, LandingBlock } from "../components";
 
 const Index = () => (
-  <Layout className="h-real">
+  <Layout className="h-real min-h-landing">
     <SEO title="Accueil" />
-    <h1 className="font-serif text-lg text-gray-1000">🏗 Work in progress</h1>
+    <LandingBlock />
   </Layout>
 );
 

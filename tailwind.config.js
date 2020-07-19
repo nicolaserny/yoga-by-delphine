@@ -51,9 +51,28 @@ module.exports = {
       height: {
         real: "calc(100vh - theme('margin.24'))",
       },
+      minHeight: {
+        landing: "800px",
+      },
       gridTemplateRows: {
         layout: "46px minmax(0, 1fr) 26px",
       },
+      fill: (theme) => ({
+        gray: {
+          "200": theme("colors.gray.200"),
+          "500": theme("colors.gray.500"),
+          "800": theme("colors.gray.800"),
+          "900": theme("colors.gray.900"),
+          "1000": theme("colors.gray.1000"),
+        },
+        purple: {
+          "100": theme("colors.purple.100"),
+          "700": theme("colors.purple.700"),
+        },
+        red: {
+          "200": theme("colors.red.200"),
+        },
+      }),
     },
   },
   variants: {},
