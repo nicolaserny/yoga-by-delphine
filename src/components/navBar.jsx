@@ -5,7 +5,7 @@ const NavLink = ({ children, to }) => (
   <Link
     to={to}
     className="mr-6 p-1 text-lg font-medium no-underline hover:text-black text-gray-800"
-    activeClassName="font-bold active-nav-link hover:text-gray-800"
+    activeClassName="font-semibold active-nav-link hover:text-gray-800"
   >
     {children}
   </Link>
