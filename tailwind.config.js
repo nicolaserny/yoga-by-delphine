@@ -9,7 +9,7 @@ module.exports = {
         "fill-gray-900",
         "fill-gray-1000",
         "fill-purple-100",
-        "fill-purple-700",
+        "fill-purple-600",
         "fill-red-200",
       ],
     },
@@ -81,7 +81,7 @@ module.exports = {
         },
         purple: {
           "100": theme("colors.purple.100"),
-          "700": theme("colors.purple.700"),
+          "600": theme("colors.purple.600"),
         },
         red: {
           "200": theme("colors.red.200"),

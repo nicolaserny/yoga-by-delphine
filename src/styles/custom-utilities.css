@@ -8,5 +8,5 @@
   left: 4px;
   width: calc(100% - 0.5rem);
   height: 2px;
-  @apply block absolute m-0 bg-purple-500;
+  @apply block absolute m-0 bg-purple-600;
 }

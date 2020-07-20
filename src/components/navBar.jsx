@@ -13,8 +13,8 @@ const NavLink = ({ children, to }) => (
 
 const NavBar = () => (
   <nav className="flex flex-no-wrap items-baseline w-full ">
-    <span className="inline-block flex-grow flex-shrink-0 text-gray-800 text-lg font-semibold text-left align-baseline">
-      Yoga <span className="text-purple-700">by</span> Delphine
+    <span className="inline-block flex-grow flex-shrink-0 text-gray-800 text-2xl font-semibold text-left align-baseline">
+      Yoga <span className="text-purple-600">by</span> Delphine
     </span>
     <ul className="flex flex-grow-0 list-none items-baseline">
       <li>
