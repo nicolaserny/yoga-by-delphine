@@ -1,5 +1,6 @@
 import React from "react";
 import Illustration from "./illustration";
+import Quote from "./quote";
 
 const LandingBlock = () => (
   <div className="w-full h-full flex justify-between items-stretch pb-16">
@@ -21,15 +22,7 @@ const LandingBlock = () => (
           <button className="primary mt-4">Réserver un cours</button>
         </div>
       </div>
-      <blockquote>
-        <p className="text-gray-700 text-lg text-left font-sans font-normal italic leading-relaxed mb-1">
-          If you want to have ongoing joy and fulfillment in your life, the
-          secret is just one word – progress. Progress equals happiness.
-        </p>
-        <span className="text-purple-500 text-base text-left font-sans font-semibold">
-          Tony Robbins
-        </span>
-      </blockquote>
+      <Quote />
     </div>
     <Illustration className="inline-block w-1/2" />
   </div>
