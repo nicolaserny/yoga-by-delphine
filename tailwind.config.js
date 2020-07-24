@@ -63,10 +63,12 @@ module.exports = {
         serif: "Merriweather, serif",
       },
       height: {
+        realsm: "calc(100vh - theme('margin.12'))",
         real: "calc(100vh - theme('margin.24'))",
       },
       minHeight: {
-        landing: "800px",
+        landing: "600px",
+        landinglg: "800px",
       },
       gridTemplateRows: {
         layout: "46px minmax(0, 1fr) 26px",

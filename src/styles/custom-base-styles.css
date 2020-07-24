@@ -2,9 +2,11 @@ html {
   @apply antialiased bg-white text-gray-800;
 }
 
+button:focus,
 *:focus {
   outline-color: theme("colors.purple.400");
 }
+button:active,
 *:active {
   outline-color: theme("colors.purple.400");
 }

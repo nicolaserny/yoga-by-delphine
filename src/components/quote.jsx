@@ -1,7 +1,7 @@
 import React from "react";
 
-const Quote = () => (
-  <blockquote className="relative">
+const Quote = ({ className }) => (
+  <blockquote className={`relative sm:w-3/5 lg:w-1/2 xl:w-auto ${className}`}>
     <svg
       className="absolute top-0 left-0 -mt-6 -ml-6"
       width="59"
@@ -14,11 +14,11 @@ const Quote = () => (
         className="fill-purple-100"
       />
     </svg>
-    <p className="relative text-gray-700 text-lg text-left font-sans font-normal italic leading-relaxed mb-1">
+    <p className="relative text-gray-700 text-base lg:text-lg text-left font-sans font-normal italic leading-relaxed mb-1">
       If you want to have ongoing joy and fulfillment in your life, the secret
       is just one word – progress. Progress equals happiness.
     </p>
-    <span className="relative text-purple-500 text-base text-left font-sans font-semibold">
+    <span className="relative text-purple-500 text-sm lg:text-base text-left font-sans font-semibold">
       <span className="inline-block h-0 w-0 border-b-2 border-purple-600 pl-1 pr-1 mb-1 mr-1" />
       Tony Robbins
     </span>
