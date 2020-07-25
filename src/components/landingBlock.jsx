@@ -3,8 +3,8 @@ import Illustration from "./illustration";
 import Quote from "./quote";
 
 const LandingBlock = () => (
-  <div className="w-full h:full">
-    <div className="flex justify-between items-stretch pb-16 mt-12 lg:mt-0">
+  <div className="w-full">
+    <div className="flex justify-between items-stretch pb-16">
       <div className="flex flex-col sm:w-3/5 lg:w-1/2 pr-6 xl:pr-24 ">
         <div className="flex flex-col justify-center flex-grow">
           <h1 className="text-gray-800 text-left text-3xl lg:text-4xl xl:text-5xl leading-tight font-serif font-bold">

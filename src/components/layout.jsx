@@ -10,7 +10,7 @@ const Layout = ({ className, children }) => (
       <header className="w-full">
         <NavBar />
       </header>
-      <main>{children}</main>
+      <main className="self-center">{children}</main>
       <Footer />
     </div>
   </div>

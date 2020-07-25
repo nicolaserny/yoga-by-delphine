@@ -63,7 +63,7 @@ module.exports = {
         serif: "Merriweather, serif",
       },
       height: {
-        realsm: "calc(100vh - theme('margin.12'))",
+        realsm: "calc(100vh - theme('margin.20'))",
         real: "calc(100vh - theme('margin.24'))",
       },
       minHeight: {
