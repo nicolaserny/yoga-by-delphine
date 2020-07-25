@@ -2,7 +2,7 @@ import React from "react";
 import { Layout, SEO, LandingBlock } from "../components";
 
 const Index = () => (
-  <Layout className="h-realsm lg:h-real min-h-landing lg:min-h-landinglg">
+  <Layout className="min-h-realsm lg:min-h-real">
     <SEO title="Accueil" />
     <LandingBlock />
   </Layout>
