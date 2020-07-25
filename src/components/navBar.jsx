@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 
-const NavLink = ({ children, to }) => (
+const NavLink = ({ children, to, menuOpen }) => (
   <Link
     to={to}
-    className="mr-4 xl:mr-6 p-1 text-lg font-medium no-underline hover:text-black text-gray-800"
-    activeClassName="font-semibold active-nav-link hover:text-gray-800"
+    className={`${
+      menuOpen ? "block" : ""
+    } mr-4 xl:mr-6 p-1 mb-3 lg:mb-0 text-xl lg:text-lg font-medium no-underline hover:text-black text-gray-800`}
+    {...(!menuOpen && {
+      activeClassName: "font-semibold active-nav-link hover:text-gray-800",
+    })}
   >
     {children}
   </Link>
@@ -21,24 +25,34 @@ const NavBar = () => {
       <ul
         className={`fixed z-30 inset-0 ${
           menuOpen ? "block" : "hidden"
-        } lg:flex  lg:static flex-grow-0 list-none items-baseline w-screen lg:w-auto bg-purple-200 lg:bg-transparent `}
+        } lg:flex  lg:static flex-grow-0 list-none items-baseline w-screen lg:w-auto pl-12 pt-16 lg:pl-0 lg:pt-0 bg-white lg:bg-transparent `}
       >
         <li>
-          <NavLink to="/">Accueil</NavLink>
+          <NavLink menuOpen={menuOpen} to="/">
+            Accueil
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/agenda">Programme</NavLink>
+          <NavLink menuOpen={menuOpen} to="/agenda">
+            Programme
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/courses">Cours</NavLink>
+          <NavLink menuOpen={menuOpen} to="/courses">
+            Cours
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/about">A propos</NavLink>
+          <NavLink menuOpen={menuOpen} to="/about">
+            A propos
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink menuOpen={menuOpen} to="/contact">
+            Contact
+          </NavLink>
         </li>
-        <li className="hidden xl:block">
+        <li>
           <button className="secondary">Réserver</button>
         </li>
       </ul>
