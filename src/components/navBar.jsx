@@ -57,7 +57,9 @@ const NavBar = () => {
         </li>
       </ul>
       <button
-        className="lg:hidden relative z-50 flex-grow-0 self-end focus:outline-none "
+        className={`lg:hidden ${
+          menuOpen ? "fixed top-0 right-0 mr-8 mt-6" : "relative"
+        } z-50  flex-grow-0 self-end focus:outline-none `}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <svg
