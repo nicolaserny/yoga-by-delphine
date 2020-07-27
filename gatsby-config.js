@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Yoga by Delphine`,
@@ -20,6 +24,15 @@ module.exports = {
             variants: [`700`],
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-source-shopify",
+      options: {
+        shopName: "yoga-by-delphine",
+        accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_API_TOKEN,
+        apiVersion: "2020-07",
+        includeCollections: ["shop", "content"],
       },
     },
     `gatsby-plugin-postcss`,

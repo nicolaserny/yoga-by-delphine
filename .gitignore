@@ -69,3 +69,6 @@ yarn-error.log
 .yarn-integrity
 env.sh
 inspirations
+.env
+.env.*
+!.env.*.TEMPLATE
