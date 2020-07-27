@@ -3,9 +3,9 @@ import NavBar from "./navBar";
 import Footer from "./footer";
 
 const Layout = ({ className, children }) => (
-  <div className="min-h-realsm lg:min-h-real mx-8 lg:mx-20">
+  <div className="mx-8 lg:mx-20">
     <div
-      className={`grid grid-rows-layout max-w-screen-xl my-6 lg:my-12 mx-auto ${className}`}
+      className={`min-h-realsm lg:min-h-real grid grid-rows-layout max-w-screen-xl my-6 lg:my-12 mx-auto`}
     >
       <header className="w-full">
         <NavBar />
