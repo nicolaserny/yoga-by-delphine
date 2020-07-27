@@ -33,7 +33,7 @@ const NavBar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink menuOpen={menuOpen} to="/agenda">
+          <NavLink menuOpen={menuOpen} to="/schedule">
             Programme
           </NavLink>
         </li>
