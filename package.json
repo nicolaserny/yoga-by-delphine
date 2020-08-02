@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "author": "Nicolas Erny",
   "dependencies": {
-    "autoprefixer": "^9.8.5",
-    "gatsby": "^2.24.4",
+    "autoprefixer": "^9.8.6",
+    "gatsby": "^2.24.23",
     "gatsby-plugin-postcss": "^2.3.11",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.3.10",
@@ -17,7 +17,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "tailwindcss": "^1.5.1"
+    "tailwindcss": "^1.6.0"
   },
   "keywords": [
     "gatsby",

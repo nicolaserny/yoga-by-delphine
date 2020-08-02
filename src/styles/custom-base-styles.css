@@ -1,5 +1,5 @@
 html {
-  @apply antialiased bg-white text-gray-800;
+  @apply h-full antialiased bg-light text-gray-800;
 }
 
 button:focus,
