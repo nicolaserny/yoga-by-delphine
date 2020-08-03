@@ -27,7 +27,9 @@ const LandingBlock = () => (
         </div>
         <Quote className="hidden xl:block" />
       </div>
-      <Illustration className="hidden sm:inline-block  sm:w-2/5 lg:w-1/2" />
+      <div className="hidden sm:inline-block  sm:w-2/5 lg:w-1/2">
+        <Illustration className="w-full" />
+      </div>
     </div>
     <Quote className="xl:hidden" />
   </div>
