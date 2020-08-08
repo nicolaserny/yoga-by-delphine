@@ -91,6 +91,6 @@ module.exports = {
       }),
     },
   },
-  variants: {},
+  variants: { margin: ["responsive", "last"] },
   plugins: [],
 };

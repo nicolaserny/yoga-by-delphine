@@ -8,15 +8,21 @@ const BookingSection = ({ title, description, courses }) => (
     <Separator />
     <section className="flex flex-row mt-4">
       <div className="w-1/2 pr-10">
-        <h2 className="font-semibold text-xl text-gray-800">{title}</h2>
+        <h2 className="font-semibold text-xl text-gray-800 leading-normal">
+          {title}
+        </h2>
         <p className="mt-2 text-gray-800 text-base font-normal leading-normal">
           {description}
         </p>
       </div>
       <div className="w-1/2">
-        {courses.length === 0 && <p>Aucun cours pour le moment.</p>}
+        {courses.length === 0 && (
+          <p className="text-gray-800 font-medium text-lg leading-relaxed mt-px pt-px">
+            Aucun cours pour le moment.
+          </p>
+        )}
         {courses.map((course) => (
-          <Course course={course} />
+          <Course key={course.shopifyId} course={course} />
         ))}
       </div>
     </section>
