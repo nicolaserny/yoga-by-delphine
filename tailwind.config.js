@@ -70,6 +70,9 @@ module.exports = {
       gridTemplateRows: {
         layout: "46px minmax(auto, 1fr) 26px",
       },
+      gridTemplateColumns: {
+        course: "auto auto minmax(0, 1fr) auto",
+      },
       fill: (theme) => ({
         gray: {
           "200": theme("colors.gray.200"),

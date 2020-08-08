@@ -1,7 +1,8 @@
 import React from "react";
-import { Layout, SEO } from "../components";
+import { Layout, SEO, BookingSection } from "../components";
 import useShopifyCourses from "../hooks/useShopifyCourses";
 import { Link } from "gatsby";
+import { ONLINE_CATEGORY, STUDIO_CATEGORY } from "../utils/constants";
 
 const Schedule = () => {
   const courses = useShopifyCourses();
@@ -26,7 +27,26 @@ const Schedule = () => {
           .
         </p>
       </div>
-      <div className="w-full h-px mt-6 mb-4 bg-gray-200" />
+      <BookingSection
+        title="En ligne"
+        description="            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            accusantium, natus libero placeat veniam impedit sunt iste voluptate
+            sequi.
+"
+        courses={courses.filter(
+          (course) => course.category === ONLINE_CATEGORY,
+        )}
+      />
+      <BookingSection
+        title="En studio"
+        description="            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            accusantium, natus libero placeat veniam impedit sunt iste voluptate
+            sequi.
+"
+        courses={courses.filter(
+          (course) => course.category === STUDIO_CATEGORY,
+        )}
+      />
       <pre>{JSON.stringify(courses, null, 2)}</pre>
     </Layout>
   );

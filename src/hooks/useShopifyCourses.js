@@ -43,7 +43,7 @@ const useShopifyCourses = () => {
         time,
         duration,
         description,
-        price: product.variants.price,
+        price: product.variants[0].price,
         category: product.productType,
         shopifyId: product.shopifyId,
       };

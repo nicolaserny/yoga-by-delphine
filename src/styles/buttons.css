@@ -25,3 +25,18 @@
   @apply outline-none;
   box-shadow: 0 0 0 2px theme("colors.red.300");
 }
+
+.tertiary {
+  @apply bg-transparent inline-block text-left text-lg text-purple-600 font-semibold  py-1 px-2 border-none;
+  width: max-content;
+}
+
+.tertiary:hover {
+  @apply text-purple-800;
+}
+
+.tertiary:focus,
+.tertiary:active {
+  @apply outline-none rounded-lg text-purple-800;
+  box-shadow: 0 0 0 2px theme("colors.purple.300");
+}
