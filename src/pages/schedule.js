@@ -12,7 +12,7 @@ const Schedule = () => {
       <h1 className="mt-12 text-gray-800 text-2xl font-semibold">
         Programme des cours
       </h1>
-      <div className="mt-2 text-gray-800 text-base font-normal leading-normal">
+      <div className="mt-2 pb-3 text-gray-800 text-base font-normal leading-normal">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>
         <p>
           Pour obtenir un{" "}
@@ -29,25 +29,18 @@ const Schedule = () => {
       </div>
       <BookingSection
         title="En ligne"
-        description="            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            accusantium, natus libero placeat veniam impedit sunt iste voluptate
-            sequi.
-"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio accusantium."
         courses={courses.filter(
           (course) => course.category === ONLINE_CATEGORY,
         )}
       />
       <BookingSection
         title="En studio"
-        description="            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            accusantium, natus libero placeat veniam impedit sunt iste voluptate
-            sequi.
-"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio accusantium."
         courses={courses.filter(
           (course) => course.category === STUDIO_CATEGORY,
         )}
       />
-      <pre>{JSON.stringify(courses, null, 2)}</pre>
     </Layout>
   );
 };

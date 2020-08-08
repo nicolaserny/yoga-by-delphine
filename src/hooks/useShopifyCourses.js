@@ -1,4 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
+import { parse } from "date-fns";
+import fr from "date-fns/locale/fr";
 
 const useShopifyCourses = () => {
   const data = useStaticQuery(graphql`
@@ -23,12 +25,15 @@ const useShopifyCourses = () => {
         return false;
       }
       const yogaType = titleElements[0].trim();
-      const dateElements = titleElements[1].split("@");
-      if (dateElements.length !== 2) {
-        return false;
-      }
-      const date = dateElements[0].trim();
-      const time = dateElements[1].trim();
+      const datetime = parse(
+        titleElements[1].trim(),
+        "dd/MM/yyyy@HH:mm",
+        new Date(),
+        {
+          locale: fr,
+        },
+      );
+
       const descriptionElements = product.description.split("-");
       const duration =
         descriptionElements.length === 2
@@ -39,10 +44,9 @@ const useShopifyCourses = () => {
       ].trim();
       return {
         yogaType,
-        date,
-        time,
         duration,
         description,
+        datetime,
         price: product.variants[0].price,
         category: product.productType,
         shopifyId: product.shopifyId,

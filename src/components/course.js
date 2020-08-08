@@ -1,5 +1,7 @@
 import React from "react";
 import { ONLINE_CATEGORY, STUDIO_CATEGORY } from "../utils/constants";
+import fr from "date-fns/locale/fr";
+import { format } from "date-fns";
 
 const CourseIcon = ({ category, id }) => {
   const onlineIcon = (
@@ -40,6 +42,17 @@ const CourseIcon = ({ category, id }) => {
   }
 };
 
+const formatCourseType = (category) => {
+  switch (category) {
+    case ONLINE_CATEGORY:
+      return "Zoom";
+    case STUDIO_CATEGORY:
+      return "Studio";
+    default:
+      return "Zoom";
+  }
+};
+
 const Course = ({ course }) => {
   return (
     <div className="grid grid-cols-course col-gap-4 items-baseline w-full mb-5 last:mb-0 px-12 py-8 bg-white rounded-lg shadow">
@@ -47,22 +60,24 @@ const Course = ({ course }) => {
         <CourseIcon category={course.category} id={course.shopifyId} />
       </div>
       <div className="text-gray-800 font-medium text-lg leading-normal">
-        {course.date}
+        {format(course.datetime, "dd MMMM yyyy HH:mm", {
+          locale: fr,
+        })}
       </div>
       <div className="text-gray-800 font-medium text-lg leading-normal">
         {course.yogaType} ({course.duration})
       </div>
-      <div className="text-gray-900 font-medium text-3xl leading-normal">
-        {course.price}
+      <div className="text-gray-900 text-right font-medium text-3xl leading-normal">
+        {parseInt(course.price)}
         <span className="text-xl">€</span>
       </div>
       <div className="text-gray-600 font-normal text-lg leading-normal">
-        Zoom
+        {formatCourseType(course.category)}
       </div>
       <div className="text-gray-600 font-normal text-lg leading-normal">
         {course.description}
       </div>
-      <button className="tertiary -ml-2">Payer</button>
+      <button className="tertiary text-right -mr-2">Payer</button>
     </div>
   );
 };

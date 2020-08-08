@@ -6,6 +6,7 @@
   "author": "Nicolas Erny",
   "dependencies": {
     "autoprefixer": "^9.8.6",
+    "date-fns": "^2.15.0",
     "gatsby": "^2.24.36",
     "gatsby-plugin-postcss": "^2.3.11",
     "gatsby-plugin-react-helmet": "^3.3.10",

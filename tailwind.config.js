@@ -71,7 +71,7 @@ module.exports = {
         layout: "46px minmax(auto, 1fr) 26px",
       },
       gridTemplateColumns: {
-        course: "auto auto minmax(0, 1fr) auto",
+        course: "80px minmax(max-content, 225px) minmax(0, 1fr) auto",
       },
       fill: (theme) => ({
         gray: {
