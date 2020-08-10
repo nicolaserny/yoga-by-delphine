@@ -53,7 +53,9 @@ const NavBar = () => {
           </NavLink>
         </li>
         <li>
-          <button className="secondary">Réserver</button>
+          <Link to="/schedule" className="secondary">
+            Réserver
+          </Link>
         </li>
       </ul>
       <button

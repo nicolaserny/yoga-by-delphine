@@ -1,6 +1,7 @@
 import React from "react";
 import Illustration from "./illustration";
 import Quote from "./quote";
+import { Link } from "gatsby";
 
 const LandingBlock = () => (
   <div className="w-full">
@@ -20,9 +21,9 @@ const LandingBlock = () => (
             porro laudantium odio animi.
           </p>
           <div className="flex">
-            <button className="primary mt-4 text-lg xl:text-xl">
+            <Link to="/schedule" className="primary mt-4 text-lg xl:text-xl">
               Réserver un cours
-            </button>
+            </Link>
           </div>
         </div>
         <Quote className="hidden xl:block" />
