@@ -9,10 +9,10 @@ const Schedule = () => {
   return (
     <Layout mainCentered={false}>
       <SEO title="Programme" />
-      <h1 className="mt-3 md:mt-12 text-gray-800 text-xl md:text-2xl font-semibold">
+      <h1 className="mt-3 lg:mt-12 text-gray-800 text-xl lg:text-2xl font-semibold">
         Programme des cours
       </h1>
-      <div className="mt-2 pb-1 md:pb-3 text-gray-800 text-base font-normal leading-normal">
+      <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>
         <p>
           Pour obtenir un{" "}
@@ -27,7 +27,7 @@ const Schedule = () => {
           .
         </p>
       </div>
-      <div className="mb-3 md:mb-5">
+      <div className="mb-3 lg:mb-5">
         <BookingSection
           title="En ligne"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio accusantium."
