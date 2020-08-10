@@ -55,29 +55,31 @@ const formatCourseType = (category) => {
 
 const Course = ({ course }) => {
   return (
-    <div className="grid grid-cols-course col-gap-4 items-baseline w-full mb-5 last:mb-0 px-12 py-8 bg-white rounded-lg shadow">
-      <div className="row-span-2 self-center text-gray-600">
+    <div className="grid grid-cols-coursesm md:grid-cols-course col-gap-1 md:col-gap-4 items-baseline w-full mb-5 last:mb-0 px-4 md:px-12 py-2 md:py-8 bg-white rounded-lg shadow">
+      <div className="hidden md:block row-span-2 self-center text-gray-600">
         <CourseIcon category={course.category} id={course.shopifyId} />
       </div>
-      <div className="text-gray-800 font-medium text-lg leading-normal">
+      <div className="text-gray-800 font-medium text-base md:text-lg leading-normal">
         {format(course.datetime, "dd MMMM yyyy HH:mm", {
           locale: fr,
         })}
       </div>
-      <div className="text-gray-800 font-medium text-lg leading-normal">
+      <div className="row-start-2 md:row-start-1 col-start-1 md:col-start-3 text-gray-800 font-medium text-base md:text-lg leading-normal">
         {course.yogaType} ({course.duration})
       </div>
-      <div className="text-gray-900 text-right font-medium text-3xl leading-normal">
+      <div className="text-gray-900 text-right font-medium text-xl md:text-3xl leading-normal">
         {parseInt(course.price)}
-        <span className="text-xl">€</span>
+        <span className="text-lg md:text-xl">€</span>
       </div>
-      <div className="text-gray-600 font-normal text-lg leading-normal">
+      <div className="row-start-4 md:row-start-2 col-start-1 md:col-start-2 text-gray-600 font-normal text-sm md:text-lg leading-normal">
         {formatCourseType(course.category)}
       </div>
-      <div className="text-gray-600 font-normal text-lg leading-normal">
+      <div className="row-start-3 md:row-start-2 col-start-1 md:col-start-3 text-gray-600 font-normal text-sm md:text-lg leading-normal">
         {course.description}
       </div>
-      <button className="tertiary text-right -mr-2">Payer</button>
+      <button className="row-start-4 md:row-start-2 col-start-2 md:col-start-4 tertiary text-base md:text-lg text-right -mr-2">
+        Payer
+      </button>
     </div>
   );
 };
