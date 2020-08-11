@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, SEO, BookingSection } from "../components";
+import { Layout, SEO, BookingSection, PageTitle } from "../components";
 import useShopifyCourses from "../hooks/useShopifyCourses";
 import { Link } from "gatsby";
 import { ONLINE_CATEGORY, STUDIO_CATEGORY } from "../utils/constants";
@@ -9,9 +9,7 @@ const Schedule = () => {
   return (
     <Layout mainCentered={false}>
       <SEO title="Programme" />
-      <h1 className="mt-3 lg:mt-12 text-gray-800 text-xl lg:text-2xl font-semibold">
-        Programme des cours
-      </h1>
+      <PageTitle>Programme des cours</PageTitle>
       <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>
         <p>
