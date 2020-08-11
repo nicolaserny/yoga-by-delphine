@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout, SEO, BookingSection, PageTitle } from "../components";
-import useShopifyCourses from "../hooks/useShopifyCourses";
+import { useShopifyCourses } from "../hooks";
 import { Link } from "gatsby";
 import { ONLINE_CATEGORY, STUDIO_CATEGORY } from "../utils/constants";
 

@@ -1,47 +1,58 @@
 import React from "react";
-import { SEO, Layout, PageTitle } from "../components";
-import Image from "gatsby-image";
-import { graphql } from "gatsby";
+import { SEO, Layout, PageTitle, CourseDescription } from "../components";
 
-export const query = graphql`
-  query {
-    image: file(name: { eq: "course-1" }) {
-      cloudinary: childCloudinaryAsset {
-        fluid(transformations: ["c_fill"]) {
-          ...CloudinaryAssetFluid
-        }
-      }
-    }
-  }
-`;
+const courses = [
+  {
+    title: "Hatha yoga",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+    description2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+    imageName: "hatha",
+  },
+  {
+    title: "Vinyassa yoga",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+    description2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+    imageName: "vinyassa",
+    imageRight: false,
+  },
+  {
+    title: "Cours en ligne sur zoom",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+    description2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+    imageName: "zoom",
+  },
+  {
+    title: "Cours en studio",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+    description2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+    imageName: "studio",
+    imageRight: false,
+  },
+];
 
-const Courses = ({ data }) => (
+const Courses = () => (
   <Layout mainCentered={false}>
     <SEO title="Courses" />
     <PageTitle>Mes cours de yoga à découvrir</PageTitle>
-    <div className="grid grid-cols-2 col-gap-24 items-center my-16 w-full">
-      <div>
-        <h2 className="mb-4 text-xl font-semibold font-normal text-gray-800">
-          Hatha yoga
-        </h2>
-        <p className="text-gray-800 text-base font-normal leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-          consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia
-          ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio
-          repudiandae ipsa!
-        </p>
-        <p className="mt-4 text-gray-800 text-base font-normal leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam
-          perferendis dignissimos quibusdam aperiam nobis possimus, quod magnam
-          natus consequatur non incidunt quas similique exercitationem beatae
-          eveniet! Rem, quibusdam minus?
-        </p>
-      </div>
-      <Image
-        className="rounded-lg"
-        fluid={data.image.cloudinary.fluid}
-        alt="Hatha yoga"
-      />
+    <div className="grid grid-cols-2 grid-flow-row-dense col-gap-24 row-gap-12 items-center my-16 w-full">
+      {courses.map((course) => (
+        <CourseDescription
+          key={course.title}
+          title={course.title}
+          description={course.description}
+          description2={course.description2}
+          imageName={course.imageName}
+          imageRight={course.imageRight}
+        />
+      ))}
     </div>
   </Layout>
 );

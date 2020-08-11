@@ -8,3 +8,4 @@ export { default as Quote } from "./quote";
 export { default as BookingSection } from "./bookingSection";
 export { default as Course } from "./course";
 export { default as PageTitle } from "./pageTitle";
+export { default as CourseDescription } from "./courseDescription";
