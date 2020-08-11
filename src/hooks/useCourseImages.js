@@ -4,38 +4,23 @@ const useCourseImages = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        hatha: file(name: { eq: "course-1" }) {
-          cloudinary: childCloudinaryAsset {
-            fluid(transformations: ["c_fill"]) {
-              ...CloudinaryAssetFluid
-            }
-          }
-        }
-        vinyassa: file(name: { eq: "course-2" }) {
-          cloudinary: childCloudinaryAsset {
-            fluid(transformations: ["c_fill"]) {
-              ...CloudinaryAssetFluid
-            }
-          }
-        }
-        zoom: file(name: { eq: "course-3" }) {
-          cloudinary: childCloudinaryAsset {
-            fluid(transformations: ["c_fill"]) {
-              ...CloudinaryAssetFluid
-            }
-          }
-        }
-        studio: file(name: { eq: "course-4" }) {
-          cloudinary: childCloudinaryAsset {
-            fluid(transformations: ["c_fill"]) {
-              ...CloudinaryAssetFluid
+        images: allFile(filter: { name: { regex: "/course-.*/" } }) {
+          nodes {
+            name
+            cloudinary: childCloudinaryAsset {
+              fluid(transformations: ["c_fill"]) {
+                ...CloudinaryAssetFluid
+              }
             }
           }
         }
       }
     `,
   );
-  return data;
+  return data.images.nodes.reduce((images, node) => {
+    images[node.name] = node.cloudinary;
+    return images;
+  }, {});
 };
 
 export default useCourseImages;
