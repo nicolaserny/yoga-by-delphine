@@ -18,7 +18,7 @@ const Schedule = () => {
           contactez-moi{" "}
           <Link
             className="text-purple-600 hover:text-purple-800 font-semibold"
-            to="/contact"
+            to="/contact/"
           >
             ici
           </Link>

@@ -33,27 +33,27 @@ const NavBar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink menuOpen={menuOpen} to="/schedule">
+          <NavLink menuOpen={menuOpen} to="/schedule/">
             Programme
           </NavLink>
         </li>
         <li>
-          <NavLink menuOpen={menuOpen} to="/courses">
+          <NavLink menuOpen={menuOpen} to="/courses/">
             Cours
           </NavLink>
         </li>
         <li>
-          <NavLink menuOpen={menuOpen} to="/about">
+          <NavLink menuOpen={menuOpen} to="/about/">
             A propos
           </NavLink>
         </li>
         <li>
-          <NavLink menuOpen={menuOpen} to="/contact">
+          <NavLink menuOpen={menuOpen} to="/contact/">
             Contact
           </NavLink>
         </li>
         <li>
-          <Link to="/schedule" className="secondary">
+          <Link to="/schedule/" className="secondary">
             Réserver
           </Link>
         </li>

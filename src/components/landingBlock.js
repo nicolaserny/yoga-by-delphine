@@ -21,7 +21,7 @@ const LandingBlock = () => (
             porro laudantium odio animi.
           </p>
           <div className="flex">
-            <Link to="/schedule" className="primary mt-4 text-lg xl:text-xl">
+            <Link to="/schedule/" className="primary mt-4 text-lg xl:text-xl">
               Réserver un cours
             </Link>
           </div>
