@@ -7,7 +7,7 @@ import { ONLINE_CATEGORY, STUDIO_CATEGORY } from "../utils/constants";
 const Schedule = () => {
   const courses = useShopifyCourses();
   return (
-    <Layout mainCentered={false}>
+    <Layout>
       <SEO title="Programme" />
       <PageTitle>Programme des cours</PageTitle>
       <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">

@@ -52,6 +52,10 @@ html {
   @apply h-full antialiased bg-light text-gray-800;
 }
 
+.width-constraints {
+  @apply w-full max-w-screen-xl mx-auto;
+}
+
 button:focus,
 *:focus {
   outline-color: theme("colors.purple.400");

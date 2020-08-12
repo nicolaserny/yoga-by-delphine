@@ -3,7 +3,7 @@ import { SEO } from "../components";
 import { Layout } from "../components";
 
 const Contact = () => (
-  <Layout mainCentered={false}>
+  <Layout>
     <SEO title="Contact" />
     <h1>Not yet implemented</h1>
   </Layout>

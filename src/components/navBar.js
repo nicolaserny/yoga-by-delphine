@@ -38,11 +38,6 @@ const NavBar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink menuOpen={menuOpen} to="/courses/">
-            Cours
-          </NavLink>
-        </li>
-        <li>
           <NavLink menuOpen={menuOpen} to="/about/">
             A propos
           </NavLink>

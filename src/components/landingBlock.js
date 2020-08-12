@@ -4,7 +4,7 @@ import Quote from "./quote";
 import { Link } from "gatsby";
 
 const LandingBlock = () => (
-  <div className="w-full">
+  <div className="width-constraints">
     <div className="flex justify-between items-stretch pb-16">
       <div className="flex flex-col sm:w-3/5 lg:w-1/2 pr-6 xl:pr-24 ">
         <div className="flex flex-col justify-center flex-grow">

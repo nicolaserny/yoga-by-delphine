@@ -2,15 +2,17 @@ import React from "react";
 import NavBar from "./navBar";
 import Footer from "./footer";
 
-const Layout = ({ className, children, mainCentered = true }) => (
-  <div className="mx-8 lg:mx-20">
+const Layout = ({ className, children, mainWithFullWidth = false }) => (
+  <div className="">
     <div
-      className={`min-h-realsm lg:min-h-real grid grid-rows-layout max-w-screen-xl my-6 lg:my-12 mx-auto`}
+      className={`min-h-realsm lg:min-h-real grid grid-rows-layout  my-6 lg:my-12 mx-8 lg:mx-20`}
     >
-      <header className="w-full">
+      <header className="width-constraints">
         <NavBar />
       </header>
-      <main className={mainCentered ? "self-center" : ""}>{children}</main>
+      <main className={mainWithFullWidth ? "w-full" : "width-constraints"}>
+        {children}
+      </main>
       <Footer />
     </div>
   </div>
