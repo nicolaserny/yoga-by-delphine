@@ -68,7 +68,7 @@ module.exports = {
         real: "calc(100vh - theme('margin.24'))",
       },
       gridTemplateRows: {
-        layout: "46px minmax(auto, 1fr) 26px",
+        layout: "46px minmax(auto, 1fr) auto",
       },
       gridTemplateColumns: {
         coursesm: "minmax(0, 1fr) auto",

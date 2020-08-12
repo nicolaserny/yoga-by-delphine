@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => (
-  <footer className="flex justify-center text-gray-500">
+  <footer className="flex justify-center text-gray-500 pb-5">
     <a
       href="https://www.instagram.com/wecket/"
       target="_blank"
