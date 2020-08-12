@@ -6,7 +6,7 @@ const NavLink = ({ children, to, menuOpen }) => (
     to={to}
     className={`${
       menuOpen ? "block" : ""
-    } mr-4 xl:mr-6 p-1 mb-3 lg:mb-0 text-xl lg:text-lg font-medium no-underline hover:text-black text-gray-800`}
+    } mr-4 xl:mr-6 p-1 mb-3 lg:mb-0 text-xl lg:text-lg font-medium no-underline hover:text-gray-900 text-gray-800`}
     {...(!menuOpen && {
       activeClassName: "font-semibold active-nav-link hover:text-gray-800",
     })}
