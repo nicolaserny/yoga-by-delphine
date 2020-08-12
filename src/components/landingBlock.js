@@ -32,7 +32,7 @@ const LandingBlock = () => (
         <Illustration className="w-full" />
       </div>
     </div>
-    <Quote className="xl:hidden" />
+    <Quote className="mb-5 md:mb-8 lg:mb-16 xl:mb-0 xl:hidden" />
   </div>
 );
 

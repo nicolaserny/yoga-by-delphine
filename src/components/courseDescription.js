@@ -11,17 +11,21 @@ const CourseDescription = ({
   return (
     <>
       <div {...(!imageRight && { className: "col-start-2" })}>
-        <h2 className="mb-4 text-xl font-semibold font-normal text-gray-800">
+        <h2 className="mb-2 lg:mb-4 text-lg lg:text-xl font-semibold font-normal text-gray-800">
           {title}
         </h2>
-        <p className="text-gray-800 text-base font-normal leading-relaxed">
+        <p className="text-gray-800 text-sm md:text-base font-normal leading-relaxed">
           {description}
         </p>
-        <p className="mt-4 text-gray-800 text-base font-normal leading-relaxed">
+        <p className="mt-4 text-gray-800 text-sm md:text-base font-normal leading-relaxed">
           {description2}
         </p>
       </div>
-      <Image className="rounded-lg" fluid={image.fluid} alt={title} />
+      <Image
+        className="mt-3 md:mt-0 mb-4 md:mb-0 rounded-lg"
+        fluid={image.fluid}
+        alt={title}
+      />
     </>
   );
 };
