@@ -13,8 +13,7 @@ const Schedule = () => {
       <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>
         <p>
-          Pour obtenir un{" "}
-          <span className="font-medium">cours d’essai gratuit</span>,
+          Pour obtenir un <span className="font-medium">cours d’essai</span>,
           contactez-moi{" "}
           <Link
             className="text-purple-600 hover:text-purple-800 font-semibold"

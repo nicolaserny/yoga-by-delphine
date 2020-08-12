@@ -3,7 +3,7 @@ import Course from "./course";
 import { compareAsc } from "date-fns";
 
 const Separator = () => (
-  <div className="w-full h-px mt-3 lg:mt-6 mb-3 lg:mb-4 bg-gray-200" />
+  <div className="w-full h-px mt-3 md:mt-4 lg:mt-6 mb-3 lg:mb-6 bg-gray-200" />
 );
 
 const BookingSection = ({ title, description, courses }) => (
