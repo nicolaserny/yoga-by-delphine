@@ -12,7 +12,7 @@ const Contact = () => (
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quos
           soluta eveniet non tempore molestiae impedit.
         </p>
-        <form name="contact" data-netlify="true">
+        <form name="contactme" data-netlify="true">
           <div className="flex w-full">
             <div className="mb-6 flex-auto mr-4">
               <label className="input-label" htmlFor="firstname">
