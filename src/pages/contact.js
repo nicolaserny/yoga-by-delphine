@@ -12,8 +12,18 @@ const Contact = () => (
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quos
           soluta eveniet non tempore molestiae impedit.
         </p>
-        <form name="contactme" method="POST" action="/sent" data-netlify="true">
+        <form
+          name="contactme"
+          method="POST"
+          action="/sent"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
           <input type="hidden" name="form-name" value="contactme" />
+          <div className="hidden">
+            <label htmlFor="bot-field">Not for human</label>
+            <input name="bot-field" id="bot-field" type="text" />
+          </div>
           <div className="lg:flex w-full">
             <div className="mb-6 lg:flex-auto lg:mr-4">
               <label className="input-label" htmlFor="firstname">
