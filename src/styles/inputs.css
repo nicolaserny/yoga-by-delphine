@@ -1,5 +1,11 @@
 label.input-label {
-  @apply block text-gray-800 text-base font-medium mb-1;
+  @apply block text-gray-800 text-sm font-medium mb-1;
+}
+
+@screen lg {
+  label.input-label {
+    @apply text-base;
+  }
 }
 
 .styled-input {

@@ -8,14 +8,14 @@ const Contact = () => (
     <section className="md:grid md:grid-cols-2 md:col-gap-12 mb-12">
       <div className="text-base lg:text-lg font-normal text-gray-800 leading-normal md:mr-4">
         <PageTitle>Me contacter</PageTitle>
-        <p className="mt-4 mb-12">
+        <p className="mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-5 lg:mb-12">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quos
           soluta eveniet non tempore molestiae impedit.
         </p>
         <form name="contactme" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contactme" />
-          <div className="flex w-full">
-            <div className="mb-6 flex-auto mr-4">
+          <div className="lg:flex w-full">
+            <div className="mb-6 lg:flex-auto lg:mr-4">
               <label className="input-label" htmlFor="firstname">
                 Prénom
               </label>
@@ -26,7 +26,7 @@ const Contact = () => (
                 type="text"
               />
             </div>
-            <div className="mb-6 flex-auto ml-4">
+            <div className="mb-6 lg:flex-auto lg:ml-4">
               <label className="input-label" htmlFor="lastname">
                 Nom
               </label>
@@ -75,7 +75,7 @@ const Contact = () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 912.921 680.228"
-        className="self-center w-full"
+        className="self-center w-full my-10 md:my-0"
       >
         <path fill="#3f3d56" d="M102.002 641.27H658.11v2.361H102.002z" />
         <path
