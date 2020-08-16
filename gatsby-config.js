@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: "gatsby-source-shopify",
       options: {
-        shopName: "yoga-by-delphine",
+        shopName: process.env.GATSBY_SHOP_NAME,
         accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_API_TOKEN,
         apiVersion: "2020-07",
         includeCollections: ["shop", "content"],

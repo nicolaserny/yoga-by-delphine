@@ -2,6 +2,7 @@ import React from "react";
 import { ONLINE_CATEGORY, STUDIO_CATEGORY } from "../utils/constants";
 import fr from "date-fns/locale/fr";
 import { format } from "date-fns";
+import BuyButton from "./buyButton";
 
 const CourseIcon = ({ category, id }) => {
   const onlineIcon = (
@@ -77,9 +78,7 @@ const Course = ({ course }) => {
       <div className="row-start-3 lg:row-start-2 col-start-1 lg:col-start-2 xl:col-start-3 text-gray-600 font-normal text-sm xl:text-lg leading-normal">
         {course.description}
       </div>
-      <button className="row-start-4 lg:row-start-2 col-start-2 lg:col-start-3 xl:col-start-4 tertiary text-base xl:text-lg text-right -mr-2">
-        Payer
-      </button>
+      <BuyButton course={course} />
     </div>
   );
 };

@@ -7,12 +7,13 @@ const useShopifyCourses = () => {
     query {
       allShopifyProduct {
         nodes {
+          id
           title
           description
           variants {
             price
+            shopifyId
           }
-          shopifyId
           productType
         }
       }
@@ -43,13 +44,14 @@ const useShopifyCourses = () => {
         descriptionElements.length === 2 ? 1 : 0
       ].trim();
       return {
+        id: product.id,
         yogaType,
         duration,
         description,
         datetime,
         price: product.variants[0].price,
         category: product.productType,
-        shopifyId: product.shopifyId,
+        shopifyId: product.variants[0].shopifyId,
       };
     })
     .filter((course) => !!course);
