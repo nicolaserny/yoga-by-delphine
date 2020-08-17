@@ -22,12 +22,12 @@ const BuyButton = ({ course }) => {
             },
           ],
         );
-        window.open(updatedCheckout.webUrl);
+        window.location.href = updatedCheckout.webUrl;
       } catch (error) {
         console.error(error);
+        setIsBuying(false);
       }
     }
-    setIsBuying(false);
   }, [course.shopifyId, setIsBuying]);
 
   return (
@@ -42,7 +42,7 @@ const BuyButton = ({ course }) => {
       )}
       {isBuying && (
         <div className="row-start-4 lg:row-start-2 col-start-2 lg:col-start-3 xl:col-start-4 font-medium text-base xl:text-lg text-right -mr-2">
-          Paiement...
+          En cours...
         </div>
       )}
     </>
