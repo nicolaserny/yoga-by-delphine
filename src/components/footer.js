@@ -5,7 +5,7 @@ const Footer = () => (
     <a
       href="https://www.instagram.com/wecket/"
       target="_blank"
-      rel="noreferrer"
+      rel="noreferrer noopener"
       className="mr-5 hover:text-gray-700"
     >
       <svg
@@ -25,7 +25,7 @@ const Footer = () => (
     <a
       href="https://www.facebook.com/delphineleblancyoga"
       target="_blank"
-      rel="noreferrer"
+      rel="noreferrer noopener"
       className="hover:text-gray-700"
     >
       <svg
