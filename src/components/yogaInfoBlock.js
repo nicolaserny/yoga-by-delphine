@@ -8,7 +8,7 @@ const SubSection = ({ title, elements, className }) => (
       <h1 className="text-gray-800 text-xl lg:text-2xl font-semibold">
         {title}
       </h1>
-      <div className="md:grid md:grid-cols-2 md:grid-flow-row-dense md:col-gap-24 md:row-gap-12 md:items-center mt-4 md:mt-8 lg:mt-12 w-full">
+      <div className="md:grid md:grid-cols-2 md:grid-flow-row-dense md:gap-x-24 md:gap-y-12 md:items-center mt-4 md:mt-8 lg:mt-12 w-full">
         {elements.map((element) => (
           <CourseDescription
             key={element.title}

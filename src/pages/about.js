@@ -20,7 +20,7 @@ const About = ({ data }) => (
   <Layout>
     <SEO title="About" />
     <PageTitle>A propos...</PageTitle>
-    <section className="md:grid md:grid-cols-2 md:col-gap-12 my-4 md:my-8 lg:my-12">
+    <section className="md:grid md:grid-cols-2 md:gap-x-12 my-4 md:my-8 lg:my-12">
       <div className="text-base lg:text-lg font-normal text-gray-800 leading-relaxed md:mr-4">
         <h2 className="text-lg lg:text-xl font-semibold leading-normal mb-3 md:mb-5 lg:mb-8">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum

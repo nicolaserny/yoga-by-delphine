@@ -56,7 +56,7 @@ const formatCourseType = (category) => {
 
 const Course = ({ course }) => {
   return (
-    <div className="grid grid-cols-coursesm lg:grid-cols-courselg xl:grid-cols-course col-gap-1 lg:col-gap-2 xl:col-gap-4 items-baseline w-full max-w-md lg:max-w-full mb-5 last:mb-0 px-4 xl:px-12 py-2 xl:py-8 bg-white rounded-lg shadow">
+    <div className="grid grid-cols-coursesm lg:grid-cols-courselg xl:grid-cols-course gap-x-1 lg:gap-x-2 xl:gap-x-4 items-baseline w-full max-w-md lg:max-w-full mb-5 last:mb-0 px-4 xl:px-12 py-2 xl:py-8 bg-white rounded-lg shadow">
       <div className="hidden xl:block row-span-2 self-center text-gray-600">
         <CourseIcon category={course.category} id={course.shopifyId} />
       </div>
