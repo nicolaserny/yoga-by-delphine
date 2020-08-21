@@ -10,6 +10,18 @@ module.exports = {
     twitterUsername: `@nicolaserny`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Yoga by Delphine`,
+        short_name: `Yoga by Delphine`,
+        start_url: `/`,
+        background_color: `#F5F7FA`,
+        theme_color: `#653CAD`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.png`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-filesystem",
