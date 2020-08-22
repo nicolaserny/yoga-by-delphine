@@ -61,12 +61,18 @@ const Course = ({ course }) => {
         <CourseIcon category={course.category} id={course.shopifyId} />
       </div>
       <div className="text-gray-800 font-medium text-base xl:text-lg leading-normal">
-        {format(course.datetime, "dd MMMM yyyy HH:mm", {
-          locale: fr,
-        })}
+        {format(
+          course.datetime,
+          course.isSubscription ? "MMMM yyyy" : "dd MMMM yyyy HH:mm",
+          {
+            locale: fr,
+          },
+        )}
       </div>
       <div className="row-start-2 lg:row-start-1 col-start-1 lg:col-start-2 xl:col-start-3 text-gray-800 font-medium text-base xl:text-lg leading-normal">
-        {course.yogaType} ({course.duration})
+        {course.isSubscription
+          ? course.yogaType
+          : `${course.yogaType} (${course.duration})`}
       </div>
       <div className="text-gray-900 text-right font-medium text-xl xl:text-3xl leading-normal">
         {parseInt(course.price)}
