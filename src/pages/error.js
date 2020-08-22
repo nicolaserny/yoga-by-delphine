@@ -21,9 +21,9 @@ const Error = () => (
             gradientTransform="rotate(-2.31 725.2 516.777)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="gray" stop-opacity=".25" />
-            <stop offset=".54" stop-color="gray" stop-opacity=".12" />
-            <stop offset="1" stop-color="gray" stop-opacity=".1" />
+            <stop offset="0" stopColor="gray" stopOpacity=".25" />
+            <stop offset=".54" stopColor="gray" stopOpacity=".12" />
+            <stop offset="1" stopColor="gray" stopOpacity=".1" />
           </linearGradient>
         </defs>
         <ellipse
