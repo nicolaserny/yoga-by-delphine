@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { buildClient } from "shopify-buy";
+import { navigate } from "gatsby";
 
 const client = buildClient({
   domain: `${process.env.GATSBY_SHOP_NAME}.myshopify.com`,
@@ -25,6 +26,7 @@ const BuyButton = ({ course }) => {
         window.location.href = updatedCheckout.webUrl;
       } catch (error) {
         console.error(error);
+        navigate("/error");
         setIsBuying(false);
       }
     }
