@@ -5,7 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Yoga by Delphine`,
-    description: `Yoga by Delphine`,
+    description: `Yoga by Delphine - cours de yoga (hatha, vinyassa et running yoga) par Delphine Leblanc.`,
+    siteUrl: "https://yogabydelphine.com",
     author: `Nicolas Erny`,
     twitterUsername: `@nicolaserny`,
   },
@@ -48,6 +49,9 @@ module.exports = {
         includeCollections: ["shop", "content"],
       },
     },
+    "gatsby-plugin-sitemap",
     `gatsby-plugin-postcss`,
+    // Enable HTTP/2 push for critical assets.
+    "gatsby-plugin-netlify",
   ],
 };
