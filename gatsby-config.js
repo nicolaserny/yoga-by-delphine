@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Yoga by Delphine`,
-    description: `Yoga by Delphine - cours de yoga (hatha, vinyassa et running yoga) par Delphine Leblanc.`,
+    description: `Yoga by Delphine - cours de yoga (hatha, vinyasa et running yoga) par Delphine Leblanc.`,
     siteUrl: "https://yogabydelphine.com",
     author: `Nicolas Erny`,
     twitterUsername: `@nicolaserny`,

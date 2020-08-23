@@ -9,8 +9,8 @@ const Contact = () => (
       <div className="text-base lg:text-lg font-normal text-gray-800 leading-normal md:mr-4">
         <PageTitle>Me contacter</PageTitle>
         <p className="mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-5 lg:mb-12">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quos
-          soluta eveniet non tempore molestiae impedit.
+          Si vous avez des questions, besoin d'un rensignement ou un soucis avec
+          une commande, je serai ravie de vous aider.
         </p>
         <form
           name="contactme"

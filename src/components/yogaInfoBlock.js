@@ -32,15 +32,15 @@ const YogaInfoBlock = () => {
       description:
         "Le rythme est lent, on prend le temps d'explorer les postures physiques, les ressentis, en y restant un certain temps.",
       description2:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+        "Le cours comprend un échauffement des articulations et une préparation respiratoire, éventuellement un enchaînement de postures sur le souffle (type salutations au soleil), puis viennent des postures plus statiques. Il se termine sur un temps d’intégration (savasana) et selon le thème du cours, une assise en méditation ou un pranayama (travail sur le souffle). ",
       image: images["course-1"],
     },
     {
-      title: "Vinyassa yoga",
+      title: "Vinyasa yoga",
       description:
-        "Le rythme est plus soutenu que pour les cours de hatha yoga. Le cours est un mouvement permanent, sans fin, emmené par le souffle.",
+        "Le cours est un mouvement permanent, sans fin, emmené par le souffle. On suit un thème en relation avec l’énergie du moment (saison, événement...).",
       description2:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+        "L’accent est mis sur des mouvements fonctionnels, respectant les articulations. Le cours se termine sur un temps d’intégration (savasana) et selon le thème du cours, une assise en méditation ou un pranayama (travail sur le souffle).",
       image: images["course-2"],
       imageRight: false,
     },
@@ -49,26 +49,44 @@ const YogaInfoBlock = () => {
       description:
         "Un temps sur tapis, un temps en baskets, ou comment améliorer et apprendre à courir grâce au yoga.",
       description2:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+        "Le cours commence sur le tapis de yoga, au sol. On prend le temps de se connecter au souffle, et de laisser le souffle détendre, animer, ouvrir et renforcer le corps. Les postures et mouvements sont spécialement étudiés pour le geste de la course à pied. La deuxième partie du cours, en extérieur, permet d’intégrer le travail sur tapis en condition de course à pied. Le cours tel que proposé s’adresse à tout le monde, et surtout à celles et ceux qui souhaitent se mettre ou remettre à la course à pied.",
       image: images["course-3"],
     },
   ];
   const courses = [
     {
       title: "Cours en ligne sur zoom",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+      description: (
+        <span>
+          Les cours ont lieu via la plateforme{" "}
+          <a
+            className="text-purple-600 hover:text-purple-800 font-semibold underline"
+            href="https://zoom.us"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Zoom
+          </a>
+          , en direct. Un lien vers la salle virtuelle vous sera envoyé sur
+          l’email utilisé lors de la réservation (pas besoin de créer un compte
+          pour participer). Le lien zoom s’ouvre dans un navigateur internet, ou
+          l’application Zoom si vous l’avez installée. La salle sera ouverte une
+          dizaine de minute avant l’heure du cours. L’idéal est de pouvoir
+          installer votre appareil de manière à ce que je vous vois pratiquer,
+          je vous demanderai d’activer votre caméra, sauf si l’état de votre
+          réseau internet ne le permet pas. Mais le plus important est que vous
+          puissiez m’entendre et éventuellement me voir.
+        </span>
+      ),
       description2:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+        "Pour le cours en lui même, ayez une tenue confortable et un tapis de yoga ou fitness. Des briques de yoga ou tout autre accessoire pour rendre l’assise ou la position allongée confortable peuvent être utiles.",
       image: images["course-4"],
       imageRight: false,
     },
     {
       title: "Cours en studio",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
-      description2:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+      description: "Prochainement...",
+      description2: "",
       image: images["course-5"],
     },
   ];

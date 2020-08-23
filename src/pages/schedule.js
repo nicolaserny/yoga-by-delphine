@@ -13,9 +13,10 @@ const Schedule = () => {
       <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>
         <p>
-          Pour obtenir un <span className="font-medium">cours d’essai</span>,{" "}
+          Pour obtenir un <span className="font-medium">cours d’essai</span>, ou{" "}
+          <span className="font-medium">des cours privés</span>{" "}
           <Link
-            className="text-purple-600 hover:text-purple-800 font-semibold"
+            className="text-purple-600 hover:text-purple-800 font-semibold underline"
             to="/contact/"
           >
             contacter-moi
@@ -26,14 +27,26 @@ const Schedule = () => {
       <div className="mb-3 lg:mb-5">
         <BookingSection
           title="En ligne"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio accusantium."
+          description={
+            <span>
+              Les cours sont en direct sur la plateforme{" "}
+              <a
+                className="text-purple-600 hover:text-purple-800 font-semibold underline"
+                href="https://zoom.us"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Zoom
+              </a>
+            </span>
+          }
           courses={courses.filter(
             (course) => course.category === ONLINE_CATEGORY,
           )}
         />
         <BookingSection
           title="En studio"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio accusantium."
+          description="Prochainement..."
           courses={courses.filter(
             (course) => course.category === STUDIO_CATEGORY,
           )}
