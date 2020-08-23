@@ -6,19 +6,28 @@ import { Link } from "gatsby";
 const LandingBlock = () => (
   <div className="width-constraints">
     <div className="flex justify-between items-stretch pb-16">
-      <div className="flex flex-col sm:w-3/5 lg:w-1/2 pr-6 xl:pr-24 ">
+      <div className="flex flex-col sm:w-3/5 lg:w-1/2 pr-6 xl:pr-2 ">
         <div className="flex flex-col justify-center flex-grow">
-          <h1 className="text-gray-800 text-left text-3xl lg:text-4xl xl:text-5xl leading-tight font-serif font-bold">
-            Yoga et Méditation
+          <h1 className="text-gray-800 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
+            Se mouvoir en conscience
           </h1>
-          <h1 className="text-purple-600 text-left text-3xl lg:text-4xl xl:text-5xl leading-tight font-serif font-bold">
-            Erat ut egestas
+          <h1 className="text-purple-600 text-left text-2xl lg:text-3xl xl:text-4xl leading-tight font-serif font-bold">
+            Tout un programme...
           </h1>
-          <p className="text-gray-700 text-left text-sm lg:text-base xl:text-lg font-sans font-normal leading-relaxed mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis,
-            architecto consequuntur. Fuga qui fugit sit ullam minima hic? Quos,
-            ipsum similique. Perferendis repudiandae magni repellendus ipsam
-            porro laudantium odio animi.
+          <p className="text-gray-700 text-left text-sm lg:text-base font-sans font-normal leading-relaxed mt-3">
+            Retrouvez votre alignement naturel et vivre avec cet alignement sur
+            tous les plans : physique, énergétique, mental et émotionnel.
+          </p>
+          <p className="text-gray-700 text-left text-sm lg:text-base font-sans font-normal leading-relaxed mt-3">
+            Attendez-vous à avoir la tête en bas, les mains par terre, les
+            jambes levées le tout sans prise de tête et dans la bonne humeur.
+          </p>
+          <p className="text-gray-700 text-left text-sm lg:text-base font-sans font-normal leading-relaxed mt-3">
+            Les cours sont pour tout le monde. Pas besoin d'être souple ou
+            athlétique.{" "}
+            <span className="text-purple-600 font-medium">
+              Venez comme vous êtes!
+            </span>
           </p>
           <div className="flex">
             <Link to="/schedule/" className="primary mt-4 text-lg xl:text-xl">
@@ -28,7 +37,7 @@ const LandingBlock = () => (
         </div>
         <Quote className="hidden xl:block" />
       </div>
-      <div className="hidden sm:inline-block  sm:w-2/5 lg:w-1/2">
+      <div className="hidden sm:inline-block  sm:w-2/5 lg:w-1/2 lg:ml-3">
         <Illustration className="w-full" />
       </div>
     </div>

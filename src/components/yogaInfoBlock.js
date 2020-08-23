@@ -30,7 +30,7 @@ const YogaInfoBlock = () => {
     {
       title: "Hatha yoga",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+        "Le rythme est lent, on prend le temps d'explorer les postures physiques, les ressentis, en y restant un certain temps.",
       description2:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
       image: images["course-1"],
@@ -38,11 +38,19 @@ const YogaInfoBlock = () => {
     {
       title: "Vinyassa yoga",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+        "Le rythme est plus soutenu que pour les cours de hatha yoga. Le cours est un mouvement permanent, sans fin, emmené par le souffle.",
       description2:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
       image: images["course-2"],
       imageRight: false,
+    },
+    {
+      title: "Running yoga",
+      description:
+        "Un temps sur tapis, un temps en baskets, ou comment améliorer et apprendre à courir grâce au yoga.",
+      description2:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
+      image: images["course-3"],
     },
   ];
   const courses = [
@@ -52,7 +60,8 @@ const YogaInfoBlock = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
       description2:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
-      image: images["course-3"],
+      image: images["course-4"],
+      imageRight: false,
     },
     {
       title: "Cours en studio",
@@ -60,18 +69,17 @@ const YogaInfoBlock = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
       description2:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur rem sed accusamus? Facilis a itaque sint? Facilis officia ab molestiae assumenda ullam cumque obcaecati. Adipisci mollitia odio repudiandae ipsa!",
-      image: images["course-4"],
-      imageRight: false,
+      image: images["course-5"],
     },
   ];
   return (
     <>
       <SubSection
-        title="Les styles de yoga"
+        title="Les styles de yoga proposés"
         elements={yogaDetails}
         className="bg-white"
       />
-      <SubSection title="Les différents cours de yoga" elements={courses} />
+      <SubSection title="Les différents types de cours" elements={courses} />
     </>
   );
 };
