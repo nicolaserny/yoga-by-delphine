@@ -11,7 +11,7 @@ const LandingBlock = () => (
           <h1 className="text-gray-800 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
             Se mouvoir en conscience
           </h1>
-          <h1 className="text-purple-600 text-left text-2xl lg:text-3xl xl:text-4xl leading-tight font-serif font-bold">
+          <h1 className="text-purple-600 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
             Tout un programme...
           </h1>
           <p className="text-gray-700 text-left text-sm lg:text-base font-sans font-normal leading-relaxed mt-3">
