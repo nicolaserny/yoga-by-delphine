@@ -16,7 +16,7 @@ export const query = graphql`
   }
 `;
 
-const Customli = ({ children }) => (
+const StyledLi = ({ children }) => (
   <li className="mb-1 last:mb-0">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +33,17 @@ const Customli = ({ children }) => (
   </li>
 );
 
+const StyledLink = ({href, children}) => (
+    <a
+    className="text-purple-600 hover:text-purple-800 text-sm lg:text-base font-semibold underline"
+    href={href}
+    target="_blank"
+    rel="noreferrer noopener"
+  >
+    {children}
+  </a>
+); 
+
 const About = ({ data }) => (
   <Layout>
     <SEO title="About" />
@@ -43,66 +54,54 @@ const About = ({ data }) => (
           Le yoga est un style de vie
         </h2>
         <p className="mb-3 md:mb-5 lg:mb-8">
-          Mes cours représente ma pratique personnelle. Ils évoluent donc avec
+          Je suis <span className="font-medium">Delphine</span> et mes cours représente ma pratique personnelle. Ils évoluent donc avec
           ce que j'explore, découvre et expérimente.
         </p>
         <div className="mb-3 md:mb-5 lg:mb-8">
           <span className="font-medium">Mes influences actuelles :</span>
           <ol className="mt-2 leading-loose">
-            <Customli>hatha yoga, vinyasa yoga</Customli>
-            <Customli>CSV (core strength vinyasa) yoga et yoga shred</Customli>
-            <Customli>LYT yoga method</Customli>
-            <Customli>Primal vinyasa yoga</Customli>
-            <Customli>Budokon yoga</Customli>
-            <Customli>Animal flow</Customli>
+            <StyledLi>hatha yoga, vinyasa yoga</StyledLi>
+            <StyledLi>CSV (core strength vinyasa) yoga et yoga shred</StyledLi>
+            <StyledLi>LYT yoga method</StyledLi>
+            <StyledLi>Primal vinyasa yoga</StyledLi>
+            <StyledLi>Budokon yoga</StyledLi>
+            <StyledLi>Animal flow</StyledLi>
           </ol>
         </div>
         <div className="mb-3 md:mb-5 lg:mb-8">
           <span className="font-medium">Mes formations :</span>
           <ol className="mt-2 leading-loose">
-            <Customli>
+            <StyledLi>
               Hatha yoga:{" "}
-              <a
-                className="text-purple-600 hover:text-purple-800 font-semibold underline"
+              <StyledLink
                 href="https://ecolefrancaisedeyoga.fr"
-                target="_blank"
-                rel="noreferrer noopener"
               >
                 EFY, école française du yoga
-              </a>
-            </Customli>
-            <Customli>
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
               Yoga alchimique, avec{" "}
-              <a
-                className="text-purple-600 hover:text-purple-800 font-semibold underline"
+              <StyledLink
                 href="https://www.dayogaschool.com"
-                target="_blank"
-                rel="noreferrer noopener"
               >
                 Mira Jamadi
-              </a>
-            </Customli>
-            <Customli>
-              <a
-                className="text-purple-600 hover:text-purple-800 font-semibold underline"
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
+              <StyledLink
                 href="https://www.running-yogis.com"
-                target="_blank"
-                rel="noreferrer noopener"
               >
                 Running yoga
-              </a>
-            </Customli>
-            <Customli>
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
               En cours de formation :{" "}
-              <a
-                className="text-purple-600 hover:text-purple-800 font-semibold underline"
+              <StyledLink
                 href="https://lytyoga.com/about-us/"
-                target="_blank"
-                rel="noreferrer noopener"
               >
                 LYT yoga method
-              </a>
-            </Customli>
+              </StyledLink>
+            </StyledLi>
           </ol>
         </div>
       </div>
