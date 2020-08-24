@@ -49,7 +49,7 @@ const YogaInfoBlock = () => {
       description:
         "Un temps sur tapis, un temps en baskets, ou comment améliorer et apprendre à courir grâce au yoga.",
       description2:
-        "Le cours commence sur le tapis de yoga, au sol. On prend le temps de se connecter au souffle, et de laisser le souffle détendre, animer, ouvrir et renforcer le corps. Les postures et mouvements sont spécialement étudiés pour le geste de la course à pied. La deuxième partie du cours, en extérieur, permet d’intégrer le travail sur tapis en condition de course à pied. Le cours tel que proposé s’adresse à tout le monde, et surtout à celles et ceux qui souhaitent se mettre ou remettre à la course à pied.",
+        "Le cours commence sur le tapis de yoga, au sol. On prend le temps de se connecter au souffle pour détendre, animer, ouvrir et renforcer le corps. Les postures et mouvements sont spécialement étudiés pour le geste de la course à pied. La deuxième partie du cours, en extérieur, permet d’intégrer le travail sur tapis en condition de course à pied. Le cours s’adresse à tout le monde, et surtout à celles et ceux qui souhaitent se mettre ou remettre à la course à pied.",
       image: images["course-3"],
     },
   ];
@@ -69,13 +69,8 @@ const YogaInfoBlock = () => {
           </a>
           , en direct. Un lien vers la salle virtuelle vous sera envoyé sur
           l’email utilisé lors de la réservation (pas besoin de créer un compte
-          pour participer). Le lien zoom s’ouvre dans un navigateur internet, ou
-          l’application Zoom si vous l’avez installée. La salle sera ouverte une
-          dizaine de minute avant l’heure du cours. L’idéal est de pouvoir
-          installer votre appareil de manière à ce que je vous vois pratiquer,
-          je vous demanderai d’activer votre caméra, sauf si l’état de votre
-          réseau internet ne le permet pas. Mais le plus important est que vous
-          puissiez m’entendre et éventuellement me voir.
+          pour participer). Le lien Zoom s’ouvre dans un navigateur internet, ou
+          l’application Zoom. L’idéal est de pouvoir installer votre appareil de manière à ce que je vous vois pratiquer.
         </span>
       ),
       description2:
