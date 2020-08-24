@@ -33,8 +33,8 @@ const StyledLi = ({ children }) => (
   </li>
 );
 
-const StyledLink = ({href, children}) => (
-    <a
+const StyledLink = ({ href, children }) => (
+  <a
     className="text-purple-600 hover:text-purple-800 text-sm lg:text-base font-semibold underline"
     href={href}
     target="_blank"
@@ -42,7 +42,7 @@ const StyledLink = ({href, children}) => (
   >
     {children}
   </a>
-); 
+);
 
 const About = ({ data }) => (
   <Layout>
@@ -54,8 +54,9 @@ const About = ({ data }) => (
           Le yoga est un style de vie
         </h2>
         <p className="mb-3 md:mb-5 lg:mb-8">
-          Je suis <span className="font-medium">Delphine</span> et mes cours représente ma pratique personnelle. Ils évoluent donc avec
-          ce que j'explore, découvre et expérimente.
+          Je suis <span className="font-medium">Delphine</span> et mes cours
+          représentent ma pratique personnelle. Ils évoluent donc avec ce que
+          j'explore, découvre et expérimente.
         </p>
         <div className="mb-3 md:mb-5 lg:mb-8">
           <span className="font-medium">Mes influences actuelles :</span>
@@ -73,32 +74,24 @@ const About = ({ data }) => (
           <ol className="mt-2 leading-loose">
             <StyledLi>
               Hatha yoga:{" "}
-              <StyledLink
-                href="https://ecolefrancaisedeyoga.fr"
-              >
+              <StyledLink href="https://ecolefrancaisedeyoga.fr">
                 EFY, école française du yoga
               </StyledLink>
             </StyledLi>
             <StyledLi>
               Yoga alchimique, avec{" "}
-              <StyledLink
-                href="https://www.dayogaschool.com"
-              >
+              <StyledLink href="https://www.dayogaschool.com">
                 Mira Jamadi
               </StyledLink>
             </StyledLi>
             <StyledLi>
-              <StyledLink
-                href="https://www.running-yogis.com"
-              >
+              <StyledLink href="https://www.running-yogis.com">
                 Running yoga
               </StyledLink>
             </StyledLi>
             <StyledLi>
               En cours de formation :{" "}
-              <StyledLink
-                href="https://lytyoga.com/about-us/"
-              >
+              <StyledLink href="https://lytyoga.com/about-us/">
                 LYT yoga method
               </StyledLink>
             </StyledLi>
