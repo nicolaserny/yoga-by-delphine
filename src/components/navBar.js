@@ -25,7 +25,7 @@ const NavBar = () => {
       <ul
         className={`fixed z-30 inset-0 ${
           menuOpen ? "block" : "hidden"
-        } lg:flex  lg:static flex-grow-0 list-none items-baseline w-screen lg:w-auto pl-12 pt-16 lg:pl-0 lg:pt-0 bg-white lg:bg-transparent `}
+        } lg:flex  lg:static flex-grow-0 list-none items-baseline w-screen lg:w-auto pl-12 pt-24 lg:pl-0 lg:pt-0 bg-white lg:bg-transparent `}
       >
         <li>
           <NavLink menuOpen={menuOpen} to="/">
@@ -48,7 +48,7 @@ const NavBar = () => {
           </NavLink>
         </li>
         <li>
-          <Link to="/schedule/" className="secondary">
+          <Link to="/schedule/" className="secondary inline-block mt-2 lg:mt-0">
             Réserver
           </Link>
         </li>

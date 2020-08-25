@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 const LandingBlock = () => (
   <div className="width-constraints">
-    <div className="flex justify-between items-stretch pb-16">
+    <div className="flex justify-between items-stretch pb-16 pt-10 xl:pt-0">
       <div className="flex flex-col sm:w-3/5 lg:w-1/2 pr-6 xl:pr-2 ">
         <div className="flex flex-col justify-center flex-grow">
           <h1 className="text-gray-800 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
