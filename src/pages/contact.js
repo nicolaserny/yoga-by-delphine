@@ -4,7 +4,7 @@ import { Layout, PageTitle } from "../components";
 
 const Contact = () => (
   <Layout>
-    <SEO title="Contact" />
+    <SEO title="Me contacter" />
     <section className="md:grid md:grid-cols-2 md:gap-x-12 mb-12">
       <div className="text-base lg:text-lg font-normal text-gray-800 leading-normal md:mr-4">
         <PageTitle>Me contacter</PageTitle>

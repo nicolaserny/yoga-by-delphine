@@ -4,7 +4,7 @@ import { Layout } from "../components";
 
 const Sent = () => (
   <Layout>
-    <SEO title="Message sent" />
+    <SEO title="Message envoyé" />
     <div className="flex flex-col items-center justify-center w-full h-full my-3">
       <svg
         xmlns="http://www.w3.org/2000/svg"

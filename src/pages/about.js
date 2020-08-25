@@ -46,20 +46,19 @@ const StyledLink = ({ href, children }) => (
 
 const About = ({ data }) => (
   <Layout>
-    <SEO title="About" />
-    <PageTitle>A propos...</PageTitle>
+    <SEO title="Delphine, professeure de Yoga" />
+    <PageTitle>Je suis Delphine, professeure de Yoga...</PageTitle>
     <section className="md:grid md:grid-cols-2 md:gap-x-12 my-4 md:my-8 lg:my-12">
       <div className="text-base lg:text-lg font-normal text-gray-800 leading-relaxed md:mr-4">
         <h2 className="text-lg lg:text-xl font-semibold leading-normal mb-3 md:mb-5 lg:mb-8">
           Le yoga est un style de vie
         </h2>
         <p className="mb-3 md:mb-5 lg:mb-8">
-          Je suis <span className="font-medium">Delphine</span> et mes cours
-          représentent ma pratique personnelle. Ils évoluent donc avec ce que
-          j'explore, découvre et expérimente.
+          Mes cours représentent ma pratique personnelle. Ils évoluent donc avec
+          ce que j'explore, découvre et expérimente.
         </p>
         <div className="mb-3 md:mb-5 lg:mb-8">
-          <span className="font-medium">Mes influences actuelles :</span>
+          <h3 className="font-medium">Mes influences actuelles :</h3>
           <ol className="mt-2 leading-loose">
             <StyledLi>hatha yoga, vinyasa yoga</StyledLi>
             <StyledLi>CSV (core strength vinyasa) yoga et yoga shred</StyledLi>
@@ -70,7 +69,7 @@ const About = ({ data }) => (
           </ol>
         </div>
         <div className="mb-3 md:mb-5 lg:mb-8">
-          <span className="font-medium">Mes formations :</span>
+          <h3 className="font-medium">Mes formations :</h3>
           <ol className="mt-2 leading-loose">
             <StyledLi>
               Hatha yoga:{" "}

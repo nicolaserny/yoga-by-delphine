@@ -11,9 +11,9 @@ const CourseDescription = ({
   return (
     <>
       <div {...(!imageRight && { className: "col-start-2" })}>
-        <h2 className="mb-2 lg:mb-4 text-lg lg:text-xl font-semibold font-normal text-gray-800">
+        <h3 className="mb-2 lg:mb-4 text-lg lg:text-xl font-semibold font-normal text-gray-800">
           {title}
-        </h2>
+        </h3>
         <p className="text-gray-800 text-sm md:text-base font-normal leading-relaxed">
           {description}
         </p>

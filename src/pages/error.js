@@ -4,7 +4,7 @@ import { Layout } from "../components";
 
 const Error = () => (
   <Layout>
-    <SEO title="Error" />
+    <SEO title="Erreur" />
     <div className="flex flex-col items-center justify-center w-full h-full my-3">
       <svg
         className="w-40 md:w-56 lg:w-64 mx-6"

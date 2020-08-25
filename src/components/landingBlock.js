@@ -9,10 +9,10 @@ const LandingBlock = () => (
       <div className="flex flex-col sm:w-3/5 lg:w-1/2 pr-6 xl:pr-2 ">
         <div className="flex flex-col justify-center flex-grow">
           <h1 className="text-gray-800 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
-            Se mouvoir en conscience
-          </h1>
-          <h1 className="text-purple-600 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
-            Tout un programme...
+            Les bienfaits du Yoga <br />
+            <span className="text-purple-600 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
+              pour se mouvoir en conscience
+            </span>
           </h1>
           <p className="text-gray-700 text-left text-sm lg:text-base font-sans font-normal leading-relaxed mt-3">
             Retrouvez votre alignement naturel et vivre avec cet alignement sur
