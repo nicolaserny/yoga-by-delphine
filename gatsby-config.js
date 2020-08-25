@@ -32,6 +32,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.yogabydelphine.com`,
+      },
+    },
+    {
       resolve: "gatsby-transformer-cloudinary",
       options: {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
