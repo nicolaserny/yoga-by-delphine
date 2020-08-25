@@ -64,7 +64,7 @@ const Contact = () => (
               <label className="input-label flex-auto" htmlFor="message">
                 Message
               </label>
-              <div className="flex-auto text-base font-medium text-right text-gray-600 mb-1">
+              <div className="flex-auto text-sm lg:text-base font-medium text-right text-gray-600 mb-1">
                 Max. 500 caractères
               </div>
             </div>

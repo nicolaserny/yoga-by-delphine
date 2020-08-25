@@ -3,12 +3,12 @@ import { CourseDescription } from ".";
 import { useCourseImages } from "../hooks";
 
 const SubSection = ({ title, elements, className }) => (
-  <div className={`-mx-8 lg:-mx-20 py-6 md:py-8 lg:py-16 ${className}`}>
+  <div className={`-mx-8 lg:-mx-20 py-5 md:py-8 lg:py-16 ${className}`}>
     <section className="width-constraints px-8 lg:px-20 xl:px-0">
       <h2 className="text-gray-800 text-xl lg:text-2xl font-semibold">
         {title}
       </h2>
-      <div className="md:grid md:grid-cols-2 md:grid-flow-row-dense md:gap-x-24 md:gap-y-12 md:items-center mt-4 md:mt-8 lg:mt-12 w-full">
+      <div className="md:grid md:grid-cols-2 md:grid-flow-row-dense md:gap-x-8 lg:gap-x-12 xl:gap-x-24 md:gap-y-12 md:items-center mt-4 md:mt-8 lg:mt-12 w-full">
         {elements.map((element) => (
           <CourseDescription
             key={element.title}

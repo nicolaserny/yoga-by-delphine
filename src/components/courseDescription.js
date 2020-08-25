@@ -10,14 +10,14 @@ const CourseDescription = ({
 }) => {
   return (
     <>
-      <div {...(!imageRight && { className: "col-start-2" })}>
-        <h3 className="mb-2 lg:mb-4 text-lg lg:text-xl font-semibold font-normal text-gray-800">
+      <div {...(!imageRight && { className: "md:col-start-2" })}>
+        <h3 className="mt-5 md:mt-0 lg:0 mb-2 lg:mb-4 text-lg lg:text-xl font-semibold font-normal text-gray-800">
           {title}
         </h3>
-        <p className="text-gray-800 text-sm md:text-base font-normal leading-relaxed">
+        <p className="text-gray-800 text-base font-normal leading-relaxed">
           {description}
         </p>
-        <p className="mt-4 text-gray-800 text-sm md:text-base font-normal leading-relaxed">
+        <p className="mt-4 text-gray-800 text-base font-normal leading-relaxed">
           {description2}
         </p>
       </div>
