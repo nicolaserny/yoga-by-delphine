@@ -39,7 +39,7 @@ const BuyButton = ({ course }) => {
           onClick={checkoutCallback}
           className="row-start-4 lg:row-start-2 col-start-2 lg:col-start-3 xl:col-start-4 tertiary text-base xl:text-lg text-right -mr-2"
         >
-          Payer
+          Réserver
         </button>
       )}
       {isBuying && (
