@@ -46,8 +46,8 @@ const StyledLink = ({ href, children }) => (
 
 const About = ({ data }) => (
   <Layout>
-    <SEO title="Delphine, professeure de Yoga" />
-    <PageTitle>Je suis Delphine, professeure de Yoga...</PageTitle>
+    <SEO title="Delphine, professeur de Yoga" />
+    <PageTitle>Je suis Delphine, professeur de Yoga...</PageTitle>
     <section className="md:grid md:grid-cols-2 gap-x-4 xl:gap-x-12 my-4 md:my-8 lg:my-12">
       <div className="text-base lg:text-lg font-normal text-gray-800 leading-relaxed md:mr-4">
         <h2 className="text-lg lg:text-xl font-semibold leading-normal mb-3 md:mb-5 lg:mb-8">

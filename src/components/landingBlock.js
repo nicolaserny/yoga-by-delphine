@@ -9,9 +9,10 @@ const LandingBlock = () => (
       <div className="flex flex-col sm:w-3/5 lg:w-1/2 sm:pr-6 xl:pr-2 ">
         <div className="flex flex-col justify-center flex-grow">
           <h1 className="text-gray-800 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
-            Les bienfaits du Yoga <br />
+            Un yoga plus intelligent
+            <br />
             <span className="text-purple-600 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
-              pour se mouvoir en conscience
+              pour une vie plus consciente
             </span>
           </h1>
           <p className="text-gray-700 text-left text-base font-sans font-normal leading-relaxed mt-3">
