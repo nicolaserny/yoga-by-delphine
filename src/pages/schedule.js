@@ -12,6 +12,7 @@ const Schedule = () => {
       <PageTitle>Programme des cours de Yoga</PageTitle>
       <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>
+        <p>Annulation sans frais jusqu'à 24h avant le début du cours.</p>
         <p>
           Pour obtenir un <span className="font-medium">cours d’essai</span>, ou{" "}
           <span className="font-medium">des cours privés</span>{" "}
@@ -46,7 +47,7 @@ const Schedule = () => {
         />
         <BookingSection
           title="En studio"
-          description="Prochainement..."
+          description="IWKA - 7 impasse Crozatier 75012 Paris"
           courses={courses.filter(
             (course) => course.category === STUDIO_CATEGORY,
           )}

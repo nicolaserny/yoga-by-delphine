@@ -81,8 +81,27 @@ const YogaInfoBlock = () => {
     },
     {
       title: "Cours en studio",
-      description: "Prochainement...",
-      description2: "",
+      description: (
+        <>
+          Adresse:{" "}
+          <span className="font-medium text-purple-600">
+            IWKA - 7 impasse Crozatier 75012 Paris
+          </span>
+          <br /> Vous devez avoir votre propre tapis de yoga, le studio n’a pas
+          de tapis adéquat. Il faudra arriver quelques minutes avant le cours,
+          et sonner pour qu’on vous ouvre. Les chaussures sont à laisser à
+          l'entrée.
+        </>
+      ),
+      description2: (
+        <>
+          Vous avez accès à des vestiaires, pour vous changer et déposer vos
+          effets personnels dans des casiers. Selon les mesures sanitaires en
+          cours, des accessoires (briques, coussins de méditation...) sont
+          disponibles pour la pratique (mais pas de tapis) Vous pouvez
+          évidemment venir avec vos propres accessoires.
+        </>
+      ),
       image: images["course-5"],
     },
   ];
