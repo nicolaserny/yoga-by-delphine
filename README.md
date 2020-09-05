@@ -52,4 +52,4 @@ $ npm run develop
 
 ## License
 
-(MIT License)[https://raw.githubusercontent.com/nicolaserny/yoga-by-delphine/master/LICENSE]
+[MIT License](https://raw.githubusercontent.com/nicolaserny/yoga-by-delphine/master/LICENSE)
