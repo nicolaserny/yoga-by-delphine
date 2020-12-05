@@ -18,7 +18,7 @@ const NavLink = ({ children, to, menuOpen }) => (
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className="flex flex-no-wrap items-baseline w-full relative">
+    <nav className="flex flex-nowrap items-baseline w-full relative">
       <span className="inline-block flex-grow flex-shrink-0 text-gray-800 text-xl lg:text-2xl font-semibold text-left align-baseline">
         Yoga <span className="text-purple-600">by</span> Delphine
       </span>

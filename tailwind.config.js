@@ -1,12 +1,8 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   purge: {
     content: ["./src/**/*.js", "./src/**/*.jsx"],
     options: {
-      whitelist: [
+      safelist: [
         "fill-gray-200",
         "fill-gray-500",
         "fill-gray-800",
@@ -23,6 +19,18 @@ module.exports = {
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
         serif: ["Merriweather", "serif"],
+      },
+      fontSize: {
+        xs: "0.75rem",
+        sm: "0.875rem",
+        base: "1rem",
+        lg: "1.125rem",
+        xl: "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "4rem",
       },
       colors: {
         light: "#F5F7FA",

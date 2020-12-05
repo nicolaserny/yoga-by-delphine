@@ -66,7 +66,7 @@ const Course = ({ course }) => {
       <div className="hidden xl:block row-span-2 self-center text-gray-600">
         <CourseIcon category={course.category} id={course.shopifyId} />
       </div>
-      <div className="text-gray-800 font-medium text-base xl:text-lg leading-normal whitespace-no-wrap">
+      <div className="text-gray-800 font-medium text-base xl:text-lg leading-normal whitespace-nowrap">
         {format(
           course.datetime,
           course.isSubscription ? "MMMM yyyy" : "eee dd MMM yyyy - HH'h'mm",
