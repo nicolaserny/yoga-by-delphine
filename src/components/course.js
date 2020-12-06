@@ -3,6 +3,7 @@ import { ONLINE_CATEGORY, STUDIO_CATEGORY } from "../utils/constants";
 import fr from "date-fns/locale/fr";
 import { format } from "date-fns";
 import BuyButton from "./buyButton";
+import { CourseType } from "../hooks/useShopifyCourses";
 
 const CourseIcon = ({ category, id }) => {
   const onlineIcon = (
@@ -60,6 +61,28 @@ const formatCourseType = (category) => {
   }
 };
 
+const formatDatetimeField = (course) => {
+  if (course.type === CourseType.CARD) {
+    return course.datetime;
+  }
+  return format(
+    course.datetime,
+    course.type === CourseType.SUBSCRIPTION
+      ? "MMMM yyyy"
+      : "eee dd MMM yyyy - HH'h'mm",
+    {
+      locale: fr,
+    },
+  );
+};
+
+const formatTitleField = (course) => {
+  if (course.type === CourseType.REGULAR) {
+    return `${course.title} (${course.duration})`;
+  }
+  return course.title;
+};
+
 const Course = ({ course }) => {
   return (
     <div className="grid grid-cols-coursesm lg:grid-cols-courselg xl:grid-cols-course gap-x-1 lg:gap-x-2 xl:gap-x-4 items-baseline w-full max-w-md lg:max-w-full mb-5 last:mb-0 px-4 xl:px-10 py-2 xl:py-8 bg-white rounded-lg shadow">
@@ -67,18 +90,10 @@ const Course = ({ course }) => {
         <CourseIcon category={course.category} id={course.shopifyId} />
       </div>
       <div className="text-gray-800 font-medium text-base xl:text-lg leading-normal whitespace-nowrap">
-        {format(
-          course.datetime,
-          course.isSubscription ? "MMMM yyyy" : "eee dd MMM yyyy - HH'h'mm",
-          {
-            locale: fr,
-          },
-        )}
+        {formatDatetimeField(course)}
       </div>
       <div className="row-start-2 lg:row-start-1 col-start-1 lg:col-start-2 xl:col-start-3 text-gray-800 font-medium text-base xl:text-lg leading-normal">
-        {course.isSubscription
-          ? course.yogaType
-          : `${course.yogaType} (${course.duration})`}
+        {formatTitleField(course)}
       </div>
       <div className="text-gray-900 text-right font-medium text-xl xl:text-3xl leading-normal">
         {parseInt(course.price)}

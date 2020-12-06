@@ -1,6 +1,7 @@
 import React from "react";
 import Course from "./course";
 import { compareAsc } from "date-fns";
+import { CourseType } from "../hooks/useShopifyCourses";
 
 const Separator = () => (
   <div className="w-full h-px mt-3 md:mt-4 lg:mt-6 mb-3 lg:mb-6 bg-gray-200" />
@@ -25,6 +26,12 @@ const BookingSection = ({ title, description, courses }) => (
           </p>
         )}
         {courses
+          .filter((course) => course.type === CourseType.CARD)
+          .map((course) => (
+            <Course key={course.shopifyId} course={course} />
+          ))}
+        {courses
+          .filter((course) => course.type !== CourseType.CARD)
           .sort((a, b) => compareAsc(a.datetime, b.datetime))
           .map((course) => (
             <Course key={course.shopifyId} course={course} />
