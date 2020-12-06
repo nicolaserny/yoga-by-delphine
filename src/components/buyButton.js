@@ -1,11 +1,19 @@
 import React, { useCallback, useState } from "react";
 import { buildClient } from "shopify-buy";
 import { navigate } from "gatsby";
+import { CourseType } from "../hooks/useShopifyCourses";
 
 const client = buildClient({
   domain: `${process.env.GATSBY_SHOP_NAME}.myshopify.com`,
   storefrontAccessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_API_TOKEN,
 });
+
+const getLabel = (course) => {
+  if (course.type === CourseType.REGULAR) {
+    return "Réserver";
+  }
+  return "Acheter";
+};
 
 const BuyButton = ({ course }) => {
   const [isBuying, setIsBuying] = useState(false);
@@ -39,7 +47,7 @@ const BuyButton = ({ course }) => {
           onClick={checkoutCallback}
           className="row-start-4 lg:row-start-2 col-start-2 lg:col-start-3 xl:col-start-4 tertiary text-base xl:text-lg text-right -mr-2"
         >
-          Réserver
+          {getLabel(course)}
         </button>
       )}
       {isBuying && (
