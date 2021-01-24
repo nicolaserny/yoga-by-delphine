@@ -3,8 +3,10 @@ import { CourseDescription } from ".";
 import { useCourseImages } from "../hooks";
 
 const SubSection = ({ title, elements, className }) => (
-  <div className={`-mx-8 lg:-mx-20 py-5 md:py-8 lg:py-16 ${className}`}>
-    <section className="width-constraints px-8 lg:px-20 xl:px-0">
+  <div
+    className={`-mx-8 lg:-mx-20 xl:-mx-10 2xl:mx-0 py-5 md:py-8 lg:py-16 ${className}`}
+  >
+    <section className="width-constraints px-8 lg:px-20 xl:px-10 2xl:px-0">
       <h2 className="text-gray-800 text-xl lg:text-2xl font-semibold">
         {title}
       </h2>

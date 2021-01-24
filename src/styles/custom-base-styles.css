@@ -58,7 +58,7 @@ html {
 }
 
 .width-constraints {
-  @apply w-full max-w-screen-xl mx-auto;
+  @apply w-full max-w-screen-xl mx-auto xl:px-10 2xl:px-0;
 }
 
 button:focus,

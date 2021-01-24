@@ -5,7 +5,7 @@ import Footer from "./footer";
 const Layout = ({ className, children, mainWithFullWidth = false }) => (
   <div className="">
     <div
-      className={`min-h-realsm lg:min-h-real grid grid-rows-layout  my-6 lg:my-12 mx-8 lg:mx-20`}
+      className={`min-h-realsm lg:min-h-real grid grid-rows-layout  my-6 lg:my-12 mx-8 lg:mx-20 xl:mx-0`}
     >
       <header className="width-constraints">
         <NavBar />
