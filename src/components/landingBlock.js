@@ -9,14 +9,13 @@ const LandingBlock = () => (
       <div className="flex flex-col sm:w-3/5 lg:w-1/2 sm:pr-6 xl:pr-2 ">
         <div className="flex flex-col justify-center flex-grow">
           <h1 className="text-gray-800 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
-            Un yoga plus intelligent
-            <br />
+            Pratiquer le yoga <br />
             <span className="text-purple-600 text-left text-2xl lg:text-3xl xl:text-5xl leading-tight font-serif font-bold">
-              pour une vie plus consciente
+              avec Delphine Leblanc
             </span>
           </h1>
           <p className="text-gray-700 text-left text-base font-sans font-normal leading-relaxed mt-3">
-            Retrouvez votre alignement naturel et vivre avec cet alignement sur
+            Retrouvez votre alignement naturel et vivez avec cet alignement sur
             tous les plans : physique, énergétique, mental et émotionnel.
           </p>
           <p className="text-gray-700 text-left text-base font-sans font-normal leading-relaxed mt-3">

@@ -3,7 +3,7 @@ import { Layout, SEO, LandingBlock, YogaInfoBlock } from "../components";
 
 const Index = () => (
   <Layout mainWithFullWidth={true}>
-    <SEO title="Un yoga plus intelligent pour une vie plus consciente" />
+    <SEO title="Pratiquer le yoga avec Delphine Leblanc" />
     <LandingBlock />
     <YogaInfoBlock />
   </Layout>

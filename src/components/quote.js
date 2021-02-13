@@ -15,8 +15,9 @@ const Quote = ({ className }) => (
       />
     </svg>
     <p className="relative text-gray-700 text-base lg:text-lg text-left font-sans font-normal italic leading-relaxed mb-1">
-      If you want to have ongoing joy and fulfillment in your life, the secret
-      is just one word – progress. Progress equals happiness.
+      Si tu recherches un sentiment de joie perpétuelle et d'accomplissement
+      dans ta vie, le secret tient en un seul mot : la progression. Progression
+      égale bonheur.
     </p>
     <span className="relative text-purple-500 text-sm lg:text-base text-left font-sans font-semibold">
       <span className="inline-block h-0 w-0 border-b-2 border-purple-600 pl-1 pr-1 mb-1 mr-1" />
