@@ -2,7 +2,7 @@
 
 # Yoga by Delphine website
 
-This is the website for [yogabydelphine.com](http://yogabydelphine.com/).
+This is the website for [yogabydelphine.com](http://www.yogabydelphine.com/).
 
 You can book online and in-studio yoga courses (only available in french).
 

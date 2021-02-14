@@ -52,6 +52,7 @@ function SEO({ metadata, lang }) {
       <meta name="og:image:secure_url" content={`${siteUrl}${ogimage}`} />
       <meta name="image" property="og:image" content={`${siteUrl}${ogimage}`} />
       <meta property="og:site_name" content={defaults.title} />
+      <meta property="og:url" content={siteUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:type" content="website" />
       <meta property="og:description" content={description} />
