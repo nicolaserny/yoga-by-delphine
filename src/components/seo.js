@@ -1,9 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
 
-const SEO = ({ description, lang, meta, title }) => {
+function SEO({ metadata, lang }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -13,73 +13,62 @@ const SEO = ({ description, lang, meta, title }) => {
             description
             author
             twitterUsername
+            ogimage
+            siteUrl
           }
         }
       }
     `,
   );
+  const defaults = site.siteMetadata;
 
-  const metaDescription = description || site.siteMetadata.description;
+  const title = metadata?.title
+    ? `${metadata.title} - ${defaults.title}`
+    : defaults.title;
+  const siteUrl = site.siteMetadata.siteUrl;
+  const description = metadata?.description || defaults.description;
+  const ogimage = metadata?.ogimage
+    ? metadata.ogimage.childImageSharp.fluid.src
+    : defaults.ogimage;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.twitterUsername,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
     >
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta itemprop="name" content={title} />
+      <meta itemprop="description" content={description} />
+      <meta itemprop="image" content={`${siteUrl}${ogimage}`} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={defaults.twitterUsername} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:creator" content={defaults.twitterUsername} />
+      <meta name="twitter:image" content={`${siteUrl}${ogimage}`} />
+      <meta name="og:image" content={`${siteUrl}${ogimage}`} />
+      <meta name="og:image:secure_url" content={`${siteUrl}${ogimage}`} />
+      <meta name="image" property="og:image" content={`${siteUrl}${ogimage}`} />
+      <meta property="og:site_name" content={defaults.title} />
+      <meta property="og:title" content={title} />
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content={description} />
+
       <link rel="preconnect" href="https://res.cloudinary.com" />
       <link rel="dns-prefetch" href="https://res.cloudinary.com" />
     </Helmet>
   );
-};
+}
 
 SEO.defaultProps = {
   lang: `fr`,
-  meta: [],
-  description: ``,
 };
 
 SEO.propTypes = {
-  description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  metadata: PropTypes.object,
 };
 
 export default SEO;

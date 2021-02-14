@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: "https://yogabydelphine.com",
     author: `Nicolas Erny`,
     twitterUsername: `@nicolaserny`,
+    ogimage: "/ogimage.png",
   },
   plugins: [
     {

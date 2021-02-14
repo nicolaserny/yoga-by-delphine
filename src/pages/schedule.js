@@ -8,7 +8,7 @@ const Schedule = () => {
   const courses = useShopifyCourses();
   return (
     <Layout>
-      <SEO title="Programme des cours de Yoga" />
+      <SEO metadata={{ title: "Programme des cours de Yoga" }} />
       <PageTitle>Programme des cours de Yoga</PageTitle>
       <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>
