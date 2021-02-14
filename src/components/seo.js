@@ -56,6 +56,10 @@ function SEO({ metadata, lang }) {
       <meta property="og:title" content={title} />
       <meta property="og:type" content="website" />
       <meta property="og:description" content={description} />
+      <meta
+        name="google-site-verification"
+        content="E2uVZDGLRE9ex-JJspJjaoylJbHbc0AlU9IwCXotGqg"
+      />
 
       <link rel="preconnect" href="https://res.cloudinary.com" />
       <link rel="dns-prefetch" href="https://res.cloudinary.com" />
