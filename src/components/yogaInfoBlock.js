@@ -73,7 +73,7 @@ const YogaInfoBlock = () => {
           l’email utilisé lors de la réservation (pas besoin de créer un compte
           pour participer). Le lien Zoom s’ouvre dans un navigateur internet, ou
           l’application Zoom. L’idéal est de pouvoir installer votre appareil de
-          manière à ce que je vous vois pratiquer.
+          manière à ce que je vous voie pratiquer.
         </span>
       ),
       description2:
