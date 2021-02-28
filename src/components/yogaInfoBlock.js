@@ -1,6 +1,7 @@
 import React from "react";
 import { CourseDescription } from ".";
 import { useCourseImages } from "../hooks";
+import { Link } from "gatsby";
 
 const SubSection = ({ title, elements, className }) => (
   <div
@@ -47,12 +48,30 @@ const YogaInfoBlock = () => {
       imageRight: false,
     },
     {
+      title: "Yoga-balles",
+      description:
+        "Le yoga-balles est une méthode simple et efficace qui vous permet de prendre votre santé en charge en apprenant à utiliser des balles en caoutchouc flexibles et adhérentes pour masser, pétrir et étirer vos muscles et tissus conjonctifs. Ce type de yoga convient à tous, même aux femmes enceintes et aux personnes à mobilité réduite. ",
+      description2: (
+        <span>
+          Le cours dure généralement 45min, et nécessite un peu de matériel.{" "}
+          <Link
+            className="text-purple-600 hover:text-purple-800 font-semibold underline"
+            to="/yoga-balles/"
+          >
+            En savoir plus...
+          </Link>
+        </span>
+      ),
+      image: images["course-yoga-balles"],
+    },
+    {
       title: "Running yoga",
       description:
         "Un temps sur tapis, un temps en baskets, ou comment améliorer et apprendre à courir grâce au yoga.",
       description2:
         "Le cours commence sur le tapis de yoga, au sol. On prend le temps de se connecter au souffle pour détendre, animer, ouvrir et renforcer le corps. Les postures et mouvements sont spécialement étudiés pour le geste de la course à pied. La deuxième partie du cours, en extérieur, permet d’intégrer le travail sur tapis en condition de course à pied. Le cours s’adresse à tout le monde, et surtout à celles et ceux qui souhaitent se mettre ou remettre à la course à pied.",
       image: images["course-3"],
+      imageRight: false,
     },
   ];
   const courses = [

@@ -11,6 +11,7 @@ module.exports = {
         "fill-purple-100",
         "fill-purple-600",
         "fill-red-200",
+        "fill-red-400",
       ],
     },
   },
@@ -101,6 +102,7 @@ module.exports = {
         },
         red: {
           200: theme("colors.red.200"),
+          400: theme("colors.red.400"),
         },
       }),
     },
