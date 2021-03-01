@@ -60,6 +60,14 @@ function SEO({ metadata, lang }) {
         name="google-site-verification"
         content="E2uVZDGLRE9ex-JJspJjaoylJbHbc0AlU9IwCXotGqg"
       />
+      {process.env.NODE_ENV === "production" && (
+        <script
+          async
+          defer
+          data-domain="yogabydelphine.com"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
+      )}
 
       <link rel="preconnect" href="https://res.cloudinary.com" />
       <link rel="dns-prefetch" href="https://res.cloudinary.com" />
