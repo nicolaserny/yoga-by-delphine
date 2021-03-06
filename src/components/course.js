@@ -1,5 +1,9 @@
 import React from "react";
-import { ONLINE_CATEGORY, STUDIO_CATEGORY } from "../utils/constants";
+import {
+  ONLINE_CATEGORY,
+  OTHER_PRIVAYE_CATEGORY,
+  STUDIO_CATEGORY,
+} from "../utils/constants";
 import fr from "date-fns/locale/fr";
 import { format } from "date-fns";
 import BuyButton from "./buyButton";
@@ -46,7 +50,7 @@ const CourseIcon = ({ category, id }) => {
     case STUDIO_CATEGORY:
       return studioIcon;
     default:
-      return onlineIcon;
+      return studioIcon;
   }
 };
 
@@ -56,12 +60,17 @@ const formatCourseType = (category) => {
       return "Zoom";
     case STUDIO_CATEGORY:
       return "Studio";
+    case OTHER_PRIVAYE_CATEGORY:
+      return "A domicile";
     default:
       return "Zoom";
   }
 };
 
 const formatDatetimeField = (course) => {
+  if (course.category === OTHER_PRIVAYE_CATEGORY) {
+    return "Cours privés";
+  }
   if (course.type === CourseType.CARD) {
     return course.datetime;
   }

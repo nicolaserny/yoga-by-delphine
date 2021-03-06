@@ -2,7 +2,11 @@ import React from "react";
 import { Layout, SEO, BookingSection, PageTitle } from "../components";
 import { useShopifyCourses } from "../hooks";
 import { Link } from "gatsby";
-import { ONLINE_CATEGORY, STUDIO_CATEGORY } from "../utils/constants";
+import {
+  ONLINE_CATEGORY,
+  OTHER_PRIVAYE_CATEGORY,
+  STUDIO_CATEGORY,
+} from "../utils/constants";
 
 const Schedule = () => {
   const courses = useShopifyCourses();
@@ -50,6 +54,13 @@ const Schedule = () => {
           description="IWKA - 7 impasse Crozatier 75012 Paris"
           courses={courses.filter(
             (course) => course.category === STUDIO_CATEGORY,
+          )}
+        />
+        <BookingSection
+          title="Autres"
+          description="Cours privés ou en extérieurs"
+          courses={courses.filter(
+            (course) => course.category === OTHER_PRIVAYE_CATEGORY,
           )}
         />
       </div>
