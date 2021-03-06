@@ -1,9 +1,11 @@
 import React from "react";
 import NavBar from "./navBar";
 import Footer from "./footer";
+import Announcement from "./announcement";
 
 const Layout = ({ className, children, mainWithFullWidth = false }) => (
   <div className="">
+    <Announcement />
     <div
       className={`min-h-realsm lg:min-h-real grid grid-rows-layout  my-6 lg:my-12 mx-8 lg:mx-20 xl:mx-0`}
     >

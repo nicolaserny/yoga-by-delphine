@@ -11,3 +11,4 @@ export { default as PageTitle } from "./pageTitle";
 export { default as CourseDescription } from "./courseDescription";
 export { default as YogaInfoBlock } from "./yogaInfoBlock";
 export { default as BuyButton } from "./buyButton";
+export { default as Announcement } from "./announcement";
