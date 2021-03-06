@@ -58,7 +58,7 @@ const Schedule = () => {
         />
         <BookingSection
           title="Autres"
-          description="Cours privés ou en extérieurs"
+          description="Cours privés ou en extérieur"
           courses={courses.filter(
             (course) => course.category === OTHER_PRIVAYE_CATEGORY,
           )}
