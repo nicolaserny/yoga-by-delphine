@@ -54,6 +54,7 @@ module.exports = {
         accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_API_TOKEN,
         apiVersion: "2020-07",
         includeCollections: ["shop", "content"],
+        downloadImages: false,
       },
     },
     {
