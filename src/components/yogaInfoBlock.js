@@ -98,7 +98,6 @@ const YogaInfoBlock = () => {
       description2:
         "Pour le cours en lui même, ayez une tenue confortable et un tapis de yoga ou fitness. Des briques de yoga ou tout autre accessoire pour rendre l’assise ou la position allongée confortable peuvent être utiles.",
       image: images["course-4"],
-      imageRight: false,
     },
     {
       title: "Cours en studio",
@@ -124,6 +123,7 @@ const YogaInfoBlock = () => {
         </>
       ),
       image: images["course-5"],
+      imageRight: false,
     },
   ];
   return (
