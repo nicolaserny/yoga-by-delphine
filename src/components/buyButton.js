@@ -19,6 +19,14 @@ const BuyButton = ({ course }) => {
   const [isBuying, setIsBuying] = useState(false);
   const checkoutCallback = useCallback(async () => {
     setIsBuying(true);
+    try {
+      if (window.plausible) {
+        window.plausible("Buy");
+      }
+    } catch (error) {
+      // I add a try/catch to avoid breaking the buy process due to an analytics error
+      console.warn(error);
+    }
     const checkout = await client.checkout.create();
     if (checkout) {
       try {
