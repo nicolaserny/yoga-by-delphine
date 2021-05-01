@@ -60,15 +60,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        exclude: ["/error", "/sent"],
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: `weekly`,
-              priority: 0.7,
-            };
-          }),
+        excludes: ["/error", "/sent"],
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: `weekly`,
+            priority: 0.7,
+          };
+        },
       },
     },
     `gatsby-plugin-postcss`,
