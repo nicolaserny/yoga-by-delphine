@@ -60,14 +60,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        excludes: ["/error", "/sent"],
-        serialize: ({ path }) => {
-          return {
-            url: path,
-            changefreq: `weekly`,
-            priority: 0.7,
-          };
-        },
+        exclude: ["/error", "/sent"],
       },
     },
     `gatsby-plugin-postcss`,
