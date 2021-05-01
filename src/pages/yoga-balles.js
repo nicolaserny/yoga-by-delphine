@@ -188,10 +188,10 @@ const YogaBalls = () => {
           </h2>
           <div className="md:grid md:grid-cols-2 gap-x-4 xl:gap-x-12 mt-2 md:mt-3 lg:mt-4">
             <p className="md:mr-4 mb-2 md:mb-3 lg:mb-4">
-              Le cours dure généralement 45min, et nécessite un peu de matériel,
-              l’accès à un mur ou surface équivalente (porte fermée, sans risque
-              qu’elle ne s’ouvre ...), un tapis de yoga ou une grande serviette
-              pour s’isoler du sol.
+              Le cours dure généralement une heure, et nécessite un peu de
+              matériel, l’accès à un mur ou surface équivalente (porte fermée,
+              sans risque qu’elle ne s’ouvre ...), un tapis de yoga ou une
+              grande serviette pour s’isoler du sol.
             </p>
             <p className="mb-2 md:mb-3 lg:mb-4">
               Il est préférable de porter une tenue confortable proche du corps
