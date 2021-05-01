@@ -34,6 +34,7 @@ const Contact = () => (
                 name="firstname"
                 id="firstname"
                 type="text"
+                placeholder="Marie"
               />
             </div>
             <div className="mb-6 lg:flex-auto lg:ml-4">
@@ -45,6 +46,7 @@ const Contact = () => (
                 name="lastname"
                 id="lastname"
                 type="text"
+                placeholder="Dupont"
               />
             </div>
           </div>
@@ -57,6 +59,7 @@ const Contact = () => (
               name="email"
               id="email"
               type="email"
+              placeholder="marie.dupont@gmail.com"
             />
           </div>
           <div className="mb-6">
@@ -73,6 +76,7 @@ const Contact = () => (
               maxLength="500"
               name="message"
               id="message"
+              placeholder="Détailler vos questions"
             />
           </div>
           <div className="flex flex-row-reverse">
