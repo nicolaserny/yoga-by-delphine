@@ -1,5 +1,5 @@
 export { default as Layout } from "./layout";
-export { default as SEO } from "./seo";
+export { default as Seo } from "./seo";
 export { default as NavBar } from "./navBar";
 export { default as LandingBlock } from "./landingBlock";
 export { default as Illustration } from "./illustration";

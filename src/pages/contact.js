@@ -1,10 +1,10 @@
 import React from "react";
-import { SEO } from "../components";
+import { Seo } from "../components";
 import { Layout, PageTitle } from "../components";
 
 const Contact = () => (
   <Layout>
-    <SEO metadata={{ title: "Me contacter" }} />
+    <Seo metadata={{ title: "Me contacter" }} />
     <section className="md:grid md:grid-cols-2 md:gap-x-12 mb-12">
       <div className="text-base lg:text-lg font-normal text-gray-800 leading-normal md:mr-4">
         <PageTitle>Me contacter</PageTitle>

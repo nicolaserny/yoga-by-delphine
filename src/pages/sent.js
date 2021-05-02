@@ -1,10 +1,10 @@
 import React from "react";
-import { SEO } from "../components";
+import { Seo } from "../components";
 import { Layout } from "../components";
 
 const Sent = () => (
   <Layout>
-    <SEO metadata={{ title: "Message envoyé" }} />
+    <Seo metadata={{ title: "Message envoyé" }} />
     <div className="flex flex-col items-center justify-center w-full h-full my-3">
       <svg
         xmlns="http://www.w3.org/2000/svg"

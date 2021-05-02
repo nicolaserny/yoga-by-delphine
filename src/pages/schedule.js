@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, SEO, BookingSection, PageTitle } from "../components";
+import { Layout, Seo, BookingSection, PageTitle } from "../components";
 import { useShopifyCourses } from "../hooks";
 import { Link } from "gatsby";
 import {
@@ -12,7 +12,7 @@ const Schedule = () => {
   const courses = useShopifyCourses();
   return (
     <Layout>
-      <SEO metadata={{ title: "Programme des cours de Yoga" }} />
+      <Seo metadata={{ title: "Programme des cours de Yoga" }} />
       <PageTitle>Programme des cours de Yoga</PageTitle>
       <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>

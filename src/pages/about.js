@@ -1,5 +1,5 @@
 import React from "react";
-import { SEO } from "../components";
+import { Seo } from "../components";
 import { Layout, PageTitle } from "../components";
 import { graphql } from "gatsby";
 import Image from "gatsby-image";
@@ -46,7 +46,7 @@ const StyledLink = ({ href, children }) => (
 
 const About = ({ data }) => (
   <Layout>
-    <SEO metadata={{ title: "Delphine, professeur de Yoga" }} />
+    <Seo metadata={{ title: "Delphine, professeur de Yoga" }} />
     <PageTitle>Je suis Delphine, professeur de Yoga...</PageTitle>
     <section className="md:grid md:grid-cols-2 gap-x-4 xl:gap-x-12 my-4 md:my-8 lg:my-12">
       <div className="text-base lg:text-lg font-normal text-gray-800 leading-relaxed md:mr-4">

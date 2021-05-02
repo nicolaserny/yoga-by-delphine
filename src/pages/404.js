@@ -1,10 +1,10 @@
 import React from "react";
-import { SEO } from "../components";
+import { Seo } from "../components";
 import { Layout } from "../components";
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO metadata={{ title: "404: Not found" }} />
+    <Seo metadata={{ title: "404: Not found" }} />
     <div className="flex flex-col items-center justify-center w-full h-full my-3">
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
 import React from "react";
-import { SEO } from "../components";
+import { Seo } from "../components";
 import { Layout, PageTitle } from "../components";
 
 const StyledLi = ({ children }) => (
@@ -149,7 +149,7 @@ const Illustration = () => (
 const YogaBalls = () => {
   return (
     <Layout>
-      <SEO metadata={{ title: "Yoga-balles" }} />
+      <Seo metadata={{ title: "Yoga-balles" }} />
       <PageTitle>Yoga-balles</PageTitle>
       <div className="text-base lg:text-lg font-normal text-gray-800 leading-relaxed mb-14">
         <section className="xl:grid xl:grid-cols-2 gap-x-4 xl:gap-x-12 mt-4 md:mt-8 lg:mt-12">
