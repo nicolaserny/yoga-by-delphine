@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 
-const NavLink = ({ children, to, menuOpen }) => (
+const NavLink = ({ children, to, menuOpen, setMenuOpen }) => (
   <Link
     to={to}
     className={`${
@@ -10,6 +10,7 @@ const NavLink = ({ children, to, menuOpen }) => (
     {...(!menuOpen && {
       activeClassName: "font-semibold active-nav-link hover:text-gray-800",
     })}
+    onClick={() => setMenuOpen(false)}
   >
     {children}
   </Link>
@@ -17,6 +18,11 @@ const NavLink = ({ children, to, menuOpen }) => (
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  React.useLayoutEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+  });
+
   return (
     <nav className="flex flex-nowrap items-baseline w-full relative">
       <span className="inline-block flex-grow flex-shrink-0 text-gray-800 text-xl lg:text-2xl font-semibold text-left align-baseline">
@@ -28,27 +34,35 @@ const NavBar = () => {
         } lg:flex  lg:static flex-grow-0 list-none items-baseline w-screen lg:w-auto pl-12 pt-24 lg:pl-0 lg:pt-0 bg-white lg:bg-transparent `}
       >
         <li>
-          <NavLink menuOpen={menuOpen} to="/">
+          <NavLink menuOpen={menuOpen} setMenuOpen={setMenuOpen} to="/">
             Accueil
           </NavLink>
         </li>
         <li>
-          <NavLink menuOpen={menuOpen} to="/schedule/">
+          <NavLink
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+            to="/schedule/"
+          >
             Programme
           </NavLink>
         </li>
         <li>
-          <NavLink menuOpen={menuOpen} to="/about/">
+          <NavLink menuOpen={menuOpen} setMenuOpen={setMenuOpen} to="/about/">
             A propos
           </NavLink>
         </li>
         <li>
-          <NavLink menuOpen={menuOpen} to="/contact/">
+          <NavLink menuOpen={menuOpen} setMenuOpen={setMenuOpen} to="/contact/">
             Contact
           </NavLink>
         </li>
         <li>
-          <Link to="/schedule/" className="secondary inline-block mt-2 lg:mt-0">
+          <Link
+            to="/schedule/"
+            className="secondary inline-block mt-2 lg:mt-0"
+            onClick={() => setMenuOpen(false)}
+          >
             Réserver
           </Link>
         </li>
