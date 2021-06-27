@@ -52,7 +52,7 @@ module.exports = {
       options: {
         shopName: process.env.GATSBY_SHOP_NAME,
         accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_API_TOKEN,
-        apiVersion: "2020-07",
+        apiVersion: "2021-04",
         includeCollections: ["shop", "content"],
         downloadImages: false,
       },
