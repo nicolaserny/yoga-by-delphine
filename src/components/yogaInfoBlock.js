@@ -53,7 +53,7 @@ const YogaInfoBlock = () => {
         "Le yoga-balles est une méthode simple et efficace qui vous permet de prendre votre santé en charge en apprenant à utiliser des balles en caoutchouc flexibles et adhérentes pour masser, pétrir et étirer vos muscles et tissus conjonctifs. Ce type de yoga convient à tous, même aux femmes enceintes et aux personnes à mobilité réduite. ",
       description2: (
         <span>
-          Le cours dure généralement 45min, et nécessite un peu de matériel.{" "}
+          Le cours dure généralement 1 heure, et nécessite un peu de matériel.{" "}
           <Link
             className="text-purple-600 hover:text-purple-800 font-semibold underline"
             to="/yoga-balles/"

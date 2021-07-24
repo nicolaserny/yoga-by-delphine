@@ -107,6 +107,12 @@ module.exports = {
       }),
     },
   },
-  variants: { margin: ["responsive", "last"] },
+  variants: {
+    margin: ["responsive", "last"],
+    ringWidth: ["focus-visible"],
+    ringColor: ["focus-visible"],
+    ringOffsetWidth: ["focus-visible"],
+    ringOffsetColor: ["focus-visible"],
+  },
   plugins: [],
 };
