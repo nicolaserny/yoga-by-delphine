@@ -38,6 +38,20 @@ function Seo({ metadata, lang }) {
       }}
     >
       <title>{title}</title>
+      <link
+        rel="preload"
+        as="font"
+        href="/fonts/montserrat-v15-latin-regular.woff2"
+        type="font/woff2"
+        crossorigin="anonymous"
+      ></link>
+      <link
+        rel="preload"
+        as="font"
+        href="/fonts/merriweather-v22-latin-700.woff2"
+        type="font/woff2"
+        crossorigin="anonymous"
+      ></link>
       <meta name="description" content={description} />
       <meta itemprop="name" content={title} />
       <meta itemprop="description" content={description} />
