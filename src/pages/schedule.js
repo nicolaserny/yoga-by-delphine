@@ -51,7 +51,12 @@ const Schedule = () => {
         />
         <BookingSection
           title="En studio"
-          description="IWKA - 7 impasse Crozatier 75012 Paris"
+          description={
+            <>
+              Funny Club J2A Judo et Multis-sport <br />
+              50 Rue Sébastien Mercier, 75015 Paris
+            </>
+          }
           courses={courses.filter(
             (course) => course.category === STUDIO_CATEGORY,
           )}
