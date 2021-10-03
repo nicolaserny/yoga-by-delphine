@@ -1,20 +1,6 @@
 module.exports = {
-  purge: {
-    content: ["./src/**/*.js", "./src/**/*.jsx"],
-    options: {
-      safelist: [
-        "fill-gray-200",
-        "fill-gray-500",
-        "fill-gray-800",
-        "fill-gray-900",
-        "fill-gray-1000",
-        "fill-purple-100",
-        "fill-purple-600",
-        "fill-red-200",
-        "fill-red-400",
-      ],
-    },
-  },
+  mode: "jit",
+  purge: ["./src/pages/**/*.{jsx,js}", "./src/components/**/*.{html,js}"],
   theme: {
     extend: {
       fontFamily: {
@@ -106,13 +92,6 @@ module.exports = {
         },
       }),
     },
-  },
-  variants: {
-    margin: ["responsive", "last"],
-    ringWidth: ["focus-visible"],
-    ringColor: ["focus-visible"],
-    ringOffsetWidth: ["focus-visible"],
-    ringOffsetColor: ["focus-visible"],
   },
   plugins: [],
 };
