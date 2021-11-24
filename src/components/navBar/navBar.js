@@ -23,13 +23,16 @@ const NavBar = () => {
         Yoga <span className="text-purple-600">by</span> Delphine
       </span>
       <ul
-        className={`hidden lg:flex  lg:static flex-grow-0 list-none items-baseline w-screen lg:w-auto pl-12 pt-24 lg:pl-0 lg:pt-0 bg-white lg:bg-transparent `}
+        className={`hidden xl:flex  lg:static flex-grow-0 list-none items-baseline w-screen lg:w-auto pl-12 pt-24 lg:pl-0 lg:pt-0 bg-white lg:bg-transparent `}
       >
         <li>
           <NavLink to="/">Accueil</NavLink>
         </li>
         <li>
           <NavLink to="/schedule/">Programme</NavLink>
+        </li>
+        <li>
+          <NavLink to="/gift-cards/">Cartes-cadeaux</NavLink>
         </li>
         <li>
           <NavLink to="/about/">A propos</NavLink>
@@ -44,7 +47,7 @@ const NavBar = () => {
         </li>
       </ul>
       <button
-        className={`lg:hidden relative flex-grow-0 self-end focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
+        className={`xl:hidden relative flex-grow-0 self-end focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
         onClick={() => setShowMobileMenu(true)}
       >
         <svg
