@@ -3,8 +3,8 @@ import { BuyButton } from ".";
 
 const GifCard = ({ giftCard }) => {
   return (
-    <article className="w-[fit-content] flex flex-row items-center gap-7 mx-auto my-7 bg-white px-12 py-14 rounded-lg shadow">
-      <div className="max-w-md">
+    <article className="w-full sm:w-[fit-content] flex flex-col sm:flex-row items-center gap-7 mx-auto my-7 bg-white px-6 py-8 lg:px-10 lg:py-12 xl:px-12 xl:py-14 rounded-lg shadow">
+      <div className="w-60 xl:w-72">
         <svg
           viewBox="0 0 409 295"
           fill="none"
@@ -232,14 +232,14 @@ const GifCard = ({ giftCard }) => {
         </svg>
       </div>
       <div>
-        <div className="text-gray-900 font-medium text-3xl leading-normal">
+        <div className="text-gray-900 font-medium text-xl lg:text-2xl xl:text-3xl leading-normal">
           {giftCard.price}
-          <span className="text-2xl">€</span>
+          <span className="text-base lg:text-xl xl:text-2xl">€</span>
         </div>
-        <div className="text-gray-800 font-medium text-xl leading-normal whitespace-nowrap">
+        <div className="text-gray-800 font-medium text-base lg:text-lg xl:text-xl leading-normal whitespace-nowrap">
           {giftCard.title}
         </div>
-        <div className="text-gray-600 text-lg leading-normal whitespace-nowrap">
+        <div className="text-gray-600 text-sm lg:text-base xl:text-lg leading-normal whitespace-nowrap">
           {giftCard.description}
         </div>
         <div className="-mx-2 mt-3">
