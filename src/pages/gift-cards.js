@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import { Layout, Seo, PageTitle } from "../components";
+import { Layout, Seo, PageTitle, GiftCard } from "../components";
 import useShopifyGiftCards from "../hooks/useShopifyGiftCards";
 
 const GiftCards = () => {
@@ -29,7 +29,11 @@ const GiftCards = () => {
           .
         </p>
       </div>
-      <pre>{JSON.stringify(giftCards, null, 2)}</pre>
+      <div className="mb-3 lg:mb-5">
+        {giftCards.map((giftCard) => (
+          <GiftCard key={giftCard.shopifyId} giftCard={giftCard} />
+        ))}
+      </div>
     </Layout>
   );
 };
