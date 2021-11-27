@@ -50,6 +50,11 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/gift-cards/" onDismiss={onDismiss}>
+              Cartes-cadeaux
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/about/" onDismiss={onDismiss}>
               A propos
             </NavLink>

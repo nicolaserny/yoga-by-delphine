@@ -1,21 +1,13 @@
 import React, { useCallback, useState } from "react";
 import { buildClient } from "shopify-buy";
 import { navigate } from "gatsby";
-import { CourseType } from "../hooks/useShopifyCourses";
 
 const client = buildClient({
   domain: `${process.env.GATSBY_SHOP_NAME}.myshopify.com`,
   storefrontAccessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_API_TOKEN,
 });
 
-const getLabel = (course) => {
-  if (course.type === CourseType.REGULAR) {
-    return "Réserver";
-  }
-  return "Acheter";
-};
-
-const BuyButton = ({ course }) => {
+function useBuy(shopifyId) {
   const [isBuying, setIsBuying] = useState(false);
   const checkoutCallback = useCallback(async () => {
     setIsBuying(true);
@@ -34,7 +26,7 @@ const BuyButton = ({ course }) => {
           checkout.id,
           [
             {
-              variantId: course.shopifyId,
+              variantId: shopifyId,
               quantity: 1,
             },
           ],
@@ -46,20 +38,26 @@ const BuyButton = ({ course }) => {
         setIsBuying(false);
       }
     }
-  }, [course.shopifyId, setIsBuying]);
+  }, [shopifyId, setIsBuying]);
+
+  return { isBuying, checkoutCallback };
+}
+
+const BuyButton = ({ shopifyId, children }) => {
+  const { isBuying, checkoutCallback } = useBuy(shopifyId);
 
   return (
     <>
       {!isBuying && (
         <button
           onClick={checkoutCallback}
-          className="row-start-4 lg:row-start-2 col-start-2 lg:col-start-3 xl:col-start-4 tertiary text-base xl:text-lg text-right -mr-2"
+          className="tertiary text-base xl:text-lg"
         >
-          {getLabel(course)}
+          {children}
         </button>
       )}
       {isBuying && (
-        <div className="row-start-4 lg:row-start-2 col-start-2 lg:col-start-3 xl:col-start-4 font-medium text-base xl:text-lg text-right -mr-2">
+        <div className="font-medium text-base xl:text-lg px-2 py-1">
           En cours...
         </div>
       )}

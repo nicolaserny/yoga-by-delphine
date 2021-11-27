@@ -9,6 +9,13 @@ import { format } from "date-fns";
 import BuyButton from "./buyButton";
 import { CourseType } from "../hooks/useShopifyCourses";
 
+const getBuyButtonLabel = (course) => {
+  if (course.type === CourseType.REGULAR) {
+    return "Réserver";
+  }
+  return "Acheter";
+};
+
 const CourseIcon = ({ category, id }) => {
   const onlineIcon = (
     <svg
@@ -114,7 +121,11 @@ const Course = ({ course }) => {
       <div className="row-start-3 lg:row-start-2 col-start-1 lg:col-start-2 xl:col-start-3 text-gray-600 font-normal text-sm xl:text-lg leading-normal">
         {course.description}
       </div>
-      <BuyButton course={course} />
+      <div className="row-start-4 lg:row-start-2 col-start-2 lg:col-start-3 xl:col-start-4 text-right -mr-2">
+        <BuyButton shopifyId={course.shopifyId}>
+          {getBuyButtonLabel(course)}
+        </BuyButton>
+      </div>
     </div>
   );
 };
