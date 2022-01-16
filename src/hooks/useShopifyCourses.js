@@ -53,9 +53,8 @@ const createRegularCourse = (product, yogaType, datetimeString) => {
     descriptionElements.length === 2
       ? descriptionElements[0].trim()
       : undefined;
-  const description = descriptionElements[
-    descriptionElements.length === 2 ? 1 : 0
-  ].trim();
+  const description =
+    descriptionElements[descriptionElements.length === 2 ? 1 : 0].trim();
   return {
     id: product.id,
     type: CourseType.REGULAR,

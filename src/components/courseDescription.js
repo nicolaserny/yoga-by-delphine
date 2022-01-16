@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const CourseDescription = ({
   title,
@@ -11,7 +11,7 @@ const CourseDescription = ({
   return (
     <>
       <div {...(!imageRight && { className: "md:col-start-2" })}>
-        <h3 className="mt-5 md:mt-0 lg:0 mb-2 lg:mb-4 text-lg lg:text-xl font-semibold font-normal text-gray-800">
+        <h3 className="mt-5 md:mt-0 lg:0 mb-2 lg:mb-4 text-lg lg:text-xl font-semibold text-gray-800">
           {title}
         </h3>
         <p className="text-gray-800 text-base font-normal leading-relaxed">
@@ -21,9 +21,9 @@ const CourseDescription = ({
           {description2}
         </p>
       </div>
-      <Image
+      <GatsbyImage
         className="mt-3 md:mt-0 mb-4 md:mb-0 rounded-lg"
-        fluid={image.fluid}
+        image={image}
         alt={title}
       />
     </>

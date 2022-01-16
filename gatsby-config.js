@@ -26,41 +26,27 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "src/images",
-      },
-    },
-    {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://www.yogabydelphine.com`,
       },
     },
-    {
-      resolve: "gatsby-transformer-cloudinary",
-      options: {
-        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-        apiKey: process.env.CLOUDINARY_API_KEY,
-        apiSecret: process.env.CLOUDINARY_API_SECRET,
-        uploadFolder: "yoga-by-delphine",
-      },
-    },
+    `gatsby-plugin-image`,
     {
       resolve: "gatsby-source-shopify",
       options: {
-        shopName: process.env.GATSBY_SHOP_NAME,
-        accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_API_TOKEN,
-        apiVersion: "2021-04",
-        includeCollections: ["shop", "content"],
+        storeUrl: `${process.env.GATSBY_SHOP_NAME}.myshopify.com`,
+        password: process.env.GATSBY_SHOPIFY_PASSWORD,
+        shopifyConnections: ["collections"],
         downloadImages: false,
       },
     },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        exclude: ["/error", "/sent"],
+        excludes: ["/error", "/sent"],
       },
     },
     `gatsby-plugin-postcss`,
