@@ -2,16 +2,17 @@ import React from "react";
 import { Seo } from "../components";
 import { Layout, PageTitle } from "../components";
 import { graphql } from "gatsby";
-import Image from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export const query = graphql`
   query {
-    image: file(name: { eq: "about" }) {
-      cloudinary: childCloudinaryAsset {
-        fluid(transformations: ["c_fill", "g_auto:subject"]) {
-          ...CloudinaryAssetFluid
-        }
-      }
+    image: cloudinaryImage(name: { eq: "about" }) {
+      gatsbyImageData(
+        width: 600
+        quality: 80
+        layout: CONSTRAINED
+        placeholder: BLURRED
+      )
     }
   }
 `;
@@ -97,9 +98,9 @@ const About = ({ data }) => (
           </ol>
         </div>
       </div>
-      <Image
+      <GatsbyImage
         className="lg:ml-8 rounded-lg object-fill md:object-contain lg:object-fill self-start"
-        fluid={data.image.cloudinary.fluid}
+        image={data.image.gatsbyImageData}
         alt="Photo de profile"
       />
     </section>

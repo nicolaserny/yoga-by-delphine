@@ -44,6 +44,10 @@ $ cd yoga-by-delphine && npm install
 
 - Configure env variables by creating a _.env.development_ file (use the template file)
 
+- Upload images from src/images to Cloudinary
+
+- Update the image sources in gatsby-node.js
+
 - Run the development server:
 
 ```bash

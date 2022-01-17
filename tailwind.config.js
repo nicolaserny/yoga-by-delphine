@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ["./src/pages/**/*.{jsx,js}", "./src/components/**/*.{html,js}"],
+  content: ["./src/pages/**/*.{jsx,js}", "./src/components/**/*.{html,js}"],
   theme: {
     extend: {
       fontFamily: {
