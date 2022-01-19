@@ -1,2 +1,6 @@
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
