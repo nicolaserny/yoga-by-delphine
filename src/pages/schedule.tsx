@@ -1,14 +1,9 @@
 import React from "react";
 import { Layout, Seo, BookingSection, PageTitle } from "../components";
 import { useShopifyCourses } from "../hooks";
-import { Link } from "gatsby";
-import {
-  ONLINE_CATEGORY,
-  OTHER_PRIVAYE_CATEGORY,
-  STUDIO_CATEGORY,
-} from "../utils/constants";
+import { Link, PageProps } from "gatsby";
 
-const Schedule = () => {
+const Schedule: React.FC<PageProps> = () => {
   const courses = useShopifyCourses();
   return (
     <Layout>
@@ -45,9 +40,7 @@ const Schedule = () => {
               </a>
             </span>
           }
-          courses={courses.filter(
-            (course) => course.category === ONLINE_CATEGORY,
-          )}
+          courses={courses.filter((course) => course.category === "online")}
         />
         <BookingSection
           title="En studio"
@@ -57,15 +50,13 @@ const Schedule = () => {
               50 Rue Sébastien Mercier, 75015 Paris
             </>
           }
-          courses={courses.filter(
-            (course) => course.category === STUDIO_CATEGORY,
-          )}
+          courses={courses.filter((course) => course.category === "studio")}
         />
         <BookingSection
           title="Autres"
           description="Cours privés ou en extérieur"
           courses={courses.filter(
-            (course) => course.category === OTHER_PRIVAYE_CATEGORY,
+            (course) => course.category === "other_private",
           )}
         />
       </div>

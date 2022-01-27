@@ -1,8 +1,9 @@
+import { PageProps } from "gatsby";
 import React from "react";
 import { Seo } from "../components";
 import { Layout, PageTitle } from "../components";
 
-const StyledLi = ({ children }) => (
+const StyledLi: React.FC<{}> = ({ children }) => (
   <li className="mb-1 last:mb-0">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +20,10 @@ const StyledLi = ({ children }) => (
   </li>
 );
 
-const StyledLink = ({ href, children }) => (
+const StyledLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
+  href,
+  children,
+}) => (
   <a
     className="text-purple-600 hover:text-purple-800 text-sm lg:text-base font-semibold underline"
     href={href}
@@ -146,7 +150,7 @@ const Illustration = () => (
   </svg>
 );
 
-const YogaBalls = () => {
+const YogaBalls: React.FC<PageProps> = () => {
   return (
     <Layout>
       <Seo metadata={{ title: "Yoga-balles" }} />

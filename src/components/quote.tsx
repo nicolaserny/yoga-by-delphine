@@ -1,7 +1,13 @@
 import React from "react";
 
-const Quote = ({ className }) => (
-  <figure className={`relative sm:w-3/5 lg:w-1/2 xl:w-auto ${className}`}>
+const Quote: React.FC<React.HTMLAttributes<HTMLElement>> = ({
+  className,
+  ...props
+}) => (
+  <figure
+    {...props}
+    className={`relative sm:w-3/5 lg:w-1/2 xl:w-auto ${className}`}
+  >
     <svg
       className="absolute top-0 left-0 -mt-6 -ml-6"
       width="59"

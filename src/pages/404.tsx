@@ -1,8 +1,9 @@
+import { PageProps } from "gatsby";
 import React from "react";
 import { Seo } from "../components";
 import { Layout } from "../components";
 
-const NotFoundPage = () => (
+const NotFoundPage: React.FC<PageProps> = () => (
   <Layout>
     <Seo metadata={{ title: "404: Not found" }} />
     <div className="flex flex-col items-center justify-center w-full h-full my-3">

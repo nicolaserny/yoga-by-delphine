@@ -1,8 +1,8 @@
 import React from "react";
 import { Seo } from "../components";
 import { Layout, PageTitle } from "../components";
-import { graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { graphql, PageProps } from "gatsby";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 export const query = graphql`
   query {
@@ -17,7 +17,7 @@ export const query = graphql`
   }
 `;
 
-const StyledLi = ({ children }) => (
+const StyledLi: React.FC<{}> = ({ children }) => (
   <li className="mb-1 last:mb-0">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,10 @@ const StyledLi = ({ children }) => (
   </li>
 );
 
-const StyledLink = ({ href, children }) => (
+const StyledLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
+  href,
+  children,
+}) => (
   <a
     className="text-purple-600 hover:text-purple-800 text-sm lg:text-base font-semibold underline"
     href={href}
@@ -45,7 +48,9 @@ const StyledLink = ({ href, children }) => (
   </a>
 );
 
-const About = ({ data }) => (
+const About: React.FC<
+  PageProps<{ image: { gatsbyImageData: IGatsbyImageData } }>
+> = ({ data }) => (
   <Layout>
     <Seo metadata={{ title: "Delphine, professeur de Yoga" }} />
     <PageTitle>Je suis Delphine, professeur de Yoga...</PageTitle>

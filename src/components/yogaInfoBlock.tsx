@@ -2,8 +2,14 @@ import React from "react";
 import { CourseDescription } from ".";
 import { useCourseImages } from "../hooks";
 import { Link } from "gatsby";
+import { CourseDescriptionProps } from "./courseDescription";
 
-const SubSection = ({ title, elements, className }) => (
+const SubSection: React.FC<
+  {
+    title: string;
+    elements: Array<CourseDescriptionProps>;
+  } & React.HTMLAttributes<HTMLDivElement>
+> = ({ title, elements, className }) => (
   <div
     className={`-mx-8 lg:-mx-20 xl:-mx-10 2xl:mx-0 py-5 md:py-8 lg:py-16 ${className}`}
   >

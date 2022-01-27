@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import MobileMenu from "./mobileMenu";
 
-const NavLink = ({ children, to, onDismiss }) => {
+const NavLink: React.FC<{ to: string }> = ({ children, to }) => {
   return (
     <Link
       to={to}

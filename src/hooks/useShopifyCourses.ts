@@ -5,20 +5,47 @@ import fr from "date-fns/locale/fr";
 const SubscriptionKeyword = "Abonnement";
 const CardKeyword = "Carte";
 
-export const CourseType = {
-  REGULAR: "REGULAR",
-  SUBSCRIPTION: "SUBSCRIPTION",
-  CARD: "CARD",
+type CourseType = "REGULAR" | "SUBSCRIPTION" | "CARD";
+export type CourseCategory = "online" | "studio" | "other_private";
+
+export type YogaProduct = {
+  id: string;
+  type: CourseType;
+  title: string;
+  duration?: string;
+  description: string;
+  datetime: Date | string;
+  price: string;
+  category: CourseCategory;
+  shopifyId: string;
 };
 
-const createSubscription = (product, yogaType, datetimeString) => {
+type AllShopifyCourseQuery = {
+  allShopifyProduct: {
+    nodes: Array<ShopifyProduct>;
+  };
+};
+
+type ShopifyProduct = {
+  id: string;
+  title: string;
+  description: string;
+  variants: Array<{ price: string; shopifyId: string }>;
+  productType: CourseCategory;
+};
+
+function createSubscription(
+  product: ShopifyProduct,
+  yogaType: string,
+  datetimeString: string,
+) {
   const datetimeSubscription = parse(datetimeString, "MM/yyyy", new Date(), {
     locale: fr,
   });
 
   return {
     id: product.id,
-    type: CourseType.SUBSCRIPTION,
+    type: "SUBSCRIPTION",
     title: yogaType,
     duration: undefined,
     description: product.description,
@@ -26,13 +53,17 @@ const createSubscription = (product, yogaType, datetimeString) => {
     price: product.variants[0].price,
     category: product.productType,
     shopifyId: product.variants[0].shopifyId,
-  };
-};
+  } as YogaProduct;
+}
 
-const createCard = (product, yogaType, datetimeString) => {
+function createCard(
+  product: ShopifyProduct,
+  yogaType: string,
+  datetimeString: string,
+) {
   return {
     id: product.id,
-    type: CourseType.CARD,
+    type: "CARD",
     title: yogaType,
     duration: undefined,
     description: product.description,
@@ -40,10 +71,14 @@ const createCard = (product, yogaType, datetimeString) => {
     price: product.variants[0].price,
     category: product.productType,
     shopifyId: product.variants[0].shopifyId,
-  };
-};
+  } as YogaProduct;
+}
 
-const createRegularCourse = (product, yogaType, datetimeString) => {
+function createRegularCourse(
+  product: ShopifyProduct,
+  yogaType: string,
+  datetimeString: string,
+) {
   const datetime = parse(datetimeString, "dd/MM/yyyy à HH:mm", new Date(), {
     locale: fr,
   });
@@ -57,7 +92,7 @@ const createRegularCourse = (product, yogaType, datetimeString) => {
     descriptionElements[descriptionElements.length === 2 ? 1 : 0].trim();
   return {
     id: product.id,
-    type: CourseType.REGULAR,
+    type: "REGULAR",
     title: yogaType,
     duration,
     description,
@@ -65,10 +100,10 @@ const createRegularCourse = (product, yogaType, datetimeString) => {
     price: product.variants[0].price,
     category: product.productType,
     shopifyId: product.variants[0].shopifyId,
-  };
-};
+  } as YogaProduct;
+}
 
-const getFactoryMethod = (yogaType) => {
+function getFactoryMethod(yogaType: string) {
   if (yogaType.startsWith(SubscriptionKeyword)) {
     return createSubscription;
   }
@@ -76,10 +111,10 @@ const getFactoryMethod = (yogaType) => {
     return createCard;
   }
   return createRegularCourse;
-};
+}
 
 const useShopifyCourses = () => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<AllShopifyCourseQuery>(graphql`
     query {
       allShopifyProduct {
         nodes {
@@ -100,7 +135,7 @@ const useShopifyCourses = () => {
     .map((product) => {
       const titleElements = product.title.split("-");
       if (titleElements.length !== 2) {
-        return false;
+        return undefined;
       }
       const yogaType = titleElements[0].trim();
 

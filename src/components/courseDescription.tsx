@@ -1,7 +1,15 @@
 import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
-const CourseDescription = ({
+export type CourseDescriptionProps = {
+  title: string;
+  description: string | JSX.Element;
+  description2: string | JSX.Element;
+  image: IGatsbyImageData;
+  imageRight?: boolean;
+};
+
+const CourseDescription: React.FC<CourseDescriptionProps> = ({
   title,
   description,
   description2,

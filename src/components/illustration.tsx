@@ -1,6 +1,8 @@
 import React from "react";
 
-const Illustration = (props) => (
+const Illustration: React.FC<React.HTMLAttributes<HTMLOrSVGElement>> = (
+  props,
+) => (
   <svg
     {...props}
     viewBox="0 0 590 643"

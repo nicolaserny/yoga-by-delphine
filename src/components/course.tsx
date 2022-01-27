@@ -1,22 +1,20 @@
 import React from "react";
-import {
-  ONLINE_CATEGORY,
-  OTHER_PRIVAYE_CATEGORY,
-  STUDIO_CATEGORY,
-} from "../utils/constants";
 import fr from "date-fns/locale/fr";
 import { format } from "date-fns";
 import BuyButton from "./buyButton";
-import { CourseType } from "../hooks/useShopifyCourses";
+import { CourseCategory, YogaProduct } from "../hooks/useShopifyCourses";
 
-const getBuyButtonLabel = (course) => {
-  if (course.type === CourseType.REGULAR) {
+function getBuyButtonLabel(course: YogaProduct) {
+  if (course.type === "REGULAR") {
     return "Réserver";
   }
   return "Acheter";
-};
+}
 
-const CourseIcon = ({ category, id }) => {
+const CourseIcon: React.FC<{ id: string; category: CourseCategory }> = ({
+  category,
+  id,
+}) => {
   const onlineIcon = (
     <svg
       width="69"
@@ -52,54 +50,52 @@ const CourseIcon = ({ category, id }) => {
     </svg>
   );
   switch (category) {
-    case ONLINE_CATEGORY:
+    case "online":
       return onlineIcon;
-    case STUDIO_CATEGORY:
+    case "studio":
       return studioIcon;
     default:
       return studioIcon;
   }
 };
 
-const formatCourseType = (category) => {
+function formatCourseType(category: CourseCategory) {
   switch (category) {
-    case ONLINE_CATEGORY:
+    case "online":
       return "Zoom";
-    case STUDIO_CATEGORY:
+    case "studio":
       return "Studio";
-    case OTHER_PRIVAYE_CATEGORY:
+    case "other_private":
       return "A domicile";
     default:
       return "Zoom";
   }
-};
+}
 
-const formatDatetimeField = (course) => {
-  if (course.category === OTHER_PRIVAYE_CATEGORY) {
+function formatDatetimeField(course: YogaProduct) {
+  if (course.category === "other_private") {
     return "Cours privés";
   }
-  if (course.type === CourseType.CARD) {
+  if (course.type === "CARD") {
     return course.datetime;
   }
   return format(
-    course.datetime,
-    course.type === CourseType.SUBSCRIPTION
-      ? "MMMM yyyy"
-      : "eee dd MMM yyyy - HH'h'mm",
+    course.datetime as Date,
+    course.type === "SUBSCRIPTION" ? "MMMM yyyy" : "eee dd MMM yyyy - HH'h'mm",
     {
       locale: fr,
     },
   );
-};
+}
 
-const formatTitleField = (course) => {
-  if (course.type === CourseType.REGULAR) {
+function formatTitleField(course: YogaProduct) {
+  if (course.type === "REGULAR") {
     return `${course.title} (${course.duration})`;
   }
   return course.title;
-};
+}
 
-const Course = ({ course }) => {
+const Course: React.FC<{ course: YogaProduct }> = ({ course }) => {
   return (
     <div className="grid grid-cols-coursesm lg:grid-cols-courselg xl:grid-cols-course gap-x-1 lg:gap-x-2 xl:gap-x-4 items-baseline w-full max-w-md lg:max-w-full mb-5 last:mb-0 px-4 xl:px-10 py-2 xl:py-8 bg-white rounded-lg shadow">
       <div className="hidden xl:block row-span-2 self-center text-gray-600">

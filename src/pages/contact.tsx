@@ -1,8 +1,9 @@
+import { PageProps } from "gatsby";
 import React from "react";
 import { Seo } from "../components";
 import { Layout, PageTitle } from "../components";
 
-const Contact = () => (
+const Contact: React.FC<PageProps> = () => (
   <Layout>
     <Seo metadata={{ title: "Me contacter" }} />
     <section className="md:grid md:grid-cols-2 md:gap-x-12 mb-12">
@@ -73,7 +74,7 @@ const Contact = () => (
             </div>
             <textarea
               className="styled-input h-32"
-              maxLength="500"
+              maxLength={500}
               name="message"
               id="message"
               placeholder="Détailler vos questions"

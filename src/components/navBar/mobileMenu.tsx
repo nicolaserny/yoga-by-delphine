@@ -2,7 +2,11 @@ import React from "react";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { Link } from "gatsby";
 
-const NavLink = ({ children, to, onDismiss }) => (
+const NavLink: React.FC<{ to: string; onDismiss: () => void }> = ({
+  children,
+  to,
+  onDismiss,
+}) => (
   <Link
     to={to}
     className={`block p-3 pl-12  text-xl font-medium no-underline hover:bg-gray-100 hover:text-gray-900 text-gray-800`}
@@ -12,7 +16,10 @@ const NavLink = ({ children, to, onDismiss }) => (
   </Link>
 );
 
-const MobileMenu = ({ isOpen, onDismiss }) => {
+const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
+  isOpen,
+  onDismiss,
+}) => {
   return (
     <DialogOverlay
       className="fixed inset-0 bg-white"

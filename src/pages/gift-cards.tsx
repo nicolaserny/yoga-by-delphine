@@ -1,9 +1,9 @@
-import { Link } from "gatsby";
+import { Link, PageProps } from "gatsby";
 import React from "react";
 import { Layout, Seo, PageTitle, GiftCard } from "../components";
 import useShopifyGiftCards from "../hooks/useShopifyGiftCards";
 
-const GiftCards = () => {
+const GiftCards: React.FC<PageProps> = () => {
   const giftCards = useShopifyGiftCards();
   return (
     <Layout>

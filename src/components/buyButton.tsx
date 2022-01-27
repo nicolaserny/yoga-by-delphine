@@ -7,7 +7,7 @@ const client = buildClient({
   storefrontAccessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_API_TOKEN,
 });
 
-function useBuy(shopifyId) {
+function useBuy(shopifyId: string) {
   const [isBuying, setIsBuying] = useState(false);
   const checkoutCallback = useCallback(async () => {
     setIsBuying(true);
@@ -43,7 +43,10 @@ function useBuy(shopifyId) {
   return { isBuying, checkoutCallback };
 }
 
-const BuyButton = ({ shopifyId, children }) => {
+const BuyButton: React.FC<{ shopifyId: string }> = ({
+  shopifyId,
+  children,
+}) => {
   const { isBuying, checkoutCallback } = useBuy(shopifyId);
 
   return (

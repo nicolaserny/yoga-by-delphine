@@ -1,6 +1,9 @@
 module.exports = {
   mode: "jit",
-  content: ["./src/pages/**/*.{jsx,js}", "./src/components/**/*.{html,js}"],
+  content: [
+    "./src/pages/**/*.{jsx,js,ts,tsx}",
+    "./src/components/**/*.{html,js,ts,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {

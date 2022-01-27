@@ -1,8 +1,9 @@
+import { PageProps } from "gatsby";
 import React from "react";
 import { Seo } from "../components";
 import { Layout } from "../components";
 
-const Sent = () => (
+const Sent: React.FC<PageProps> = () => (
   <Layout>
     <Seo metadata={{ title: "Message envoyé" }} />
     <div className="flex flex-col items-center justify-center w-full h-full my-3">

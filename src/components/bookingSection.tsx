@@ -1,13 +1,17 @@
 import React from "react";
 import Course from "./course";
 import { compareAsc } from "date-fns";
-import { CourseType } from "../hooks/useShopifyCourses";
+import { YogaProduct } from "../hooks/useShopifyCourses";
 
 const Separator = () => (
   <div className="w-full h-px mt-3 md:mt-4 lg:mt-6 mb-3 lg:mb-6 bg-gray-200" />
 );
 
-const BookingSection = ({ title, description, courses }) => (
+const BookingSection: React.FC<{
+  title: string;
+  description: string | JSX.Element;
+  courses: YogaProduct[];
+}> = ({ title, description, courses }) => (
   <>
     <Separator />
     <section className="lg:flex lg:flex-row mt-3 lg:mt-4">
@@ -26,13 +30,13 @@ const BookingSection = ({ title, description, courses }) => (
           </p>
         )}
         {courses
-          .filter((course) => course.type === CourseType.CARD)
+          .filter((course) => course.type === "CARD")
           .map((course) => (
             <Course key={course.shopifyId} course={course} />
           ))}
         {courses
-          .filter((course) => course.type !== CourseType.CARD)
-          .sort((a, b) => compareAsc(a.datetime, b.datetime))
+          .filter((course) => course.type !== "CARD")
+          .sort((a, b) => compareAsc(a.datetime as Date, b.datetime as Date))
           .map((course) => (
             <Course key={course.shopifyId} course={course} />
           ))}
