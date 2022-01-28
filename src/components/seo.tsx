@@ -1,9 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function Seo({ metadata, lang }) {
+function Seo({
+  metadata,
+  lang = "fr",
+}: {
+  metadata: { title?: string; description?: string; ogimage?: string };
+  lang?: string;
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -27,9 +32,7 @@ function Seo({ metadata, lang }) {
     : defaults.title;
   const siteUrl = site.siteMetadata.siteUrl;
   const description = metadata?.description || defaults.description;
-  const ogimage = metadata?.ogimage
-    ? metadata.ogimage.childImageSharp.fluid.src
-    : defaults.ogimage;
+  const ogimage = metadata?.ogimage || defaults.ogimage;
 
   return (
     <Helmet
@@ -43,19 +46,19 @@ function Seo({ metadata, lang }) {
         as="font"
         href="/fonts/montserrat-v15-latin-regular.woff2"
         type="font/woff2"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       ></link>
       <link
         rel="preload"
         as="font"
         href="/fonts/merriweather-v22-latin-700.woff2"
         type="font/woff2"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       ></link>
       <meta name="description" content={description} />
-      <meta itemprop="name" content={title} />
-      <meta itemprop="description" content={description} />
-      <meta itemprop="image" content={`${siteUrl}${ogimage}`} />
+      <meta itemProp="name" content={title} />
+      <meta itemProp="description" content={description} />
+      <meta itemProp="image" content={`${siteUrl}${ogimage}`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={defaults.twitterUsername} />
       <meta name="twitter:title" content={title} />
@@ -80,14 +83,5 @@ function Seo({ metadata, lang }) {
     </Helmet>
   );
 }
-
-Seo.defaultProps = {
-  lang: `fr`,
-};
-
-Seo.propTypes = {
-  lang: PropTypes.string,
-  metadata: PropTypes.object,
-};
 
 export default Seo;

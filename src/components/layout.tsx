@@ -1,9 +1,12 @@
 import React from "react";
-import NavBar from "./navBar";
+import { NavBar } from "./navBar";
 import Footer from "./footer";
 import Announcement from "./announcement";
 
-const Layout = ({ className, children, mainWithFullWidth = false }) => (
+const Layout: React.FC<{ mainWithFullWidth?: boolean }> = ({
+  children,
+  mainWithFullWidth = false,
+}) => (
   <div className="">
     <Announcement />
     <div
