@@ -19,11 +19,11 @@ const NavBar = () => {
 
   return (
     <nav className="flex flex-nowrap items-baseline w-full relative">
-      <span className="inline-block flex-grow flex-shrink-0 text-gray-800 text-xl lg:text-2xl font-semibold text-left align-baseline">
+      <span className="inline-block grow shrink-0 text-gray-800 text-xl lg:text-2xl font-semibold text-left align-baseline">
         Yoga <span className="text-purple-600">by</span> Delphine
       </span>
       <ul
-        className={`hidden xl:flex  lg:static flex-grow-0 list-none items-baseline w-screen lg:w-auto pl-12 pt-24 lg:pl-0 lg:pt-0 bg-white lg:bg-transparent `}
+        className={`hidden xl:flex  lg:static grow-0 list-none items-baseline w-screen lg:w-auto pl-12 pt-24 lg:pl-0 lg:pt-0 bg-white lg:bg-transparent `}
       >
         <li>
           <NavLink to="/">Accueil</NavLink>
@@ -47,7 +47,7 @@ const NavBar = () => {
         </li>
       </ul>
       <button
-        className={`xl:hidden relative flex-grow-0 self-end focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
+        className={`xl:hidden relative grow-0 self-end focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
         onClick={() => setShowMobileMenu(true)}
       >
         <svg
