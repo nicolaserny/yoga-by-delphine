@@ -7,7 +7,7 @@ const LandingBlock = () => (
   <div className="width-constraints">
     <div className="flex justify-between items-stretch pb-16 pt-10 xl:pt-0">
       <div className="flex flex-col sm:w-3/5 lg:w-1/2 sm:pr-6 xl:pr-2 ">
-        <div className="flex flex-col justify-center flex-grow">
+        <div className="flex flex-col justify-center grow">
           <h1 className="text-gray-800 text-left text-3xl lg:text-4xl xl:text-5xl leading-tight font-serif font-bold">
             Pratiquer le yoga <br />
             <span className="text-purple-600 text-left text-3xl lg:text-4xl xl:text-5xl leading-tight font-serif font-bold">

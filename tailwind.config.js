@@ -1,5 +1,4 @@
 module.exports = {
-  mode: "jit",
   content: [
     "./src/pages/**/*.{jsx,js,ts,tsx}",
     "./src/components/**/*.{html,js,ts,tsx}",
@@ -23,6 +22,7 @@ module.exports = {
         "6xl": "4rem",
       },
       colors: {
+        current: "currentColor",
         light: "#F5F7FA",
         gray: {
           100: "#F0F4F8",
@@ -77,25 +77,6 @@ module.exports = {
         courselg: "minmax(max-content, 200px) minmax(0, 1fr) auto",
         course: "70px minmax(max-content, 240px) minmax(0, 1fr) auto",
       },
-      fill: (theme) => ({
-        gray: {
-          100: theme("colors.gray.100"),
-          200: theme("colors.gray.200"),
-          500: theme("colors.gray.500"),
-          800: theme("colors.gray.800"),
-          900: theme("colors.gray.900"),
-          1000: theme("colors.gray.1000"),
-        },
-        purple: {
-          100: theme("colors.purple.100"),
-          500: theme("colors.purple.500"),
-          600: theme("colors.purple.600"),
-        },
-        red: {
-          200: theme("colors.red.200"),
-          400: theme("colors.red.400"),
-        },
-      }),
     },
   },
   plugins: [],
