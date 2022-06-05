@@ -67,6 +67,8 @@ function formatCourseType(category: CourseCategory) {
       return "Studio";
     case "other_private":
       return "A domicile";
+    case "other_subscription":
+      return "Zoom / Extérieur";
     default:
       return "Zoom";
   }

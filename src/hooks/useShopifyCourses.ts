@@ -1,12 +1,16 @@
 import { useStaticQuery, graphql } from "gatsby";
-import { parse } from "date-fns";
+import { parse, isValid } from "date-fns";
 import fr from "date-fns/locale/fr";
 
 const SubscriptionKeyword = "Abonnement";
 const CardKeyword = "Carte";
 
 type CourseType = "REGULAR" | "SUBSCRIPTION" | "CARD";
-export type CourseCategory = "online" | "studio" | "other_private";
+export type CourseCategory =
+  | "online"
+  | "studio"
+  | "other_private"
+  | "other_subscription";
 
 export type YogaProduct = {
   id: string;
@@ -42,18 +46,20 @@ function createSubscription(
   const datetimeSubscription = parse(datetimeString, "MM/yyyy", new Date(), {
     locale: fr,
   });
-
-  return {
-    id: product.id,
-    type: "SUBSCRIPTION",
-    title: yogaType,
-    duration: undefined,
-    description: product.description,
-    datetime: datetimeSubscription,
-    price: product.variants[0].price,
-    category: product.productType,
-    shopifyId: product.variants[0].shopifyId,
-  } as YogaProduct;
+  if (isValid(datetimeSubscription)) {
+    return {
+      id: product.id,
+      type: "SUBSCRIPTION",
+      title: yogaType,
+      duration: undefined,
+      description: product.description,
+      datetime: datetimeSubscription,
+      price: product.variants[0].price,
+      category: product.productType,
+      shopifyId: product.variants[0].shopifyId,
+    } as YogaProduct;
+  }
+  return createCard(product, yogaType, datetimeString);
 }
 
 function createCard(

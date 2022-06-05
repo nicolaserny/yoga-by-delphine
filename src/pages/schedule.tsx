@@ -54,9 +54,16 @@ const Schedule: React.FC<PageProps> = () => {
         />
         <BookingSection
           title="Autres"
-          description="Cours privés ou en extérieur"
+          description={
+            <>
+              <p>Cours privés ou en extérieur</p>
+              <p>Autres formules d'abonnement</p>
+            </>
+          }
           courses={courses.filter(
-            (course) => course.category === "other_private",
+            (course) =>
+              course.category === "other_private" ||
+              course.category === "other_subscription",
           )}
         />
       </div>
