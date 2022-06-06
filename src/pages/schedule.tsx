@@ -40,7 +40,11 @@ const Schedule: React.FC<PageProps> = () => {
               </a>
             </span>
           }
-          courses={courses.filter((course) => course.category === "online")}
+          courses={courses.filter(
+            (course) =>
+              course.category === "online" ||
+              course.category === "other_subscription",
+          )}
         />
         <BookingSection
           title="En studio"
