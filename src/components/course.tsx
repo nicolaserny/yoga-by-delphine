@@ -69,6 +69,8 @@ function formatCourseType(category: CourseCategory) {
       return "A domicile";
     case "other_subscription":
       return "Zoom / Extérieur";
+    case "park":
+      return "Parc Andre Citroen";
     default:
       return "Zoom";
   }

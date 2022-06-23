@@ -10,7 +10,8 @@ export type CourseCategory =
   | "online"
   | "studio"
   | "other_private"
-  | "other_subscription";
+  | "other_subscription"
+  | "park";
 
 export type YogaProduct = {
   id: string;

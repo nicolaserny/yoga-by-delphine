@@ -67,7 +67,8 @@ const Schedule: React.FC<PageProps> = () => {
           courses={courses.filter(
             (course) =>
               course.category === "other_private" ||
-              course.category === "other_subscription",
+              course.category === "other_subscription" ||
+              course.category === "park",
           )}
         />
       </div>
