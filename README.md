@@ -51,7 +51,7 @@ $ cd yoga-by-delphine && npm install
 - Run the development server:
 
 ```bash
-$ npm run develop
+$ npm run dev
 ```
 
 ## License

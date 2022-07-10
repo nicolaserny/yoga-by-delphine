@@ -1,0 +1,42 @@
+.secondary {
+  @apply bg-transparent text-lg text-red-600 font-semibold  py-2 px-4 border border-red-600  rounded-lg;
+}
+
+.secondary:hover {
+  @apply bg-red-500 text-white border-transparent;
+}
+
+.secondary:focus,
+.secondary:active {
+  @apply outline-none;
+  box-shadow: 0 0 0 2px theme("colors.red.300");
+}
+
+.primary {
+  @apply bg-red-500 text-xl text-white font-bold  py-2 px-4 rounded-lg;
+}
+
+.primary:hover {
+  @apply bg-red-600;
+}
+
+.primary:focus,
+.primary:active {
+  @apply outline-none;
+  box-shadow: 0 0 0 2px theme("colors.red.300");
+}
+
+.tertiary {
+  @apply bg-transparent inline-block text-left text-lg text-purple-600 font-semibold  py-1 px-2 border-none;
+  width: max-content;
+}
+
+.tertiary:hover {
+  @apply text-purple-800;
+}
+
+.tertiary:focus,
+.tertiary:active {
+  @apply outline-none rounded-lg text-purple-800;
+  box-shadow: 0 0 0 2px theme("colors.purple.300");
+}

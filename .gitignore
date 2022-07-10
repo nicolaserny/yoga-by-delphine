@@ -51,24 +51,17 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variable files
-.env*
-
-# gatsby files
-.cache/
-public
-
 # Mac files
 .DS_Store
 
-# Yarn
-yarn-error.log
-.pnp/
-.pnp.js
-# Yarn Integrity file
-.yarn-integrity
-env.sh
-inspirations
 .env
 .env.*
 !.env.*.TEMPLATE
+
+# Remix + netlify
+/.cache
+/public/build
+/.netlify
+/app/tailwind.css
+
+old-side/

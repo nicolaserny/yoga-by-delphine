@@ -1,6 +1,8 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{ts,tsx,jsx,js}"],
+  content: [
+    "./src/pages/**/*.{jsx,js,ts,tsx}",
+    "./src/components/**/*.{html,js,ts,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -58,6 +60,10 @@ module.exports = {
           900: "#8A041A",
           1000: "#610316",
         },
+      },
+      fontFamily: {
+        sans: "Montserrat, sans-serif",
+        serif: "Merriweather, serif",
       },
       minHeight: {
         realsm: "calc(100vh - theme('margin.20'))",
