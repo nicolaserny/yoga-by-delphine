@@ -58,3 +58,22 @@ export function getImgProps(
     sizes: sizes.join(", "),
   };
 }
+
+const createImages = <
+  ImageType extends Record<string, { id: string; alt: string }>,
+>(
+  images: ImageType,
+) => {
+  const imageBuilders: Record<string, ImageBuilder> = {};
+  for (const [name, { id, alt }] of Object.entries(images)) {
+    imageBuilders[name] = getImageBuilder(id, alt);
+  }
+  return imageBuilders as { [Name in keyof ImageType]: ImageBuilder };
+};
+
+export const images = createImages({
+  course2: {
+    id: "yoga-by-delphine/course-2.jpg",
+    alt: "Course2",
+  },
+});
