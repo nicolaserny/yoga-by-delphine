@@ -18,7 +18,7 @@ export default function Index() {
   const { blurDataUrl } = useLoaderData() as LoaderData;
   return (
     <>
-      <h1>Test2</h1>;
+      <h1>Test2</h1>
       <main>
         <BlurrableImage
           blurDataUrl={blurDataUrl}
