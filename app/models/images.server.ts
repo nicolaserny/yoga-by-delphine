@@ -1,17 +1,17 @@
-import type { ImageBuilder } from "~/images";
+export type BlurredDataUrlsResponse = Record<string, string | undefined>;
 
-export async function getBlurredDataUrl(imageBuilder: ImageBuilder) {
-  const blurredImageUrl = imageBuilder({
-    quality: "auto",
-    format: "webp",
-    resize: { width: 100 },
-    effect: { name: "blur", value: 1000 },
-  });
-  const response = await fetch(blurredImageUrl);
+// We want to use the time to live feature of ondemand builders to cache blurredDataUrls.
+export async function getBlurredDataUrlsFromApi(
+  imageIds: Array<string>,
+): Promise<BlurredDataUrlsResponse> {
+  const url = process.env.URL || "http://localhost:3000";
+  const response = await fetch(
+    `${url}/api/blurred-images/${imageIds
+      .map((e) => encodeURIComponent(e))
+      .join("/")}`,
+  );
   if (!response.ok) {
-    return undefined;
+    return {} as BlurredDataUrlsResponse;
   }
-  const buffer = await response.arrayBuffer();
-  const data = Buffer.from(buffer).toString("base64");
-  return `data:image/webp;base64,${data}`;
+  return await response.json();
 }
