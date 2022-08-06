@@ -1,9 +1,9 @@
-export type BlurredDataUrlsResponse = Record<string, string | undefined>;
+export type BlurredDataUrls = Record<string, string | undefined>;
 
 // We want to use the time to live feature of ondemand builders to cache blurredDataUrls.
 export async function getBlurredDataUrlsFromApi(
   imageIds: Array<string>,
-): Promise<BlurredDataUrlsResponse> {
+): Promise<BlurredDataUrls> {
   const url = process.env.URL || "http://localhost:3000";
   const response = await fetch(
     `${url}/api/blurred-images/${imageIds
@@ -11,7 +11,7 @@ export async function getBlurredDataUrlsFromApi(
       .join("/")}`,
   );
   if (!response.ok) {
-    return {} as BlurredDataUrlsResponse;
+    return {} as BlurredDataUrls;
   }
   return await response.json();
 }

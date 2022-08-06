@@ -72,8 +72,13 @@ const createImages = <
   return imageBuilders as { [Name in keyof ImageType]: ImageBuilder };
 };
 
-// TODO images with blurredDataUrls add helper method imagesWithBlurredDataUrls
 export const images = createImages({
+  "course-1": { id: "course-1.jpg", alt: "Hatha yoga" },
+  "course-2": { id: "course-2.jpg", alt: "Vinyasa yoga" },
+  "course-yoga-balles": { id: "course-yoga-balles.jpg", alt: "Yoga-balles" },
+  "course-3": { id: "course-3.jpg", alt: "Running yoga" },
+  "course-4": { id: "course-4.jpg", alt: "Cours en ligne sur zoom" },
+  "course-5": { id: "course-5.jpg", alt: "Cours en studio" },
   course2: {
     id: "course-2.jpg",
     alt: "Course2",

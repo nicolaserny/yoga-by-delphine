@@ -23,7 +23,12 @@ function BlurrableImage({
 
   React.useEffect(() => {
     if (!jsImgElRef.current) return;
-    if (jsImgElRef.current.complete) return;
+    if (jsImgElRef.current.complete) {
+      setTimeout(() => {
+        setVisible(true);
+      }, 0);
+      return;
+    }
 
     let current = true;
     jsImgElRef.current.addEventListener("load", () => {

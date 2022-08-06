@@ -1,8 +1,9 @@
 import React from "react";
-import { CourseDescription } from ".";
-import { useCourseImages } from "../hooks";
-import { Link } from "gatsby";
-import { CourseDescriptionProps } from "./courseDescription";
+import CourseDescription from "./courseDescription";
+import { Link } from "@remix-run/react";
+import type { CourseDescriptionProps } from "./courseDescription";
+import { images } from "~/images";
+import { useBlurDataUrls } from "~/hooks/useBlurDataUrls";
 
 const SubSection: React.FC<
   {
@@ -26,6 +27,7 @@ const SubSection: React.FC<
             description2={element.description2}
             image={element.image}
             imageRight={element.imageRight}
+            blurDataUrl={element.blurDataUrl}
           />
         ))}
       </div>
@@ -34,7 +36,7 @@ const SubSection: React.FC<
 );
 
 const YogaInfoBlock = () => {
-  const images = useCourseImages();
+  const { blurDataUrls } = useBlurDataUrls("routes/index");
   const yogaDetails = [
     {
       title: "Hatha yoga",
@@ -43,6 +45,7 @@ const YogaInfoBlock = () => {
       description2:
         "Le cours comprend un échauffement des articulations et une préparation respiratoire, éventuellement un enchaînement de postures sur le souffle (type salutations au soleil), puis viennent des postures plus statiques. Il se termine sur un temps d’intégration (savasana) et selon le thème du cours, une assise en méditation ou un pranayama (travail sur le souffle). ",
       image: images["course-1"],
+      blurDataUrl: blurDataUrls[images["course-1"].id],
     },
     {
       title: "Vinyasa yoga",
@@ -51,6 +54,7 @@ const YogaInfoBlock = () => {
       description2:
         "L’accent est mis sur des mouvements fonctionnels, respectant les articulations. Le cours se termine sur un temps d’intégration (savasana) et selon le thème du cours, une assise en méditation ou un pranayama (travail sur le souffle).",
       image: images["course-2"],
+      blurDataUrl: blurDataUrls[images["course-2"].id],
       imageRight: false,
     },
     {
@@ -69,6 +73,7 @@ const YogaInfoBlock = () => {
         </span>
       ),
       image: images["course-yoga-balles"],
+      blurDataUrl: blurDataUrls[images["course-yoga-balles"].id],
     },
     {
       title: "Running yoga",
@@ -77,6 +82,7 @@ const YogaInfoBlock = () => {
       description2:
         "Le cours commence sur le tapis de yoga, au sol. On prend le temps de se connecter au souffle pour détendre, animer, ouvrir et renforcer le corps. Les postures et mouvements sont spécialement étudiés pour le geste de la course à pied. La deuxième partie du cours, en extérieur, permet d’intégrer le travail sur tapis en condition de course à pied. Le cours s’adresse à tout le monde, et surtout à celles et ceux qui souhaitent se mettre ou remettre à la course à pied.",
       image: images["course-3"],
+      blurDataUrl: blurDataUrls[images["course-3"].id],
       imageRight: false,
     },
   ];
@@ -104,6 +110,7 @@ const YogaInfoBlock = () => {
       description2:
         "Pour le cours en lui même, ayez une tenue confortable et un tapis de yoga ou fitness. Des briques de yoga ou tout autre accessoire pour rendre l’assise ou la position allongée confortable peuvent être utiles.",
       image: images["course-4"],
+      blurDataUrl: blurDataUrls[images["course-4"].id],
     },
     {
       title: "Cours en studio",
@@ -129,6 +136,7 @@ const YogaInfoBlock = () => {
         </>
       ),
       image: images["course-5"],
+      blurDataUrl: blurDataUrls[images["course-5"].id],
       imageRight: false,
     },
   ];

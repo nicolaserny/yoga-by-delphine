@@ -1,12 +1,15 @@
 import React from "react";
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import { BlurrableImage } from "./blurrableImage";
+import type { ImageBuilder } from "~/images";
+import { getImgProps } from "~/images";
 
 export type CourseDescriptionProps = {
   title: string;
   description: string | JSX.Element;
   description2: string | JSX.Element;
-  image: IGatsbyImageData;
+  image: ImageBuilder;
   imageRight?: boolean;
+  blurDataUrl?: string;
 };
 
 const CourseDescription: React.FC<CourseDescriptionProps> = ({
@@ -14,6 +17,7 @@ const CourseDescription: React.FC<CourseDescriptionProps> = ({
   description,
   description2,
   image,
+  blurDataUrl,
   imageRight = true,
 }) => {
   return (
@@ -29,10 +33,18 @@ const CourseDescription: React.FC<CourseDescriptionProps> = ({
           {description2}
         </p>
       </div>
-      <GatsbyImage
-        className="mt-3 md:mt-0 mb-4 md:mb-0 rounded-lg"
-        image={image}
-        alt={title}
+      <BlurrableImage
+        className="aspect-h-4 aspect-w-6 w-full"
+        blurDataUrl={blurDataUrl}
+        img={
+          <img
+            className="rounded-lg object-cover object-center"
+            {...getImgProps(image, {
+              widths: [280, 560, 840, 1100, 1650],
+              sizes: ["(min-width: 600px) 600px", "50vw"],
+            })}
+          />
+        }
       />
     </>
   );

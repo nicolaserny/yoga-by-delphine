@@ -1,7 +1,6 @@
-import React from "react";
 import Illustration from "./illustration";
 import Quote from "./quote";
-import { Link } from "gatsby";
+import { Link } from "@remix-run/react";
 
 const LandingBlock = () => (
   <div className="width-constraints">
