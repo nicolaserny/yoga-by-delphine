@@ -10,11 +10,31 @@ import {
 } from "@remix-run/react";
 import { Layout } from "./components";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+  {
+    rel: "preload",
+    as: "font",
+    href: "/fonts/montserrat-v15-latin-regular.woff2",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    as: "font",
+    href: "/fonts/merriweather-v22-latin-700.woff2",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
+  { rel: "preconnect", href: "https://res.cloudinary.com" },
+  { rel: "dns-prefetch", href: "https://res.cloudinary.com" },
+  { rel: "manifest", href: "/site.webmanifest" },
+  { rel: "icon", href: "/favicon-32x32.png", type: "image/png" },
+  { rel: "stylesheet", href: styles },
+];
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Yoga by Delphine",
   viewport: "width=device-width,initial-scale=1",
 });
 
