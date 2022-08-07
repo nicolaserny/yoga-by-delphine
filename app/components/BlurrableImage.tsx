@@ -69,4 +69,4 @@ function BlurrableImage({
   );
 }
 
-export { BlurrableImage };
+export default BlurrableImage;
