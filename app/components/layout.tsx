@@ -3,10 +3,7 @@ import { NavBar } from "./navBar";
 import Footer from "./footer";
 import Announcement from "./announcement";
 
-const Layout: React.FC<{ mainWithFullWidth?: boolean }> = ({
-  children,
-  mainWithFullWidth = false,
-}) => (
+const Layout: React.FC = ({ children }) => (
   <div>
     <Announcement />
     <div
@@ -15,9 +12,7 @@ const Layout: React.FC<{ mainWithFullWidth?: boolean }> = ({
       <header className="width-constraints">
         <NavBar />
       </header>
-      <main className={mainWithFullWidth ? "w-full" : "width-constraints"}>
-        {children}
-      </main>
+      {children}
       <Footer />
     </div>
   </div>

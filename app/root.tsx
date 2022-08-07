@@ -26,7 +26,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Layout mainWithFullWidth={true}>
+        <Layout>
           <Outlet />
         </Layout>
         <ScrollRestoration />

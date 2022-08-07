@@ -1,7 +1,6 @@
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import LandingBlock from "~/components/landingBlock";
-import YogaInfoBlock from "~/components/yogaInfoBlock";
+import { LandingBlock, YogaInfoBlock } from "~/components";
 import { images } from "~/images";
 import type { BlurredDataUrls } from "~/models/images.server";
 import { getBlurredDataUrlsFromApi } from "~/models/images.server";
@@ -25,9 +24,9 @@ export const loader: LoaderFunction = async () => {
 
 export default function Index() {
   return (
-    <>
+    <main className="w-full">
       <LandingBlock />
       <YogaInfoBlock />
-    </>
+    </main>
   );
 }
