@@ -1,15 +1,11 @@
-import React, { useCallback, useState } from "react";
-import { buildClient } from "shopify-buy";
-import { navigate } from "gatsby";
+import React, { useState } from "react";
 
-const client = buildClient({
-  domain: `${process.env.GATSBY_SHOP_NAME}.myshopify.com`,
-  storefrontAccessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_API_TOKEN,
-});
-
-function useBuy(shopifyId: string) {
+const BuyButton: React.FC<{ shopifyId: string }> = ({
+  shopifyId,
+  children,
+}) => {
   const [isBuying, setIsBuying] = useState(false);
-  const checkoutCallback = useCallback(async () => {
+  const submitHandler = () => {
     setIsBuying(true);
     try {
       if (window.plausible) {
@@ -19,43 +15,13 @@ function useBuy(shopifyId: string) {
       // I add a try/catch to avoid breaking the buy process due to an analytics error
       console.warn(error);
     }
-    const checkout = await client.checkout.create();
-    if (checkout) {
-      try {
-        const updatedCheckout = await client.checkout.addLineItems(
-          checkout.id,
-          [
-            {
-              variantId: shopifyId,
-              quantity: 1,
-            },
-          ],
-        );
-        window.location.href = updatedCheckout.webUrl;
-      } catch (error) {
-        console.error(error);
-        navigate("/error");
-        setIsBuying(false);
-      }
-    }
-  }, [shopifyId, setIsBuying]);
-
-  return { isBuying, checkoutCallback };
-}
-
-const BuyButton: React.FC<{ shopifyId: string }> = ({
-  shopifyId,
-  children,
-}) => {
-  const { isBuying, checkoutCallback } = useBuy(shopifyId);
+  };
 
   return (
-    <>
+    <form action="/api/checkout" onSubmit={submitHandler} method="POST">
+      <input type="hidden" name="shopifyId" value={shopifyId} />
       {!isBuying && (
-        <button
-          onClick={checkoutCallback}
-          className="tertiary text-base xl:text-lg"
-        >
+        <button type="submit" className="tertiary text-base xl:text-lg">
           {children}
         </button>
       )}
@@ -64,7 +30,7 @@ const BuyButton: React.FC<{ shopifyId: string }> = ({
           En cours...
         </div>
       )}
-    </>
+    </form>
   );
 };
 

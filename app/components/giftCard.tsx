@@ -1,8 +1,8 @@
 import React from "react";
-import { BuyButton } from ".";
-import { GiftCard } from "../hooks/useShopifyGiftCards";
+import type { GiftCardType } from "~/models/giftCards.server";
+import BuyButton from "./buyButton";
 
-const GifCard: React.FC<{ giftCard: GiftCard }> = ({ giftCard }) => {
+const GifCard: React.FC<{ giftCard: GiftCardType }> = ({ giftCard }) => {
   return (
     <article className="w-full sm:w-[fit-content] flex flex-col sm:flex-row items-center gap-7 mx-auto my-7 bg-white px-6 py-8 lg:px-10 lg:py-12 xl:px-12 xl:py-14 rounded-lg shadow">
       <div className="w-60 xl:w-72">
