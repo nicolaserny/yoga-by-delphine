@@ -1,6 +1,7 @@
 import type { Handler } from "@netlify/functions";
 import { builder } from "@netlify/functions";
 import { setConfig, buildImageUrl } from "cloudinary-build-url";
+import fetch from "node-fetch";
 
 setConfig({
   cloudName: "nicolaspika",

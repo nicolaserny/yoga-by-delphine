@@ -2,7 +2,7 @@ import React from "react";
 import fr from "date-fns/locale/fr";
 import { format } from "date-fns";
 import BuyButton from "./buyButton";
-import { CourseCategory, YogaProduct } from "../hooks/useShopifyCourses";
+import type { YogaProduct, CourseCategory } from "~/models/courses.server";
 
 function getBuyButtonLabel(course: YogaProduct) {
   if (course.type === "REGULAR") {
@@ -112,7 +112,7 @@ const Course: React.FC<{ course: YogaProduct }> = ({ course }) => {
         {formatTitleField(course)}
       </div>
       <div className="justify-self-end text-gray-900 text-right font-medium text-xl xl:text-3xl leading-normal">
-        {parseInt(course.price)}
+        {course.price}
         <span className="text-base xl:text-xl">€</span>
       </div>
       <div className="row-start-4 lg:row-start-2 col-start-1 lg:col-start-1 xl:col-start-2 text-gray-600 font-normal text-sm xl:text-lg leading-normal">

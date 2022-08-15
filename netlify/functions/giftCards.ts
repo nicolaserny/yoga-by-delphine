@@ -12,13 +12,6 @@ type AllShopifyGiftCardData = {
   }>;
 };
 
-type GiftCard = {
-  shopifyId: string;
-  title: string;
-  description: string;
-  price: number;
-};
-
 const giftCardsHandler: Handler = async () => {
   const giftCardsResponse = await postToShopify<AllShopifyGiftCardData>({
     query: `
@@ -43,9 +36,8 @@ const giftCardsHandler: Handler = async () => {
         }
     `,
   });
-  let giftcards = [] as Array<GiftCard>;
   if (giftCardsResponse?.products) {
-    giftcards = giftCardsResponse.products.edges.flatMap((card) => {
+    const giftcards = giftCardsResponse.products.edges.flatMap((card) => {
       return card.node.variants.edges.map((variant) => ({
         shopifyId: variant.node.id,
         title: card.node.title,
@@ -53,15 +45,16 @@ const giftCardsHandler: Handler = async () => {
         price: parseInt(variant.node.priceV2.amount),
       }));
     });
+    return {
+      statusCode: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(giftcards),
+      ttl: 300,
+    };
   }
-  return {
-    statusCode: 200,
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(giftcards),
-    ttl: 300,
-  };
+  return { statusCode: 404 };
 };
 
 const handler = builder(giftCardsHandler);

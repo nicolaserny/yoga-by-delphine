@@ -17,6 +17,11 @@
   status = 200
 
 [[redirects]]
+  from = "/api/courses/*"
+  to = "/.netlify/builders/courses"
+  status = 200
+
+[[redirects]]
   from = "/api/checkout/*"
   to = "/.netlify/functions/checkout"
   status = 200

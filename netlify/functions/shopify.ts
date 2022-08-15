@@ -1,4 +1,5 @@
 import invariant from "tiny-invariant";
+import fetch from "node-fetch";
 
 export type ShopifyNode<NodeType> = {
   node: NodeType;
@@ -28,7 +29,7 @@ export async function postToShopify<ResponseDataType, VariablesType = {}>({
   invariant(shopName, "The shop name is required");
 
   try {
-    const result: ShopifyResponseType<ResponseDataType> = await fetch(
+    const response = await fetch(
       `https://${shopName}.myshopify.com/api/${ShopifyApiVersion}/graphql.json`,
       {
         method: "POST",
@@ -38,7 +39,10 @@ export async function postToShopify<ResponseDataType, VariablesType = {}>({
         },
         body: JSON.stringify({ query, variables: variables || {} }),
       },
-    ).then((res) => res.json());
+    );
+
+    const result =
+      (await response.json()) as ShopifyResponseType<ResponseDataType>;
 
     if (result.errors) {
       console.error({ errors: result.errors });

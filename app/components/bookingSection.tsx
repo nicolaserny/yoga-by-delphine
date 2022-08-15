@@ -1,7 +1,7 @@
 import React from "react";
 import Course from "./course";
 import { compareAsc } from "date-fns";
-import { YogaProduct } from "../hooks/useShopifyCourses";
+import type { YogaProduct } from "~/models/courses.server";
 
 const Separator = () => (
   <div className="w-full h-px mt-3 md:mt-4 lg:mt-6 mb-3 lg:mb-6 bg-gray-200" />
@@ -19,9 +19,9 @@ const BookingSection: React.FC<{
         <h2 className="font-semibold text-lg lg:text-xl text-gray-800 leading-normal">
           {title}
         </h2>
-        <p className="mt-2 text-gray-800 text-base font-normal leading-normal">
+        <div className="mt-2 text-gray-800 text-base font-normal leading-normal">
           {description}
-        </p>
+        </div>
       </div>
       <div className="w-full lg:w-2/3">
         {courses.length === 0 && (
