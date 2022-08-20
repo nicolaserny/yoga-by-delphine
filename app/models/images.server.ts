@@ -1,3 +1,5 @@
+import { getSiteUrl } from "~/utils/misc.server";
+
 export type BlurredDataUrls = Record<string, string | undefined>;
 
 export type BlurredDataUrlsLoader = {
@@ -8,7 +10,7 @@ export type BlurredDataUrlsLoader = {
 export async function getBlurredDataUrlsFromApi(
   imageIds: Array<string>,
 ): Promise<BlurredDataUrls> {
-  const url = process.env.URL || "http://localhost:3000";
+  const url = getSiteUrl();
   const response = await fetch(
     `${url}/api/blurred-images/${imageIds
       .map((e) => encodeURIComponent(e))

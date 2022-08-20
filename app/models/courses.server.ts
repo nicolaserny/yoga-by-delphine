@@ -1,3 +1,5 @@
+import { getSiteUrl } from "~/utils/misc.server";
+
 export type CourseType = "REGULAR" | "SUBSCRIPTION" | "CARD";
 export type CourseCategory =
   | "online"
@@ -19,10 +21,7 @@ export type YogaProduct = {
 };
 
 export async function getCoursesFromApi(): Promise<Array<YogaProduct>> {
-  console.log("url", process.env.URL);
-  console.log("apiKey", process.env.API_URL);
-  console.log("deploy url", process.env.DEPLOY_URL);
-  const url = process.env.URL || "http://localhost:3000";
+  const url = getSiteUrl();
   const response = await fetch(`${url}/api/courses`);
   if (!response.ok) {
     return [];
