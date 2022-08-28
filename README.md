@@ -8,19 +8,13 @@ You can book online and in-studio yoga courses (only available in french).
 
 ![yogabydelphine](./screenshot.png)
 
-This site is based on a JAMSTACK architecture:
+This site is based on the following stack:
 
-- [GatsbyJS](https://www.gatsbyjs.com/): a static site generator
+- [Remix](https://remix.run/): full stack web framework
 - [Shopify](https://www.shopify.com/) for the e-commerce part
-- [Netlify](https://www.netlify.com/) for CI/CD/hosting
+- [Netlify](https://www.netlify.com/) for CI/CD/hosting + serverless functions
 - [Cloudinary](https://cloudinary.com/) to manage images
 - [Tailwindcss](https://tailwindcss.com/)
-
-## How does it work?
-
-Performance and accessibility are essential for this project. That's the reason why I rely on a static site generator such as Gatsby. The challenge is to manage dynamic data (courses).
-
-The key idea of this architecture is the use of webhooks. I define webhooks to trigger builds on Netlify when a course is created/updated/deleted on Shopify.
 
 ## Design
 
@@ -28,7 +22,7 @@ You can find the website design in Figma [here](https://www.figma.com/file/wioiq
 
 ## Development
 
-> **NOTE:** a Cloudinary account and a Shopify partner account are required.
+> **NOTE:** a Shopify partner account is required.
 
 - Clone the repo:
 
@@ -43,11 +37,6 @@ $ cd yoga-by-delphine && npm install
 ```
 
 - Configure env variables by creating a _.env.development_ file (use the template file)
-
-- Upload images from src/images to Cloudinary
-
-- Update the image sources in gatsby-node.js
-
 - Run the development server:
 
 ```bash

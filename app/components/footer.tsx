@@ -50,7 +50,7 @@ const Footer = () => (
       </a>
     </div>
     <p className="text-xs text-gray-700 text-center pb-5">
-      © Nicolas Erny 2020
+      © Nicolas Erny 2022
     </p>
   </footer>
 );
