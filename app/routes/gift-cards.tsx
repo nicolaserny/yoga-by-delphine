@@ -1,14 +1,19 @@
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import type { GiftCardType } from "~/models/giftCards.server";
 import { getGiftCardsFromApi } from "~/models/giftCards.server";
+import { getSeo } from "~/utils/seo";
 import { PageTitle, GiftCard } from "../components";
 
 export const loader: LoaderFunction = async () => {
   const giftCards = await getGiftCardsFromApi();
   return json<Array<GiftCardType>>(giftCards, { status: 200 });
 };
+
+export const meta: MetaFunction = () => ({
+  ...getSeo({ title: "Cartes-Cadeaux: Offrez des cours de Yoga" }),
+});
 
 export default function GifCardRoute() {
   const giftCards = useLoaderData() as Array<GiftCardType>;

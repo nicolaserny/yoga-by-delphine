@@ -9,8 +9,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { Layout } from "./components";
+import { getSeo, siteUrl } from "./utils/seo";
 
 export const links: LinksFunction = () => [
+  { rel: "canonical", href: siteUrl },
   {
     rel: "preload",
     as: "font",
@@ -62,8 +64,9 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Yoga by Delphine",
-  viewport: "width=device-width,initial-scale=1",
+  viewport: "width=device-width,initial-scale=1,shrink-to-fit=no",
+  ...getSeo({}),
+  "google-site-verification": "E2uVZDGLRE9ex-JJspJjaoylJbHbc0AlU9IwCXotGqg",
 });
 
 export default function App() {

@@ -1,15 +1,20 @@
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import type { YogaProduct } from "~/models/courses.server";
 import { getCoursesFromApi } from "~/models/courses.server";
 import { parseCourseDate } from "~/utils/date";
+import { getSeo } from "~/utils/seo";
 import { BookingSection, PageTitle } from "../components";
 
 export const loader: LoaderFunction = async () => {
   const courses = await getCoursesFromApi();
   return json<Array<YogaProduct>>(courses, { status: 200 });
 };
+
+export const meta: MetaFunction = () => ({
+  ...getSeo({ title: "Programme des cours de Yoga" }),
+});
 
 function normalizeCourses(courses: Array<YogaProduct>) {
   return courses.map((course) => ({

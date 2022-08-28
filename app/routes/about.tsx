@@ -1,4 +1,4 @@
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import React from "react";
@@ -6,11 +6,16 @@ import { BlurrableImage, PageTitle } from "~/components";
 import { getImgProps, images } from "~/images";
 import type { BlurredDataUrlsLoader } from "~/models/images.server";
 import { getBlurredDataUrlsFromApi } from "~/models/images.server";
+import { getSeo } from "~/utils/seo";
 
 export const loader: LoaderFunction = async () => {
   const blurDataUrls = await getBlurredDataUrlsFromApi([images["about"].id]);
   return json<BlurredDataUrlsLoader>({ blurDataUrls }, { status: 200 });
 };
+
+export const meta: MetaFunction = () => ({
+  ...getSeo({ title: "Delphine, professeur de Yoga" }),
+});
 
 const StyledLi: React.FC<{}> = ({ children }) => (
   <li className="mb-1 last:mb-0">

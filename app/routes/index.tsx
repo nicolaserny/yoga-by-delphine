@@ -1,9 +1,10 @@
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { LandingBlock, YogaInfoBlock } from "~/components";
 import { images } from "~/images";
 import type { BlurredDataUrlsLoader } from "~/models/images.server";
 import { getBlurredDataUrlsFromApi } from "~/models/images.server";
+import { getSeo } from "~/utils/seo";
 
 export const loader: LoaderFunction = async () => {
   const blurDataUrls = await getBlurredDataUrlsFromApi([
@@ -16,6 +17,10 @@ export const loader: LoaderFunction = async () => {
   ]);
   return json<BlurredDataUrlsLoader>({ blurDataUrls }, { status: 200 });
 };
+
+export const meta: MetaFunction = () => ({
+  ...getSeo({ title: "Pratiquer le yoga avec Delphine Leblanc" }),
+});
 
 export default function Index() {
   return (

@@ -1,3 +1,10 @@
+import type { MetaFunction } from "@remix-run/node";
+import { getSeo } from "~/utils/seo";
+
+export const meta: MetaFunction = () => ({
+  ...getSeo({ title: "Message envoyé" }),
+});
+
 function SentRoute() {
   return (
     <main className="width-constraints">

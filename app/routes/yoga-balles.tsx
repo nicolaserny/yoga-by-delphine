@@ -1,5 +1,11 @@
+import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { PageTitle } from "~/components";
+import { getSeo } from "~/utils/seo";
+
+export const meta: MetaFunction = () => ({
+  ...getSeo({ title: "Yoga-balles" }),
+});
 
 const StyledLi: React.FC<{}> = ({ children }) => (
   <li className="mb-1 last:mb-0">
