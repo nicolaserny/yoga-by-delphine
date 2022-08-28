@@ -1,6 +1,48 @@
-[[plugins]]
-  package = "netlify-plugin-gatsby-cache"
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[dev]
+  command = "remix watch"
+  port = 3000
+
+[[redirects]]
+  from = "/api/blurred-images/*"
+  to = "/.netlify/builders/blurredImages"
+  status = 200
+
+[[redirects]]
+  from = "/api/gift-cards/*"
+  to = "/.netlify/builders/giftCards"
+  status = 200
+
+[[redirects]]
+  from = "/api/courses/*"
+  to = "/.netlify/builders/courses"
+  status = 200
+
+[[redirects]]
+  from = "/api/checkout/*"
+  to = "/.netlify/functions/checkout"
+  status = 200
+
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+
+[[headers]]
+  for = "/build/*"
+  [headers.values]
+    "Cache-Control" = "public, max-age=31536000, s-maxage=31536000"
+
 [[headers]]
   for = "/fonts/*"
   [headers.values]
-    cache-control = "public, max-age=31536000, immutable"
+   "Cache-Control"  = "public, max-age=31536000, immutable"
+
+[[plugins]]
+package = "netlify-plugin-inline-functions-env"
+  [plugins.inputs]
+  buildEvent = "onBuild"

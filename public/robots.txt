@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.yogabydelphine.com/sitemap.xml
+

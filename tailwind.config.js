@@ -1,8 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/pages/**/*.{jsx,js,ts,tsx}",
-    "./src/components/**/*.{html,js,ts,tsx}",
-  ],
+  content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
     extend: {
       fontFamily: {
@@ -61,10 +59,6 @@ module.exports = {
           1000: "#610316",
         },
       },
-      fontFamily: {
-        sans: "Montserrat, sans-serif",
-        serif: "Merriweather, serif",
-      },
       minHeight: {
         realsm: "calc(100vh - theme('margin.20'))",
         real: "calc(100vh - theme('margin.24'))",
@@ -79,5 +73,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

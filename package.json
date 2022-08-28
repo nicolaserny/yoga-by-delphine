@@ -1,63 +1,62 @@
 {
-  "name": "yoga-by-delphine",
   "private": true,
+  "name": "yoga-by-delphine",
   "description": "Yoga by Delphine website",
   "version": "0.1.0",
   "author": "Nicolas Erny",
+  "sideEffects": false,
+  "scripts": {
+    "build": "run-s \"build:*\"",
+    "build:css": "npm run generate:css -- --minify",
+    "build:remix": "remix build",
+    "dev": "run-p \"dev:*\"",
+    "dev:css": "npm run generate:css -- --watch",
+    "dev:remix": "cross-env NODE_ENV=development netlify dev",
+    "generate:css": "npx tailwindcss -i ./styles/tailwind.css -o ./app/tailwind.css",
+    "start": "cross-env NODE_ENV=production netlify dev",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
+    "@netlify/functions": "^1.0.0",
     "@reach/dialog": "^0.17.0",
-    "autoprefixer": "10.4.7",
-    "date-fns": "^2.28.0",
-    "focus-visible": "^5.2.0",
-    "gatsby": "^4.15.1",
-    "gatsby-plugin-canonical-urls": "^4.15.0",
-    "gatsby-plugin-image": "^2.15.0",
-    "gatsby-plugin-manifest": "^4.15.0",
-    "gatsby-plugin-netlify": "^4.4.0",
-    "gatsby-plugin-postcss": "^5.15.0",
-    "gatsby-plugin-react-helmet": "^5.15.0",
-    "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sharp": "^4.15.0",
-    "gatsby-plugin-sitemap": "^5.15.0",
-    "gatsby-source-filesystem": "^4.15.0",
-    "gatsby-source-shopify": "^7.4.0",
-    "gatsby-transformer-sharp": "^4.15.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-helmet": "^6.1.0",
-    "shopify-buy": "^2.15.1",
-    "source-map": "^0.8.0-beta.0",
-    "tailwindcss": "^3.0.24"
+    "@remix-run/netlify": "^1.6.5",
+    "@remix-run/node": "^1.6.5",
+    "@remix-run/react": "^1.6.5",
+    "cloudinary-build-url": "^0.2.4",
+    "clsx": "^1.2.1",
+    "cross-env": "^7.0.3",
+    "date-fns": "^2.29.1",
+    "node-fetch": "^3.2.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tiny-invariant": "^1.2.0"
   },
   "devDependencies": {
-    "@types/react-helmet": "^6.1.5",
+    "@cld-apis/types": "^0.1.6",
+    "@remix-run/dev": "^1.6.5",
+    "@remix-run/eslint-config": "^1.6.5",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@types/react": "^17.0.45",
+    "@types/react-dom": "^17.0.17",
+    "eslint": "^8.19.0",
     "husky": "^8.0.1",
-    "postcss": "^8.4.14",
-    "postcss-focus-visible": "^6.0.4",
-    "postcss-import": "^14.1.0",
-    "prettier": "^2.6.2",
-    "pretty-quick": "^3.1.3"
-  },
-  "resolutions": {
-    "source-map": "^0.8.0-beta.0"
-  },
-  "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom"
+    "netlify-plugin-inline-functions-env": "^1.0.9",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3",
+    "tailwindcss": "^3.1.6",
+    "typescript": "^4.7.4"
   },
   "keywords": [
-    "gatsby",
+    "remix",
     "yoga",
     "courses",
     "shopify"
   ],
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build --log-pages",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+  "engines": {
+    "node": ">=16"
   },
   "repository": {
     "type": "git",
@@ -65,5 +64,11 @@
   },
   "bugs": {
     "url": "https://github.com/nicolaserny/yoga-by-delphine/issues"
-  }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "build",
+    "public/build"
+  ]
 }
