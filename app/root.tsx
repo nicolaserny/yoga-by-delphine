@@ -85,6 +85,20 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <script
+          key="plausible-script"
+          async
+          defer
+          data-domain="yogabydelphine.com"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
+        <script
+          key="plausible-custom-events"
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) } `,
+          }}
+        />
       </head>
       <body>
         <Layout>
