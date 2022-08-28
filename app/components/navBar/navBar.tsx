@@ -13,6 +13,7 @@ const StyledNavLink: React.FC<{ to: string }> = ({ children, to }) => {
             : "font-medium hover:text-gray-900"
         } no-underline  text-gray-800`
       }
+      prefetch="intent"
     >
       {children}
     </NavLink>
@@ -46,7 +47,11 @@ const NavBar = () => {
           <StyledNavLink to="/contact/">Contact</StyledNavLink>
         </li>
         <li>
-          <Link to="/schedule/" className="secondary inline-block mt-2 lg:mt-0">
+          <Link
+            to="/schedule/"
+            prefetch="intent"
+            className="secondary inline-block mt-2 lg:mt-0"
+          >
             Réserver
           </Link>
         </li>

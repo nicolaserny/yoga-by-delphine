@@ -7,6 +7,7 @@ const Announcement = () => (
       <Link
         className="text-white hover:no-underline font-medium underline focus:no-underline focus:outline-none focus:ring-1 focus:ring-white"
         to="/schedule/"
+        prefetch="intent"
       >
         En savoir plus...
       </Link>

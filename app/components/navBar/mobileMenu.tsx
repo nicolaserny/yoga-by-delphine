@@ -11,6 +11,7 @@ const NavLink: React.FC<{ to: string; onDismiss: () => void }> = ({
     to={to}
     className={`block p-3 pl-12  text-xl font-medium no-underline hover:bg-gray-100 hover:text-gray-900 text-gray-800`}
     onClick={onDismiss}
+    prefetch="intent"
   >
     {children}
   </Link>
@@ -76,6 +77,7 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
               to="/schedule/"
               onClick={onDismiss}
               className="secondary inline-block ml-12 mt-3"
+              prefetch="intent"
             >
               Réserver
             </Link>
