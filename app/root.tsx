@@ -58,6 +58,16 @@ export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://res.cloudinary.com" },
   { rel: "dns-prefetch", href: "https://res.cloudinary.com" },
   { rel: "manifest", href: "/site.webmanifest" },
+  {
+    rel: "apple-touch-icon",
+    sizes: "192x192",
+    href: "/icons/icon-192x192.png",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "512x512",
+    href: "/icons/icon-512x512.png",
+  },
   { rel: "icon", href: "/favicon-32x32.png", type: "image/png" },
   { rel: "stylesheet", href: styles },
 ];
