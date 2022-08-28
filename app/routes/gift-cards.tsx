@@ -8,7 +8,12 @@ import { PageTitle, GiftCard } from "../components";
 
 export const loader: LoaderFunction = async () => {
   const giftCards = await getGiftCardsFromApi();
-  return json<Array<GiftCardType>>(giftCards, { status: 200 });
+  return json<Array<GiftCardType>>(giftCards, {
+    status: 200,
+    headers: {
+      "Cache-Control": "public, max-age=120, s-maxage=120",
+    },
+  });
 };
 
 export const meta: MetaFunction = () => ({

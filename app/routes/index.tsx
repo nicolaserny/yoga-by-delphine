@@ -15,7 +15,15 @@ export const loader: LoaderFunction = async () => {
     images["course-5"].id,
     images["course-yoga-balles"].id,
   ]);
-  return json<BlurredDataUrlsLoader>({ blurDataUrls }, { status: 200 });
+  return json<BlurredDataUrlsLoader>(
+    { blurDataUrls },
+    {
+      status: 200,
+      headers: {
+        "Cache-Control": "public, max-age=3600, s-maxage=3600",
+      },
+    },
+  );
 };
 
 export const meta: MetaFunction = () => ({

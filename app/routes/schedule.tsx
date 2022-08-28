@@ -9,7 +9,12 @@ import { BookingSection, PageTitle } from "../components";
 
 export const loader: LoaderFunction = async () => {
   const courses = await getCoursesFromApi();
-  return json<Array<YogaProduct>>(courses, { status: 200 });
+  return json<Array<YogaProduct>>(courses, {
+    status: 200,
+    headers: {
+      "Cache-Control": "public, max-age=120, s-maxage=120",
+    },
+  });
 };
 
 export const meta: MetaFunction = () => ({
