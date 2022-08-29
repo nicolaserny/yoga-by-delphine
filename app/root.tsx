@@ -7,12 +7,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "@remix-run/react";
 import { Layout } from "./components";
-import { getSeo, siteUrl } from "./utils/seo";
+import { getSeo, getUrl, siteUrl } from "./utils/seo";
 
 export const links: LinksFunction = () => [
-  { rel: "canonical", href: siteUrl },
   {
     rel: "preload",
     as: "font",
@@ -75,15 +75,22 @@ export const links: LinksFunction = () => [
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   viewport: "width=device-width,initial-scale=1,shrink-to-fit=no",
-  ...getSeo({}),
+  ...getSeo({ url: siteUrl }),
   "google-site-verification": "E2uVZDGLRE9ex-JJspJjaoylJbHbc0AlU9IwCXotGqg",
 });
+
+function CanonicalLink() {
+  const location = useLocation();
+  const canonicalUrl = getUrl(location);
+  return <link rel="canonical" href={canonicalUrl} />;
+}
 
 export default function App() {
   return (
     <html lang="fr">
       <head>
         <Meta />
+        <CanonicalLink />
         <Links />
         <script
           key="plausible-script"

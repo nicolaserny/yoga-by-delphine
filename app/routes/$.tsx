@@ -1,9 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
-import { getSeo } from "~/utils/seo";
+import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: MetaFunction = () => ({
-  ...getSeo({ title: "404: Not found" }),
-});
+export const meta: MetaFunction = ({ location }) => {
+  return {
+    ...getSeo({ title: "404: Not found", url: getUrl(location) }),
+  };
+};
 
 function NotFoundPage() {
   return (

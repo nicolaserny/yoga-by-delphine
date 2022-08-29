@@ -1,11 +1,13 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useNavigate } from "@remix-run/react";
-import { getSeo } from "~/utils/seo";
+import { getSeo, getUrl } from "~/utils/seo";
 import { PageTitle } from "../components";
 
-export const meta: MetaFunction = () => ({
-  ...getSeo({ title: "Me contacter" }),
-});
+export const meta: MetaFunction = ({ location }) => {
+  return {
+    ...getSeo({ title: "Me contacter", url: getUrl(location) }),
+  };
+};
 
 function ContactRoute() {
   const navigate = useNavigate();

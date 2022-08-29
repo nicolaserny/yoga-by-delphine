@@ -1,9 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
-import { getSeo } from "~/utils/seo";
+import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: MetaFunction = () => ({
-  ...getSeo({ title: "Erreur" }),
-});
+export const meta: MetaFunction = ({ location }) => {
+  return {
+    ...getSeo({ title: "Erreur", url: getUrl(location) }),
+  };
+};
 
 function ErrorRoute() {
   return (

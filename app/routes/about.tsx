@@ -6,16 +6,18 @@ import { BlurrableImage, PageTitle } from "~/components";
 import { getImgProps, images } from "~/images";
 import type { BlurredDataUrlsLoader } from "~/models/images.server";
 import { getBlurredDataUrlsFromApi } from "~/models/images.server";
-import { getSeo } from "~/utils/seo";
+import { getSeo, getUrl } from "~/utils/seo";
 
 export const loader: LoaderFunction = async () => {
   const blurDataUrls = await getBlurredDataUrlsFromApi([images["about"].id]);
   return json<BlurredDataUrlsLoader>({ blurDataUrls }, { status: 200 });
 };
 
-export const meta: MetaFunction = () => ({
-  ...getSeo({ title: "Delphine, professeur de Yoga" }),
-});
+export const meta: MetaFunction = ({ location }) => {
+  return {
+    ...getSeo({ title: "Delphine, professeur de Yoga", url: getUrl(location) }),
+  };
+};
 
 const StyledLi: React.FC<{}> = ({ children }) => (
   <li className="mb-1 last:mb-0">

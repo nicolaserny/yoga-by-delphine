@@ -3,7 +3,7 @@ import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import type { GiftCardType } from "~/models/giftCards.server";
 import { getGiftCardsFromApi } from "~/models/giftCards.server";
-import { getSeo } from "~/utils/seo";
+import { getSeo, getUrl } from "~/utils/seo";
 import { PageTitle, GiftCard } from "../components";
 
 export const loader: LoaderFunction = async () => {
@@ -16,9 +16,14 @@ export const loader: LoaderFunction = async () => {
   });
 };
 
-export const meta: MetaFunction = () => ({
-  ...getSeo({ title: "Cartes-Cadeaux: Offrez des cours de Yoga" }),
-});
+export const meta: MetaFunction = ({ location }) => {
+  return {
+    ...getSeo({
+      title: "Cartes-Cadeaux: Offrez des cours de Yoga",
+      url: getUrl(location),
+    }),
+  };
+};
 
 export default function GifCardRoute() {
   const giftCards = useLoaderData() as Array<GiftCardType>;

@@ -1,9 +1,15 @@
+import type { Location } from "@remix-run/react";
+
 const defaultTitle = "Yoga by Delphine";
 const defautDescription =
   "Je suis Delphine Leblanc, professeur de Yoga - Réservez vos cours de hatha yoga, vinyasa, yoga-balles et running yoga - 2 options : en ligne sur Zoom ou en studio sur Paris";
 export const siteUrl = "https://www.yogabydelphine.com";
 
-export function getSeo(metadata: { title?: string; description?: string }) {
+export function getSeo(metadata: {
+  title?: string;
+  description?: string;
+  url: string;
+}) {
   const title = metadata.title
     ? `${metadata.title} - ${defaultTitle}`
     : defaultTitle;
@@ -22,8 +28,13 @@ export function getSeo(metadata: { title?: string; description?: string }) {
     "twitter:alt": title,
     "og:image": `${siteUrl}/ogimage.png`,
     "og:image:secure_url": `${siteUrl}/ogimage.png`,
-    "og:url": siteUrl,
+    "og:url": metadata.url,
     "og:title": title,
     "og:description": description,
   };
+}
+
+export function getUrl(location: Location) {
+  const pathname = location.pathname;
+  return `${siteUrl}${pathname === "/" ? "" : pathname}`;
 }

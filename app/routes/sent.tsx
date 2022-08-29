@@ -1,9 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
-import { getSeo } from "~/utils/seo";
+import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: MetaFunction = () => ({
-  ...getSeo({ title: "Message envoyé" }),
-});
+export const meta: MetaFunction = ({ location }) => {
+  return {
+    ...getSeo({ title: "Message envoyé", url: getUrl(location) }),
+  };
+};
 
 function SentRoute() {
   return (

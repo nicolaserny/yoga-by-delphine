@@ -4,7 +4,7 @@ import { LandingBlock, YogaInfoBlock } from "~/components";
 import { images } from "~/images";
 import type { BlurredDataUrlsLoader } from "~/models/images.server";
 import { getBlurredDataUrlsFromApi } from "~/models/images.server";
-import { getSeo } from "~/utils/seo";
+import { getSeo, getUrl } from "~/utils/seo";
 
 export const loader: LoaderFunction = async () => {
   const blurDataUrls = await getBlurredDataUrlsFromApi([
@@ -26,9 +26,14 @@ export const loader: LoaderFunction = async () => {
   );
 };
 
-export const meta: MetaFunction = () => ({
-  ...getSeo({ title: "Pratiquer le yoga avec Delphine Leblanc" }),
-});
+export const meta: MetaFunction = ({ location }) => {
+  return {
+    ...getSeo({
+      title: "Pratiquer le yoga avec Delphine Leblanc",
+      url: getUrl(location),
+    }),
+  };
+};
 
 export default function Index() {
   return (

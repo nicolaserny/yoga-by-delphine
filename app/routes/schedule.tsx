@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "@remix-run/react";
 import type { YogaProduct } from "~/models/courses.server";
 import { getCoursesFromApi } from "~/models/courses.server";
 import { parseCourseDate } from "~/utils/date";
-import { getSeo } from "~/utils/seo";
+import { getSeo, getUrl } from "~/utils/seo";
 import { BookingSection, PageTitle } from "../components";
 
 export const loader: LoaderFunction = async () => {
@@ -17,9 +17,11 @@ export const loader: LoaderFunction = async () => {
   });
 };
 
-export const meta: MetaFunction = () => ({
-  ...getSeo({ title: "Programme des cours de Yoga" }),
-});
+export const meta: MetaFunction = ({ location }) => {
+  return {
+    ...getSeo({ title: "Programme des cours de Yoga", url: getUrl(location) }),
+  };
+};
 
 function normalizeCourses(courses: Array<YogaProduct>) {
   return courses.map((course) => ({
