@@ -67,6 +67,7 @@ const YogaInfoBlock = () => {
           <Link
             className="text-purple-600 hover:text-purple-800 font-semibold underline"
             to="/yoga-balles/"
+            prefetch="intent"
           >
             En savoir plus...
           </Link>
