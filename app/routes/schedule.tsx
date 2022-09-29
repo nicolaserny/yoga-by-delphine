@@ -51,6 +51,19 @@ function ScheduleRoute() {
           .
         </p>
       </div>
+
+      <p className="text-red-700 font-medium">
+        Nous rencontrons actuellement un problème avec notre partenaire Shopify.
+        <br />
+        Pour tout problème avec une commande, merci de me{" "}
+        <Link
+          className="text-red-700 hover:no-underline font-medium underline focus:no-underline focus:outline-none focus:ring-1 focus:ring-red-700"
+          to="/contact/"
+          prefetch="intent"
+        >
+          contacter
+        </Link>
+      </p>
       <div className="mb-3 lg:mb-5">
         <BookingSection
           title="En ligne"
