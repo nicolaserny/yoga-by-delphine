@@ -56,3 +56,44 @@ export async function postToShopify<ResponseDataType, VariablesType = {}>({
     console.error(error);
   }
 }
+
+export async function postToAdminShopify<ResponseDataType, VariablesType = {}>({
+  query,
+  variables,
+}: {
+  query: string;
+  variables?: VariablesType;
+}): Promise<ResponseDataType | undefined> {
+  const adminAccessToken = process.env.SHOPIFY_ADMIN_API_PASSWORD;
+  invariant(adminAccessToken, "The admin api token is required");
+  const shopName = process.env.SHOP_NAME;
+  invariant(shopName, "The shop name is required");
+
+  try {
+    const response = await fetch(
+      `https://${shopName}.myshopify.com/admin/api/${ShopifyApiVersion}/graphql.json`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Shopify-Access-Token": adminAccessToken,
+        },
+        body: JSON.stringify({ query, variables: variables || {} }),
+      },
+    );
+
+    const result =
+      (await response.json()) as ShopifyResponseType<ResponseDataType>;
+
+    if (result.errors) {
+      console.error({ errors: result.errors });
+    } else if (!result || !result.data) {
+      console.warn({ result });
+      return undefined;
+    }
+
+    return result.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
