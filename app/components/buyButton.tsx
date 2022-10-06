@@ -18,7 +18,7 @@ const BuyButton: React.FC<{ shopifyId: string }> = ({
   };
 
   return (
-    <form action="/api/order" onSubmit={submitHandler} method="POST">
+    <form action="/api/checkout" onSubmit={submitHandler} method="POST">
       <input type="hidden" name="shopifyId" value={shopifyId} />
       {!isBuying && (
         <button type="submit" className="tertiary text-base xl:text-lg">
