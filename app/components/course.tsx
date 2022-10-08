@@ -81,7 +81,7 @@ function formatDatetimeField(course: YogaProduct) {
     return "Cours privés";
   }
   if (course.type === "CARD") {
-    return course.datetime;
+    return course.datetime as string;
   }
   return format(
     course.datetime as Date,

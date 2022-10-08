@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { NavLink, Link } from "@remix-run/react";
 import MobileMenu from "./mobileMenu";
 
-const StyledNavLink: React.FC<{ to: string }> = ({ children, to }) => {
+const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
+  children,
+  to,
+}) => {
   return (
     <NavLink
       to={to}

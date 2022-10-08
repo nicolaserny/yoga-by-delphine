@@ -2,11 +2,11 @@ import React from "react";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { Link } from "@remix-run/react";
 
-const NavLink: React.FC<{ to: string; onDismiss: () => void }> = ({
-  children,
-  to,
-  onDismiss,
-}) => (
+const NavLink: React.FC<{
+  children: React.ReactNode;
+  to: string;
+  onDismiss: () => void;
+}> = ({ children, to, onDismiss }) => (
   <Link
     to={to}
     className={`block p-3 pl-12  text-xl font-medium no-underline hover:bg-gray-100 hover:text-gray-900 text-gray-800`}

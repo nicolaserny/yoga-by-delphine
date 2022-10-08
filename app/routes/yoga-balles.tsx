@@ -9,7 +9,7 @@ export const meta: MetaFunction = ({ location }) => {
   };
 };
 
-const StyledLi: React.FC<{}> = ({ children }) => (
+const StyledLi: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <li className="mb-1 last:mb-0">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -268,7 +268,7 @@ function YogaBallsRoute() {
               <ol className="leading-loose">
                 <StyledLi>
                   <StyledLink href="https://www.amazon.fr/Yoga-Tune-Up-Therapy-Balls/dp/B00U3712CK/ref=sr_1_6?__mk_fr_FR=ÅMÅŽÕÑ&crid=1MJISTPDL65GV&dchild=1&keywords=tune+up+fitness&qid=1614335806&sprefix=Tune+up%2Caps%2C160&sr=8-6">
-                    Balles régulières
+                    Balles réguli����res
                   </StyledLink>
                 </StyledLi>
                 <StyledLi>

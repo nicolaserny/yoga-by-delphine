@@ -19,7 +19,7 @@ export const meta: MetaFunction = ({ location }) => {
   };
 };
 
-const StyledLi: React.FC<{}> = ({ children }) => (
+const StyledLi: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <li className="mb-1 last:mb-0">
     <svg
       xmlns="http://www.w3.org/2000/svg"

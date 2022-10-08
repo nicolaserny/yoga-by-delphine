@@ -3,7 +3,7 @@ import { NavBar } from "./navBar";
 import Footer from "./footer";
 import Announcement from "./announcement";
 
-const Layout: React.FC = ({ children }) => (
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div>
     <Announcement />
     <div
