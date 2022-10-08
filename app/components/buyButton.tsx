@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const BuyButton: React.FC<{ shopifyId: string }> = ({
+const BuyButton: React.FC<{ shopifyId: string; children: React.ReactNode }> = ({
   shopifyId,
   children,
 }) => {
