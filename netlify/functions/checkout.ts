@@ -12,10 +12,10 @@ type ShopifyCheckoutInput = {
 };
 
 const handler: Handler = async (event) => {
-  console.log(JSON.stringify(event.headers, null, 2));
   invariant(event.body, "The body is required");
   const { shopifyId } = parse(event.body);
   invariant(typeof shopifyId === "string", "The shopifyId is required");
+  const buyerIP = event.headers["x-nf-client-connection-ip"];
 
   try {
     const response = await postToShopify<ShopifyCheckout, ShopifyCheckoutInput>(
@@ -43,6 +43,7 @@ const handler: Handler = async (event) => {
             lineItems: [{ variantId: shopifyId, quantity: 1 }],
           },
         },
+        buyerIP,
       },
     );
 

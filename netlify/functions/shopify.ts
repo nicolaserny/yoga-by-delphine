@@ -19,15 +19,17 @@ type ShopifyResponseType<ResponseDataType> = {
 export async function postToShopify<ResponseDataType, VariablesType = {}>({
   query,
   variables,
+  buyerIP,
 }: {
   query: string;
+  buyerIP?: string;
   variables?: VariablesType;
 }): Promise<ResponseDataType | undefined> {
   const storefrontAccessToken = process.env.SHOPIFY_DELEGATE_ACCESS_TOKEN;
   invariant(storefrontAccessToken, "The storefront api token is required");
   const shopName = process.env.SHOP_NAME;
   invariant(shopName, "The shop name is required");
-
+  console.log("buyerIP", buyerIP);
   try {
     const response = await fetch(
       `https://${shopName}.myshopify.com/api/${ShopifyApiVersion}/graphql.json`,
@@ -36,11 +38,11 @@ export async function postToShopify<ResponseDataType, VariablesType = {}>({
         headers: {
           "Content-Type": "application/json",
           "Shopify-Storefront-Private-Token": storefrontAccessToken,
+          ...(buyerIP && { "Shopify-Storefront-Buyer-IP": buyerIP }),
         },
         body: JSON.stringify({ query, variables: variables || {} }),
       },
     );
-
     const result =
       (await response.json()) as ShopifyResponseType<ResponseDataType>;
 
