@@ -9,7 +9,7 @@ export type ShopifyEdges<NodeType> = {
   edges: Array<ShopifyNode<NodeType>>;
 };
 
-const ShopifyApiVersion = "2022-07";
+const ShopifyApiVersion = "2022-10";
 
 type ShopifyResponseType<ResponseDataType> = {
   data?: ResponseDataType;
@@ -23,7 +23,7 @@ export async function postToShopify<ResponseDataType, VariablesType = {}>({
   query: string;
   variables?: VariablesType;
 }): Promise<ResponseDataType | undefined> {
-  const storefrontAccessToken = process.env.SHOPIFY_STOREFRONT_API_TOKEN;
+  const storefrontAccessToken = process.env.SHOPIFY_DELEGATE_ACCESS_TOKEN;
   invariant(storefrontAccessToken, "The storefront api token is required");
   const shopName = process.env.SHOP_NAME;
   invariant(shopName, "The shop name is required");
@@ -35,7 +35,7 @@ export async function postToShopify<ResponseDataType, VariablesType = {}>({
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-Shopify-Storefront-Access-Token": storefrontAccessToken,
+          "Shopify-Storefront-Private-Token": storefrontAccessToken,
         },
         body: JSON.stringify({ query, variables: variables || {} }),
       },

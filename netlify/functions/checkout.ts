@@ -12,6 +12,7 @@ type ShopifyCheckoutInput = {
 };
 
 const handler: Handler = async (event) => {
+  console.log(JSON.stringify(event.headers, null, 2));
   invariant(event.body, "The body is required");
   const { shopifyId } = parse(event.body);
   invariant(typeof shopifyId === "string", "The shopifyId is required");
