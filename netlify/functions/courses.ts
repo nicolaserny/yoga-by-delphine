@@ -127,7 +127,7 @@ const coursesHandler: Handler = async () => {
     ShopifyCoursesInput
   >({
     query: `
-        query getGiftCards($sortKey: ProductSortKeys!) {
+        query getCourses($sortKey: ProductSortKeys!) {
             products(first: 50, query: "NOT product_type:Cartes-cadeaux", sortKey: $sortKey, reverse: true) {
                 edges {
                     node {
