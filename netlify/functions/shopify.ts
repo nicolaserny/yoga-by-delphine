@@ -1,5 +1,5 @@
 import invariant from "tiny-invariant";
-import fetch from "node-fetch";
+import fetch from "@remix-run/web-fetch";
 
 export type ShopifyNode<NodeType> = {
   node: NodeType;

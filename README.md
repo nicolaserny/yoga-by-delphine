@@ -30,17 +30,19 @@ You can find the website design in Figma [here](https://www.figma.com/file/wioiq
 $ git clone https://github.com/nicolaserny/yoga-by-delphine.git
 ```
 
+- Install [pnpm](https://pnpm.io/)
+
 - Go to the project directory and install dependencies:
 
 ```bash
-$ cd yoga-by-delphine && npm install
+$ cd yoga-by-delphine && pnpm install
 ```
 
 - Configure env variables by creating a _.env.development_ file (use the template file)
 - Run the development server:
 
 ```bash
-$ npm run dev
+$ pnpm run dev
 ```
 
 ## License
