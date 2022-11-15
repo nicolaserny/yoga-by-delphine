@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "./button";
 
 const BuyButton: React.FC<{ shopifyId: string; children: React.ReactNode }> = ({
   shopifyId,
@@ -21,12 +22,12 @@ const BuyButton: React.FC<{ shopifyId: string; children: React.ReactNode }> = ({
     <form action="/api/checkout" onSubmit={submitHandler} method="POST">
       <input type="hidden" name="shopifyId" value={shopifyId} />
       {!isBuying && (
-        <button type="submit" className="tertiary text-base xl:text-lg">
+        <Button type="submit" variant="link" colorScheme="purple">
           {children}
-        </button>
+        </Button>
       )}
       {isBuying && (
-        <div className="font-medium text-base xl:text-lg px-2 py-1">
+        <div className="px-2 py-1 text-base font-medium xl:text-lg">
           En cours...
         </div>
       )}

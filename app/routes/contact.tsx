@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useNavigate } from "@remix-run/react";
+import Button from "~/components/button";
 import { getSeo, getUrl } from "~/utils/seo";
 import { PageTitle } from "../components";
 
@@ -36,10 +37,10 @@ function ContactRoute() {
 
   return (
     <main className="width-constraints">
-      <section className="md:grid md:grid-cols-2 md:gap-x-12 mb-12">
-        <div className="text-base lg:text-lg font-normal text-gray-800 leading-normal md:mr-4">
+      <section className="mb-12 md:grid md:grid-cols-2 md:gap-x-12">
+        <div className="text-base font-normal leading-normal text-gray-800 md:mr-4 lg:text-lg">
           <PageTitle>Me contacter</PageTitle>
-          <p className="mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-5 lg:mb-12">
+          <p className="mt-2 mb-3 md:mt-3 md:mb-5 lg:mt-4 lg:mb-12">
             Si vous avez des questions, besoin d'un rensignement ou un soucis
             avec une commande, je serai ravie de vous aider.
           </p>
@@ -56,8 +57,8 @@ function ContactRoute() {
               <label htmlFor="bot-field">Not for human</label>
               <input name="bot-field" id="bot-field" type="text" />
             </div>
-            <div className="lg:flex w-full">
-              <div className="mb-6 lg:flex-auto lg:mr-4">
+            <div className="w-full lg:flex">
+              <div className="mb-6 lg:mr-4 lg:flex-auto">
                 <label className="input-label" htmlFor="firstname">
                   Prénom
                 </label>
@@ -69,7 +70,7 @@ function ContactRoute() {
                   placeholder="Marie"
                 />
               </div>
-              <div className="mb-6 lg:flex-auto lg:ml-4">
+              <div className="mb-6 lg:ml-4 lg:flex-auto">
                 <label className="input-label" htmlFor="lastname">
                   Nom
                 </label>
@@ -99,7 +100,7 @@ function ContactRoute() {
                 <label className="input-label flex-auto" htmlFor="message">
                   Message
                 </label>
-                <div className="flex-auto text-sm lg:text-base font-medium text-right text-gray-600 mb-1">
+                <div className="mb-1 flex-auto text-right text-sm font-medium text-gray-600 lg:text-base">
                   Max. 500 caractères
                 </div>
               </div>
@@ -112,16 +113,21 @@ function ContactRoute() {
               />
             </div>
             <div className="flex flex-row-reverse">
-              <button className="primary" type="submit">
+              <Button
+                variant="solid"
+                size="large"
+                colorScheme="red"
+                type="submit"
+              >
                 Envoyer
-              </button>
+              </Button>
             </div>
           </form>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 912.921 680.228"
-          className="self-center w-full my-10 md:my-0"
+          className="my-10 w-full self-center md:my-0"
         >
           <path fill="#3f3d56" d="M102.002 641.27H658.11v2.361H102.002z" />
           <path

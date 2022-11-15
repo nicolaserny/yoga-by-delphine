@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "@remix-run/react";
 import MobileMenu from "./mobileMenu";
+import Button from "../button";
 
 const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
   children,
@@ -10,11 +11,11 @@ const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `mr-4 xl:mr-6 p-1 mb-3 lg:mb-0 text-xl lg:text-lg ${
+        `mr-4 mb-3 p-1 text-xl lg:mb-0 lg:text-lg xl:mr-6 ${
           isActive
-            ? "font-semibold active-nav-link hover:text-gray-800"
+            ? "active-nav-link font-semibold hover:text-gray-800"
             : "font-medium hover:text-gray-900"
-        } no-underline  text-gray-800`
+        } text-gray-800  no-underline`
       }
       prefetch="intent"
     >
@@ -27,12 +28,12 @@ const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <nav className="flex flex-nowrap items-baseline w-full relative">
-      <span className="inline-block grow shrink-0 text-gray-800 text-xl lg:text-2xl font-semibold text-left align-baseline">
+    <nav className="relative flex w-full flex-nowrap items-baseline">
+      <span className="inline-block shrink-0 grow text-left align-baseline text-xl font-semibold text-gray-800 lg:text-2xl">
         Yoga <span className="text-purple-600">by</span> Delphine
       </span>
       <ul
-        className={`hidden xl:flex  lg:static grow-0 list-none items-baseline w-screen lg:w-auto pl-12 pt-24 lg:pl-0 lg:pt-0 bg-white lg:bg-transparent `}
+        className={`hidden w-screen  grow-0 list-none items-baseline bg-white pl-12 pt-24 lg:static lg:w-auto lg:bg-transparent lg:pl-0 lg:pt-0 xl:flex `}
       >
         <li>
           <StyledNavLink to="/">Accueil</StyledNavLink>
@@ -50,17 +51,21 @@ const NavBar = () => {
           <StyledNavLink to="/contact/">Contact</StyledNavLink>
         </li>
         <li>
-          <Link
+          <Button
+            as={Link}
+            variant="outline"
+            colorScheme="red"
             to="/schedule/"
             prefetch="intent"
-            className="secondary inline-block mt-2 lg:mt-0"
+            className="mt-2 !text-lg lg:mt-0"
+            size="large"
           >
             Réserver
-          </Link>
+          </Button>
         </li>
       </ul>
       <button
-        className={`xl:hidden relative grow-0 self-end focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
+        className={`relative grow-0 self-end focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 xl:hidden`}
         onClick={() => setShowMobileMenu(true)}
       >
         <svg
