@@ -1,16 +1,21 @@
 import { Link } from "@remix-run/react";
+import Button from "./button";
 
 const Announcement = () => (
-  <div className="w-full flex justify-center p-4 text-white font-medium text-base bg-gradient-to-r from-purple-600 to-red-600">
+  <div className="flex w-full justify-center bg-gradient-to-r from-purple-600 to-red-600 p-4 text-base font-medium text-white">
     <p className="">
       Le planning de novembre est en ligne !{" "}
-      <Link
-        className="text-white hover:no-underline font-medium underline focus:no-underline focus:outline-none focus:ring-1 focus:ring-white"
+      <Button
+        as={Link}
+        variant="link"
+        colorScheme="white"
+        size="base"
+        responsive={false}
         to="/schedule/"
         prefetch="intent"
       >
         En savoir plus...
-      </Link>
+      </Button>
     </p>
   </div>
 );

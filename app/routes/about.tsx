@@ -3,6 +3,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import React from "react";
 import { BlurrableImage, PageTitle } from "~/components";
+import Button from "~/components/button";
 import { getImgProps, images } from "~/images";
 import type { BlurredDataUrlsLoader } from "~/models/images.server";
 import { getBlurredDataUrlsFromApi } from "~/models/images.server";
@@ -25,7 +26,7 @@ const StyledLi: React.FC<{ children: React.ReactNode }> = ({ children }) => (
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 125"
       height="1.4em"
-      className="inline-block mr-4  text-purple-600"
+      className="mr-4 inline-block  text-purple-600"
     >
       <path
         fill="currentColor"
@@ -40,14 +41,18 @@ const StyledLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   href,
   children,
 }) => (
-  <a
-    className="text-purple-600 hover:text-purple-800 text-sm lg:text-base font-semibold underline"
+  <Button
+    as="a"
+    variant="link"
+    colorScheme="purple"
+    size="base"
+    responsive={false}
     href={href}
     target="_blank"
     rel="noreferrer noopener"
   >
     {children}
-  </a>
+  </Button>
 );
 
 function About() {
@@ -55,9 +60,9 @@ function About() {
   return (
     <main className="width-constraints">
       <PageTitle>Je suis Delphine, professeur de Yoga...</PageTitle>
-      <section className="md:grid md:grid-cols-2 gap-x-4 xl:gap-x-12 my-4 md:my-8 lg:my-12">
-        <div className="text-base lg:text-lg font-normal text-gray-800 leading-relaxed md:mr-4">
-          <h2 className="text-lg lg:text-xl font-semibold leading-normal mb-3 md:mb-5 lg:mb-8">
+      <section className="my-4 gap-x-4 md:my-8 md:grid md:grid-cols-2 lg:my-12 xl:gap-x-12">
+        <div className="text-base font-normal leading-relaxed text-gray-800 md:mr-4 lg:text-lg">
+          <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-5 lg:mb-8 lg:text-xl">
             Le yoga est un style de vie
           </h2>
           <p className="mb-3 md:mb-5 lg:mb-8">

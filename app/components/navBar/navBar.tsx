@@ -57,7 +57,8 @@ const NavBar = () => {
             colorScheme="red"
             to="/schedule/"
             prefetch="intent"
-            className="mt-2 !text-lg lg:mt-0"
+            className="mt-2 lg:mt-0"
+            responsive={false}
             size="large"
           >
             Réserver

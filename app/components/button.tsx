@@ -5,8 +5,9 @@ type ButtonProps<Type extends React.ElementType> = {
   children: React.ReactNode;
   as?: Type;
   variant: "solid" | "outline" | "link";
-  colorScheme: "purple" | "red" | "gray";
-  size?: "base" | "large";
+  colorScheme: "purple" | "red" | "gray" | "white";
+  size?: "small" | "base" | "large" | "xlarge";
+  responsive?: boolean;
 };
 
 type ButtonComponent = <T extends React.ElementType = "button">(
@@ -24,6 +25,7 @@ const Button = React.forwardRef(function Button<
     variant,
     colorScheme,
     size = "base",
+    responsive = true,
     ...props
   }: ButtonProps<Type> &
     Omit<React.ComponentPropsWithRef<Type>, keyof ButtonProps<Type>>,
@@ -38,8 +40,13 @@ const Button = React.forwardRef(function Button<
         className,
         "inline-block transition-colors duration-500 hover:duration-150",
         {
-          "text-lg xl:text-xl": size === "large",
-          "text-base xl:text-lg": size === "base",
+          "text-sm": size === "small",
+          "lg:text-base": size === "small" && responsive,
+          "text-base": size === "base",
+          "xl:text-lg": size === "base" && responsive,
+          "text-lg": size === "large",
+          "xl:text-xl": size === "large" && responsive,
+          "text-xl": size === "xlarge",
           "rounded-lg py-2 px-4 font-bold text-white focus:outline-none focus:ring":
             variant === "solid",
           "bg-red-500 hover:bg-red-600 focus:ring-red-300":
@@ -48,10 +55,12 @@ const Button = React.forwardRef(function Button<
             variant === "outline",
           "text-red-600 hover:bg-red-500 focus:ring-red-300 ":
             variant === "outline" && colorScheme === "red",
-          "w-max border-none bg-transparent py-1 px-2  text-left   font-semibold focus:outline-none focus:ring-2":
+          "w-max border-none bg-transparent text-left font-semibold no-underline hover:underline focus:rounded-lg focus:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2":
             variant === "link",
-          "text-purple-600 no-underline hover:text-purple-700 hover:underline focus:rounded-lg focus:no-underline focus:ring-purple-300":
+          "text-purple-600 hover:text-purple-700 focus-visible:ring-purple-300":
             variant === "link" && colorScheme === "purple",
+          "text-white focus-visible:ring-white":
+            variant === "link" && colorScheme === "white",
         },
       )}
     >

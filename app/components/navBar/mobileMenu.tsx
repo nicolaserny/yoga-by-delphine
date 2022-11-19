@@ -80,7 +80,9 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
               colorScheme="red"
               to="/schedule/"
               onClick={onDismiss}
-              className="ml-12 mt-3 !text-xl"
+              className="ml-12 mt-3"
+              responsive={false}
+              size="xlarge"
               prefetch="intent"
             >
               Réserver
