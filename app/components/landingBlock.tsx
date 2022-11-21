@@ -25,7 +25,7 @@ const LandingBlock = () => (
           <p className="mt-3 text-left font-sans text-base font-normal leading-relaxed text-gray-700">
             Les cours sont pour tout le monde. Pas besoin d'être souple ou
             athlétique.{" "}
-            <span className="font-medium text-purple-600">
+            <span className="font-medium text-gray-800">
               Venez comme vous êtes!
             </span>
           </p>

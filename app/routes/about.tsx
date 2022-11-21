@@ -3,7 +3,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import React from "react";
 import { BlurrableImage, PageTitle } from "~/components";
-import Button from "~/components/button";
+import AnchorLink from "~/components/anchorLink";
 import { getImgProps, images } from "~/images";
 import type { BlurredDataUrlsLoader } from "~/models/images.server";
 import { getBlurredDataUrlsFromApi } from "~/models/images.server";
@@ -41,18 +41,9 @@ const StyledLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   href,
   children,
 }) => (
-  <Button
-    as="a"
-    variant="link"
-    colorScheme="purple"
-    size="base"
-    responsive={false}
-    href={href}
-    target="_blank"
-    rel="noreferrer noopener"
-  >
+  <AnchorLink href={href} target="_blank" rel="noreferrer noopener">
     {children}
-  </Button>
+  </AnchorLink>
 );
 
 function About() {

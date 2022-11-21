@@ -4,7 +4,7 @@ import { Link } from "@remix-run/react";
 import type { CourseDescriptionProps } from "./courseDescription";
 import { images } from "~/images";
 import { useBlurDataUrls } from "~/hooks/useBlurDataUrls";
-import Button from "./button";
+import AnchorLink from "./anchorLink";
 
 const SubSection: React.FC<
   {
@@ -65,13 +65,9 @@ const YogaInfoBlock = () => {
       description2: (
         <span>
           Le cours dure généralement 1 heure, et nécessite un peu de matériel.{" "}
-          <Link
-            className="font-semibold text-purple-600 underline hover:text-purple-800"
-            to="/yoga-balles/"
-            prefetch="intent"
-          >
+          <AnchorLink as={Link} to="/yoga-balles/" prefetch="intent">
             En savoir plus...
-          </Link>
+          </AnchorLink>
         </span>
       ),
       image: images["course-yoga-balles"],
@@ -94,18 +90,13 @@ const YogaInfoBlock = () => {
       description: (
         <span>
           Les cours ont lieu via la plateforme{" "}
-          <Button
-            as="a"
-            variant="link"
-            colorScheme="purple"
-            size="base"
-            responsive={false}
+          <AnchorLink
             href="https://zoom.us"
             target="_blank"
             rel="noreferrer noopener"
           >
             Zoom
-          </Button>
+          </AnchorLink>
           , en direct. Un lien vers la salle virtuelle vous sera envoyé sur
           l’email utilisé lors de la réservation (pas besoin de créer un compte
           pour participer). Le lien Zoom s’ouvre dans un navigateur internet, ou
@@ -123,11 +114,11 @@ const YogaInfoBlock = () => {
       description: (
         <>
           Adresse du studio: <br />
-          <span className="font-medium text-purple-600">
+          <span className="font-semibold text-gray-700">
             Funny Club J2A Judo et Multis-sport
           </span>
           <br />
-          <span className="font-medium text-purple-600">
+          <span className="font-semibold text-gray-700">
             50 Rue Sébastien Mercier, 75015 Paris
           </span>
           <br /> Vous devez avoir votre propre tapis de yoga, le studio n’a pas

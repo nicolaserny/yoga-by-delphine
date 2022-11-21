@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { PageTitle } from "~/components";
-import Button from "~/components/button";
+import AnchorLink from "~/components/anchorLink";
 import { getSeo, getUrl } from "~/utils/seo";
 
 export const meta: MetaFunction = ({ location }) => {
@@ -31,18 +31,9 @@ const StyledLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   href,
   children,
 }) => (
-  <Button
-    as="a"
-    variant="link"
-    colorScheme="purple"
-    size="base"
-    responsive={false}
-    href={href}
-    target="_blank"
-    rel="noreferrer noopener"
-  >
+  <AnchorLink href={href} target="_blank" rel="noreferrer noopener">
     {children}
-  </Button>
+  </AnchorLink>
 );
 
 const Illustration = () => (

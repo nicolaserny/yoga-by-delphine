@@ -1,7 +1,7 @@
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
-import Button from "~/components/button";
+import AnchorLink from "~/components/anchorLink";
 import type { YogaProduct } from "~/models/courses.server";
 import { getCoursesFromApi } from "~/models/courses.server";
 import { parseCourseDate } from "~/utils/date";
@@ -43,16 +43,9 @@ function ScheduleRoute() {
         <p>
           Pour obtenir un <span className="font-medium">cours d’essai</span>, ou{" "}
           <span className="font-medium">des cours privés</span>{" "}
-          <Button
-            as={Link}
-            variant="link"
-            colorScheme="purple"
-            responsive={false}
-            size="base"
-            to="/contact/"
-          >
+          <AnchorLink as={Link} to="/contact/">
             contacter-moi
-          </Button>
+          </AnchorLink>
           .
         </p>
       </div>
@@ -63,18 +56,13 @@ function ScheduleRoute() {
           description={
             <span>
               Les cours sont en direct sur la plateforme{" "}
-              <Button
-                as="a"
-                variant="link"
-                colorScheme="purple"
-                responsive={false}
-                size="base"
+              <AnchorLink
                 href="https://zoom.us"
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 Zoom
-              </Button>
+              </AnchorLink>
             </span>
           }
           courses={courses.filter(
