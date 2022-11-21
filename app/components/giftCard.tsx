@@ -4,14 +4,14 @@ import BuyButton from "./buyButton";
 
 const GifCard: React.FC<{ giftCard: GiftCardType }> = ({ giftCard }) => {
   return (
-    <article className="w-full sm:w-[fit-content] flex flex-col sm:flex-row items-center gap-7 mx-auto my-7 bg-white px-6 py-8 lg:px-10 lg:py-12 xl:px-12 xl:py-14 rounded-lg shadow">
+    <article className="mx-auto my-7 flex w-full flex-col items-center gap-7 rounded-lg bg-white px-6 py-8 shadow sm:w-[fit-content] sm:flex-row lg:px-10 lg:py-12 xl:px-12 xl:py-14">
       <div className="w-60 xl:w-72">
         <svg
           viewBox="0 0 409 295"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
-          className="w-full h-full"
+          className="h-full w-full"
         >
           <g clipPath={`url(#card-illustration-${giftCard.shopifyId})`}>
             <path
@@ -233,17 +233,17 @@ const GifCard: React.FC<{ giftCard: GiftCardType }> = ({ giftCard }) => {
         </svg>
       </div>
       <div>
-        <div className="text-gray-900 font-medium text-xl lg:text-2xl xl:text-3xl leading-normal">
+        <div className="text-xl font-medium leading-normal text-gray-900 lg:text-2xl xl:text-3xl">
           {giftCard.price}
           <span className="text-base lg:text-xl xl:text-2xl">€</span>
         </div>
-        <div className="text-gray-800 font-medium text-base lg:text-lg xl:text-xl leading-normal whitespace-nowrap">
+        <div className="whitespace-nowrap text-base font-medium leading-normal text-gray-800 lg:text-lg xl:text-xl">
           {giftCard.title}
         </div>
-        <div className="text-gray-600 text-sm lg:text-base xl:text-lg leading-normal whitespace-nowrap">
+        <div className="whitespace-nowrap text-sm leading-normal text-gray-600 lg:text-base xl:text-lg">
           {giftCard.description}
         </div>
-        <div className="-mx-2 mt-3">
+        <div className="mt-3">
           <BuyButton shopifyId={giftCard.shopifyId}>Acheter</BuyButton>
         </div>
       </div>

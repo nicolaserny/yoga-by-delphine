@@ -27,9 +27,7 @@ const BuyButton: React.FC<{ shopifyId: string; children: React.ReactNode }> = ({
         </Button>
       )}
       {isBuying && (
-        <div className="px-2 py-1 text-base font-medium xl:text-lg">
-          En cours...
-        </div>
+        <div className="text-base font-medium xl:text-lg">En cours...</div>
       )}
     </form>
   );

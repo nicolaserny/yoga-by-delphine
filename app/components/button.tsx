@@ -57,7 +57,7 @@ const Button = React.forwardRef(function Button<
             variant === "outline" && colorScheme === "red",
           "w-max border-none bg-transparent text-left font-semibold no-underline hover:underline focus:rounded-lg focus:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2":
             variant === "link",
-          "text-purple-600 hover:text-purple-700 focus-visible:ring-purple-300":
+          "text-purple-700 focus-visible:ring-purple-300":
             variant === "link" && colorScheme === "purple",
           "text-white focus-visible:ring-white":
             variant === "link" && colorScheme === "white",
