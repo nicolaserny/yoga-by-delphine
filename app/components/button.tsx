@@ -38,7 +38,7 @@ const Button = React.forwardRef(function Button<
       {...props}
       className={clsx(
         className,
-        "inline-block transition-colors duration-500 hover:duration-150",
+        "inline-block transition-colors duration-500 hover:duration-150 focus:outline-none",
         {
           "text-sm": size === "small",
           "lg:text-base": size === "small" && responsive,
@@ -47,17 +47,17 @@ const Button = React.forwardRef(function Button<
           "text-lg": size === "large",
           "xl:text-xl": size === "large" && responsive,
           "text-xl": size === "xlarge",
-          "rounded-lg py-2 px-4 font-bold text-white focus:outline-none focus:ring":
+          "rounded-lg py-2 px-4 font-bold text-white focus-visible:ring":
             variant === "solid",
-          "bg-red-500 hover:bg-red-600 focus:ring-red-300":
+          "bg-red-500 hover:bg-red-600 focus-visible:ring-red-300":
             variant === "solid" && colorScheme === "red",
-          "rounded-lg border border-red-600  bg-transparent py-2 px-4 font-semibold hover:border-transparent hover:text-white focus:outline-none focus:ring":
+          "rounded-lg border border-red-600  bg-transparent py-2 px-4 font-semibold hover:border-transparent hover:text-white focus:outline-none focus-visible:ring":
             variant === "outline",
-          "text-red-600 hover:bg-red-500 focus:ring-red-300 ":
+          "text-red-600 hover:bg-red-500 focus-visible:ring-red-300 ":
             variant === "outline" && colorScheme === "red",
-          "w-max border-none bg-transparent text-left font-semibold no-underline hover:underline focus:rounded-lg focus:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2":
+          "w-max border-none bg-transparent text-left font-semibold no-underline hover:underline focus:rounded-lg focus:no-underline focus-visible:outline-none focus-visible:ring-2 ":
             variant === "link",
-          "text-purple-700 focus-visible:ring-purple-300":
+          "text-purple-700 focus-visible:ring-purple-300 focus-visible:ring-offset-2":
             variant === "link" && colorScheme === "purple",
           "text-white focus-visible:ring-white":
             variant === "link" && colorScheme === "white",
