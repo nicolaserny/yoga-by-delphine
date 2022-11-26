@@ -11,9 +11,11 @@ function AnchorLink<Type extends React.ElementType = "a">({
   ...props
 }: AnchorLinkProps<Type> &
   Omit<React.ComponentPropsWithoutRef<Type>, keyof AnchorLinkProps<Type>>) {
+  const Component = (as || "a") as React.ElementType;
   return (
     <Button
       {...props}
+      as={Component}
       variant="link"
       colorScheme="purple"
       size="base"
