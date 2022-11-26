@@ -22,9 +22,11 @@ const BuyButton: React.FC<{ shopifyId: string; children: React.ReactNode }> = ({
     <form action="/api/checkout" onSubmit={submitHandler} method="POST">
       <input type="hidden" name="shopifyId" value={shopifyId} />
       {!isBuying && (
-        <Button type="submit" variant="link" colorScheme="purple">
-          {children}
-        </Button>
+        <div className="pl-5">
+          <Button type="submit" variant="link" colorScheme="purple">
+            {children}
+          </Button>
+        </div>
       )}
       {isBuying && (
         <div className="text-base font-medium xl:text-lg">En cours...</div>
