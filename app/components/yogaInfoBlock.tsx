@@ -4,6 +4,7 @@ import { Link } from "@remix-run/react";
 import type { CourseDescriptionProps } from "./courseDescription";
 import { images } from "~/images";
 import { useBlurDataUrls } from "~/hooks/useBlurDataUrls";
+import AnchorLink from "./anchorLink";
 
 const SubSection: React.FC<
   {
@@ -12,13 +13,13 @@ const SubSection: React.FC<
   } & React.HTMLAttributes<HTMLDivElement>
 > = ({ title, elements, className }) => (
   <div
-    className={`-mx-8 lg:-mx-20 xl:-mx-10 2xl:mx-0 py-5 md:py-8 lg:py-16 ${className}`}
+    className={`-mx-8 py-5 md:py-8 lg:-mx-20 lg:py-16 xl:-mx-10 2xl:mx-0 ${className}`}
   >
     <section className="width-constraints px-8 lg:px-20 xl:px-10 2xl:px-0">
-      <h2 className="text-gray-800 text-xl lg:text-2xl font-semibold">
+      <h2 className="text-xl font-semibold text-gray-800 lg:text-2xl">
         {title}
       </h2>
-      <div className="md:grid md:grid-cols-2 md:grid-flow-row-dense md:gap-x-8 lg:gap-x-12 xl:gap-x-24 md:gap-y-12 md:items-center mt-4 md:mt-8 lg:mt-12 w-full">
+      <div className="mt-4 w-full md:mt-8 md:grid md:grid-flow-row-dense md:grid-cols-2 md:items-center md:gap-x-8 md:gap-y-12 lg:mt-12 lg:gap-x-12 xl:gap-x-24">
         {elements.map((element) => (
           <CourseDescription
             key={element.title}
@@ -64,13 +65,9 @@ const YogaInfoBlock = () => {
       description2: (
         <span>
           Le cours dure généralement 1 heure, et nécessite un peu de matériel.{" "}
-          <Link
-            className="text-purple-600 hover:text-purple-800 font-semibold underline"
-            to="/yoga-balles/"
-            prefetch="intent"
-          >
+          <AnchorLink as={Link} to="/yoga-balles/" prefetch="intent">
             En savoir plus...
-          </Link>
+          </AnchorLink>
         </span>
       ),
       image: images["course-yoga-balles"],
@@ -93,14 +90,13 @@ const YogaInfoBlock = () => {
       description: (
         <span>
           Les cours ont lieu via la plateforme{" "}
-          <a
-            className="text-purple-600 hover:text-purple-800 font-semibold underline"
+          <AnchorLink
             href="https://zoom.us"
             target="_blank"
             rel="noreferrer noopener"
           >
             Zoom
-          </a>
+          </AnchorLink>
           , en direct. Un lien vers la salle virtuelle vous sera envoyé sur
           l’email utilisé lors de la réservation (pas besoin de créer un compte
           pour participer). Le lien Zoom s’ouvre dans un navigateur internet, ou
@@ -118,11 +114,11 @@ const YogaInfoBlock = () => {
       description: (
         <>
           Adresse du studio: <br />
-          <span className="font-medium text-purple-600">
+          <span className="font-semibold text-gray-700">
             Funny Club J2A Judo et Multis-sport
           </span>
           <br />
-          <span className="font-medium text-purple-600">
+          <span className="font-semibold text-gray-700">
             50 Rue Sébastien Mercier, 75015 Paris
           </span>
           <br /> Vous devez avoir votre propre tapis de yoga, le studio n’a pas

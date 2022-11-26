@@ -1,6 +1,7 @@
 import React from "react";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { Link } from "@remix-run/react";
+import Button from "../button";
 
 const NavLink: React.FC<{
   children: React.ReactNode;
@@ -9,7 +10,7 @@ const NavLink: React.FC<{
 }> = ({ children, to, onDismiss }) => (
   <Link
     to={to}
-    className={`block p-3 pl-12  text-xl font-medium no-underline hover:bg-gray-100 hover:text-gray-900 text-gray-800`}
+    className={`block p-3 pl-12  text-xl font-medium text-gray-800 no-underline hover:bg-gray-100 hover:text-gray-900`}
     onClick={onDismiss}
     prefetch="intent"
   >
@@ -73,14 +74,19 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
             </NavLink>
           </li>
           <li>
-            <Link
+            <Button
+              as={Link}
+              variant="outline"
+              colorScheme="red"
               to="/schedule/"
               onClick={onDismiss}
-              className="secondary inline-block ml-12 mt-3"
+              className="ml-12 mt-3"
+              responsive={false}
+              size="xlarge"
               prefetch="intent"
             >
               Réserver
-            </Link>
+            </Button>
           </li>
         </ul>
       </DialogContent>

@@ -1,6 +1,7 @@
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
+import AnchorLink from "~/components/anchorLink";
 import type { GiftCardType } from "~/models/giftCards.server";
 import { getGiftCardsFromApi } from "~/models/giftCards.server";
 import { getSeo, getUrl } from "~/utils/seo";
@@ -30,7 +31,7 @@ export default function GifCardRoute() {
   return (
     <main className="width-constraints">
       <PageTitle>Offrez des cours de Yoga</PageTitle>
-      <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">
+      <div className="mt-2 pb-1 text-base font-normal leading-normal text-gray-800 lg:pb-3">
         <p>
           Les cartes-cadeaux sont valables sur l’ensemble des cours, cartes et
           abonnements.
@@ -41,12 +42,9 @@ export default function GifCardRoute() {
         </p>
         <p>
           Pour toute autre question,{" "}
-          <Link
-            className="text-purple-600 hover:text-purple-800 font-semibold underline"
-            to="/contact/"
-          >
+          <AnchorLink as={Link} to="/contact/">
             contacter-moi
-          </Link>
+          </AnchorLink>
           .
         </p>
       </div>

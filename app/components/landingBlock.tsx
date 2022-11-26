@@ -1,46 +1,51 @@
 import Illustration from "./illustration";
 import Quote from "./quote";
 import { Link } from "@remix-run/react";
+import Button from "./button";
 
 const LandingBlock = () => (
   <div className="width-constraints">
-    <div className="flex justify-between items-stretch pb-16 pt-10 xl:pt-0">
-      <div className="flex flex-col sm:w-3/5 lg:w-1/2 sm:pr-6 xl:pr-2 ">
-        <div className="flex flex-col justify-center grow">
-          <h1 className="text-gray-800 text-left text-3xl lg:text-4xl xl:text-5xl leading-tight font-serif font-bold">
+    <div className="flex items-stretch justify-between pb-16 pt-10 xl:pt-0">
+      <div className="flex flex-col sm:w-3/5 sm:pr-6 lg:w-1/2 xl:pr-2 ">
+        <div className="flex grow flex-col justify-center">
+          <h1 className="text-left font-serif text-3xl font-bold leading-tight text-gray-800 lg:text-4xl xl:text-5xl">
             Pratiquer le yoga <br />
-            <span className="text-purple-600 text-left text-3xl lg:text-4xl xl:text-5xl leading-tight font-serif font-bold">
+            <span className="text-left font-serif text-3xl font-bold leading-tight text-purple-600 lg:text-4xl xl:text-5xl">
               avec Delphine Leblanc
             </span>
           </h1>
-          <p className="text-gray-700 text-left text-base font-sans font-normal leading-relaxed mt-3">
+          <p className="mt-3 text-left font-sans text-base font-normal leading-relaxed text-gray-700">
             Retrouvez votre alignement naturel et vivez avec cet alignement sur
             tous les plans : physique, énergétique, mental et émotionnel.
           </p>
-          <p className="text-gray-700 text-left text-base font-sans font-normal leading-relaxed mt-3">
+          <p className="mt-3 text-left font-sans text-base font-normal leading-relaxed text-gray-700">
             Attendez-vous à avoir la tête en bas, les mains par terre, les
             jambes levées le tout sans prise de tête et dans la bonne humeur.
           </p>
-          <p className="text-gray-700 text-left text-base font-sans font-normal leading-relaxed mt-3">
+          <p className="mt-3 text-left font-sans text-base font-normal leading-relaxed text-gray-700">
             Les cours sont pour tout le monde. Pas besoin d'être souple ou
             athlétique.{" "}
-            <span className="text-purple-600 font-medium">
+            <span className="font-medium text-gray-800">
               Venez comme vous êtes!
             </span>
           </p>
           <div className="flex">
-            <Link
+            <Button
+              as={Link}
+              variant="solid"
+              colorScheme="red"
               to="/schedule/"
               prefetch="intent"
-              className="primary mt-4 text-lg xl:text-xl"
+              className="mt-4"
+              size="large"
             >
               Réserver un cours
-            </Link>
+            </Button>
           </div>
         </div>
         <Quote className="hidden xl:block" />
       </div>
-      <div className="hidden sm:inline-block  sm:w-2/5 lg:w-1/2 lg:ml-3">
+      <div className="hidden sm:inline-block  sm:w-2/5 lg:ml-3 lg:w-1/2">
         <Illustration className="w-full" />
       </div>
     </div>

@@ -101,27 +101,27 @@ function formatTitleField(course: YogaProduct) {
 
 const Course: React.FC<{ course: YogaProduct }> = ({ course }) => {
   return (
-    <div className="grid grid-cols-coursesm lg:grid-cols-courselg xl:grid-cols-course gap-x-1 lg:gap-x-2 xl:gap-x-4 items-baseline w-full max-w-md lg:max-w-full mb-5 last:mb-0 px-4 xl:px-10 py-2 xl:py-8 bg-white rounded-lg shadow">
-      <div className="hidden xl:block row-span-2 self-center text-gray-600">
+    <div className="mb-5 grid w-full max-w-md grid-cols-coursesm items-baseline gap-x-1 rounded-lg bg-white px-4 py-2 shadow last:mb-0 lg:max-w-full lg:grid-cols-courselg lg:gap-x-2 xl:grid-cols-course xl:gap-x-4 xl:px-10 xl:py-8">
+      <div className="row-span-2 hidden self-center text-gray-600 xl:block">
         <CourseIcon category={course.category} id={course.shopifyId} />
       </div>
-      <div className="text-gray-800 font-medium text-base xl:text-lg leading-normal whitespace-nowrap">
+      <div className="whitespace-nowrap text-base font-medium leading-normal text-gray-800 xl:text-lg">
         {formatDatetimeField(course)}
       </div>
-      <div className="row-start-2 lg:row-start-1 col-start-1 lg:col-start-2 xl:col-start-3 text-gray-800 font-medium text-base xl:text-lg leading-normal">
+      <div className="col-start-1 row-start-2 text-base font-medium leading-normal text-gray-800 lg:col-start-2 lg:row-start-1 xl:col-start-3 xl:text-lg">
         {formatTitleField(course)}
       </div>
-      <div className="justify-self-end text-gray-900 text-right font-medium text-xl xl:text-3xl leading-normal">
+      <div className="justify-self-end text-right text-xl font-medium leading-normal text-gray-900 xl:text-3xl">
         {course.price}
         <span className="text-base xl:text-xl">€</span>
       </div>
-      <div className="row-start-4 lg:row-start-2 col-start-1 lg:col-start-1 xl:col-start-2 text-gray-600 font-normal text-sm xl:text-lg leading-normal">
+      <div className="col-start-1 row-start-4 text-sm font-normal leading-normal text-gray-600 lg:col-start-1 lg:row-start-2 xl:col-start-2 xl:text-lg">
         {formatCourseType(course.category)}
       </div>
-      <div className="row-start-3 lg:row-start-2 col-start-1 lg:col-start-2 xl:col-start-3 text-gray-600 font-normal text-sm xl:text-lg leading-normal">
+      <div className="col-start-1 row-start-3 text-sm font-normal leading-normal text-gray-600 lg:col-start-2 lg:row-start-2 xl:col-start-3 xl:text-lg">
         {course.description}
       </div>
-      <div className="row-start-4 lg:row-start-2 col-start-2 lg:col-start-3 xl:col-start-4 text-right -mr-2">
+      <div className="col-start-2 row-start-4 text-right lg:col-start-3 lg:row-start-2 xl:col-start-4">
         <BuyButton shopifyId={course.shopifyId}>
           {getBuyButtonLabel(course)}
         </BuyButton>

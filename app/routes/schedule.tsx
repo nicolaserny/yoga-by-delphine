@@ -1,6 +1,7 @@
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
+import AnchorLink from "~/components/anchorLink";
 import type { YogaProduct } from "~/models/courses.server";
 import { getCoursesFromApi } from "~/models/courses.server";
 import { parseCourseDate } from "~/utils/date";
@@ -36,18 +37,15 @@ function ScheduleRoute() {
   return (
     <main className="width-constraints">
       <PageTitle>Programme des cours de Yoga</PageTitle>
-      <div className="mt-2 pb-1 lg:pb-3 text-gray-800 text-base font-normal leading-normal">
+      <div className="mt-2 pb-1 text-base font-normal leading-normal text-gray-800 lg:pb-3">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>
         <p>Annulation sans frais jusqu'à 24h avant le début du cours.</p>
         <p>
           Pour obtenir un <span className="font-medium">cours d’essai</span>, ou{" "}
           <span className="font-medium">des cours privés</span>{" "}
-          <Link
-            className="text-purple-600 hover:text-purple-800 font-semibold underline"
-            to="/contact/"
-          >
+          <AnchorLink as={Link} to="/contact/">
             contacter-moi
-          </Link>
+          </AnchorLink>
           .
         </p>
       </div>
@@ -58,14 +56,13 @@ function ScheduleRoute() {
           description={
             <span>
               Les cours sont en direct sur la plateforme{" "}
-              <a
-                className="text-purple-600 hover:text-purple-800 font-semibold underline"
+              <AnchorLink
                 href="https://zoom.us"
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 Zoom
-              </a>
+              </AnchorLink>
             </span>
           }
           courses={courses.filter(

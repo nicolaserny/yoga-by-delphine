@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { PageTitle } from "~/components";
+import AnchorLink from "~/components/anchorLink";
 import { getSeo, getUrl } from "~/utils/seo";
 
 export const meta: MetaFunction = ({ location }) => {
@@ -15,7 +16,7 @@ const StyledLi: React.FC<{ children: React.ReactNode }> = ({ children }) => (
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 125"
       height="1.4em"
-      className="inline-block mr-4  text-purple-600"
+      className="mr-4 inline-block  text-purple-600"
     >
       <path
         fill="currentColor"
@@ -30,14 +31,9 @@ const StyledLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   href,
   children,
 }) => (
-  <a
-    className="text-purple-600 hover:text-purple-800 text-sm lg:text-base font-semibold underline"
-    href={href}
-    target="_blank"
-    rel="noreferrer noopener"
-  >
+  <AnchorLink href={href} target="_blank" rel="noreferrer noopener">
     {children}
-  </a>
+  </AnchorLink>
 );
 
 const Illustration = () => (
@@ -160,10 +156,10 @@ function YogaBallsRoute() {
   return (
     <main className="width-constraints">
       <PageTitle>Yoga-balles</PageTitle>
-      <div className="text-base lg:text-lg font-normal text-gray-800 leading-relaxed mb-14">
-        <section className="xl:grid xl:grid-cols-2 gap-x-4 xl:gap-x-12 mt-4 md:mt-8 lg:mt-12">
+      <div className="mb-14 text-base font-normal leading-relaxed text-gray-800 lg:text-lg">
+        <section className="mt-4 gap-x-4 md:mt-8 lg:mt-12 xl:grid xl:grid-cols-2 xl:gap-x-12">
           <div className="md:mr-4">
-            <h2 className="text-lg lg:text-xl font-semibold leading-normal mb-3 md:mb-4 lg:mb-5">
+            <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-4 lg:mb-5 lg:text-xl">
               Qu'est ce que le Yoga-balles ?
             </h2>
             <p className="mb-2 md:mb-3 lg:mb-4">
@@ -192,11 +188,11 @@ function YogaBallsRoute() {
           <Illustration />
         </section>
         <section className="mt-3 md:mt-5 lg:mt-6">
-          <h2 className="text-lg lg:text-xl font-semibold leading-normal mb-3 md:mb-4 lg:mb-5">
+          <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-4 lg:mb-5 lg:text-xl">
             Le cours
           </h2>
-          <div className="md:grid md:grid-cols-2 gap-x-4 xl:gap-x-12 mt-2 md:mt-3 lg:mt-4">
-            <p className="md:mr-4 mb-2 md:mb-3 lg:mb-4">
+          <div className="mt-2 gap-x-4 md:mt-3 md:grid md:grid-cols-2 lg:mt-4 xl:gap-x-12">
+            <p className="mb-2 md:mr-4 md:mb-3 lg:mb-4">
               Le cours dure généralement une heure, et nécessite un peu de
               matériel, l’accès à un mur ou surface équivalente (porte fermée,
               sans risque qu’elle ne s’ouvre ...), un tapis de yoga ou une
@@ -211,10 +207,10 @@ function YogaBallsRoute() {
           </div>
         </section>
         <section className="mt-3 md:mt-5 lg:mt-6">
-          <h2 className="text-lg lg:text-xl font-semibold leading-normal mb-3 md:mb-4 lg:mb-5">
+          <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-4 lg:mb-5 lg:text-xl">
             Matériel nécessaire
           </h2>
-          <div className="md:grid md:grid-cols-2 gap-x-4 xl:gap-x-12 mt-2 md:mt-3 lg:mt-4">
+          <div className="mt-2 gap-x-4 md:mt-3 md:grid md:grid-cols-2 lg:mt-4 xl:gap-x-12">
             <div className="md:mr-4">
               <ol className="leading-loose">
                 <StyledLi>un bloc ou un livre épais</StyledLi>
@@ -240,7 +236,7 @@ function YogaBallsRoute() {
           </div>
         </section>
         <section className="mt-3 md:mt-5 lg:mt-6">
-          <h2 className="text-lg lg:text-xl font-semibold leading-normal mb-3 md:mb-4 lg:mb-5">
+          <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-4 lg:mb-5 lg:text-xl">
             Où acheter le matériel ?
           </h2>
           <p className="mb-2 md:mb-3 lg:mb-4">
@@ -263,12 +259,12 @@ function YogaBallsRoute() {
             {", "}
             ou sur Amazon :
           </p>
-          <div className="md:grid md:grid-cols-2 gap-x-4 xl:gap-x-12 mt-2 md:mt-3 lg:mt-4">
+          <div className="mt-2 gap-x-4 md:mt-3 md:grid md:grid-cols-2 lg:mt-4 xl:gap-x-12">
             <div className="md:mr-4">
               <ol className="leading-loose">
                 <StyledLi>
                   <StyledLink href="https://www.amazon.fr/Yoga-Tune-Up-Therapy-Balls/dp/B00U3712CK/ref=sr_1_6?__mk_fr_FR=ÅMÅŽÕÑ&crid=1MJISTPDL65GV&dchild=1&keywords=tune+up+fitness&qid=1614335806&sprefix=Tune+up%2Caps%2C160&sr=8-6">
-                    Balles réguli����res
+                    Balles régulières
                   </StyledLink>
                 </StyledLi>
                 <StyledLi>
