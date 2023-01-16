@@ -45,6 +45,9 @@ const NavBar = () => {
           <StyledNavLink to="/gift-cards/">Cartes-cadeaux</StyledNavLink>
         </li>
         <li>
+          <StyledNavLink to="/videos/">Vidéos</StyledNavLink>
+        </li>
+        <li>
           <StyledNavLink to="/about/">A propos</StyledNavLink>
         </li>
         <li>
