@@ -64,6 +64,11 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
             </NavLink>
           </li>
           <li>
+            <NavLink to="/videos/" onDismiss={onDismiss}>
+              Vidéos
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/about/" onDismiss={onDismiss}>
               A propos
             </NavLink>

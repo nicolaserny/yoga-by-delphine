@@ -4,7 +4,7 @@ import { compareAsc } from "date-fns";
 import type { YogaProduct } from "~/models/courses.server";
 
 const Separator = () => (
-  <div className="w-full h-px mt-3 md:mt-4 lg:mt-6 mb-3 lg:mb-6 bg-gray-200" />
+  <hr className="mt-3 mb-3 h-px w-full bg-gray-200 md:mt-4 lg:mt-6 lg:mb-6" />
 );
 
 const BookingSection: React.FC<{
@@ -14,18 +14,18 @@ const BookingSection: React.FC<{
 }> = ({ title, description, courses }) => (
   <>
     <Separator />
-    <section className="lg:flex lg:flex-row mt-3 lg:mt-4">
-      <div className="w-full lg:w-1/3 mb-2 lg:mb-0 lg:pr-10">
-        <h2 className="font-semibold text-lg lg:text-xl text-gray-800 leading-normal">
+    <section className="mt-3 lg:mt-4 lg:flex lg:flex-row">
+      <div className="mb-2 w-full lg:mb-0 lg:w-1/3 lg:pr-10">
+        <h2 className="text-lg font-semibold leading-normal text-gray-800 lg:text-xl">
           {title}
         </h2>
-        <div className="mt-2 text-gray-800 text-base font-normal leading-normal">
+        <div className="mt-2 text-base font-normal leading-normal text-gray-800">
           {description}
         </div>
       </div>
       <div className="w-full lg:w-2/3">
         {courses.length === 0 && (
-          <p className="text-gray-800 font-medium text-base lg:text-lg leading-relaxed mt-px pt-px">
+          <p className="mt-px pt-px text-base font-medium leading-relaxed text-gray-800 lg:text-lg">
             Aucun cours pour le moment.
           </p>
         )}

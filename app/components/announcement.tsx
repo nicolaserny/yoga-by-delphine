@@ -4,18 +4,18 @@ import Button from "./button";
 const Announcement = () => (
   <div className="flex w-full justify-center bg-gradient-to-r from-purple-600 to-red-600 p-4 text-base font-medium text-white">
     <p className="">
-      Le planning de janvier est en ligne !{" "}
+      Le site s'enrichit d'une nouvelle section vidéos.{" "}
       <Button
         as={Link}
         variant="link"
         colorScheme="white"
         size="base"
         responsive={false}
-        to="/schedule/"
+        to="/videos/"
         prefetch="intent"
         className="group"
       >
-        En savoir plus
+        Regarder une vidéo
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

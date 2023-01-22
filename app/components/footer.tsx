@@ -1,11 +1,11 @@
 const Footer = () => (
   <footer>
-    <div className="flex justify-center text-gray-500 pb-3 lg:pb-4">
+    <div className="flex justify-center gap-4 pb-3 text-gray-500 lg:pb-4">
       <a
         href="https://www.instagram.com/wecket/"
         target="_blank"
         rel="noreferrer noopener"
-        className="mr-5 hover:text-gray-700"
+        className="hover:text-gray-700"
       >
         <svg
           width="25"
@@ -19,7 +19,27 @@ const Footer = () => (
             className="fill-current"
           />
         </svg>
-        <span className="sr-only">Delphine's instagram</span>
+        <span className="sr-only">Instagram de Delphine</span>
+      </a>
+      <a
+        href="https://www.youtube.com/@delphineleblancyoga"
+        target="_blank"
+        rel="noreferrer noopener"
+        className="hover:text-gray-700"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="26"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            className="fill-current"
+            d="M34.124 4.61a4.358 4.358 0 0 0-3.075-3.075C28.335.8 17.429.8 17.429.8S6.525.8 3.81 1.535A4.357 4.357 0 0 0 .735 4.609 44.979 44.979 0 0 0 .001 13a44.98 44.98 0 0 0 .734 8.39 4.357 4.357 0 0 0 3.075 3.076c2.714.734 13.62.734 13.62.734s10.905 0 13.619-.734a4.358 4.358 0 0 0 3.075-3.075c.506-2.768.752-5.577.734-8.39a44.987 44.987 0 0 0-.734-8.392Zm-20.18 13.619V7.77l9.05 5.23-9.05 5.228Z"
+          />
+        </svg>
+        <span className="sr-only">Chaine YouTube de Delphine</span>
       </a>
       <a
         href="https://www.facebook.com/delphineleblancyoga"
@@ -46,10 +66,10 @@ const Footer = () => (
             </clipPath>
           </defs>
         </svg>
-        <span className="sr-only">Delphine's facebook page</span>
+        <span className="sr-only">Page Facebook de Delphine</span>
       </a>
     </div>
-    <p className="text-xs text-gray-700 text-center pb-5">
+    <p className="pb-5 text-center text-xs text-gray-700">
       © Nicolas Erny 2022
     </p>
   </footer>
