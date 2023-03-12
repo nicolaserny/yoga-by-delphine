@@ -10,7 +10,11 @@ import { getBlurredDataUrlsFromApi } from "~/models/images.server";
 import { getSeo, getUrl } from "~/utils/seo";
 
 export const loader: LoaderFunction = async () => {
-  const blurDataUrls = await getBlurredDataUrlsFromApi([images["about"].id]);
+  const blurDataUrls = await getBlurredDataUrlsFromApi([
+    images["profile-2"].id,
+    images["profile-3"].id,
+    images["profile-4"].id,
+  ]);
   return json<BlurredDataUrlsLoader>({ blurDataUrls }, { status: 200 });
 };
 
@@ -103,19 +107,63 @@ function About() {
           </div>
         </div>
         <div className="lg:pl-8">
-          <BlurrableImage
-            className="aspect-h-7 aspect-w-5 w-full self-start"
-            blurDataUrl={blurDataUrls[images["about"].id]}
-            img={
-              <img
-                className="rounded-lg object-cover object-center"
-                {...getImgProps(images.about, {
-                  widths: [280, 560, 840, 1100, 1650],
-                  sizes: ["(min-width: 600px) 600px", "50vw"],
-                })}
+          <div className="relative mx-auto md:mb-[100px] md:mt-[80px] md:w-[calc(100%-110px)]  lg:mb-[100px] lg:mt-[80px] lg:w-[calc(100%-120px)] xl:mt-[133px] xl:mb-[160px] xl:w-[calc(100%-168px)]">
+            <BlurrableImage
+              className="aspect-h-4 aspect-w-3 w-full shadow-lg"
+              blurDataUrl={blurDataUrls[images["profile-3"].id]}
+              img={
+                <img
+                  className="rounded-lg object-cover object-center"
+                  {...getImgProps(images["profile-3"], {
+                    widths: [280, 560, 840, 1100, 1650],
+                    sizes: [
+                      "(max-width: 768px) 100vw",
+                      "(min-width:768px) and (max-width:1200px) 50vw",
+                      "376px",
+                    ],
+                  })}
+                />
+              }
+            />
+            <div className="absolute left-0 bottom-0 hidden -translate-x-1/2 shadow-lg md:block md:w-[110px] md:translate-y-[100px] lg:w-[120px] lg:translate-y-[100px] xl:w-[168px] xl:translate-y-[160px]">
+              <BlurrableImage
+                className="aspect-h-4 aspect-w-3 w-full"
+                blurDataUrl={blurDataUrls[images["profile-4"].id]}
+                img={
+                  <img
+                    className="rounded-lg object-cover object-center"
+                    {...getImgProps(images["profile-4"], {
+                      widths: [280, 560, 840, 1100, 1650],
+                      sizes: [
+                        "(max-width: 768px) 100vw",
+                        "(min-width:768px) and (max-width:1200px) 120px",
+                        "168px",
+                      ],
+                    })}
+                  />
+                }
               />
-            }
-          />
+            </div>
+            <div className="absolute right-0 top-0 hidden translate-x-1/2 shadow-lg md:block md:w-[110px] md:-translate-y-[80px] lg:w-[120px] lg:-translate-y-[80px] xl:w-[168px] xl:-translate-y-[133px]">
+              <BlurrableImage
+                className="aspect-h-4 aspect-w-3 w-full"
+                blurDataUrl={blurDataUrls[images["profile-2"].id]}
+                img={
+                  <img
+                    className="rounded-lg object-cover object-center"
+                    {...getImgProps(images["profile-2"], {
+                      widths: [280, 560, 840, 1100, 1650],
+                      sizes: [
+                        "(max-width: 768px) 100vw",
+                        "(min-width:768px) and (max-width:1200px) 120px",
+                        "168px",
+                      ],
+                    })}
+                  />
+                }
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>

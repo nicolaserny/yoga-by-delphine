@@ -80,4 +80,7 @@ export const images = createImages({
   "course-4": { id: "course-4.jpg", alt: "Cours en ligne sur zoom" },
   "course-5": { id: "course-5.jpg", alt: "Cours en studio" },
   about: { id: "about.jpg", alt: "Photo de profile" },
+  "profile-4": { id: "profile-4.jpg", alt: "Photo de Delphine" },
+  "profile-2": { id: "profile-2.jpg", alt: "Photo de Delphine" },
+  "profile-3": { id: "profile-3.jpg", alt: "Photo de Delphine" },
 });
