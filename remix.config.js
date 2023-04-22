@@ -6,8 +6,4 @@ module.exports = {
   future: {
     v2_meta: false,
   },
-  // appDirectory: "app",
-  // assetsBuildDirectory: "public/build",
-  // serverBuildPath: ".netlify/functions-internal/server.js",
-  // publicPath: "/build/",
 };
