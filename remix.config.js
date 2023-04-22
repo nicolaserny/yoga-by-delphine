@@ -5,5 +5,7 @@ module.exports = {
   ignoredRouteFiles: ["**/.*"],
   future: {
     v2_meta: false,
+    v2_errorBoundary: true,
+    v2_normalizeFormMethod: true,
   },
 };
