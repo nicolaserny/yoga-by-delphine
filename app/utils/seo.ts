@@ -1,3 +1,4 @@
+import type { V2_MetaDescriptor } from "@remix-run/node";
 import type { Location } from "@remix-run/react";
 
 const defaultTitle = "Yoga by Delphine";
@@ -9,29 +10,32 @@ export function getSeo(metadata: {
   title?: string;
   description?: string;
   url: string;
-}) {
+}): V2_MetaDescriptor[] {
   const title = metadata.title
     ? `${metadata.title} - ${defaultTitle}`
     : defaultTitle;
   const description = metadata.description || defautDescription;
-  return {
-    title: title,
-    description: description,
-    keywords: "yoga, cours en ligne, cours en studio, Paris",
-    image: `${siteUrl}/ogimage.png`,
-    "twitter:card": "summary_large_image",
-    "twitter:site": "@nicolaserny",
-    "twitter:creator": "@nicolaserny",
-    "twitter:title": title,
-    "twitter:description": description,
-    "twitter:image": `${siteUrl}/ogimage.png`,
-    "twitter:alt": title,
-    "og:image": `${siteUrl}/ogimage.png`,
-    "og:image:secure_url": `${siteUrl}/ogimage.png`,
-    "og:url": metadata.url,
-    "og:title": title,
-    "og:description": description,
-  };
+  return [
+    { title },
+    { name: "description", content: description },
+    {
+      name: "keywords",
+      content: "yoga, cours en ligne, cours en studio, Paris",
+    },
+    { name: "image", content: `${siteUrl}/ogimage.png` },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:site", content: "@nicolaserny" },
+    { name: "twitter:creator", content: "@nicolaserny" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: `${siteUrl}/ogimage.png` },
+    { name: "twitter:alt", content: title },
+    { property: "og:image", content: `${siteUrl}/ogimage.png` },
+    { property: "og:image:secure_url", content: `${siteUrl}/ogimage.png` },
+    { property: "og:url", content: metadata.url },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+  ];
 }
 
 export function getUrl(location: Location) {

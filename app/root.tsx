@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/node";
 import styles from "./tailwind.css";
 import {
   Links,
@@ -10,7 +10,7 @@ import {
   useLocation,
 } from "@remix-run/react";
 import { Layout } from "./components";
-import { getSeo, getUrl, siteUrl } from "./utils/seo";
+import { getUrl } from "./utils/seo";
 
 export const links: LinksFunction = () => [
   {
@@ -72,13 +72,6 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  viewport: "width=device-width,initial-scale=1,shrink-to-fit=no",
-  ...getSeo({ url: siteUrl }),
-  "google-site-verification": "E2uVZDGLRE9ex-JJspJjaoylJbHbc0AlU9IwCXotGqg",
-});
-
 function CanonicalLink() {
   const location = useLocation();
   const canonicalUrl = getUrl(location);
@@ -89,6 +82,15 @@ export default function App() {
   return (
     <html lang="fr">
       <head>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,shrink-to-fit=no"
+        />
+        <meta
+          name="google-site-verification"
+          content="E2uVZDGLRE9ex-JJspJjaoylJbHbc0AlU9IwCXotGqg"
+        />
         <Meta />
         <CanonicalLink />
         <Links />

@@ -1,14 +1,12 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from "@remix-run/react";
 import React from "react";
 import { PageTitle } from "~/components";
 import AnchorLink from "~/components/anchorLink";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: MetaFunction = ({ location }) => {
-  return {
-    ...getSeo({ title: "Yoga-balles", url: getUrl(location) }),
-  };
-};
+export const meta: V2_MetaFunction = ({ location }) => [
+  ...getSeo({ title: "Yoga-balles", url: getUrl(location) }),
+];
 
 const StyledLi: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <li className="mb-1 last:mb-0">
@@ -192,7 +190,7 @@ function YogaBallsRoute() {
             Le cours
           </h2>
           <div className="mt-2 gap-x-4 md:mt-3 md:grid md:grid-cols-2 lg:mt-4 xl:gap-x-12">
-            <p className="mb-2 md:mr-4 md:mb-3 lg:mb-4">
+            <p className="mb-2 md:mb-3 md:mr-4 lg:mb-4">
               Le cours dure généralement une heure, et nécessite un peu de
               matériel, l’accès à un mur ou surface équivalente (porte fermée,
               sans risque qu’elle ne s’ouvre ...), un tapis de yoga ou une

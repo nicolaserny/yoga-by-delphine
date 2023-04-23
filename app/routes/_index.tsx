@@ -1,4 +1,4 @@
-import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import type { LoaderFunction, V2_MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { LandingBlock, YogaInfoBlock } from "~/components";
 import { images } from "~/images";
@@ -26,13 +26,13 @@ export const loader: LoaderFunction = async () => {
   );
 };
 
-export const meta: MetaFunction = ({ location }) => {
-  return {
+export const meta: V2_MetaFunction = ({ location }) => {
+  return [
     ...getSeo({
       title: "Pratiquer le yoga avec Delphine Leblanc",
       url: getUrl(location),
     }),
-  };
+  ];
 };
 
 export default function Index() {

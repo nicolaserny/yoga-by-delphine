@@ -1,20 +1,18 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from "@remix-run/react";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: MetaFunction = ({ location }) => {
-  return {
-    ...getSeo({ title: "Message envoyé", url: getUrl(location) }),
-  };
-};
+export const meta: V2_MetaFunction = ({ location }) => [
+  ...getSeo({ title: "Message envoyé", url: getUrl(location) }),
+];
 
 function SentRoute() {
   return (
     <main className="width-constraints">
-      <div className="flex flex-col items-center justify-center w-full h-full my-3">
+      <div className="my-3 flex h-full w-full flex-col items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 570 511.675"
-          className="w-40 md:w-56 lg:w-64 mx-6"
+          className="mx-6 w-40 md:w-56 lg:w-64"
         >
           <path
             d="M565 195.675a.997.997 0 01-.572-.18L287.87 2.893a5.015 5.015 0 00-5.729.01L7.574 195.494a1 1 0 01-1.148-1.638L280.993 1.264a7.022 7.022 0 018.02-.013L565.57 193.854a1 1 0 01-.572 1.82z"
@@ -45,10 +43,10 @@ function SentRoute() {
             className="fill-purple-600"
           />
         </svg>
-        <div className="text-gray-800 sm:text-xl md:text-2xl lg:text-4xl font-semibold mt-6">
+        <div className="mt-6 font-semibold text-gray-800 sm:text-xl md:text-2xl lg:text-4xl">
           Merci pour le message
         </div>
-        <div className="text-purple-600 sm:text-lg md:text-xl lg:text-2xl font-semibold">
+        <div className="font-semibold text-purple-600 sm:text-lg md:text-xl lg:text-2xl">
           Je vous répondrai rapidement
         </div>
       </div>

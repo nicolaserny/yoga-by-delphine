@@ -1,7 +1,7 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from "@remix-run/node";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: MetaFunction = ({ location }) => {
+export const meta: V2_MetaFunction = ({ location }) => {
   return {
     ...getSeo({ title: "404: Not found", url: getUrl(location) }),
   };
@@ -10,11 +10,11 @@ export const meta: MetaFunction = ({ location }) => {
 function NotFoundPage() {
   return (
     <main className="width-constraints">
-      <div className="flex flex-col items-center justify-center w-full h-full my-3">
+      <div className="my-3 flex h-full w-full flex-col items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1074.392 584.231"
-          className="w-40 md:w-56 lg:w-64 mx-6"
+          className="mx-6 w-40 md:w-56 lg:w-64"
         >
           <ellipse
             cx="540.643"
@@ -233,7 +233,7 @@ function NotFoundPage() {
           <circle cx="582.946" cy="355.115" r="5" fill="#653cad" opacity=".3" />
           <circle cx="460.946" cy="355.115" r="5" fill="#653cad" opacity=".3" />
         </svg>
-        <div className="text-gray-800 sm:text-xl md:text-2xl lg:text-4xl font-semibold mt-6">
+        <div className="mt-6 font-semibold text-gray-800 sm:text-xl md:text-2xl lg:text-4xl">
           Cette page n'existe pas
         </div>
       </div>

@@ -1,18 +1,16 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from "@remix-run/node";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: MetaFunction = ({ location }) => {
-  return {
-    ...getSeo({ title: "Erreur", url: getUrl(location) }),
-  };
-};
+export const meta: V2_MetaFunction = ({ location }) => [
+  ...getSeo({ title: "Erreur", url: getUrl(location) }),
+];
 
 function ErrorRoute() {
   return (
     <main className="width-constraints">
-      <div className="flex flex-col items-center justify-center w-full h-full my-3">
+      <div className="my-3 flex h-full w-full flex-col items-center justify-center">
         <svg
-          className="w-40 md:w-56 lg:w-64 mx-6"
+          className="mx-6 w-40 md:w-56 lg:w-64"
           xmlns="http://www.w3.org/2000/svg"
           viewBox=" 0 0 1022.7 785.81"
         >
@@ -363,10 +361,10 @@ function ErrorRoute() {
           />
         </svg>
 
-        <div className="text-red-600 sm:text-xl md:text-2xl lg:text-4xl font-semibold mt-6">
+        <div className="mt-6 font-semibold text-red-600 sm:text-xl md:text-2xl lg:text-4xl">
           Une erreur s'est produite
         </div>
-        <div className="text-gray-800 sm:text-lg md:text-xl lg:text-2xl font-semibold">
+        <div className="font-semibold text-gray-800 sm:text-lg md:text-xl lg:text-2xl">
           Veuillez réessayer ou contactez-moi
         </div>
       </div>
