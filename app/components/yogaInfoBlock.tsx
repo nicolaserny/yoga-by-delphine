@@ -37,7 +37,7 @@ const SubSection: React.FC<
 );
 
 const YogaInfoBlock = () => {
-  const { blurDataUrls } = useBlurDataUrls("routes/index");
+  const { blurDataUrls } = useBlurDataUrls("routes/_index");
   const yogaDetails = [
     {
       title: "Hatha yoga",
