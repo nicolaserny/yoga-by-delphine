@@ -1,4 +1,4 @@
-import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import type { LoaderFunction, V2_MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import React from "react";
@@ -18,11 +18,9 @@ export const loader: LoaderFunction = async () => {
   return json<BlurredDataUrlsLoader>({ blurDataUrls }, { status: 200 });
 };
 
-export const meta: MetaFunction = ({ location }) => {
-  return {
-    ...getSeo({ title: "Delphine, professeur de Yoga", url: getUrl(location) }),
-  };
-};
+export const meta: V2_MetaFunction = ({ location }) => [
+  ...getSeo({ title: "Delphine, professeur de Yoga", url: getUrl(location) }),
+];
 
 const StyledLi: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <li className="mb-1 last:mb-0">
@@ -107,7 +105,7 @@ function About() {
           </div>
         </div>
         <div className="lg:pl-8">
-          <div className="relative mx-auto md:mb-[100px] md:mt-[80px] md:w-[calc(100%-110px)]  lg:mb-[100px] lg:mt-[80px] lg:w-[calc(100%-120px)] xl:mt-[133px] xl:mb-[160px] xl:w-[calc(100%-168px)]">
+          <div className="relative mx-auto md:mb-[100px] md:mt-[80px] md:w-[calc(100%-110px)]  lg:mb-[100px] lg:mt-[80px] lg:w-[calc(100%-120px)] xl:mb-[160px] xl:mt-[133px] xl:w-[calc(100%-168px)]">
             <BlurrableImage
               className="aspect-h-4 aspect-w-3 w-full shadow-lg"
               blurDataUrl={blurDataUrls[images["profile-3"].id]}
@@ -125,7 +123,7 @@ function About() {
                 />
               }
             />
-            <div className="absolute left-0 bottom-0 hidden -translate-x-1/2 shadow-lg md:block md:w-[110px] md:translate-y-[100px] lg:w-[120px] lg:translate-y-[100px] xl:w-[168px] xl:translate-y-[160px]">
+            <div className="absolute bottom-0 left-0 hidden -translate-x-1/2 shadow-lg md:block md:w-[110px] md:translate-y-[100px] lg:w-[120px] lg:translate-y-[100px] xl:w-[168px] xl:translate-y-[160px]">
               <BlurrableImage
                 className="aspect-h-4 aspect-w-3 w-full"
                 blurDataUrl={blurDataUrls[images["profile-4"].id]}

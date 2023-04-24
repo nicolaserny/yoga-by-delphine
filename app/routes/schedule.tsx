@@ -1,4 +1,4 @@
-import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import type { LoaderFunction, V2_MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import AnchorLink from "~/components/anchorLink";
@@ -18,11 +18,9 @@ export const loader: LoaderFunction = async () => {
   });
 };
 
-export const meta: MetaFunction = ({ location }) => {
-  return {
-    ...getSeo({ title: "Programme des cours de Yoga", url: getUrl(location) }),
-  };
-};
+export const meta: V2_MetaFunction = ({ location }) => [
+  ...getSeo({ title: "Programme des cours de Yoga", url: getUrl(location) }),
+];
 
 function normalizeCourses(courses: Array<YogaProduct>) {
   return courses.map((course) => ({

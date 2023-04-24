@@ -1,14 +1,12 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from "@remix-run/node";
 import { useNavigate } from "@remix-run/react";
 import Button from "~/components/button";
 import { getSeo, getUrl } from "~/utils/seo";
 import { PageTitle } from "../components";
 
-export const meta: MetaFunction = ({ location }) => {
-  return {
-    ...getSeo({ title: "Me contacter", url: getUrl(location) }),
-  };
-};
+export const meta: V2_MetaFunction = ({ location }) => [
+  ...getSeo({ title: "Me contacter", url: getUrl(location) }),
+];
 
 function ContactRoute() {
   const navigate = useNavigate();
@@ -40,7 +38,7 @@ function ContactRoute() {
       <section className="mb-12 md:grid md:grid-cols-2 md:gap-x-12">
         <div className="text-base font-normal leading-normal text-gray-800 md:mr-4 lg:text-lg">
           <PageTitle>Me contacter</PageTitle>
-          <p className="mt-2 mb-3 md:mt-3 md:mb-5 lg:mt-4 lg:mb-12">
+          <p className="mb-3 mt-2 md:mb-5 md:mt-3 lg:mb-12 lg:mt-4">
             Si vous avez des questions, besoin d'un rensignement ou un soucis
             avec une commande, je serai ravie de vous aider.
           </p>

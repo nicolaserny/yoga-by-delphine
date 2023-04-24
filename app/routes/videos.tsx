@@ -1,16 +1,14 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from "@remix-run/react";
 import { PageTitle } from "~/components";
 import Button from "~/components/button";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: MetaFunction = ({ location }) => {
-  return {
-    ...getSeo({
-      title: "Cours de yoga en vidéo",
-      url: getUrl(location),
-    }),
-  };
-};
+export const meta: V2_MetaFunction = ({ location }) => [
+  ...getSeo({
+    title: "Cours de yoga en vidéo",
+    url: getUrl(location),
+  }),
+];
 
 const videoSections = [
   {
@@ -39,7 +37,7 @@ function videos() {
   return (
     <main className="width-constraints">
       <PageTitle>Cours de yoga en vidéo</PageTitle>
-      <p className="mt-3 mb-10 text-base font-normal leading-normal text-gray-800 md:mb-16 lg:mb-24">
+      <p className="mb-10 mt-3 text-base font-normal leading-normal text-gray-800 md:mb-16 lg:mb-24">
         Découvrez des séances de Yoga pour tout niveau.
       </p>
       <div className="flex flex-col gap-10 md:gap-16 lg:gap-24">
@@ -51,7 +49,7 @@ function videos() {
             <h2 className="text-lg font-semibold leading-none text-gray-800 lg:w-2/5 lg:text-xl xl:w-1/3">
               {section.title}
             </h2>
-            <div className="aspect-w-9 aspect-h-5 w-full lg:aspect-h-4  xl:aspect-h-3 xl:max-w-2xl ">
+            <div className="aspect-h-5 aspect-w-9 w-full lg:aspect-h-4  xl:aspect-h-3 xl:max-w-2xl ">
               <iframe
                 title={section.videoTitle}
                 src={section.videoUrl}
