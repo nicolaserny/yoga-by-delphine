@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Button from "./button";
+import clsx from "clsx";
 
-const BuyButton: React.FC<{ shopifyId: string; children: React.ReactNode }> = ({
-  shopifyId,
-  children,
-}) => {
+const BuyButton: React.FC<{
+  shopifyId: string;
+  withLeftPadding?: boolean;
+  children: React.ReactNode;
+}> = ({ shopifyId, withLeftPadding = true, children }) => {
   const [isBuying, setIsBuying] = useState(false);
   const submitHandler = () => {
     setIsBuying(true);
@@ -22,7 +24,7 @@ const BuyButton: React.FC<{ shopifyId: string; children: React.ReactNode }> = ({
     <form action="/api/checkout" onSubmit={submitHandler} method="POST">
       <input type="hidden" name="shopifyId" value={shopifyId} />
       {!isBuying && (
-        <div className="pl-5">
+        <div className={clsx(withLeftPadding && "pl-5")}>
           <Button type="submit" variant="link" colorScheme="purple">
             {children}
           </Button>

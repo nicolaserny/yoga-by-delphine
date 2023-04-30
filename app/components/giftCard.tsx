@@ -244,7 +244,9 @@ const GifCard: React.FC<{ giftCard: GiftCardType }> = ({ giftCard }) => {
           {giftCard.description}
         </div>
         <div className="mt-3">
-          <BuyButton shopifyId={giftCard.shopifyId}>Acheter</BuyButton>
+          <BuyButton withLeftPadding={false} shopifyId={giftCard.shopifyId}>
+            Acheter
+          </BuyButton>
         </div>
       </div>
     </article>
