@@ -1,0 +1,20 @@
+import clsx from "clsx";
+import React from "react";
+
+function Label(
+  { className, ...props }: React.LabelHTMLAttributes<HTMLLabelElement>,
+  ref: React.Ref<HTMLLabelElement>,
+) {
+  return (
+    <label
+      {...props}
+      ref={ref}
+      className={clsx(
+        className,
+        "mb-1 block text-sm font-medium text-gray-800 lg:text-base",
+      )}
+    />
+  );
+}
+
+export default React.forwardRef(Label);
