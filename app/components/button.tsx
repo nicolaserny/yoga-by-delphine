@@ -47,11 +47,11 @@ const Button = React.forwardRef(function Button<
           "text-lg": size === "large",
           "xl:text-xl": size === "large" && responsive,
           "text-xl": size === "xlarge",
-          "rounded-lg py-2 px-4 font-bold text-white focus-visible:ring":
+          "rounded-lg px-4 py-2 font-bold text-white focus-visible:ring":
             variant === "solid",
           "bg-red-500 hover:bg-red-600 focus-visible:ring-red-300":
             variant === "solid" && colorScheme === "red",
-          "rounded-lg border border-red-600  bg-transparent py-2 px-4 font-semibold  hover:text-white focus:outline-none focus-visible:ring":
+          "rounded-lg border border-red-600  bg-transparent px-4 py-2 font-semibold  hover:text-white focus:outline-none focus-visible:ring":
             variant === "outline",
           "text-red-600 hover:border-red-500 hover:bg-red-500 focus-visible:ring-red-300":
             variant === "outline" && colorScheme === "red",

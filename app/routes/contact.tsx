@@ -3,6 +3,10 @@ import { useNavigate } from "@remix-run/react";
 import Button from "~/components/button";
 import { getSeo, getUrl } from "~/utils/seo";
 import { PageTitle } from "../components";
+import Input from "~/components/input";
+import React from "react";
+import Textarea from "~/components/textarea";
+import Label from "~/components/label";
 
 export const meta: V2_MetaFunction = ({ location }) => [
   ...getSeo({ title: "Me contacter", url: getUrl(location) }),
@@ -10,6 +14,7 @@ export const meta: V2_MetaFunction = ({ location }) => [
 
 function ContactRoute() {
   const navigate = useNavigate();
+  const firstNameRef = React.useRef<HTMLInputElement>(null);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -32,6 +37,12 @@ function ContactRoute() {
         navigate("/error");
       });
   };
+
+  React.useEffect(() => {
+    if (firstNameRef.current) {
+      firstNameRef.current.focus();
+    }
+  }, []);
 
   return (
     <main className="width-constraints">
@@ -57,57 +68,53 @@ function ContactRoute() {
             </div>
             <div className="w-full lg:flex">
               <div className="mb-6 lg:mr-4 lg:flex-auto">
-                <label className="input-label" htmlFor="firstname">
-                  Prénom
-                </label>
-                <input
-                  className="styled-input"
+                <Label htmlFor="firstname">Prénom</Label>
+                <Input
+                  ref={firstNameRef}
                   name="firstname"
                   id="firstname"
                   type="text"
-                  placeholder="Marie"
+                  autoComplete="given-name"
+                  required={true}
                 />
               </div>
               <div className="mb-6 lg:ml-4 lg:flex-auto">
-                <label className="input-label" htmlFor="lastname">
-                  Nom
-                </label>
-                <input
-                  className="styled-input"
+                <Label htmlFor="lastname">Nom</Label>
+                <Input
                   name="lastname"
                   id="lastname"
                   type="text"
-                  placeholder="Dupont"
+                  autoComplete="family-name"
+                  required={true}
                 />
               </div>
             </div>
             <div className="mb-6">
-              <label className="input-label" htmlFor="email">
-                Email
-              </label>
-              <input
-                className="styled-input"
+              <Label htmlFor="email">Email</Label>
+              <Input
                 name="email"
                 id="email"
                 type="email"
-                placeholder="marie.dupont@gmail.com"
+                autoComplete="email"
+                required={true}
               />
             </div>
             <div className="mb-6">
               <div className="flex">
-                <label className="input-label flex-auto" htmlFor="message">
+                <Label className="flex-auto" htmlFor="message">
                   Message
-                </label>
+                </Label>
                 <div className="mb-1 flex-auto text-right text-sm font-medium text-gray-600 lg:text-base">
                   Max. 500 caractères
                 </div>
               </div>
-              <textarea
-                className="styled-input h-32"
+              <Textarea
+                className="h-32"
                 maxLength={500}
                 name="message"
                 id="message"
                 placeholder="Détailler vos questions"
+                required={true}
               />
             </div>
             <div className="flex flex-row-reverse">
