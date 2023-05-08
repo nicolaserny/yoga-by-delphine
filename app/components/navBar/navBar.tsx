@@ -11,9 +11,9 @@ const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `mr-4 mb-3 p-1 text-xl lg:mb-0 lg:text-lg xl:mr-6 ${
+        `mb-3 mr-4 p-1 text-xl lg:mb-0 lg:text-lg xl:mr-6 ${
           isActive
-            ? "active-nav-link font-semibold hover:text-gray-800"
+            ? "relative font-semibold after:absolute after:bottom-[3px] after:left-[4px] after:m-0 after:block after:h-[2px] after:w-[calc(100%_-_0.5rem)] after:bg-purple-600 after:content-[''] hover:text-gray-800"
             : "font-medium hover:text-gray-900"
         } text-gray-800  no-underline`
       }

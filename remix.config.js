@@ -3,6 +3,8 @@ module.exports = {
   serverBuildPath: ".netlify/functions-internal/server.js",
   server: "./server.js",
   ignoredRouteFiles: ["**/.*"],
+  tailwind: true,
+  serverModuleFormat: "cjs",
   future: {
     v2_meta: true,
     v2_errorBoundary: true,
