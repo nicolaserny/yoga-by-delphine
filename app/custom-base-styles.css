@@ -1,3 +1,5 @@
+@tailwind base;
+
 /* latin */
 @font-face {
   font-family: "Merriweather";
@@ -70,18 +72,9 @@ html {
     Silence the warning about missing Reach Dialog styles
   */
   --reach-dialog: 1;
-  @apply h-full antialiased bg-light text-gray-800;
+  @apply h-full bg-light text-gray-800 antialiased;
 }
 
 .width-constraints {
-  @apply w-full max-w-screen-xl mx-auto xl:px-10 2xl:px-0;
-}
-
-button:focus,
-*:focus {
-  outline-color: theme("colors.purple.400");
-}
-button:active,
-*:active {
-  outline-color: theme("colors.purple.400");
+  @apply mx-auto w-full max-w-screen-xl xl:px-10 2xl:px-0;
 }
