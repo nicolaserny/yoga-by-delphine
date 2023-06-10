@@ -243,12 +243,8 @@ function YogaBallsRoute() {
           </p>
           <p>
             On peut les commander{" "}
-            <StyledLink href="https://www.yogami.ca/boutique-yogami/">
-              sur Yogami (Canada)
-            </StyledLink>
-            {", "}
-            <StyledLink href="https://www.perform-better.de/en/search?search=roll+model">
-              sur Perform Better (Europe)
+            <StyledLink href="https://nouveauyoga.com/products/troussededepartyogaballes">
+              sur Nouveau Yoga
             </StyledLink>
             {", "}
             <StyledLink href="https://www.tuneupfitness.com/shop/self-massage-therapy-balls">
