@@ -51,3 +51,6 @@ for = "/fonts/*"
 package = "netlify-plugin-inline-functions-env"
 [plugins.inputs]
 buildEvent = "onBuild"
+
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
