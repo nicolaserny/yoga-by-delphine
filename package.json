@@ -29,6 +29,7 @@
     },
     "devDependencies": {
         "@cld-apis/types": "^0.1.6",
+        "@netlify/plugin-lighthouse": "^5.0.0",
         "@remix-run/dev": "^1.19.3",
         "@remix-run/eslint-config": "^1.19.3",
         "@tailwindcss/aspect-ratio": "^0.4.2",
