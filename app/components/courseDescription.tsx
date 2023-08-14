@@ -23,7 +23,7 @@ const CourseDescription: React.FC<CourseDescriptionProps> = ({
   return (
     <>
       <div {...(!imageRight && { className: "md:col-start-2" })}>
-        <h3 className="lg:0 mt-5 mb-2 text-lg font-semibold text-gray-800 md:mt-0 lg:mb-4 lg:text-xl">
+        <h3 className="lg:0 mb-2 mt-5 text-lg font-semibold text-gray-800 md:mt-0 lg:mb-4 lg:text-xl">
           {title}
         </h3>
         <p className="text-base font-normal leading-relaxed text-gray-800">
@@ -39,6 +39,7 @@ const CourseDescription: React.FC<CourseDescriptionProps> = ({
         img={
           <img
             className="rounded-lg object-cover object-center"
+            loading="lazy"
             {...getImgProps(image, {
               widths: [280, 560, 840, 1100, 1650],
               sizes: [

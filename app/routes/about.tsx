@@ -112,6 +112,7 @@ function About() {
               img={
                 <img
                   className="rounded-lg object-cover object-center"
+                  loading="lazy"
                   {...getImgProps(images["profile-3"], {
                     widths: [280, 560, 840, 1100, 1650],
                     sizes: [
@@ -130,6 +131,7 @@ function About() {
                 img={
                   <img
                     className="rounded-lg object-cover object-center"
+                    loading="lazy"
                     {...getImgProps(images["profile-4"], {
                       widths: [280, 560, 840, 1100, 1650],
                       sizes: [
@@ -149,6 +151,7 @@ function About() {
                 img={
                   <img
                     className="rounded-lg object-cover object-center"
+                    loading="lazy"
                     {...getImgProps(images["profile-2"], {
                       widths: [280, 560, 840, 1100, 1650],
                       sizes: [
