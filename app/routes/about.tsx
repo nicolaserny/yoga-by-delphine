@@ -1,22 +1,10 @@
-import type { LoaderFunction, V2_MetaFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import type { V2_MetaFunction } from "@remix-run/node";
 import React from "react";
 import { BlurrableImage, PageTitle } from "~/components";
 import AnchorLink from "~/components/anchorLink";
+import { blurDataUrls } from "~/generated/blurDataUrls";
 import { getImgProps, images } from "~/images";
-import type { BlurredDataUrlsLoader } from "~/models/images.server";
-import { getBlurredDataUrlsFromApi } from "~/models/images.server";
 import { getSeo, getUrl } from "~/utils/seo";
-
-export const loader: LoaderFunction = async () => {
-  const blurDataUrls = await getBlurredDataUrlsFromApi([
-    images["profile-2"].id,
-    images["profile-3"].id,
-    images["profile-4"].id,
-  ]);
-  return json<BlurredDataUrlsLoader>({ blurDataUrls }, { status: 200 });
-};
 
 export const meta: V2_MetaFunction = ({ location }) => [
   ...getSeo({ title: "Delphine, professeur de Yoga", url: getUrl(location) }),
@@ -49,7 +37,6 @@ const StyledLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
 );
 
 function About() {
-  const { blurDataUrls } = useLoaderData() as BlurredDataUrlsLoader;
   return (
     <main className="width-constraints">
       <PageTitle>Je suis Delphine, professeur de Yoga...</PageTitle>
@@ -108,7 +95,11 @@ function About() {
           <div className="relative mx-auto md:mb-[100px] md:mt-[80px] md:w-[calc(100%-110px)]  lg:mb-[100px] lg:mt-[80px] lg:w-[calc(100%-120px)] xl:mb-[160px] xl:mt-[133px] xl:w-[calc(100%-168px)]">
             <BlurrableImage
               className="aspect-h-4 aspect-w-3 w-full shadow-lg"
-              blurDataUrl={blurDataUrls[images["profile-3"].id]}
+              blurDataUrl={
+                blurDataUrls[
+                  images["profile-3"].id as keyof typeof blurDataUrls
+                ]
+              }
               img={
                 <img
                   className="rounded-lg object-cover object-center"
@@ -127,7 +118,11 @@ function About() {
             <div className="absolute bottom-0 left-0 hidden -translate-x-1/2 shadow-lg md:block md:w-[110px] md:translate-y-[100px] lg:w-[120px] lg:translate-y-[100px] xl:w-[168px] xl:translate-y-[160px]">
               <BlurrableImage
                 className="aspect-h-4 aspect-w-3 w-full"
-                blurDataUrl={blurDataUrls[images["profile-4"].id]}
+                blurDataUrl={
+                  blurDataUrls[
+                    images["profile-4"].id as keyof typeof blurDataUrls
+                  ]
+                }
                 img={
                   <img
                     className="rounded-lg object-cover object-center"
@@ -147,7 +142,11 @@ function About() {
             <div className="absolute right-0 top-0 hidden translate-x-1/2 shadow-lg md:block md:w-[110px] md:-translate-y-[80px] lg:w-[120px] lg:-translate-y-[80px] xl:w-[168px] xl:-translate-y-[133px]">
               <BlurrableImage
                 className="aspect-h-4 aspect-w-3 w-full"
-                blurDataUrl={blurDataUrls[images["profile-2"].id]}
+                blurDataUrl={
+                  blurDataUrls[
+                    images["profile-2"].id as keyof typeof blurDataUrls
+                  ]
+                }
                 img={
                   <img
                     className="rounded-lg object-cover object-center"

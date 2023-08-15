@@ -2,6 +2,7 @@ import React from "react";
 import type { ImageBuilder } from "~/images";
 import { getImgProps } from "~/images";
 import BlurrableImage from "./blurrableImage";
+import { blurDataUrls } from "~/generated/blurDataUrls";
 
 export type CourseDescriptionProps = {
   title: string;
@@ -9,7 +10,6 @@ export type CourseDescriptionProps = {
   description2: string | JSX.Element;
   image: ImageBuilder;
   imageRight?: boolean;
-  blurDataUrl?: string;
 };
 
 const CourseDescription: React.FC<CourseDescriptionProps> = ({
@@ -17,7 +17,6 @@ const CourseDescription: React.FC<CourseDescriptionProps> = ({
   description,
   description2,
   image,
-  blurDataUrl,
   imageRight = true,
 }) => {
   return (
@@ -35,7 +34,7 @@ const CourseDescription: React.FC<CourseDescriptionProps> = ({
       </div>
       <BlurrableImage
         className="aspect-h-4 aspect-w-6 w-full"
-        blurDataUrl={blurDataUrl}
+        blurDataUrl={blurDataUrls[image.id as keyof typeof blurDataUrls]}
         img={
           <img
             className="rounded-lg object-cover object-center"

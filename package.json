@@ -6,11 +6,12 @@
     "author": "Nicolas Erny",
     "sideEffects": false,
     "scripts": {
-        "build": "remix build",
+        "build": "pnpm run generateBlurDataUrls && remix build",
         "dev": "cross-env NODE_ENV=development netlify dev",
         "start": "cross-env NODE_ENV=production netlify serve",
         "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint . --max-warnings 0",
-        "typecheck": "tsc --noEmit"
+        "typecheck": "tsc --noEmit",
+        "generateBlurDataUrls": "tsx ./tools/generateBlurDataUrls.ts ./app/generated/blurDataUrls.ts"
     },
     "dependencies": {
         "@netlify/functions": "^1.6.0",
@@ -40,11 +41,11 @@
         "eslint": "^8.47.0",
         "husky": "^8.0.3",
         "netlify-plugin-inline-functions-env": "^1.0.9",
-        "npm-run-all": "^4.1.5",
         "prettier": "^3.0.1",
         "prettier-plugin-tailwindcss": "^0.5.2",
         "pretty-quick": "^3.1.3",
         "tailwindcss": "^3.3.3",
+        "tsx": "^3.12.7",
         "typescript": "^5.1.6"
     },
     "overrides": {
