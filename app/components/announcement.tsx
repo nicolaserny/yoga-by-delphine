@@ -4,7 +4,7 @@ import Button from "./button";
 const Announcement = () => (
   <div className="flex w-full justify-center bg-gradient-to-r from-purple-600 to-red-600 p-4 text-base font-medium text-white">
     <p className="">
-      Découvrez notre forfait spécial été : cours en ligne et au parc.{" "}
+      Planning de cours allégé en Septembre (vacances).{" "}
       <Button
         as={Link}
         variant="link"
@@ -15,7 +15,7 @@ const Announcement = () => (
         prefetch="intent"
         className="group"
       >
-        Achetez dès maintenant
+        En savoir plus
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
