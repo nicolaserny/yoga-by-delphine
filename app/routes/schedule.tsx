@@ -1,4 +1,8 @@
-import type { LoaderFunction, V2_MetaFunction } from "@remix-run/node";
+import type {
+  DataFunctionArgs,
+  LoaderFunction,
+  V2_MetaFunction,
+} from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import AnchorLink from "~/components/anchorLink";
@@ -8,8 +12,9 @@ import { parseCourseDate } from "~/utils/date";
 import { getSeo, getUrl } from "~/utils/seo";
 import { BookingSection, PageTitle } from "../components";
 
-export const loader: LoaderFunction = async () => {
-  const courses = await getCoursesFromApi();
+export const loader: LoaderFunction = async ({ request }: DataFunctionArgs) => {
+  const buyerIP = request.headers.get("x-nf-client-connection-ip") || undefined;
+  const courses = await getCoursesFromApi(buyerIP);
   return json<Array<YogaProduct>>(courses, {
     status: 200,
     headers: {
