@@ -1,4 +1,8 @@
-import type { LoaderFunction, V2_MetaFunction } from "@remix-run/node";
+import type {
+  DataFunctionArgs,
+  LoaderFunction,
+  V2_MetaFunction,
+} from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import AnchorLink from "~/components/anchorLink";
@@ -7,8 +11,9 @@ import { getGiftCardsFromApi } from "~/models/giftCards.server";
 import { getSeo, getUrl } from "~/utils/seo";
 import { PageTitle, GiftCard } from "../components";
 
-export const loader: LoaderFunction = async () => {
-  const giftCards = await getGiftCardsFromApi();
+export const loader: LoaderFunction = async ({ request }: DataFunctionArgs) => {
+  const buyerIP = request.headers.get("x-nf-client-connection-ip") || undefined;
+  const giftCards = await getGiftCardsFromApi(buyerIP);
   return json<Array<GiftCardType>>(giftCards, {
     status: 200,
     headers: {
