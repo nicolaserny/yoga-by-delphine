@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "./button";
 import clsx from "clsx";
+import { Form } from "@remix-run/react";
 
 const BuyButton: React.FC<{
   shopifyId: string;
@@ -21,7 +22,7 @@ const BuyButton: React.FC<{
   };
 
   return (
-    <form action="/api/checkout" onSubmit={submitHandler} method="POST">
+    <Form action="/api/checkout" onSubmit={submitHandler} method="POST">
       <input type="hidden" name="shopifyId" value={shopifyId} />
       {!isBuying && (
         <div className={clsx(withLeftPadding && "pl-5")}>
@@ -33,7 +34,7 @@ const BuyButton: React.FC<{
       {isBuying && (
         <div className="text-base font-medium xl:text-lg">En cours...</div>
       )}
-    </form>
+    </Form>
   );
 };
 

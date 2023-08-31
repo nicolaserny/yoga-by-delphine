@@ -7,8 +7,8 @@
     "sideEffects": false,
     "scripts": {
         "build": "pnpm run generateBlurDataUrls && remix build",
-        "dev": "cross-env NODE_ENV=development netlify dev",
-        "start": "cross-env NODE_ENV=production netlify serve",
+        "dev": "remix dev",
+        "start": "netlify serve",
         "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint . --max-warnings 0",
         "typecheck": "tsc --noEmit",
         "generateBlurDataUrls": "tsx ./tools/generateBlurDataUrls.ts ./app/generated/blurDataUrls.ts"
@@ -19,6 +19,7 @@
         "@reach/dialog": "^0.18.0",
         "@remix-run/node": "^1.19.3",
         "@remix-run/react": "^1.19.3",
+        "@remix-run/serve": "^1.19.3",
         "cloudinary-build-url": "^0.2.4",
         "clsx": "^2.0.0",
         "cross-env": "^7.0.3",
