@@ -1,7 +1,4 @@
-import type { Handler } from "@netlify/functions";
-import { parse } from "querystring";
-import { postToShopify } from "./shopify";
-import invariant from "tiny-invariant";
+import { postToShopify } from "~/utils/shopify.server";
 
 type ShopifyCheckout = {
   checkoutCreate: { checkout: { id: string; webUrl: string } };
@@ -11,12 +8,13 @@ type ShopifyCheckoutInput = {
   input: { lineItems: Array<{ variantId: string; quantity: number }> };
 };
 
-const handler: Handler = async (event) => {
-  invariant(event.body, "The body is required");
-  const { shopifyId } = parse(event.body);
-  invariant(typeof shopifyId === "string", "The shopifyId is required");
-  const buyerIP = event.headers["x-nf-client-connection-ip"];
-
+export async function createCheckoutUrl({
+  shopifyId,
+  buyerIP,
+}: {
+  shopifyId: string;
+  buyerIP?: string;
+}) {
   try {
     const response = await postToShopify<ShopifyCheckout, ShopifyCheckoutInput>(
       {
@@ -47,27 +45,9 @@ const handler: Handler = async (event) => {
       },
     );
 
-    if (!response?.checkoutCreate.checkout.webUrl) {
-      throw new Error("No checkout URL returned");
-    }
-
-    return {
-      statusCode: 301,
-      headers: {
-        Location: response.checkoutCreate.checkout.webUrl,
-      },
-      body: "Redirecting to checkout...",
-    };
+    return response?.checkoutCreate.checkout.webUrl;
   } catch (error) {
     console.error(error);
-    return {
-      statusCode: 301,
-      headers: {
-        Location: "/error",
-      },
-      body: "Redirecting to error page...",
-    };
+    return undefined;
   }
-};
-
-export { handler };
+}
