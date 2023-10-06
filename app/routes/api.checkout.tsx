@@ -1,8 +1,8 @@
-import { redirect, type ActionArgs } from "@remix-run/node";
+import { redirect, type ActionFunctionArgs } from "@remix-run/node";
 import invariant from "tiny-invariant";
 import { createCheckoutUrl } from "~/models/checkout.server";
 
-export const action = async ({ request }: ActionArgs) => {
+export const action = async ({ request }: ActionFunctionArgs) => {
   const buyerIP = request.headers.get("x-nf-client-connection-ip") || undefined;
   const formData = await request.formData();
   const shopifyId = formData.get("shopifyId");

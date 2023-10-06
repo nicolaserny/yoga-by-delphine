@@ -1,4 +1,4 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { BlurrableImage, PageTitle } from "~/components";
 import AnchorLink from "~/components/anchorLink";
@@ -6,7 +6,7 @@ import { blurDataUrls } from "~/generated/blurDataUrls";
 import { getImgProps, images } from "~/images";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: V2_MetaFunction = ({ location }) => [
+export const meta: MetaFunction = ({ location }) => [
   ...getSeo({ title: "Delphine, professeur de Yoga", url: getUrl(location) }),
 ];
 
