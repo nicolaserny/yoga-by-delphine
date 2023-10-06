@@ -1,7 +1,7 @@
 import type {
   DataFunctionArgs,
   LoaderFunction,
-  V2_MetaFunction,
+  MetaFunction,
 } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
@@ -22,7 +22,7 @@ export const loader: LoaderFunction = async ({ request }: DataFunctionArgs) => {
   });
 };
 
-export const meta: V2_MetaFunction = ({ location }) => [
+export const meta: MetaFunction = ({ location }) => [
   ...getSeo({
     title: "Cartes-Cadeaux: Offrez des cours de Yoga",
     url: getUrl(location),

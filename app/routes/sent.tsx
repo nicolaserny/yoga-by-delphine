@@ -1,7 +1,7 @@
-import type { V2_MetaFunction } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/react";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: V2_MetaFunction = ({ location }) => [
+export const meta: MetaFunction = ({ location }) => [
   ...getSeo({ title: "Message envoyé", url: getUrl(location) }),
 ];
 

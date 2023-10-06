@@ -1,4 +1,4 @@
-import type { V2_MetaDescriptor } from "@remix-run/node";
+import type { MetaDescriptor } from "@remix-run/node";
 import type { Location } from "@remix-run/react";
 
 const defaultTitle = "Yoga by Delphine";
@@ -10,7 +10,7 @@ export function getSeo(metadata: {
   title?: string;
   description?: string;
   url: string;
-}): V2_MetaDescriptor[] {
+}): MetaDescriptor[] {
   const title = metadata.title
     ? `${metadata.title} - ${defaultTitle}`
     : defaultTitle;

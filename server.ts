@@ -7,6 +7,6 @@ sourceMapSupport.install();
 installGlobals();
 
 export const handler = createRequestHandler({
-  build,
+  build: build as any,
   mode: process.env.NODE_ENV,
 });

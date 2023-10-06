@@ -1,4 +1,4 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import { useNavigate } from "@remix-run/react";
 import Button from "~/components/button";
 import { getSeo, getUrl } from "~/utils/seo";
@@ -8,7 +8,7 @@ import React from "react";
 import Textarea from "~/components/textarea";
 import Label from "~/components/label";
 
-export const meta: V2_MetaFunction = ({ location }) => [
+export const meta: MetaFunction = ({ location }) => [
   ...getSeo({ title: "Me contacter", url: getUrl(location) }),
 ];
 
