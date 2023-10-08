@@ -14,5 +14,14 @@ export const config = {
   //
   // Add other exclusions here, e.g. "^/api/*$" for custom Netlify functions or
   // custom Netlify Edge Functions
-  excluded_patterns: ["^/_assets/*$"],
+  excludedPath: [
+    "/fonts/*.woff2",
+    "/icons/*.png",
+    "/form.html",
+    "/robots.txt",
+    "/site.webmanifest",
+    "/*.png",
+    "/*.jpg",
+    "/build/_assets/*",
+  ],
 };
