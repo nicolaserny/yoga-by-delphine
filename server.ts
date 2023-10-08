@@ -22,6 +22,7 @@ export const config = {
     "/site.webmanifest",
     "/*.png",
     "/*.jpg",
+    "/*.ico",
     "/build/_assets/*",
   ],
 };
