@@ -14,7 +14,7 @@ export const loader: LoaderFunction = async ({ context }: DataFunctionArgs) => {
   return json<Array<GiftCardType>>(giftCards, {
     status: 200,
     headers: {
-      "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+      "Cache-Control": "public, max-age=120, s-maxage=120",
     },
   });
 };
