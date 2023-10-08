@@ -11,12 +11,7 @@ import { PageTitle, GiftCard } from "../components";
 export const loader: LoaderFunction = async ({ context }: DataFunctionArgs) => {
   const buyerIP = (context.ip as string) || undefined;
   const giftCards = await getGiftCardsFromApi(buyerIP);
-  return json<Array<GiftCardType>>(giftCards, {
-    status: 200,
-    headers: {
-      "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
-    },
-  });
+  return json<Array<GiftCardType>>(giftCards);
 };
 
 export const meta: MetaFunction = ({ location }) => [

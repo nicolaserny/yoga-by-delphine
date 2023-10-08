@@ -10,16 +10,7 @@ export const action = async ({ request, context }: ActionArgs) => {
   invariant(typeof shopifyId === "string", "Missing shopifyId");
   const checkoutUrl = await createCheckoutUrl({ buyerIP, shopifyId });
   if (!checkoutUrl) {
-    return redirect("/error", {
-      headers: {
-        "Cache-Control":
-          "no-store, no-cache, must-revalidate, proxy-revalidate",
-      },
-    });
+    return redirect("/error");
   }
-  return redirect(checkoutUrl, {
-    headers: {
-      "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
-    },
-  });
+  return redirect(checkoutUrl);
 };
