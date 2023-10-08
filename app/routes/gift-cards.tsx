@@ -1,6 +1,6 @@
 import type { DataFunctionArgs, LoaderFunction } from "@netlify/remix-runtime";
 import { json } from "@netlify/remix-runtime";
-import type { MetaFunction} from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/react";
 import { Link, useLoaderData } from "@remix-run/react";
 import AnchorLink from "~/components/anchorLink";
 import type { GiftCardType } from "~/models/giftCards.server";
@@ -8,8 +8,8 @@ import { getGiftCardsFromApi } from "~/models/giftCards.server";
 import { getSeo, getUrl } from "~/utils/seo";
 import { PageTitle, GiftCard } from "../components";
 
-export const loader: LoaderFunction = async ({ request }: DataFunctionArgs) => {
-  const buyerIP = request.headers.get("x-nf-client-connection-ip") || undefined;
+export const loader: LoaderFunction = async ({ context }: DataFunctionArgs) => {
+  const buyerIP = (context.ip as string) || undefined;
   const giftCards = await getGiftCardsFromApi(buyerIP);
   return json<Array<GiftCardType>>(giftCards, {
     status: 200,
