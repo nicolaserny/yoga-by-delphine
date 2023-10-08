@@ -109,7 +109,7 @@ export default function App() {
           }}
         />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <Layout>
           <Outlet />
         </Layout>
