@@ -19,7 +19,7 @@ export const config = {
     "/icons/*.png",
     "/form.html",
     "/robots.txt",
-    "/site.webmanifest",
+    "/sitemap.xml",
     "/*.png",
     "/*.jpg",
     "/*.ico",
