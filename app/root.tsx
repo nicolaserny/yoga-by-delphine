@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@netlify/remix-runtime";
 import styles from "./tailwind.css";
 import {
   Links,
@@ -109,7 +109,7 @@ export default function App() {
           }}
         />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <Layout>
           <Outlet />
         </Layout>

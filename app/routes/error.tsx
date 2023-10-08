@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/react";
 import { getSeo, getUrl } from "~/utils/seo";
 
 export const meta: MetaFunction = ({ location }) => [

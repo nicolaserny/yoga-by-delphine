@@ -1,4 +1,4 @@
-import type { MetaDescriptor } from "@remix-run/node";
+import type { MetaDescriptor } from "@netlify/remix-runtime";
 import type { Location } from "@remix-run/react";
 
 const defaultTitle = "Yoga by Delphine";
