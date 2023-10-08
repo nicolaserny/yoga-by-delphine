@@ -12,12 +12,7 @@ import { BookingSection, PageTitle } from "../components";
 export const loader: LoaderFunction = async ({ context }: DataFunctionArgs) => {
   const buyerIP = (context.ip as string) || undefined;
   const courses = await getCoursesFromApi(buyerIP);
-  return json<Array<YogaProduct>>(courses, {
-    status: 200,
-    headers: {
-      "Cache-Control": "public, max-age=120, s-maxage=120",
-    },
-  });
+  return json<Array<YogaProduct>>(courses);
 };
 
 export const meta: MetaFunction = ({ location }) => [
