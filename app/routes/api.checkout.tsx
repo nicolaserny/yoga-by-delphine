@@ -1,8 +1,9 @@
-import { redirect, type ActionFunctionArgs } from "@remix-run/node";
+import type { ActionArgs } from "@netlify/remix-runtime";
+import { redirect } from "@netlify/remix-runtime";
 import invariant from "tiny-invariant";
 import { createCheckoutUrl } from "~/models/checkout.server";
 
-export const action = async ({ request }: ActionFunctionArgs) => {
+export const action = async ({ request }: ActionArgs) => {
   const buyerIP = request.headers.get("x-nf-client-connection-ip") || undefined;
   const formData = await request.formData();
   const shopifyId = formData.get("shopifyId");

@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@netlify/remix-runtime";
 import styles from "./tailwind.css";
 import {
   Links,

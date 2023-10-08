@@ -1,9 +1,6 @@
-import type {
-  DataFunctionArgs,
-  LoaderFunction,
-  MetaFunction,
-} from "@remix-run/node";
-import { json } from "@remix-run/node";
+import type { DataFunctionArgs, LoaderFunction } from "@netlify/remix-runtime";
+import { json } from "@netlify/remix-runtime";
+import type { MetaFunction} from "@remix-run/react";
 import { Link, useLoaderData } from "@remix-run/react";
 import AnchorLink from "~/components/anchorLink";
 import type { GiftCardType } from "~/models/giftCards.server";

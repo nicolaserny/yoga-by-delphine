@@ -1,11 +1,14 @@
-/** @type {import('@remix-run/dev').AppConfig} */
+const { config } = require("@netlify/remix-edge-adapter");
+const baseConfig =
+  process.env.NODE_ENV === "production"
+    ? config
+    : { ignoredRouteFiles: ["**/.*"], serverModuleFormat: "cjs" };
+
+/**
+ * @type {import('@remix-run/dev').AppConfig}
+ */
 module.exports = {
-  ignoredRouteFiles: ["**/.*"],
-  server:
-    process.env.NETLIFY || process.env.NETLIFY_LOCAL
-      ? "./server.ts"
-      : undefined,
-  serverBuildPath: ".netlify/functions-internal/server.js",
+  ...baseConfig,
+  future: undefined,
   tailwind: true,
-  serverModuleFormat: "cjs",
 };

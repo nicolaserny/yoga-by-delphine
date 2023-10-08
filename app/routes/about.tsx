@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/react";
 import React from "react";
 import { BlurrableImage, PageTitle } from "~/components";
 import AnchorLink from "~/components/anchorLink";
