@@ -2,9 +2,9 @@ import * as dotenv from "dotenv";
 import invariant from "tiny-invariant";
 import fetch from "@remix-run/web-fetch";
 
-dotenv.config({ path: ".env.development" });
+dotenv.config({ path: ".env" });
 
-const ShopifyApiVersion = "2022-10";
+const ShopifyApiVersion = "2023-10";
 
 async function postToAdminShopify({ query, variables }) {
   const adminAccessToken = process.env.SHOPIFY_ADMIN_API_PASSWORD;

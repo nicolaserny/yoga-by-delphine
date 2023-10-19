@@ -38,7 +38,7 @@ $ git clone https://github.com/nicolaserny/yoga-by-delphine.git
 $ cd yoga-by-delphine && pnpm install
 ```
 
-- Configure env variables by creating a _.env.development_ file (use the template file)
+- Configure env variables by creating a _.env_ file (use the template file)
 - Run the development server:
 
 ```bash
