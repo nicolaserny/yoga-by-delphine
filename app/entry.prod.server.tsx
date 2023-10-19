@@ -1,4 +1,4 @@
-import type { EntryContext } from "@remix-run/node";
+import type { EntryContext } from "@netlify/remix-runtime";
 import { RemixServer } from "@remix-run/react";
 import isbot from "isbot";
 // Looking to use renderReadableStream? See https://github.com/netlify/remix-template/discussions/100
