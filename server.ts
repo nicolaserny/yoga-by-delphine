@@ -2,7 +2,7 @@ import { createRequestHandler } from "@netlify/remix-edge-adapter";
 import * as build from "@remix-run/dev/server-build";
 
 export default createRequestHandler({
-  build: build as any,
+  build: build,
   // process.env.NODE_ENV is provided by Remix at compile time
   mode: process.env.NODE_ENV,
 });
