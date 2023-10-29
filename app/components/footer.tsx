@@ -70,7 +70,7 @@ const Footer = () => (
       </a>
     </div>
     <p className="pb-5 text-center text-xs text-gray-700">
-      © Nicolas Erny 2022
+      © Nicolas Erny 2023
     </p>
   </footer>
 );

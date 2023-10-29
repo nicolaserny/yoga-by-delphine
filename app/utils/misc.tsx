@@ -1,7 +1,12 @@
-import React from "react";
+import * as React from "react";
 
-export const useSSRLayoutEffect =
-  typeof window === "undefined" ? () => {} : React.useLayoutEffect;
+const canUseDOM = !!(
+  typeof window !== "undefined" &&
+  window.document &&
+  window.document.createElement
+);
+
+export const useSSRLayoutEffect = canUseDOM ? React.useLayoutEffect : () => {};
 
 export function notNullOrUndefined<TValue>(
   value: TValue | null | undefined,

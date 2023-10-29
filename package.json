@@ -8,7 +8,7 @@
     "scripts": {
         "build": "pnpm run generateBlurDataUrls && remix build",
         "predev": "rimraf ./.netlify/edge-functions/",
-        "dev": "remix dev",
+        "dev": "remix dev --manual -c \"ntl dev --framework=#static\"",
         "start": "netlify serve",
         "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint . --max-warnings 0",
         "typecheck": "tsc --noEmit",
