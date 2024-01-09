@@ -1,6 +1,6 @@
 import type { YogaProduct } from "~/models/courses.server";
 import { parse } from "date-fns";
-import fr from "date-fns/locale/fr";
+import { fr } from "date-fns/locale";
 
 export function parseCourseDate(course: YogaProduct): Date | string {
   let format = undefined;
