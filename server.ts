@@ -3,14 +3,14 @@ import { broadcastDevReady } from "@netlify/remix-runtime";
 import * as build from "@remix-run/dev/server-build";
 
 export default createRequestHandler({
-  build: build,
+  build: build as any,
   // process.env.NODE_ENV is provided by Remix at compile time
   mode: process.env.NODE_ENV,
 });
 
 if (process.env.NODE_ENV === "development") {
   // Tell remix dev that the server is ready when this module is loaded
-  broadcastDevReady(build);
+  broadcastDevReady(build as any);
 }
 
 export const config = {

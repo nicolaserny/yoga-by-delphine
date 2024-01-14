@@ -1,11 +1,11 @@
 import { postToShopify } from "~/utils/shopify.server";
 
 type ShopifyCheckout = {
-  checkoutCreate: { checkout: { id: string; webUrl: string } };
+  cartCreate: { cart: { id: string; checkoutUrl: string } };
 };
 
 type ShopifyCheckoutInput = {
-  input: { lineItems: Array<{ variantId: string; quantity: number }> };
+  input: { lines: Array<{ merchandiseId: string; quantity: number }> };
 };
 
 export async function createCheckoutUrl({
@@ -19,15 +19,15 @@ export async function createCheckoutUrl({
     const response = await postToShopify<ShopifyCheckout, ShopifyCheckoutInput>(
       {
         query: `
-        mutation checkoutCreate($input: CheckoutCreateInput!) {
-          checkoutCreate(input: $input) {
-            checkout {
+        mutation cartCreate($input: CartInput!) {
+          cartCreate(input: $input) {
+            cart {
                id
-               webUrl
-               lineItems(first: 5) {
+               checkoutUrl
+               lines(first: 5) {
                  edges {
                    node {
-                     title
+                     id
                      quantity
                    }
                  }
@@ -38,14 +38,13 @@ export async function createCheckoutUrl({
       `,
         variables: {
           input: {
-            lineItems: [{ variantId: shopifyId, quantity: 1 }],
+            lines: [{ merchandiseId: shopifyId, quantity: 1 }],
           },
         },
         buyerIP,
       },
     );
-
-    return response?.checkoutCreate.checkout.webUrl;
+    return response?.cartCreate.cart.checkoutUrl;
   } catch (error) {
     console.error(error);
     return undefined;
