@@ -11,7 +11,7 @@ export default async function handleRequest(
   loadContext: AppLoadContext,
 ) {
   const body = await renderToReadableStream(
-    <RemixServer context={remixContext} url={request.url} />,
+    <RemixServer context={remixContext as any} url={request.url} />,
     {
       signal: request.signal,
       onError(error: unknown) {
