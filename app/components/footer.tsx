@@ -2,7 +2,7 @@ const Footer = () => (
   <footer>
     <div className="flex justify-center gap-4 pb-3 text-gray-500 lg:pb-4">
       <a
-        href="https://www.instagram.com/wecket/"
+        href="https://www.instagram.com/delphineleblancyoga/"
         target="_blank"
         rel="noreferrer noopener"
         className="hover:text-gray-700"
