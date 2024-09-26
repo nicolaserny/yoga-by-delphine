@@ -1,40 +1,31 @@
 import clsx from "clsx";
 import React from "react";
+import type { PolymorphicComponentProp } from "~/utils/polymorphicComponentProp";
 
-type ButtonProps<Type extends React.ElementType> = {
-  children: React.ReactNode;
-  as?: Type;
-  variant: "solid" | "outline" | "link";
-  colorScheme: "purple" | "red" | "gray" | "white";
-  size?: "small" | "base" | "large" | "xlarge";
-  responsive?: boolean;
-};
-
-type ButtonComponent = <T extends React.ElementType = "button">(
-  props: ButtonProps<T> &
-    Omit<React.ComponentPropsWithRef<T>, keyof ButtonProps<T>>,
-) => React.ReactElement | null;
-
-const Button = React.forwardRef(function Button<
-  Type extends React.ElementType = "button",
->(
+type ButtonProps<C extends React.ElementType> = PolymorphicComponentProp<
+  C,
   {
-    as,
-    children,
-    className,
-    variant,
-    colorScheme,
-    size = "base",
-    responsive = true,
-    ...props
-  }: ButtonProps<Type> &
-    Omit<React.ComponentPropsWithRef<Type>, keyof ButtonProps<Type>>,
-  ref: React.ComponentPropsWithRef<Type>["ref"],
-) {
+    children: React.ReactNode;
+    variant: "solid" | "outline" | "link";
+    colorScheme: "purple" | "red" | "gray" | "white";
+    size?: "small" | "base" | "large" | "xlarge";
+    responsive?: boolean;
+  }
+>;
+
+const Button = <C extends React.ElementType = "button">({
+  as,
+  children,
+  className,
+  variant,
+  colorScheme,
+  size = "base",
+  responsive = true,
+  ...props
+}: ButtonProps<C>) => {
   const Component = as || "button";
   return (
     <Component
-      ref={ref}
       {...props}
       className={clsx(
         className,
@@ -51,11 +42,11 @@ const Button = React.forwardRef(function Button<
             variant === "solid",
           "bg-red-500 hover:bg-red-600 focus-visible:ring-red-300":
             variant === "solid" && colorScheme === "red",
-          "rounded-lg border border-red-600  bg-transparent px-4 py-2 font-semibold  hover:text-white focus:outline-none focus-visible:ring":
+          "rounded-lg border border-red-600 bg-transparent px-4 py-2 font-semibold hover:text-white focus:outline-none focus-visible:ring":
             variant === "outline",
           "text-red-600 hover:border-red-500 hover:bg-red-500 focus-visible:ring-red-300":
             variant === "outline" && colorScheme === "red",
-          "w-max border-none bg-transparent text-left font-semibold no-underline hover:underline focus:rounded-lg focus:no-underline focus-visible:outline-none focus-visible:ring-2 ":
+          "w-max border-none bg-transparent text-left font-semibold no-underline hover:underline focus:rounded-lg focus:no-underline focus-visible:outline-none focus-visible:ring-2":
             variant === "link",
           "text-purple-700 focus-visible:ring-purple-300 focus-visible:ring-offset-2":
             variant === "link" && colorScheme === "purple",
@@ -67,6 +58,6 @@ const Button = React.forwardRef(function Button<
       {children}
     </Component>
   );
-}) as ButtonComponent;
+};
 
 export default Button;
