@@ -5,6 +5,7 @@
     "version": "0.1.0",
     "author": "Nicolas Erny",
     "sideEffects": false,
+    "type": "module",
     "scripts": {
         "prepare": "husky",
         "build": "pnpm run generateBlurDataUrls && remix build",
