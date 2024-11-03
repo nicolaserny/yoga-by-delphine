@@ -4,7 +4,7 @@ import invariant from "tiny-invariant";
 
 dotenv.config({ path: ".env" });
 
-const ShopifyApiVersion = "2023-10";
+const ShopifyApiVersion = "2024-10";
 
 async function postToAdminShopify({ query, variables }) {
   const adminAccessToken = process.env.SHOPIFY_ADMIN_API_PASSWORD;

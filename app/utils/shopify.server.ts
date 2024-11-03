@@ -8,7 +8,7 @@ export type ShopifyEdges<NodeType> = {
   edges: Array<ShopifyNode<NodeType>>;
 };
 
-const ShopifyApiVersion = "2023-10";
+const ShopifyApiVersion = "2024-10";
 
 type ShopifyResponseType<ResponseDataType> = {
   data?: ResponseDataType;
