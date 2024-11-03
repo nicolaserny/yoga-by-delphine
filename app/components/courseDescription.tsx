@@ -1,8 +1,7 @@
 import React from "react";
-import type { ImageBuilder } from "~/images";
-import { getImgProps } from "~/images";
 import BlurrableImage from "./blurrableImage";
 import { blurDataUrls } from "~/generated/blurDataUrls";
+import { type ImageBuilder, getImgProps } from "~/images";
 
 export type CourseDescriptionProps = {
   title: string;

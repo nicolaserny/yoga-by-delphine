@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import { NavLink, Link } from "@remix-run/react";
-import MobileMenu from "./mobileMenu";
+import React, { useState } from "react";
 import Button from "../button";
+import MobileMenu from "./mobileMenu";
 
 const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
   children,
@@ -15,7 +15,7 @@ const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
           isActive
             ? "relative font-semibold after:absolute after:bottom-[3px] after:left-[4px] after:m-0 after:block after:h-[2px] after:w-[calc(100%_-_0.5rem)] after:bg-purple-600 after:content-[''] hover:text-gray-800"
             : "font-medium hover:text-gray-900"
-        } text-gray-800  no-underline`
+        } text-gray-800 no-underline`
       }
       prefetch="intent"
     >
@@ -33,7 +33,7 @@ const NavBar = () => {
         Yoga <span className="text-purple-600">by</span> Delphine
       </span>
       <ul
-        className={`hidden w-screen  grow-0 list-none items-baseline bg-white pl-12 pt-24 lg:static lg:w-auto lg:bg-transparent lg:pl-0 lg:pt-0 xl:flex `}
+        className={`hidden w-screen grow-0 list-none items-baseline bg-white pl-12 pt-24 lg:static lg:w-auto lg:bg-transparent lg:pl-0 lg:pt-0 xl:flex`}
       >
         <li>
           <StyledNavLink to="/">Accueil</StyledNavLink>

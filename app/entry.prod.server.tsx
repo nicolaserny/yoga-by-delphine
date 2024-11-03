@@ -1,4 +1,4 @@
-import type { AppLoadContext, EntryContext } from "@netlify/remix-runtime";
+import type { EntryContext } from "@netlify/remix-runtime";
 import { RemixServer } from "@remix-run/react";
 import { isbot } from "isbot";
 import { renderToReadableStream } from "react-dom/server";
@@ -8,9 +8,9 @@ export default async function handleRequest(
   responseStatusCode: number,
   responseHeaders: Headers,
   remixContext: EntryContext,
-  loadContext: AppLoadContext,
 ) {
   const body = await renderToReadableStream(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <RemixServer context={remixContext as any} url={request.url} />,
     {
       signal: request.signal,

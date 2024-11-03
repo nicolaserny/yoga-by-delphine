@@ -1,13 +1,14 @@
-import type { DataFunctionArgs, LoaderFunction } from "@netlify/remix-runtime";
-import { json } from "@netlify/remix-runtime";
-import type { MetaFunction } from "@remix-run/react";
-import { Link, useLoaderData } from "@remix-run/react";
+import {
+  type DataFunctionArgs,
+  type LoaderFunction,
+  json,
+} from "@netlify/remix-runtime";
+import { type MetaFunction, Link, useLoaderData } from "@remix-run/react";
+import { BookingSection, PageTitle } from "../components";
 import AnchorLink from "~/components/anchorLink";
-import type { YogaProduct } from "~/models/courses.server";
-import { getCoursesFromApi } from "~/models/courses.server";
+import { type YogaProduct, getCoursesFromApi } from "~/models/courses.server";
 import { parseCourseDate } from "~/utils/date";
 import { getSeo, getUrl } from "~/utils/seo";
-import { BookingSection, PageTitle } from "../components";
 
 export const loader: LoaderFunction = async ({ context }: DataFunctionArgs) => {
   const buyerIP = (context.ip as string) || undefined;

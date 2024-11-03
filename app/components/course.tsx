@@ -1,6 +1,6 @@
-import React from "react";
-import { fr } from "date-fns/locale";
 import { format } from "date-fns";
+import { fr } from "date-fns/locale";
+import React from "react";
 import BuyButton from "./buyButton";
 import type { YogaProduct, CourseCategory } from "~/models/courses.server";
 

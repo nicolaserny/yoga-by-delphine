@@ -49,7 +49,7 @@ function videos() {
             <h2 className="text-lg font-semibold leading-none text-gray-800 lg:w-2/5 lg:text-xl xl:w-1/3">
               {section.title}
             </h2>
-            <div className="aspect-h-5 aspect-w-9 w-full lg:aspect-h-4  xl:aspect-h-3 xl:max-w-2xl ">
+            <div className="aspect-h-5 aspect-w-9 w-full lg:aspect-h-4 xl:aspect-h-3 xl:max-w-2xl">
               <iframe
                 title={section.videoTitle}
                 src={section.videoUrl}

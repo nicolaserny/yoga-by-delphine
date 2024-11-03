@@ -1,5 +1,5 @@
-import * as React from "react";
 import clsx from "clsx";
+import * as React from "react";
 import { useSSRLayoutEffect } from "~/utils/misc";
 
 // Component from https://kentcdodds.com/blog/building-an-awesome-image-loading-experience

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 let handleRequestImpl;
 if (process.env.NODE_ENV === "development") {
   handleRequestImpl = require("./entry.dev.server.tsx").default;

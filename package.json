@@ -37,13 +37,19 @@
         "@cld-apis/types": "0.1.6",
         "@netlify/plugin-lighthouse": "6.0.1",
         "@remix-run/dev": "2.13.1",
-        "@remix-run/eslint-config": "2.13.1",
         "@remix-run/serve": "2.13.1",
         "@tailwindcss/aspect-ratio": "0.4.2",
         "@types/react": "18.3.12",
         "@types/react-dom": "18.3.1",
         "@types/source-map-support": "0.5.10",
-        "eslint": "8.57.0",
+        "eslint": "9.14.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import-x": "^4.4.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-react": "^7.37.2",
+        "eslint-plugin-react-hooks": "^5.0.0",
+        "globals": "^15.11.0",
         "husky": "9.1.6",
         "netlify-cli": "17.37.2",
         "prettier": "3.3.3",
@@ -52,7 +58,8 @@
         "rimraf": "6.0.1",
         "tailwindcss": "3.4.14",
         "tsx": "4.19.2",
-        "typescript": "5.6.3"
+        "typescript": "5.6.3",
+        "typescript-eslint": "^8.12.2"
     },
     "overrides": {
         "react": "$react",
@@ -75,11 +82,5 @@
     },
     "bugs": {
         "url": "https://github.com/nicolaserny/yoga-by-delphine/issues"
-    },
-    "eslintIgnore": [
-        "node_modules",
-        "coverage",
-        "build",
-        "public/build"
-    ]
+    }
 }

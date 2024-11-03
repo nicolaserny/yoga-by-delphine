@@ -1,8 +1,8 @@
-import { setConfig, buildImageUrl } from "cloudinary-build-url";
-import fetch from "@remix-run/web-fetch";
-import { images } from "~/images";
 import fs from "fs";
 import path from "path";
+import fetch from "@remix-run/web-fetch";
+import { setConfig, buildImageUrl } from "cloudinary-build-url";
+import { images } from "~/images";
 
 setConfig({
   cloudName: "nicolaspika",
