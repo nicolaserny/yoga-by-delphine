@@ -1,5 +1,4 @@
 import type { LinksFunction } from "@netlify/remix-runtime";
-import styles from "./tailwind.css";
 import {
   Links,
   LiveReload,
@@ -10,6 +9,7 @@ import {
   useLocation,
 } from "@remix-run/react";
 import { Layout } from "./components";
+import styles from "./tailwind.css";
 import { getUrl } from "./utils/seo";
 
 export const links: LinksFunction = () => [

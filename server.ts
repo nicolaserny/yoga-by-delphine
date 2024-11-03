@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createRequestHandler } from "@netlify/remix-edge-adapter";
 import { broadcastDevReady } from "@netlify/remix-runtime";
 import * as build from "@remix-run/dev/server-build";

@@ -1,7 +1,7 @@
+import { Form } from "@remix-run/react";
+import clsx from "clsx";
 import React, { useState } from "react";
 import Button from "./button";
-import clsx from "clsx";
-import { Form } from "@remix-run/react";
 
 const BuyButton: React.FC<{
   shopifyId: string;

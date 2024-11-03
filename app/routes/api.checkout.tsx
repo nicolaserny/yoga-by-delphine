@@ -1,5 +1,4 @@
-import type { ActionFunctionArgs } from "@netlify/remix-runtime";
-import { redirect } from "@netlify/remix-runtime";
+import { type ActionFunctionArgs, redirect } from "@netlify/remix-runtime";
 import invariant from "tiny-invariant";
 import { createCheckoutUrl } from "~/models/checkout.server";
 

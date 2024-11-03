@@ -1,12 +1,16 @@
-import type { DataFunctionArgs, LoaderFunction } from "@netlify/remix-runtime";
-import { json } from "@netlify/remix-runtime";
-import type { MetaFunction } from "@remix-run/react";
-import { Link, useLoaderData } from "@remix-run/react";
-import AnchorLink from "~/components/anchorLink";
-import type { GiftCardType } from "~/models/giftCards.server";
-import { getGiftCardsFromApi } from "~/models/giftCards.server";
-import { getSeo, getUrl } from "~/utils/seo";
+import {
+  type DataFunctionArgs,
+  type LoaderFunction,
+  json,
+} from "@netlify/remix-runtime";
+import { type MetaFunction, Link, useLoaderData } from "@remix-run/react";
 import { PageTitle, GiftCard } from "../components";
+import AnchorLink from "~/components/anchorLink";
+import {
+  type GiftCardType,
+  getGiftCardsFromApi,
+} from "~/models/giftCards.server";
+import { getSeo, getUrl } from "~/utils/seo";
 
 export const loader: LoaderFunction = async ({ context }: DataFunctionArgs) => {
   const buyerIP = (context.ip as string) || undefined;

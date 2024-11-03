@@ -15,7 +15,7 @@ type ShopifyResponseType<ResponseDataType> = {
   errors: unknown;
 };
 
-export async function postToShopify<ResponseDataType, VariablesType = {}>({
+export async function postToShopify<ResponseDataType, VariablesType = object>({
   query,
   variables,
   buyerIP,
@@ -58,7 +58,10 @@ export async function postToShopify<ResponseDataType, VariablesType = {}>({
   }
 }
 
-export async function postToAdminShopify<ResponseDataType, VariablesType = {}>({
+export async function postToAdminShopify<
+  ResponseDataType,
+  VariablesType = object,
+>({
   query,
   variables,
 }: {

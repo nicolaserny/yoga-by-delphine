@@ -1,6 +1,6 @@
-import React from "react";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { Link } from "@remix-run/react";
+import React from "react";
 import Button from "../button";
 
 const NavLink: React.FC<{
@@ -10,7 +10,7 @@ const NavLink: React.FC<{
 }> = ({ children, to, onDismiss }) => (
   <Link
     to={to}
-    className={`block p-3 pl-12  text-xl font-medium text-gray-800 no-underline hover:bg-gray-100 hover:text-gray-900`}
+    className={`block p-3 pl-12 text-xl font-medium text-gray-800 no-underline hover:bg-gray-100 hover:text-gray-900`}
     onClick={onDismiss}
     prefetch="intent"
   >
@@ -30,7 +30,7 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
     >
       <DialogContent aria-label="Menu">
         <button
-          className={`fixed top-8 right-6 p-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
+          className={`fixed right-6 top-8 p-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
           onClick={onDismiss}
         >
           <svg

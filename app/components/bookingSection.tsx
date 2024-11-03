@@ -1,10 +1,10 @@
+import { compareAsc } from "date-fns";
 import React from "react";
 import Course from "./course";
-import { compareAsc } from "date-fns";
 import type { YogaProduct } from "~/models/courses.server";
 
 const Separator = () => (
-  <hr className="mt-3 mb-3 h-px w-full bg-gray-200 md:mt-4 lg:mt-6 lg:mb-6" />
+  <hr className="mb-3 mt-3 h-px w-full bg-gray-200 md:mt-4 lg:mb-6 lg:mt-6" />
 );
 
 const BookingSection: React.FC<{

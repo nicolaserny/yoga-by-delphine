@@ -1,12 +1,11 @@
-import type { MetaFunction} from "@remix-run/react";
-import { useNavigate } from "@remix-run/react";
-import Button from "~/components/button";
-import { getSeo, getUrl } from "~/utils/seo";
-import { PageTitle } from "../components";
-import Input from "~/components/input";
+import { type MetaFunction, useNavigate } from "@remix-run/react";
 import React from "react";
-import Textarea from "~/components/textarea";
+import { PageTitle } from "../components";
+import Button from "~/components/button";
+import Input from "~/components/input";
 import Label from "~/components/label";
+import Textarea from "~/components/textarea";
+import { getSeo, getUrl } from "~/utils/seo";
 
 export const meta: MetaFunction = ({ location }) => [
   ...getSeo({ title: "Me contacter", url: getUrl(location) }),

@@ -16,7 +16,7 @@ const StyledLi: React.FC<{ children: React.ReactNode }> = ({ children }) => (
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 125"
       height="1.4em"
-      className="mr-4 inline-block  text-purple-600"
+      className="mr-4 inline-block text-purple-600"
     >
       <path
         fill="currentColor"
@@ -92,7 +92,7 @@ function About() {
           </div>
         </div>
         <div className="lg:pl-8">
-          <div className="relative mx-auto md:mb-[100px] md:mt-[80px] md:w-[calc(100%-110px)]  lg:mb-[100px] lg:mt-[80px] lg:w-[calc(100%-120px)] xl:mb-[160px] xl:mt-[133px] xl:w-[calc(100%-168px)]">
+          <div className="relative mx-auto md:mb-[100px] md:mt-[80px] md:w-[calc(100%-110px)] lg:mb-[100px] lg:mt-[80px] lg:w-[calc(100%-120px)] xl:mb-[160px] xl:mt-[133px] xl:w-[calc(100%-168px)]">
             <BlurrableImage
               className="aspect-h-4 aspect-w-3 w-full shadow-lg"
               blurDataUrl={

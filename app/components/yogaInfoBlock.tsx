@@ -1,9 +1,10 @@
-import React from "react";
-import CourseDescription from "./courseDescription";
 import { Link } from "@remix-run/react";
-import type { CourseDescriptionProps } from "./courseDescription";
-import { images } from "~/images";
+import React from "react";
 import AnchorLink from "./anchorLink";
+import CourseDescription, {
+  type CourseDescriptionProps,
+} from "./courseDescription";
+import { images } from "~/images";
 
 const SubSection: React.FC<
   {

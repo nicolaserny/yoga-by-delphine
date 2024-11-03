@@ -1,5 +1,4 @@
-import type { ShopifyEdges } from "~/utils/shopify.server";
-import { postToShopify } from "~/utils/shopify.server";
+import { type ShopifyEdges, postToShopify } from "~/utils/shopify.server";
 
 export type GiftCardType = {
   shopifyId: string;

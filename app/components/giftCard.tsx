@@ -1,6 +1,6 @@
 import React from "react";
-import type { GiftCardType } from "~/models/giftCards.server";
 import BuyButton from "./buyButton";
+import type { GiftCardType } from "~/models/giftCards.server";
 
 const GifCard: React.FC<{ giftCard: GiftCardType }> = ({ giftCard }) => {
   return (

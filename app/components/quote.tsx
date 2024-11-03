@@ -9,7 +9,7 @@ const Quote: React.FC<React.HTMLAttributes<HTMLElement>> = ({
     className={`relative sm:w-3/5 lg:w-1/2 xl:w-auto ${className}`}
   >
     <svg
-      className="absolute top-0 left-0 -mt-6 -ml-6"
+      className="absolute left-0 top-0 -ml-6 -mt-6"
       width="59"
       height="64"
       fill="none"
@@ -21,14 +21,14 @@ const Quote: React.FC<React.HTMLAttributes<HTMLElement>> = ({
         className="fill-purple-100"
       />
     </svg>
-    <blockquote className="relative text-gray-700 text-base lg:text-lg text-left font-sans font-normal italic leading-relaxed mb-1">
+    <blockquote className="relative mb-1 text-left font-sans text-base font-normal italic leading-relaxed text-gray-700 lg:text-lg">
       Si tu recherches un sentiment de joie perpétuelle et d'accomplissement
       dans ta vie, le secret tient en un seul mot : la progression. Progression
       égale bonheur.
     </blockquote>
     <figcaption>
-      <span className="relative text-purple-500 text-sm lg:text-base text-left font-sans font-semibold">
-        <span className="inline-block h-0 w-0 border-b-2 border-purple-600 pl-1 pr-1 mb-1 mr-1" />
+      <span className="relative text-left font-sans text-sm font-semibold text-purple-500 lg:text-base">
+        <span className="mb-1 mr-1 inline-block h-0 w-0 border-b-2 border-purple-600 pl-1 pr-1" />
         Tony Robbins
       </span>
     </figcaption>

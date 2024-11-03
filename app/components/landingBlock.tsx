@@ -1,12 +1,12 @@
-import Illustration from "./illustration";
-import Quote from "./quote";
 import { Link } from "@remix-run/react";
 import Button from "./button";
+import Illustration from "./illustration";
+import Quote from "./quote";
 
 const LandingBlock = () => (
   <div className="width-constraints">
     <div className="flex items-stretch justify-between pb-16 pt-10 xl:pt-0">
-      <div className="flex flex-col sm:w-3/5 sm:pr-6 lg:w-1/2 xl:pr-2 ">
+      <div className="flex flex-col sm:w-3/5 sm:pr-6 lg:w-1/2 xl:pr-2">
         <div className="flex grow flex-col justify-center">
           <h1 className="text-left font-serif text-3xl font-bold leading-tight text-gray-800 lg:text-4xl xl:text-5xl">
             Pratiquer le yoga <br />
@@ -45,7 +45,7 @@ const LandingBlock = () => (
         </div>
         <Quote className="hidden xl:block" />
       </div>
-      <div className="hidden sm:inline-block  sm:w-2/5 lg:ml-3 lg:w-1/2">
+      <div className="hidden sm:inline-block sm:w-2/5 lg:ml-3 lg:w-1/2">
         <Illustration className="w-full" />
       </div>
     </div>

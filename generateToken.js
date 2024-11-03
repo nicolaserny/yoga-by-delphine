@@ -1,6 +1,6 @@
+import fetch from "@remix-run/web-fetch";
 import * as dotenv from "dotenv";
 import invariant from "tiny-invariant";
-import fetch from "@remix-run/web-fetch";
 
 dotenv.config({ path: ".env" });
 
