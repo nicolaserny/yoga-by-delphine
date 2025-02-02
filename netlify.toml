@@ -1,9 +1,13 @@
 [build]
 command = "pnpm run build && pnpm run lint && pnpm run typecheck"
-publish = "public"
+publish = "build/client"
+
+[dev]
+command = "npm run dev"
+framework = "vite"
 
 [[headers]]
-for = "/build/*"
+for = "/assets/*"
 [headers.values]
 "Cache-Control" = "public, max-age=31536000, s-maxage=31536000"
 
