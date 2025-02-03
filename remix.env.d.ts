@@ -1,3 +1,5 @@
+/// <reference types="@netlify/remix-runtime" />
+/// <reference types="vite/client" />
 export {};
 
 declare global {
@@ -11,4 +13,5 @@ declare global {
     env: ProcessEnv;
   }
   let process: Process;
+  let Netlify: { env: { get: (key: string) => string | undefined } };
 }

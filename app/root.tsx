@@ -1,7 +1,6 @@
 import type { LinksFunction } from "@netlify/remix-runtime";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -9,7 +8,7 @@ import {
   useLocation,
 } from "@remix-run/react";
 import { Layout } from "./components";
-import styles from "./tailwind.css";
+import styles from "./tailwind.css?url";
 import { getUrl } from "./utils/seo";
 
 export const links: LinksFunction = () => [
@@ -115,7 +114,6 @@ export default function App() {
         </Layout>
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );

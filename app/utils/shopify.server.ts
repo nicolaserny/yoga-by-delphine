@@ -1,4 +1,5 @@
 import invariant from "tiny-invariant";
+import { getValueFromEnv } from "./env";
 
 export type ShopifyNode<NodeType> = {
   node: NodeType;
@@ -24,9 +25,11 @@ export async function postToShopify<ResponseDataType, VariablesType = object>({
   buyerIP?: string;
   variables?: VariablesType;
 }): Promise<ResponseDataType | undefined> {
-  const storefrontAccessToken = process.env.SHOPIFY_DELEGATE_ACCESS_TOKEN;
+  const storefrontAccessToken = getValueFromEnv(
+    "SHOPIFY_DELEGATE_ACCESS_TOKEN",
+  );
   invariant(storefrontAccessToken, "The storefront api token is required");
-  const shopName = process.env.SHOP_NAME;
+  const shopName = getValueFromEnv("SHOP_NAME");
   invariant(shopName, "The shop name is required");
   console.log("buyerIP", buyerIP);
   try {
@@ -68,9 +71,9 @@ export async function postToAdminShopify<
   query: string;
   variables?: VariablesType;
 }): Promise<ResponseDataType | undefined> {
-  const adminAccessToken = process.env.SHOPIFY_ADMIN_API_PASSWORD;
+  const adminAccessToken = getValueFromEnv("SHOPIFY_ADMIN_API_PASSWORD");
   invariant(adminAccessToken, "The admin api token is required");
-  const shopName = process.env.SHOP_NAME;
+  const shopName = getValueFromEnv("SHOP_NAME");
   invariant(shopName, "The shop name is required");
 
   try {
