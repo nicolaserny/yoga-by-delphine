@@ -64,10 +64,10 @@ importers:
         version: 2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1))
       "@tailwindcss/aspect-ratio":
         specifier: 0.4.2
-        version: 0.4.2(tailwindcss@4.0.0)
-      "@tailwindcss/postcss":
-        specifier: ^4.0.0
-        version: 4.0.0
+        version: 0.4.2(tailwindcss@4.0.3)
+      "@tailwindcss/vite":
+        specifier: ^4.0.3
+        version: 4.0.3(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1))
       "@types/react":
         specifier: 18.3.12
         version: 18.3.12
@@ -120,8 +120,8 @@ importers:
         specifier: 6.0.1
         version: 6.0.1
       tailwindcss:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.0.3
+        version: 4.0.3
       tsx:
         specifier: 4.19.2
         version: 4.19.2
@@ -145,13 +145,6 @@ packages:
         integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==,
       }
     engines: { node: ">=0.10.0" }
-
-  "@alloc/quick-lru@5.2.0":
-    resolution:
-      {
-        integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==,
-      }
-    engines: { node: ">=10" }
 
   "@ampproject/remapping@2.2.1":
     resolution:
@@ -3126,11 +3119,13 @@ packages:
       }
     engines: { node: ">= 10" }
 
-  "@tailwindcss/postcss@4.0.0":
+  "@tailwindcss/vite@4.0.3":
     resolution:
       {
-        integrity: sha512-lI2bPk4TvwavHdehjr5WiC6HnZ59hacM6ySEo4RM/H7tsjWd8JpqiNW9ThH7rO/yKtrn4mGBoXshpvn8clXjPg==,
+        integrity: sha512-Qj6rSO+EvXnNDymloKZ11D54JJTnDrkRWJBzNHENDxjt0HtrCZJbSLIrcJ/WdaoU4othrel/oFqHpO/doxIS/Q==,
       }
+    peerDependencies:
+      vite: ^5.2.0 || ^6
 
   "@tokenizer/token@0.3.0":
     resolution:
@@ -12263,12 +12258,6 @@ packages:
         integrity: sha512-jANKmUe0sIQc/zTALTBy186PoM/k6aPrh3A7p6AaAfF6WPSbTx1JYeGIGH162btpH+mmVEXln+UxwViZHO2Jhg==,
       }
 
-  tailwindcss@4.0.0:
-    resolution:
-      {
-        integrity: sha512-ULRPI3A+e39T7pSaf1xoi58AqqJxVCLg8F/uM5A3FadUbnyDTgltVnXJvdkTjwCOGA6NazqHVcwPJC5h2vRYVQ==,
-      }
-
   tailwindcss@4.0.3:
     resolution:
       {
@@ -13586,8 +13575,6 @@ packages:
 
 snapshots:
   "@aashutoshrathi/word-wrap@1.2.6": {}
-
-  "@alloc/quick-lru@5.2.0": {}
 
   "@ampproject/remapping@2.2.1":
     dependencies:
@@ -15328,9 +15315,9 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  "@tailwindcss/aspect-ratio@0.4.2(tailwindcss@4.0.0)":
+  "@tailwindcss/aspect-ratio@0.4.2(tailwindcss@4.0.3)":
     dependencies:
-      tailwindcss: 4.0.0
+      tailwindcss: 4.0.3
 
   "@tailwindcss/node@4.0.3":
     dependencies:
@@ -15385,14 +15372,13 @@ snapshots:
       "@tailwindcss/oxide-win32-arm64-msvc": 4.0.3
       "@tailwindcss/oxide-win32-x64-msvc": 4.0.3
 
-  "@tailwindcss/postcss@4.0.0":
+  "@tailwindcss/vite@4.0.3(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1))":
     dependencies:
-      "@alloc/quick-lru": 5.2.0
       "@tailwindcss/node": 4.0.3
       "@tailwindcss/oxide": 4.0.3
       lightningcss: 1.29.1
-      postcss: 8.5.1
-      tailwindcss: 4.0.0
+      tailwindcss: 4.0.3
+      vite: 5.4.14(@types/node@20.11.17)(lightningcss@1.29.1)
 
   "@tokenizer/token@0.3.0": {}
 
@@ -21640,8 +21626,6 @@ snapshots:
       untildify: 3.0.3
     transitivePeerDependencies:
       - supports-color
-
-  tailwindcss@4.0.0: {}
 
   tailwindcss@4.0.3: {}
 
