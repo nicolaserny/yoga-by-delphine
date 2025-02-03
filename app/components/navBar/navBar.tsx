@@ -11,7 +11,7 @@ const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `mb-3 mr-4 p-1 text-xl lg:mb-0 lg:text-lg xl:mr-6 ${
+        `mr-4 mb-3 p-1 text-xl lg:mb-0 lg:text-lg xl:mr-6 ${
           isActive
             ? "relative font-semibold after:absolute after:bottom-[3px] after:left-[4px] after:m-0 after:block after:h-[2px] after:w-[calc(100%_-_0.5rem)] after:bg-purple-600 after:content-[''] hover:text-gray-800"
             : "font-medium hover:text-gray-900"
@@ -33,7 +33,7 @@ const NavBar = () => {
         Yoga <span className="text-purple-600">by</span> Delphine
       </span>
       <ul
-        className={`hidden w-screen grow-0 list-none items-baseline bg-white pl-12 pt-24 lg:static lg:w-auto lg:bg-transparent lg:pl-0 lg:pt-0 xl:flex`}
+        className={`hidden w-screen grow-0 list-none items-baseline bg-white pt-24 pl-12 lg:static lg:w-auto lg:bg-transparent lg:pt-0 lg:pl-0 xl:flex`}
       >
         <li>
           <StyledNavLink to="/">Accueil</StyledNavLink>
@@ -69,7 +69,7 @@ const NavBar = () => {
         </li>
       </ul>
       <button
-        className={`relative grow-0 self-end focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 xl:hidden`}
+        className={`relative grow-0 self-end focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 xl:hidden`}
         onClick={() => setShowMobileMenu(true)}
       >
         <svg

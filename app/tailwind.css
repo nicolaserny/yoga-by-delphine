@@ -1,3 +1,67 @@
-@import "./custom-base-styles.css";
-@tailwind components;
-@tailwind utilities;
+@import "./custom-base-styles.css" layer(components);
+@import "tailwindcss/utilities" layer(utilities);
+
+@plugin '@tailwindcss/aspect-ratio';
+
+@theme {
+  --font-sans: Montserrat, sans-serif;
+  --font-serif: Merriweather, serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 4rem;
+
+  --color-current: currentColor;
+  --color-light: #f5f7fa;
+
+  --color-gray-100: #f0f4f8;
+  --color-gray-200: #d9e2ec;
+  --color-gray-300: #bcccdc;
+  --color-gray-400: #9fb3c8;
+  --color-gray-500: #829ab1;
+  --color-gray-600: #627d98;
+  --color-gray-700: #486581;
+  --color-gray-800: #334e68;
+  --color-gray-900: #243b53;
+  --color-gray-1000: #102a43;
+
+  --color-purple-100: #eae2f8;
+  --color-purple-200: #cfbcf2;
+  --color-purple-300: #a081d9;
+  --color-purple-400: #8662c7;
+  --color-purple-500: #724bb7;
+  --color-purple-600: #653cad;
+  --color-purple-700: #51279b;
+  --color-purple-800: #421987;
+  --color-purple-900: #34126f;
+  --color-purple-1000: #240754;
+
+  --color-red-100: #ffe3e3;
+  --color-red-200: #ffbdbd;
+  --color-red-300: #ff9b9b;
+  --color-red-400: #f86a6a;
+  --color-red-500: #ef4e4e;
+  --color-red-600: #e12d39;
+  --color-red-700: #cf1124;
+  --color-red-800: #ab091e;
+  --color-red-900: #8a041a;
+  --color-red-1000: #610316;
+
+  --min-height-realsm: calc(100vh - theme("margin.20"));
+  --min-height-real: calc(100vh - theme("margin.24"));
+
+  --grid-template-rows-layout: 46px minmax(auto, 1fr) auto;
+
+  --grid-template-columns-coursesm: minmax(0, 1fr) auto;
+  --grid-template-columns-courselg: minmax(max-content, 200px) minmax(0, 1fr)
+    auto;
+  --grid-template-columns-course: 70px minmax(max-content, 240px) minmax(0, 1fr)
+    auto;
+}

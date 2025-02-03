@@ -37,19 +37,19 @@ function videos() {
   return (
     <main className="width-constraints">
       <PageTitle>Cours de yoga en vidéo</PageTitle>
-      <p className="mb-10 mt-3 text-base font-normal leading-normal text-gray-800 md:mb-16 lg:mb-24">
+      <p className="mt-3 mb-10 text-base leading-normal font-normal text-gray-800 md:mb-16 lg:mb-24">
         Découvrez des séances de Yoga pour tout niveau.
       </p>
       <div className="flex flex-col gap-10 md:gap-16 lg:gap-24">
         {videoSections.map((section) => (
           <section
             key={section.title}
-            className="flex flex-col items-start justify-center gap-6 text-base font-normal leading-normal text-gray-800 sm:mx-auto sm:w-[min(100%,42rem)] lg:mx-0 lg:w-full lg:flex-row"
+            className="flex flex-col items-start justify-center gap-6 text-base leading-normal font-normal text-gray-800 sm:mx-auto sm:w-[min(100%,42rem)] lg:mx-0 lg:w-full lg:flex-row"
           >
-            <h2 className="text-lg font-semibold leading-none text-gray-800 lg:w-2/5 lg:text-xl xl:w-1/3">
+            <h2 className="text-lg leading-none font-semibold text-gray-800 lg:w-2/5 lg:text-xl xl:w-1/3">
               {section.title}
             </h2>
-            <div className="aspect-h-5 aspect-w-9 w-full lg:aspect-h-4 xl:aspect-h-3 xl:max-w-2xl">
+            <div className="aspect-h-5 aspect-w-9 lg:aspect-h-4 xl:aspect-h-3 w-full xl:max-w-2xl">
               <iframe
                 title={section.videoTitle}
                 src={section.videoUrl}
@@ -62,10 +62,10 @@ function videos() {
         ))}
       </div>
       <div className="mx-auto my-10 w-full bg-white p-8 text-center shadow-md sm:w-[32rem] md:my-16 lg:my-24">
-        <h2 className="text-lg font-semibold leading-none text-gray-800 lg:text-xl">
+        <h2 className="text-lg leading-none font-semibold text-gray-800 lg:text-xl">
           Ma chaîne YouTube
         </h2>
-        <p className="my-4 text-base font-normal leading-normal text-gray-800">
+        <p className="my-4 text-base leading-normal font-normal text-gray-800">
           Je publie régulièrement de nouvelles vidéos (cours, mini routines...).
           Venez pratiquer avec moi.
         </p>

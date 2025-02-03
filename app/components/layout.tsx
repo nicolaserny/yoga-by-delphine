@@ -5,7 +5,7 @@ import { NavBar } from "./navBar";
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div>
     <div
-      className={`mx-8 my-6 grid min-h-realsm grid-rows-layout lg:mx-20 lg:my-12 lg:min-h-real xl:mx-0`}
+      className={`min-h-realsm grid-rows-layout lg:min-h-real mx-8 my-6 grid lg:mx-20 lg:my-12 xl:mx-0`}
     >
       <header className="width-constraints">
         <NavBar />

@@ -101,24 +101,24 @@ function formatTitleField(course: YogaProduct) {
 
 const Course: React.FC<{ course: YogaProduct }> = ({ course }) => {
   return (
-    <div className="mb-5 grid w-full max-w-md grid-cols-coursesm items-baseline gap-x-1 rounded-lg bg-white px-4 py-2 shadow last:mb-0 lg:max-w-full lg:grid-cols-courselg lg:gap-x-2 xl:grid-cols-course xl:gap-x-4 xl:px-10 xl:py-8">
+    <div className="grid-cols-coursesm lg:grid-cols-courselg xl:grid-cols-course mb-5 grid w-full max-w-md items-baseline gap-x-1 rounded-lg bg-white px-4 py-2 shadow-sm last:mb-0 lg:max-w-full lg:gap-x-2 xl:gap-x-4 xl:px-10 xl:py-8">
       <div className="row-span-2 hidden self-center text-gray-600 xl:block">
         <CourseIcon category={course.category} id={course.shopifyId} />
       </div>
-      <div className="whitespace-nowrap text-base font-medium leading-normal text-gray-800 xl:text-lg">
+      <div className="text-base leading-normal font-medium whitespace-nowrap text-gray-800 xl:text-lg">
         {formatDatetimeField(course)}
       </div>
-      <div className="col-start-1 row-start-2 text-base font-medium leading-normal text-gray-800 lg:col-start-2 lg:row-start-1 xl:col-start-3 xl:text-lg">
+      <div className="col-start-1 row-start-2 text-base leading-normal font-medium text-gray-800 lg:col-start-2 lg:row-start-1 xl:col-start-3 xl:text-lg">
         {formatTitleField(course)}
       </div>
-      <div className="justify-self-end text-right text-xl font-medium leading-normal text-gray-900 xl:text-3xl">
+      <div className="justify-self-end text-right text-xl leading-normal font-medium text-gray-900 xl:text-3xl">
         {course.price}
         <span className="text-base xl:text-xl">€</span>
       </div>
-      <div className="col-start-1 row-start-4 text-sm font-normal leading-normal text-gray-600 lg:col-start-1 lg:row-start-2 xl:col-start-2 xl:text-lg">
+      <div className="col-start-1 row-start-4 text-sm leading-normal font-normal text-gray-600 lg:col-start-1 lg:row-start-2 xl:col-start-2 xl:text-lg">
         {formatCourseType(course.category)}
       </div>
-      <div className="col-start-1 row-start-3 text-sm font-normal leading-normal text-gray-600 lg:col-start-2 lg:row-start-2 xl:col-start-3 xl:text-lg">
+      <div className="col-start-1 row-start-3 text-sm leading-normal font-normal text-gray-600 lg:col-start-2 lg:row-start-2 xl:col-start-3 xl:text-lg">
         {course.description}
       </div>
       <div className="col-start-2 row-start-4 text-right lg:col-start-3 lg:row-start-2 xl:col-start-4">

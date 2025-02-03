@@ -5,24 +5,24 @@ import Quote from "./quote";
 
 const LandingBlock = () => (
   <div className="width-constraints">
-    <div className="flex items-stretch justify-between pb-16 pt-10 xl:pt-0">
+    <div className="flex items-stretch justify-between pt-10 pb-16 xl:pt-0">
       <div className="flex flex-col sm:w-3/5 sm:pr-6 lg:w-1/2 xl:pr-2">
         <div className="flex grow flex-col justify-center">
-          <h1 className="text-left font-serif text-3xl font-bold leading-tight text-gray-800 lg:text-4xl xl:text-5xl">
+          <h1 className="text-left font-serif text-3xl leading-tight font-bold text-gray-800 lg:text-4xl xl:text-5xl">
             Pratiquer le yoga <br />
-            <span className="text-left font-serif text-3xl font-bold leading-tight text-purple-600 lg:text-4xl xl:text-5xl">
+            <span className="text-left font-serif text-3xl leading-tight font-bold text-purple-600 lg:text-4xl xl:text-5xl">
               avec Delphine Leblanc
             </span>
           </h1>
-          <p className="mt-3 text-left font-sans text-base font-normal leading-relaxed text-gray-700">
+          <p className="mt-3 text-left font-sans text-base leading-relaxed font-normal text-gray-700">
             Retrouvez votre alignement naturel et vivez avec cet alignement sur
             tous les plans : physique, énergétique, mental et émotionnel.
           </p>
-          <p className="mt-3 text-left font-sans text-base font-normal leading-relaxed text-gray-700">
+          <p className="mt-3 text-left font-sans text-base leading-relaxed font-normal text-gray-700">
             Attendez-vous à avoir la tête en bas, les mains par terre, les
             jambes levées le tout sans prise de tête et dans la bonne humeur.
           </p>
-          <p className="mt-3 text-left font-sans text-base font-normal leading-relaxed text-gray-700">
+          <p className="mt-3 text-left font-sans text-base leading-relaxed font-normal text-gray-700">
             Les cours sont pour tout le monde. Pas besoin d'être souple ou
             athlétique.{" "}
             <span className="font-medium text-gray-800">
