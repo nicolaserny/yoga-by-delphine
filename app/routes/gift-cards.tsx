@@ -1,21 +1,14 @@
-import {
-  type DataFunctionArgs,
-  type LoaderFunction,
-  json,
-} from "@netlify/remix-runtime";
+import { type LoaderFunctionArgs } from "@netlify/remix-runtime";
 import { type MetaFunction, Link, useLoaderData } from "@remix-run/react";
 import { PageTitle, GiftCard } from "../components";
 import AnchorLink from "~/components/anchorLink";
-import {
-  type GiftCardType,
-  getGiftCardsFromApi,
-} from "~/models/giftCards.server";
+import { getGiftCardsFromApi } from "~/models/giftCards.server";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const loader: LoaderFunction = async ({ context }: DataFunctionArgs) => {
+export const loader = async ({ context }: LoaderFunctionArgs) => {
   const buyerIP = (context.ip as string) || undefined;
   const giftCards = await getGiftCardsFromApi(buyerIP);
-  return json<Array<GiftCardType>>(giftCards);
+  return giftCards;
 };
 
 export const meta: MetaFunction = ({ location }) => [
@@ -26,7 +19,7 @@ export const meta: MetaFunction = ({ location }) => [
 ];
 
 export default function GifCardRoute() {
-  const giftCards = useLoaderData() as Array<GiftCardType>;
+  const giftCards = useLoaderData<typeof loader>();
   return (
     <main className="width-constraints">
       <PageTitle>Offrez des cours de Yoga</PageTitle>
