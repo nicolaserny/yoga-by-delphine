@@ -154,10 +154,10 @@ function YogaBallsRoute() {
   return (
     <main className="width-constraints">
       <PageTitle>Yoga-balles</PageTitle>
-      <div className="mb-14 text-base font-normal leading-relaxed text-gray-800 lg:text-lg">
+      <div className="mb-14 text-base leading-relaxed font-normal text-gray-800 lg:text-lg">
         <section className="mt-4 gap-x-4 md:mt-8 lg:mt-12 xl:grid xl:grid-cols-2 xl:gap-x-12">
           <div className="md:mr-4">
-            <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-4 lg:mb-5 lg:text-xl">
+            <h2 className="mb-3 text-lg leading-normal font-semibold md:mb-4 lg:mb-5 lg:text-xl">
               Qu'est ce que le Yoga-balles ?
             </h2>
             <p className="mb-2 md:mb-3 lg:mb-4">
@@ -186,11 +186,11 @@ function YogaBallsRoute() {
           <Illustration />
         </section>
         <section className="mt-3 md:mt-5 lg:mt-6">
-          <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-4 lg:mb-5 lg:text-xl">
+          <h2 className="mb-3 text-lg leading-normal font-semibold md:mb-4 lg:mb-5 lg:text-xl">
             Le cours
           </h2>
           <div className="mt-2 gap-x-4 md:mt-3 md:grid md:grid-cols-2 lg:mt-4 xl:gap-x-12">
-            <p className="mb-2 md:mb-3 md:mr-4 lg:mb-4">
+            <p className="mb-2 md:mr-4 md:mb-3 lg:mb-4">
               Le cours dure généralement une heure, et nécessite un peu de
               matériel, l’accès à un mur ou surface équivalente (porte fermée,
               sans risque qu’elle ne s’ouvre ...), un tapis de yoga ou une
@@ -205,7 +205,7 @@ function YogaBallsRoute() {
           </div>
         </section>
         <section className="mt-3 md:mt-5 lg:mt-6">
-          <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-4 lg:mb-5 lg:text-xl">
+          <h2 className="mb-3 text-lg leading-normal font-semibold md:mb-4 lg:mb-5 lg:text-xl">
             Matériel nécessaire
           </h2>
           <div className="mt-2 gap-x-4 md:mt-3 md:grid md:grid-cols-2 lg:mt-4 xl:gap-x-12">
@@ -234,7 +234,7 @@ function YogaBallsRoute() {
           </div>
         </section>
         <section className="mt-3 md:mt-5 lg:mt-6">
-          <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-4 lg:mb-5 lg:text-xl">
+          <h2 className="mb-3 text-lg leading-normal font-semibold md:mb-4 lg:mb-5 lg:text-xl">
             Où acheter le matériel ?
           </h2>
           <p className="mb-2 md:mb-3 lg:mb-4">

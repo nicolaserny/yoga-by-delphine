@@ -4,7 +4,7 @@ import Course from "./course";
 import type { YogaProduct } from "~/models/courses.server";
 
 const Separator = () => (
-  <hr className="mb-3 mt-3 h-px w-full bg-gray-200 md:mt-4 lg:mb-6 lg:mt-6" />
+  <hr className="mt-3 mb-3 h-px w-full bg-gray-200 md:mt-4 lg:mt-6 lg:mb-6" />
 );
 
 const BookingSection: React.FC<{
@@ -16,16 +16,16 @@ const BookingSection: React.FC<{
     <Separator />
     <section className="mt-3 lg:mt-4 lg:flex lg:flex-row">
       <div className="mb-2 w-full lg:mb-0 lg:w-1/3 lg:pr-10">
-        <h2 className="text-lg font-semibold leading-normal text-gray-800 lg:text-xl">
+        <h2 className="text-lg leading-normal font-semibold text-gray-800 lg:text-xl">
           {title}
         </h2>
-        <div className="mt-2 text-base font-normal leading-normal text-gray-800">
+        <div className="mt-2 text-base leading-normal font-normal text-gray-800">
           {description}
         </div>
       </div>
       <div className="w-full lg:w-2/3">
         {courses.length === 0 && (
-          <p className="mt-px pt-px text-base font-medium leading-relaxed text-gray-800 lg:text-lg">
+          <p className="mt-px pt-px text-base leading-relaxed font-medium text-gray-800 lg:text-lg">
             Aucun cours pour le moment.
           </p>
         )}

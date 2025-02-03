@@ -41,8 +41,8 @@ function About() {
     <main className="width-constraints">
       <PageTitle>Je suis Delphine, professeur de Yoga...</PageTitle>
       <section className="my-4 gap-x-4 md:my-8 md:grid md:grid-cols-2 lg:my-12 xl:gap-x-12">
-        <div className="text-base font-normal leading-relaxed text-gray-800 md:mr-4 lg:text-lg">
-          <h2 className="mb-3 text-lg font-semibold leading-normal md:mb-5 lg:mb-8 lg:text-xl">
+        <div className="text-base leading-relaxed font-normal text-gray-800 md:mr-4 lg:text-lg">
+          <h2 className="mb-3 text-lg leading-normal font-semibold md:mb-5 lg:mb-8 lg:text-xl">
             Le yoga est un style de vie
           </h2>
           <p className="mb-3 md:mb-5 lg:mb-8">
@@ -92,7 +92,7 @@ function About() {
           </div>
         </div>
         <div className="lg:pl-8">
-          <div className="relative mx-auto md:mb-[100px] md:mt-[80px] md:w-[calc(100%-110px)] lg:mb-[100px] lg:mt-[80px] lg:w-[calc(100%-120px)] xl:mb-[160px] xl:mt-[133px] xl:w-[calc(100%-168px)]">
+          <div className="relative mx-auto md:mt-[80px] md:mb-[100px] md:w-[calc(100%-110px)] lg:mt-[80px] lg:mb-[100px] lg:w-[calc(100%-120px)] xl:mt-[133px] xl:mb-[160px] xl:w-[calc(100%-168px)]">
             <BlurrableImage
               className="aspect-h-4 aspect-w-3 w-full shadow-lg"
               blurDataUrl={
@@ -139,7 +139,7 @@ function About() {
                 }
               />
             </div>
-            <div className="absolute right-0 top-0 hidden translate-x-1/2 shadow-lg md:block md:w-[110px] md:-translate-y-[80px] lg:w-[120px] lg:-translate-y-[80px] xl:w-[168px] xl:-translate-y-[133px]">
+            <div className="absolute top-0 right-0 hidden translate-x-1/2 shadow-lg md:block md:w-[110px] md:-translate-y-[80px] lg:w-[120px] lg:-translate-y-[80px] xl:w-[168px] xl:-translate-y-[133px]">
               <BlurrableImage
                 className="aspect-h-4 aspect-w-3 w-full"
                 blurDataUrl={

@@ -29,7 +29,7 @@ const Button = <C extends React.ElementType = "button">({
       {...props}
       className={clsx(
         className,
-        "inline-block transition-colors duration-500 hover:duration-150 focus:outline-none",
+        "inline-block transition-colors duration-500 hover:duration-150 focus:outline-hidden",
         {
           "text-sm": size === "small",
           "lg:text-base": size === "small" && responsive,
@@ -38,15 +38,15 @@ const Button = <C extends React.ElementType = "button">({
           "text-lg": size === "large",
           "xl:text-xl": size === "large" && responsive,
           "text-xl": size === "xlarge",
-          "rounded-lg px-4 py-2 font-bold text-white focus-visible:ring":
+          "rounded-lg px-4 py-2 font-bold text-white focus-visible:ring-3":
             variant === "solid",
           "bg-red-500 hover:bg-red-600 focus-visible:ring-red-300":
             variant === "solid" && colorScheme === "red",
-          "rounded-lg border border-red-600 bg-transparent px-4 py-2 font-semibold hover:text-white focus:outline-none focus-visible:ring":
+          "rounded-lg border border-red-600 bg-transparent px-4 py-2 font-semibold hover:text-white focus:outline-hidden focus-visible:ring-3":
             variant === "outline",
           "text-red-600 hover:border-red-500 hover:bg-red-500 focus-visible:ring-red-300":
             variant === "outline" && colorScheme === "red",
-          "w-max border-none bg-transparent text-left font-semibold no-underline hover:underline focus:rounded-lg focus:no-underline focus-visible:outline-none focus-visible:ring-2":
+          "w-max border-none bg-transparent text-left font-semibold no-underline hover:underline focus:rounded-lg focus:no-underline focus-visible:ring-2 focus-visible:outline-hidden":
             variant === "link",
           "text-purple-700 focus-visible:ring-purple-300 focus-visible:ring-offset-2":
             variant === "link" && colorScheme === "purple",

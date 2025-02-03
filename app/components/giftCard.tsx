@@ -4,7 +4,7 @@ import type { GiftCardType } from "~/models/giftCards.server";
 
 const GifCard: React.FC<{ giftCard: GiftCardType }> = ({ giftCard }) => {
   return (
-    <article className="mx-auto my-7 flex w-full flex-col items-center gap-7 rounded-lg bg-white px-6 py-8 shadow sm:w-[fit-content] sm:flex-row lg:px-10 lg:py-12 xl:px-12 xl:py-14">
+    <article className="mx-auto my-7 flex w-full flex-col items-center gap-7 rounded-lg bg-white px-6 py-8 shadow-sm sm:w-[fit-content] sm:flex-row lg:px-10 lg:py-12 xl:px-12 xl:py-14">
       <div className="w-60 xl:w-72">
         <svg
           viewBox="0 0 409 295"
@@ -233,14 +233,14 @@ const GifCard: React.FC<{ giftCard: GiftCardType }> = ({ giftCard }) => {
         </svg>
       </div>
       <div>
-        <div className="text-xl font-medium leading-normal text-gray-900 lg:text-2xl xl:text-3xl">
+        <div className="text-xl leading-normal font-medium text-gray-900 lg:text-2xl xl:text-3xl">
           {giftCard.price}
           <span className="text-base lg:text-xl xl:text-2xl">€</span>
         </div>
-        <div className="whitespace-nowrap text-base font-medium leading-normal text-gray-800 lg:text-lg xl:text-xl">
+        <div className="text-base leading-normal font-medium whitespace-nowrap text-gray-800 lg:text-lg xl:text-xl">
           {giftCard.title}
         </div>
-        <div className="whitespace-nowrap text-sm leading-normal text-gray-600 lg:text-base xl:text-lg">
+        <div className="text-sm leading-normal whitespace-nowrap text-gray-600 lg:text-base xl:text-lg">
           {giftCard.description}
         </div>
         <div className="mt-3">

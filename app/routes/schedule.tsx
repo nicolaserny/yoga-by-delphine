@@ -33,7 +33,7 @@ function ScheduleRoute() {
   return (
     <main className="width-constraints">
       <PageTitle>Programme des cours de Yoga</PageTitle>
-      <div className="mt-2 pb-1 text-base font-normal leading-normal text-gray-800 lg:pb-3">
+      <div className="mt-2 pb-1 text-base leading-normal font-normal text-gray-800 lg:pb-3">
         <p>Vous pouvez réserver des cours en ligne ou en studio.</p>
         <p>Annulation sans frais jusqu'à 24h avant le début du cours.</p>
         <p>

@@ -30,7 +30,7 @@ export default function GifCardRoute() {
   return (
     <main className="width-constraints">
       <PageTitle>Offrez des cours de Yoga</PageTitle>
-      <div className="mt-2 pb-1 text-base font-normal leading-normal text-gray-800 lg:pb-3">
+      <div className="mt-2 pb-1 text-base leading-normal font-normal text-gray-800 lg:pb-3">
         <p>
           Les cartes-cadeaux sont valables sur l’ensemble des cours, cartes et
           abonnements.

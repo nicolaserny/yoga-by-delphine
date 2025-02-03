@@ -30,7 +30,7 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
     >
       <DialogContent aria-label="Menu">
         <button
-          className={`fixed right-6 top-8 p-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
+          className={`fixed top-8 right-6 p-3 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
           onClick={onDismiss}
         >
           <svg
@@ -85,7 +85,7 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
               colorScheme="red"
               to="/schedule/"
               onClick={onDismiss}
-              className="ml-12 mt-3"
+              className="mt-3 ml-12"
               responsive={false}
               size="xlarge"
               prefetch="intent"
