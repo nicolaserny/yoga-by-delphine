@@ -1,8 +1,4 @@
-import {
-  type DataFunctionArgs,
-  type LoaderFunction,
-  json,
-} from "@netlify/remix-runtime";
+import { type LoaderFunctionArgs } from "@netlify/remix-runtime";
 import { type MetaFunction, Link, useLoaderData } from "@remix-run/react";
 import { BookingSection, PageTitle } from "../components";
 import AnchorLink from "~/components/anchorLink";
@@ -10,10 +6,10 @@ import { type YogaProduct, getCoursesFromApi } from "~/models/courses.server";
 import { parseCourseDate } from "~/utils/date";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const loader: LoaderFunction = async ({ context }: DataFunctionArgs) => {
+export const loader = async ({ context }: LoaderFunctionArgs) => {
   const buyerIP = (context.ip as string) || undefined;
   const courses = await getCoursesFromApi(buyerIP);
-  return json<Array<YogaProduct>>(courses);
+  return courses;
 };
 
 export const meta: MetaFunction = ({ location }) => [
@@ -28,7 +24,7 @@ function normalizeCourses(courses: Array<YogaProduct>) {
 }
 
 function ScheduleRoute() {
-  const coursesData = useLoaderData() as Array<YogaProduct>;
+  const coursesData = useLoaderData<typeof loader>();
   const courses = normalizeCourses(coursesData);
   return (
     <main className="width-constraints">
