@@ -31,7 +31,13 @@ const StyledLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   href,
   children,
 }) => (
-  <AnchorLink href={href} target="_blank" rel="noreferrer noopener">
+  <AnchorLink
+    href={href}
+    target="_blank"
+    rel="noreferrer noopener"
+    size="base"
+    responsive={true}
+  >
     {children}
   </AnchorLink>
 );
@@ -54,12 +60,27 @@ function About() {
             <ol className="mt-2 leading-loose">
               <StyledLi>hatha yoga, vinyasa yoga</StyledLi>
               <StyledLi>
-                CSV (core strength vinyasa) yoga et yoga shred
+                <StyledLink href="https://yogaforlifeonline.com/the-yoga-teacher-revolution-training/">
+                  CSV (core strength vinyasa)
+                </StyledLink>{" "}
+                yoga et yoga shred
               </StyledLi>
               <StyledLi>LYT yoga method</StyledLi>
-              <StyledLi>Primal vinyasa yoga</StyledLi>
-              <StyledLi>Budokon yoga</StyledLi>
-              <StyledLi>Animal flow</StyledLi>
+              <StyledLi>
+                <StyledLink href="https://primalvinyasayoga.com/">
+                  Primal vinyasa yoga
+                </StyledLink>
+              </StyledLi>
+              <StyledLi>
+                <StyledLink href="https://budokonacademy.thinkific.com/">
+                  Budokon yoga
+                </StyledLink>
+              </StyledLi>
+              <StyledLi>
+                <StyledLink href="https://animalflow.com/">
+                  Animal flow
+                </StyledLink>
+              </StyledLi>
             </ol>
           </div>
           <div className="mb-3 md:mb-5 lg:mb-8">
@@ -80,13 +101,26 @@ function About() {
               <StyledLi>
                 <StyledLink href="https://www.running-yogis.com">
                   Running yoga
-                </StyledLink>
+                </StyledLink>{" "}
+                avec Bénédicte Opsomer
               </StyledLi>
               <StyledLi>
-                En cours de formation :{" "}
-                <StyledLink href="https://lytyoga.com/about-us/">
-                  LYT yoga method
-                </StyledLink>
+                <StyledLink href="https://lytyoga.com/teacher-training/">
+                  LYT yoga
+                </StyledLink>{" "}
+                avec Lara Heimann
+              </StyledLi>
+              <StyledLi>
+                <StyledLink href="https://universitedeyoga.com/">
+                  Diva yoga
+                </StyledLink>{" "}
+                avec Maryse Lehoux
+              </StyledLi>
+              <StyledLi>
+                <StyledLink href="https://universitedeyoga.com/balles/">
+                  Yoga balles
+                </StyledLink>{" "}
+                avec Mireille Martel et Julie Cadorette
               </StyledLi>
             </ol>
           </div>

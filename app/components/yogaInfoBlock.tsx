@@ -108,21 +108,15 @@ const YogaInfoBlock = () => {
         <>
           Adresse du studio: <br />
           <span className="font-semibold text-gray-700">
-            Funny Club J2A Judo et Multis-sport
+            64 promenade du Verger, 92130 Issy-les-Moulineaux
           </span>
-          <br />
-          <span className="font-semibold text-gray-700">
-            50 Rue Sébastien Mercier, 75015 Paris
-          </span>
-          <br /> Vous devez avoir votre propre tapis de yoga, le studio n’a pas
-          de tapis adéquat.
         </>
       ),
       description2: (
         <>
-          Selon les mesures sanitaires en cours, des accessoires (briques,
-          coussins de méditation...) sont disponibles pour la pratique (mais pas
-          de tapis) Vous pouvez évidemment venir avec vos propres accessoires.
+          Il est préférable de venir avec votre tapis de yoga personnel, il
+          concentre votre énergie. La salle propose des briques et des
+          couvertures.
         </>
       ),
       image: images["course-5"],
