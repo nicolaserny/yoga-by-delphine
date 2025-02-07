@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React from "react";
 import type { PolymorphicComponentProp } from "~/utils/polymorphicComponentProp";
 
-type ButtonProps<C extends React.ElementType> = PolymorphicComponentProp<
+export type ButtonProps<C extends React.ElementType> = PolymorphicComponentProp<
   C,
   {
     children: React.ReactNode;

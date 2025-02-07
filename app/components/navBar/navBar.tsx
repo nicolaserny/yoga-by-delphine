@@ -29,9 +29,13 @@ const NavBar = () => {
 
   return (
     <nav className="relative flex w-full flex-nowrap items-baseline">
-      <span className="inline-block shrink-0 grow text-left align-baseline text-xl font-semibold text-gray-800 lg:text-2xl">
-        Yoga <span className="text-purple-600">by</span> Delphine
-      </span>
+      <div className="shrink-0 grow">
+        <Link to="/">
+          <span className="inline-block text-left align-baseline text-xl font-semibold text-gray-800 lg:text-2xl">
+            Yoga <span className="text-purple-600">by</span> Delphine
+          </span>
+        </Link>
+      </div>
       <ul
         className={`hidden w-screen grow-0 list-none items-baseline bg-white pt-24 pl-12 lg:static lg:w-auto lg:bg-transparent lg:pt-0 lg:pl-0 xl:flex`}
       >

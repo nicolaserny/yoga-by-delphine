@@ -1,13 +1,17 @@
-import Button from "./button";
+import Button, { ButtonProps } from "./button";
 
 type AnchorLinkProps<Type extends React.ElementType> = {
   children: React.ReactNode;
   as?: Type;
+  size?: ButtonProps<Type>["size"];
+  responsive?: ButtonProps<Type>["responsive"];
 };
 
 function AnchorLink<Type extends React.ElementType = "a">({
   as,
   children,
+  size,
+  responsive,
   ...props
 }: AnchorLinkProps<Type> &
   Omit<React.ComponentPropsWithoutRef<Type>, keyof AnchorLinkProps<Type>>) {
@@ -18,8 +22,8 @@ function AnchorLink<Type extends React.ElementType = "a">({
       as={Component}
       variant="link"
       colorScheme="purple"
-      size="base"
-      responsive={false}
+      size={size || "base"}
+      responsive={responsive || false}
     >
       {children}
     </Button>
