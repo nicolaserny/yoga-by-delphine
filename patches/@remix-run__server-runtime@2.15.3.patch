@@ -1,0 +1,30 @@
+diff --git a/dist/esm/server.js b/dist/esm/server.js
+index 5368f8456e3bf582c801c3f71d05f8400baa7017..9fb29ebf34ef93d4fb562aa43f80444055686117 100644
+--- a/dist/esm/server.js
++++ b/dist/esm/server.js
+@@ -189,7 +189,9 @@ async function handleManifestRequest(build, routes, url) {
+     }
+     return json(patches, {
+       headers: {
+-        "Cache-Control": "public, max-age=31536000, immutable"
++        "Cache-Control": "public, max-age=0, must-revalidate",
++        "CDN-Cache-Control": "public, max-age=31536000",
++        "Netlify-Vary": "query"
+       }
+     }); // Override the TypedResponse stuff from json()
+   }
+diff --git a/dist/server.js b/dist/server.js
+index 430ba0dc910307b8aa2ab2eaf107fe12b3f6ae19..d7bb924edfed6e84d108dc5d804bdce91799fd50 100644
+--- a/dist/server.js
++++ b/dist/server.js
+@@ -193,7 +193,9 @@ async function handleManifestRequest(build, routes, url) {
+     }
+     return responses.json(patches, {
+       headers: {
+-        "Cache-Control": "public, max-age=31536000, immutable"
++        "Cache-Control": "public, max-age=0, must-revalidate",
++        "CDN-Cache-Control": "public, max-age=31536000",
++        "Netlify-Vary": "query"
+       }
+     }); // Override the TypedResponse stuff from json()
+   }
