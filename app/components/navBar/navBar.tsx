@@ -28,7 +28,7 @@ const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <nav className="relative flex w-full flex-nowrap items-baseline">
+    <nav className="relative flex w-full flex-nowrap items-center lg:items-baseline">
       <div className="shrink-0 grow">
         <Link to="/">
           <span className="inline-block text-left align-baseline text-xl font-semibold text-gray-800 lg:text-2xl">
