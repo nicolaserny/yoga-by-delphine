@@ -11,7 +11,8 @@ const BookingSection: React.FC<{
   title: string;
   description: string | JSX.Element;
   courses: YogaProduct[];
-}> = ({ title, description, courses }) => (
+  noCoursesMessage?: string | JSX.Element;
+}> = ({ title, description, courses, noCoursesMessage }) => (
   <>
     <Separator />
     <section className="mt-3 lg:mt-4 lg:flex lg:flex-row">
@@ -26,7 +27,7 @@ const BookingSection: React.FC<{
       <div className="w-full lg:w-2/3">
         {courses.length === 0 && (
           <p className="mt-px pt-px text-base leading-relaxed font-medium text-gray-800 lg:text-lg">
-            Aucun cours pour le moment.
+            {noCoursesMessage || "Aucun cours pour le moment"}.
           </p>
         )}
         {courses
