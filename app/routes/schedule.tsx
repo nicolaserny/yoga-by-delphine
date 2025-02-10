@@ -73,6 +73,20 @@ function ScheduleRoute() {
             </>
           }
           courses={courses.filter((course) => course.category === "studio")}
+          noCoursesMessage={
+            <span>
+              Information et inscription auprès de l’association{" "}
+              <AnchorLink
+                href="https://asepgi92.fr/yoga/"
+                target="_blank"
+                rel="noreferrer noopener"
+                size="base"
+                responsive={true}
+              >
+                Asepgi92
+              </AnchorLink>
+            </span>
+          }
         />
         <BookingSection
           title="Autres"
