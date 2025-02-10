@@ -67,6 +67,12 @@ importers:
       "@remix-run/dev":
         specifier: 2.15.3
         version: 2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1))
+      "@remix-run/fs-routes":
+        specifier: ^2.15.3
+        version: 2.15.3(@remix-run/dev@2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1)))(@remix-run/route-config@2.15.3(@remix-run/dev@2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1)))(typescript@5.7.3))(typescript@5.7.3)
+      "@remix-run/route-config":
+        specifier: ^2.15.3
+        version: 2.15.3(@remix-run/dev@2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1)))(typescript@5.7.3)
       "@tailwindcss/aspect-ratio":
         specifier: 0.4.2
         version: 0.4.2(tailwindcss@4.0.5)
@@ -2717,6 +2723,20 @@ packages:
       typescript:
         optional: true
 
+  "@remix-run/fs-routes@2.15.3":
+    resolution:
+      {
+        integrity: sha512-uv4eBA+90A3PGroMAS/+aC5B9wyoNYxQFKALy3KhKl1tX68TY42IrRUeIJdkDd8y/F7RE9OlQzcn3nHl+dRyng==,
+      }
+    engines: { node: ">=18.0.0" }
+    peerDependencies:
+      "@remix-run/dev": ^2.15.3
+      "@remix-run/route-config": ^2.15.3
+      typescript: ^5.1.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   "@remix-run/node@2.15.3":
     resolution:
       {
@@ -2738,6 +2758,19 @@ packages:
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
+      typescript: ^5.1.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  "@remix-run/route-config@2.15.3":
+    resolution:
+      {
+        integrity: sha512-r6YVRaADMjM5M/d7BH94sgdoDtTRDY40PY4Lg0jwMHZLWuqLXLoNg1MvHfzuJpWfoSNeXCseSnYJsnRyGjM5BQ==,
+      }
+    engines: { node: ">=18.0.0" }
+    peerDependencies:
+      "@remix-run/dev": ^2.15.3
       typescript: ^5.1.0
     peerDependenciesMeta:
       typescript:
@@ -15227,6 +15260,13 @@ snapshots:
     optionalDependencies:
       typescript: 5.7.3
 
+  "@remix-run/fs-routes@2.15.3(@remix-run/dev@2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1)))(@remix-run/route-config@2.15.3(@remix-run/dev@2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1)))(typescript@5.7.3))(typescript@5.7.3)":
+    dependencies:
+      "@remix-run/dev": 2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1))
+      "@remix-run/route-config": 2.15.3(@remix-run/dev@2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1)))(typescript@5.7.3)
+    optionalDependencies:
+      typescript: 5.7.3
+
   "@remix-run/node@2.15.3(typescript@5.7.3)":
     dependencies:
       "@remix-run/server-runtime": 2.15.3(patch_hash=b37woqp3zrqdu5q3etsjw52xky)(typescript@5.7.3)
@@ -15248,6 +15288,13 @@ snapshots:
       react-router: 6.29.0(react@18.3.1)
       react-router-dom: 6.29.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       turbo-stream: 2.4.0
+    optionalDependencies:
+      typescript: 5.7.3
+
+  "@remix-run/route-config@2.15.3(@remix-run/dev@2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1)))(typescript@5.7.3)":
+    dependencies:
+      "@remix-run/dev": 2.15.3(@remix-run/react@2.15.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@remix-run/serve@2.15.3(typescript@5.7.3))(@types/node@20.11.17)(lightningcss@1.29.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.7.3))(typescript@5.7.3)(vite@5.4.14(@types/node@20.11.17)(lightningcss@1.29.1))
+      lodash: 4.17.21
     optionalDependencies:
       typescript: 5.7.3
 
