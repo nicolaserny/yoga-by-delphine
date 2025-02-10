@@ -67,8 +67,9 @@ function ScheduleRoute() {
           title="En studio"
           description={
             <>
-              Funny Club J2A Judo et Multis-sport <br />
-              50 Rue Sébastien Mercier, 75015 Paris
+              64 promenade du Verger
+              <br />
+              92130 Issy-les-Moulineaux
             </>
           }
           courses={courses.filter((course) => course.category === "studio")}
