@@ -17,10 +17,10 @@
         "generateBlurDataUrls": "tsx ./tools/generateBlurDataUrls.ts ./app/generated/blurDataUrls.ts"
     },
     "dependencies": {
+        "@headlessui/react": "^2.2.0",
         "@netlify/edge-functions": "2.11.1",
         "@netlify/remix-edge-adapter": "3.4.2",
         "@netlify/remix-runtime": "2.3.1",
-        "@reach/dialog": "0.18.0",
         "@remix-run/react": "2.15.3",
         "@remix-run/serve": "2.15.3",
         "cloudinary-build-url": "0.2.4",
