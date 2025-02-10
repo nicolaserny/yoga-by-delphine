@@ -37,6 +37,8 @@
         "@cld-apis/types": "0.1.6",
         "@netlify/plugin-lighthouse": "6.0.1",
         "@remix-run/dev": "2.15.3",
+        "@remix-run/fs-routes": "^2.15.3",
+        "@remix-run/route-config": "^2.15.3",
         "@remix-run/serve": "2.15.3",
         "@tailwindcss/aspect-ratio": "0.4.2",
         "@tailwindcss/vite": "^4.0.5",
