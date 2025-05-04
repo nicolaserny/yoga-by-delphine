@@ -27,7 +27,7 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
       <div className="fixed inset-0 bg-white">
         <DialogPanel aria-label="Menu">
           <button
-            className={`fixed top-8 right-6 p-3 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2`}
+            className={`fixed top-6 right-8 -m-3 p-3 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 lg:top-12 lg:right-[5rem]`}
             onClick={onDismiss}
           >
             <svg
