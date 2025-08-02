@@ -1,8 +1,8 @@
 diff --git a/dist/esm/server.js b/dist/esm/server.js
-index 5368f8456e3bf582c801c3f71d05f8400baa7017..9fb29ebf34ef93d4fb562aa43f80444055686117 100644
+index 9b353530a5886b4b551d07bfb7e5bf920d7ec28e..b352d3e865c9fd5b0211b71dc27369172afa2703 100644
 --- a/dist/esm/server.js
 +++ b/dist/esm/server.js
-@@ -189,7 +189,9 @@ async function handleManifestRequest(build, routes, url) {
+@@ -217,7 +217,9 @@ async function handleManifestRequest(build, routes, url) {
      }
      return json(patches, {
        headers: {
@@ -14,10 +14,10 @@ index 5368f8456e3bf582c801c3f71d05f8400baa7017..9fb29ebf34ef93d4fb562aa43f804440
      }); // Override the TypedResponse stuff from json()
    }
 diff --git a/dist/server.js b/dist/server.js
-index 430ba0dc910307b8aa2ab2eaf107fe12b3f6ae19..d7bb924edfed6e84d108dc5d804bdce91799fd50 100644
+index 9d0c9e443393499c0e9d5f764d8e4624ca02179e..ded7e467e20ef5dfb2cc8be32bfedf115322afea 100644
 --- a/dist/server.js
 +++ b/dist/server.js
-@@ -193,7 +193,9 @@ async function handleManifestRequest(build, routes, url) {
+@@ -221,7 +221,9 @@ async function handleManifestRequest(build, routes, url) {
      }
      return responses.json(patches, {
        headers: {
