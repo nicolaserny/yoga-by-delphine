@@ -70,7 +70,7 @@
         "react": "$react",
         "react-dom": "$react-dom"
     },
-    "packageManager": "pnpm@9.10.0",
+    "packageManager": "pnpm@10.14.0",
     "keywords": [
         "remix",
         "yoga",
@@ -79,7 +79,7 @@
     ],
     "license": "MIT",
     "engines": {
-        "node": "20.x"
+        "node": "22.x"
     },
     "repository": {
         "type": "git",

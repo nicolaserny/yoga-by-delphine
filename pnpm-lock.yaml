@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   "@remix-run/server-runtime@2.17.0":
-    hash: gfijdysxp5thas2csv5wpseasq
+    hash: 4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3
     path: patches/@remix-run__server-runtime@2.17.0.patch
 
 importers:
@@ -20,10 +20,10 @@ importers:
         version: 2.17.0
       "@netlify/remix-edge-adapter":
         specifier: 3.4.3
-        version: 3.4.3(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2))(@remix-run/serve@2.17.0(typescript@5.9.2))(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.9.2))(tsx@4.20.3)(typescript@5.9.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)(yaml@2.8.1))(yaml@2.8.1)
+        version: 3.4.3(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2))(@remix-run/serve@2.17.0(typescript@5.9.2))(@remix-run/server-runtime@2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.9.2))(tsx@4.20.3)(typescript@5.9.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)(yaml@2.8.1))(yaml@2.8.1)
       "@netlify/remix-runtime":
         specifier: 2.3.1
-        version: 2.3.1(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2))
+        version: 2.3.1(@remix-run/server-runtime@2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2))
       "@remix-run/react":
         specifier: 2.17.0
         version: 2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2)
@@ -15007,9 +15007,9 @@ snapshots:
       is-plain-obj: 4.1.0
       path-exists: 5.0.0
 
-  "@netlify/remix-edge-adapter@3.4.3(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2))(@remix-run/serve@2.17.0(typescript@5.9.2))(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.9.2))(tsx@4.20.3)(typescript@5.9.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)(yaml@2.8.1))(yaml@2.8.1)":
+  "@netlify/remix-edge-adapter@3.4.3(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2))(@remix-run/serve@2.17.0(typescript@5.9.2))(@remix-run/server-runtime@2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.9.2))(tsx@4.20.3)(typescript@5.9.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)(yaml@2.8.1))(yaml@2.8.1)":
     dependencies:
-      "@netlify/remix-runtime": 2.3.1(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2))
+      "@netlify/remix-runtime": 2.3.1(@remix-run/server-runtime@2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2))
       "@remix-run/dev": 2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2))(@remix-run/serve@2.17.0(typescript@5.9.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.9.2))(tsx@4.20.3)(typescript@5.9.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)(yaml@2.8.1))(yaml@2.8.1)
       "@remix-run/node": 2.17.0(typescript@5.9.2)
       isbot: 5.1.29
@@ -15038,9 +15038,9 @@ snapshots:
       - wrangler
       - yaml
 
-  "@netlify/remix-runtime@2.3.1(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2))":
+  "@netlify/remix-runtime@2.3.1(@remix-run/server-runtime@2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2))":
     dependencies:
-      "@remix-run/server-runtime": 2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2)
+      "@remix-run/server-runtime": 2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2)
 
   "@netlify/run-utils@6.0.2":
     dependencies:
@@ -15367,7 +15367,7 @@ snapshots:
       "@remix-run/node": 2.17.0(typescript@5.9.2)
       "@remix-run/react": 2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2)
       "@remix-run/router": 1.23.0
-      "@remix-run/server-runtime": 2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2)
+      "@remix-run/server-runtime": 2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2)
       "@types/mdx": 2.0.11
       "@vanilla-extract/integration": 6.5.0(@types/node@20.11.17)(lightningcss@1.30.1)
       arg: 5.0.2
@@ -15449,7 +15449,7 @@ snapshots:
 
   "@remix-run/node@2.17.0(typescript@5.9.2)":
     dependencies:
-      "@remix-run/server-runtime": 2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2)
+      "@remix-run/server-runtime": 2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2)
       "@remix-run/web-fetch": 4.4.2
       "@web3-storage/multipart-parser": 1.0.0
       cookie-signature: 1.2.1
@@ -15462,7 +15462,7 @@ snapshots:
   "@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2)":
     dependencies:
       "@remix-run/router": 1.23.0
-      "@remix-run/server-runtime": 2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2)
+      "@remix-run/server-runtime": 2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2)
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
       react-router: 6.30.0(react@19.1.1)
@@ -15494,7 +15494,7 @@ snapshots:
       - supports-color
       - typescript
 
-  "@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.9.2)":
+  "@remix-run/server-runtime@2.17.0(patch_hash=4ce6470a78d441be1571531a5b56c680af2dfbca1d07f9b988fe7445c17f96c3)(typescript@5.9.2)":
     dependencies:
       "@remix-run/router": 1.23.0
       "@types/cookie": 0.6.0
