@@ -1,10 +1,13 @@
 import clsx from "clsx";
 import React from "react";
 
-function Textarea(
-  { className, ...props }: React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-  ref: React.Ref<HTMLTextAreaElement>,
-) {
+function Textarea({
+  className,
+  ref,
+  ...props
+}: React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  ref?: React.Ref<HTMLTextAreaElement>;
+}) {
   return (
     <textarea
       {...props}
@@ -17,4 +20,4 @@ function Textarea(
   );
 }
 
-export default React.forwardRef(Textarea);
+export default Textarea;
