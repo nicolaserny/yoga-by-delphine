@@ -2,10 +2,13 @@
 import clsx from "clsx";
 import React from "react";
 
-function Label(
-  { className, ...props }: React.LabelHTMLAttributes<HTMLLabelElement>,
-  ref: React.Ref<HTMLLabelElement>,
-) {
+function Label({
+  className,
+  ref,
+  ...props
+}: React.LabelHTMLAttributes<HTMLLabelElement> & {
+  ref?: React.Ref<HTMLLabelElement>;
+}) {
   return (
     <label
       {...props}
@@ -18,4 +21,4 @@ function Label(
   );
 }
 
-export default React.forwardRef(Label);
+export default Label;

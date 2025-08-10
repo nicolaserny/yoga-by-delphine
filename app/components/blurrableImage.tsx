@@ -8,8 +8,11 @@ function BlurrableImage({
   blurDataUrl,
   ...rest
 }: {
-  img: JSX.Element &
-    React.ReactElement<React.ImgHTMLAttributes<HTMLImageElement>>;
+  img: React.ReactElement<
+    React.ImgHTMLAttributes<HTMLImageElement> & {
+      ref?: React.Ref<HTMLImageElement>;
+    }
+  >;
   blurDataUrl?: string;
 } & React.HTMLAttributes<HTMLDivElement>) {
   const [visible, setVisible] = React.useState(false);

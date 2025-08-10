@@ -5,8 +5,8 @@ import { type ImageBuilder, getImgProps } from "~/images";
 
 export type CourseDescriptionProps = {
   title: string;
-  description: string | JSX.Element;
-  description2: string | JSX.Element;
+  description: string | React.ReactElement;
+  description2: string | React.ReactElement;
   image: ImageBuilder;
   imageRight?: boolean;
 };

@@ -1,10 +1,13 @@
 import clsx from "clsx";
 import React from "react";
 
-function Input(
-  { className, ...props }: React.InputHTMLAttributes<HTMLInputElement>,
-  ref: React.Ref<HTMLInputElement>,
-) {
+function Input({
+  className,
+  ref,
+  ...props
+}: React.InputHTMLAttributes<HTMLInputElement> & {
+  ref?: React.Ref<HTMLInputElement>;
+}) {
   return (
     <input
       {...props}
@@ -17,4 +20,4 @@ function Input(
   );
 }
 
-export default React.forwardRef(Input);
+export default Input;
