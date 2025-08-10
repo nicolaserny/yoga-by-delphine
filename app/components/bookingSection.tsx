@@ -9,9 +9,9 @@ const Separator = () => (
 
 const BookingSection: React.FC<{
   title: string;
-  description: string | JSX.Element;
+  description: string | React.ReactElement;
   courses: YogaProduct[];
-  noCoursesMessage?: string | JSX.Element;
+  noCoursesMessage?: string | React.ReactElement;
 }> = ({ title, description, courses, noCoursesMessage }) => (
   <>
     <Separator />

@@ -14,19 +14,19 @@ importers:
     dependencies:
       "@headlessui/react":
         specifier: ^2.2.7
-        version: 2.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       "@netlify/edge-functions":
         specifier: 2.17.0
         version: 2.17.0
       "@netlify/remix-edge-adapter":
         specifier: 3.4.3
-        version: 3.4.3(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
+        version: 3.4.3(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
       "@netlify/remix-runtime":
         specifier: 2.3.1
         version: 2.3.1(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.8.2))
       "@remix-run/react":
         specifier: 2.17.0
-        version: 2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2)
+        version: 2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2)
       "@remix-run/serve":
         specifier: 2.17.0
         version: 2.17.0(typescript@5.8.2)
@@ -46,11 +46,11 @@ importers:
         specifier: 5.1.29
         version: 5.1.29
       react:
-        specifier: 18.3.1
-        version: 18.3.1
+        specifier: 19.1.1
+        version: 19.1.1
       react-dom:
-        specifier: 18.3.1
-        version: 18.3.1(react@18.3.1)
+        specifier: 19.1.1
+        version: 19.1.1(react@19.1.1)
       source-map-support:
         specifier: 0.5.21
         version: 0.5.21
@@ -66,13 +66,13 @@ importers:
         version: 6.0.1
       "@remix-run/dev":
         specifier: 2.17.0
-        version: 2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
+        version: 2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
       "@remix-run/fs-routes":
         specifier: ^2.17.0
-        version: 2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(@remix-run/route-config@2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2))(typescript@5.8.2)
+        version: 2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(@remix-run/route-config@2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2))(typescript@5.8.2)
       "@remix-run/route-config":
         specifier: ^2.17.0
-        version: 2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2)
+        version: 2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2)
       "@tailwindcss/aspect-ratio":
         specifier: 0.4.2
         version: 0.4.2(tailwindcss@4.1.11)
@@ -80,11 +80,11 @@ importers:
         specifier: ^4.1.11
         version: 4.1.11(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
       "@types/react":
-        specifier: 18.3.23
-        version: 18.3.23
+        specifier: 19.1.9
+        version: 19.1.9
       "@types/react-dom":
-        specifier: 18.3.7
-        version: 18.3.7(@types/react@18.3.23)
+        specifier: 19.1.7
+        version: 19.1.7(@types/react@19.1.9)
       "@types/source-map-support":
         specifier: 0.5.10
         version: 0.5.10
@@ -3834,24 +3834,18 @@ packages:
         integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==,
       }
 
-  "@types/prop-types@15.7.11":
+  "@types/react-dom@19.1.7":
     resolution:
       {
-        integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==,
-      }
-
-  "@types/react-dom@18.3.7":
-    resolution:
-      {
-        integrity: sha512-MEe3UeoENYVFXzoXEWsvcpg6ZvlrFNlOQ7EOsvhI3CfAXwzPfO8Qwuxd40nepsYKqyyVQnTdEfv68q91yLcKrQ==,
+        integrity: sha512-i5ZzwYpqjmrKenzkoLM2Ibzt6mAsM7pxB6BCIouEVVmgiqaMj1TjaK7hnA36hbW5aZv20kx7Lw6hWzPWg0Rurw==,
       }
     peerDependencies:
-      "@types/react": ^18.0.0
+      "@types/react": ^19.0.0
 
-  "@types/react@18.3.23":
+  "@types/react@19.1.9":
     resolution:
       {
-        integrity: sha512-/LDXMQh55EzZQ0uVAZmKKhfENivEvWz6E+EYzh+/MCjMhNsotd+ZHhBGIjFDTi6+fz0OhQQQLbTgdQIxxCsC0w==,
+        integrity: sha512-WmdoynAX8Stew/36uTSVMcLJJ1KRh6L3IZRx1PZ7qJtBqT3dYTgyDTx8H1qoRghErydW7xw9mSJ3wS//tCRpFA==,
       }
 
   "@types/retry@0.12.1":
@@ -11877,13 +11871,13 @@ packages:
       }
     hasBin: true
 
-  react-dom@18.3.1:
+  react-dom@19.1.1:
     resolution:
       {
-        integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==,
+        integrity: sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw==,
       }
     peerDependencies:
-      react: ^18.3.1
+      react: ^19.1.1
 
   react-is@16.13.1:
     resolution:
@@ -11923,10 +11917,10 @@ packages:
     peerDependencies:
       react: ">=16.8"
 
-  react@18.3.1:
+  react@19.1.1:
     resolution:
       {
-        integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==,
+        integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==,
       }
     engines: { node: ">=0.10.0" }
 
@@ -12411,10 +12405,10 @@ packages:
         integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==,
       }
 
-  scheduler@0.23.2:
+  scheduler@0.26.0:
     resolution:
       {
-        integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==,
+        integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==,
       }
 
   secure-json-parse@2.7.0:
@@ -15430,31 +15424,31 @@ snapshots:
       "@floating-ui/core": 1.6.9
       "@floating-ui/utils": 0.2.9
 
-  "@floating-ui/react-dom@2.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+  "@floating-ui/react-dom@2.1.2(react-dom@19.1.1(react@19.1.1))(react@19.1.1)":
     dependencies:
       "@floating-ui/dom": 1.6.13
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
-  "@floating-ui/react@0.26.28(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+  "@floating-ui/react@0.26.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1)":
     dependencies:
-      "@floating-ui/react-dom": 2.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      "@floating-ui/react-dom": 2.1.2(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       "@floating-ui/utils": 0.2.9
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
       tabbable: 6.2.0
 
   "@floating-ui/utils@0.2.9": {}
 
-  "@headlessui/react@2.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+  "@headlessui/react@2.2.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)":
     dependencies:
-      "@floating-ui/react": 0.26.28(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      "@react-aria/focus": 3.21.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      "@react-aria/interactions": 3.25.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      "@tanstack/react-virtual": 3.13.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      use-sync-external-store: 1.5.0(react@18.3.1)
+      "@floating-ui/react": 0.26.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      "@react-aria/focus": 3.21.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      "@react-aria/interactions": 3.25.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      "@tanstack/react-virtual": 3.13.12(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+      use-sync-external-store: 1.5.0(react@19.1.1)
 
   "@humanfs/core@0.19.1": {}
 
@@ -15918,10 +15912,10 @@ snapshots:
       is-plain-obj: 4.1.0
       path-exists: 5.0.0
 
-  "@netlify/remix-edge-adapter@3.4.3(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))":
+  "@netlify/remix-edge-adapter@3.4.3(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))":
     dependencies:
       "@netlify/remix-runtime": 2.3.1(@remix-run/server-runtime@2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.8.2))
-      "@remix-run/dev": 2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
+      "@remix-run/dev": 2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
       "@remix-run/node": 2.17.0(typescript@5.8.2)
       isbot: 5.1.29
     optionalDependencies:
@@ -16194,56 +16188,56 @@ snapshots:
       "@pnpm/network.ca-file": 1.0.2
       config-chain: 1.1.13
 
-  "@react-aria/focus@3.21.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+  "@react-aria/focus@3.21.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)":
     dependencies:
-      "@react-aria/interactions": 3.25.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      "@react-aria/utils": 3.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      "@react-types/shared": 3.31.0(react@18.3.1)
+      "@react-aria/interactions": 3.25.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      "@react-aria/utils": 3.30.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      "@react-types/shared": 3.31.0(react@19.1.1)
       "@swc/helpers": 0.5.15
       clsx: 2.1.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
-  "@react-aria/interactions@3.25.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+  "@react-aria/interactions@3.25.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)":
     dependencies:
-      "@react-aria/ssr": 3.9.10(react@18.3.1)
-      "@react-aria/utils": 3.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      "@react-aria/ssr": 3.9.10(react@19.1.1)
+      "@react-aria/utils": 3.30.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       "@react-stately/flags": 3.1.2
-      "@react-types/shared": 3.31.0(react@18.3.1)
+      "@react-types/shared": 3.31.0(react@19.1.1)
       "@swc/helpers": 0.5.15
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
-  "@react-aria/ssr@3.9.10(react@18.3.1)":
+  "@react-aria/ssr@3.9.10(react@19.1.1)":
     dependencies:
       "@swc/helpers": 0.5.15
-      react: 18.3.1
+      react: 19.1.1
 
-  "@react-aria/utils@3.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+  "@react-aria/utils@3.30.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)":
     dependencies:
-      "@react-aria/ssr": 3.9.10(react@18.3.1)
+      "@react-aria/ssr": 3.9.10(react@19.1.1)
       "@react-stately/flags": 3.1.2
-      "@react-stately/utils": 3.10.8(react@18.3.1)
-      "@react-types/shared": 3.31.0(react@18.3.1)
+      "@react-stately/utils": 3.10.8(react@19.1.1)
+      "@react-types/shared": 3.31.0(react@19.1.1)
       "@swc/helpers": 0.5.15
       clsx: 2.1.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   "@react-stately/flags@3.1.2":
     dependencies:
       "@swc/helpers": 0.5.15
 
-  "@react-stately/utils@3.10.8(react@18.3.1)":
+  "@react-stately/utils@3.10.8(react@19.1.1)":
     dependencies:
       "@swc/helpers": 0.5.15
-      react: 18.3.1
+      react: 19.1.1
 
-  "@react-types/shared@3.31.0(react@18.3.1)":
+  "@react-types/shared@3.31.0(react@19.1.1)":
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
 
-  "@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))":
+  "@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))":
     dependencies:
       "@babel/core": 7.23.9
       "@babel/generator": 7.23.6
@@ -16256,7 +16250,7 @@ snapshots:
       "@mdx-js/mdx": 2.3.0
       "@npmcli/package-json": 4.0.1
       "@remix-run/node": 2.17.0(typescript@5.8.2)
-      "@remix-run/react": 2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2)
+      "@remix-run/react": 2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2)
       "@remix-run/router": 1.23.0
       "@remix-run/server-runtime": 2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.8.2)
       "@types/mdx": 2.0.11
@@ -16331,10 +16325,10 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.2
 
-  "@remix-run/fs-routes@2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(@remix-run/route-config@2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2))(typescript@5.8.2)":
+  "@remix-run/fs-routes@2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(@remix-run/route-config@2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2))(typescript@5.8.2)":
     dependencies:
-      "@remix-run/dev": 2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
-      "@remix-run/route-config": 2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2)
+      "@remix-run/dev": 2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
+      "@remix-run/route-config": 2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2)
     optionalDependencies:
       typescript: 5.8.2
 
@@ -16350,21 +16344,21 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.2
 
-  "@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2)":
+  "@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2)":
     dependencies:
       "@remix-run/router": 1.23.0
       "@remix-run/server-runtime": 2.17.0(patch_hash=gfijdysxp5thas2csv5wpseasq)(typescript@5.8.2)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-router: 6.30.0(react@18.3.1)
-      react-router-dom: 6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+      react-router: 6.30.0(react@19.1.1)
+      react-router-dom: 6.30.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       turbo-stream: 2.4.1
     optionalDependencies:
       typescript: 5.8.2
 
-  "@remix-run/route-config@2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2)":
+  "@remix-run/route-config@2.17.0(@remix-run/dev@2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)))(typescript@5.8.2)":
     dependencies:
-      "@remix-run/dev": 2.17.0(@remix-run/react@2.17.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
+      "@remix-run/dev": 2.17.0(@remix-run/react@2.17.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.8.2))(@remix-run/serve@2.17.0(typescript@5.8.2))(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(ts-node@10.9.2(@types/node@20.11.17)(typescript@5.8.2))(tsx@4.20.3)(typescript@5.8.2)(vite@6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
       lodash: 4.17.21
     optionalDependencies:
       typescript: 5.8.2
@@ -16627,11 +16621,11 @@ snapshots:
       tailwindcss: 4.1.11
       vite: 6.3.5(@types/node@20.11.17)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)
 
-  "@tanstack/react-virtual@3.13.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+  "@tanstack/react-virtual@3.13.12(react-dom@19.1.1(react@19.1.1))(react@19.1.1)":
     dependencies:
       "@tanstack/virtual-core": 3.13.12
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   "@tanstack/virtual-core@3.13.12": {}
 
@@ -16712,15 +16706,12 @@ snapshots:
 
   "@types/parse-json@4.0.2": {}
 
-  "@types/prop-types@15.7.11": {}
-
-  "@types/react-dom@18.3.7(@types/react@18.3.23)":
+  "@types/react-dom@19.1.7(@types/react@19.1.9)":
     dependencies:
-      "@types/react": 18.3.23
+      "@types/react": 19.1.9
 
-  "@types/react@18.3.23":
+  "@types/react@19.1.9":
     dependencies:
-      "@types/prop-types": 15.7.11
       csstype: 3.1.3
 
   "@types/retry@0.12.1": {}
@@ -22169,11 +22160,10 @@ snapshots:
       minimist: 1.2.8
       strip-json-comments: 2.0.1
 
-  react-dom@18.3.1(react@18.3.1):
+  react-dom@19.1.1(react@19.1.1):
     dependencies:
-      loose-envify: 1.4.0
-      react: 18.3.1
-      scheduler: 0.23.2
+      react: 19.1.1
+      scheduler: 0.26.0
 
   react-is@16.13.1: {}
 
@@ -22181,21 +22171,19 @@ snapshots:
 
   react-refresh@0.14.0: {}
 
-  react-router-dom@6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router-dom@6.30.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       "@remix-run/router": 1.23.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-router: 6.30.0(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+      react-router: 6.30.0(react@19.1.1)
 
-  react-router@6.30.0(react@18.3.1):
+  react-router@6.30.0(react@19.1.1):
     dependencies:
       "@remix-run/router": 1.23.0
-      react: 18.3.1
+      react: 19.1.1
 
-  react@18.3.1:
-    dependencies:
-      loose-envify: 1.4.0
+  react@19.1.1: {}
 
   read-package-up@11.0.0:
     dependencies:
@@ -22520,9 +22508,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  scheduler@0.23.2:
-    dependencies:
-      loose-envify: 1.4.0
+  scheduler@0.26.0: {}
 
   secure-json-parse@2.7.0: {}
 
@@ -23506,9 +23492,9 @@ snapshots:
 
   urlpattern-polyfill@8.0.2: {}
 
-  use-sync-external-store@1.5.0(react@18.3.1):
+  use-sync-external-store@1.5.0(react@19.1.1):
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
 
   util-deprecate@1.0.2: {}
 
