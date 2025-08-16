@@ -1,5 +1,9 @@
-import { type LoaderFunctionArgs } from "@netlify/remix-runtime";
-import { type MetaFunction, Link, useLoaderData } from "@remix-run/react";
+import {
+  type LoaderFunctionArgs,
+  type MetaFunction,
+  Link,
+  useLoaderData,
+} from "react-router";
 import { BookingSection, PageTitle } from "../components";
 import AnchorLink from "~/components/anchorLink";
 import { type YogaProduct, getCoursesFromApi } from "~/models/courses.server";

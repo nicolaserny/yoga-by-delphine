@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/react";
+import type { MetaFunction } from "react-router";
 import { PageTitle } from "~/components";
 import Button from "~/components/button";
 import { getSeo, getUrl } from "~/utils/seo";

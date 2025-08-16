@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/react";
+import type { MetaFunction } from "react-router";
 import { LandingBlock, YogaInfoBlock } from "~/components";
 import { getSeo, getUrl } from "~/utils/seo";
 

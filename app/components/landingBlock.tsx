@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import Button from "./button";
 import Illustration from "./illustration";
 import Quote from "./quote";

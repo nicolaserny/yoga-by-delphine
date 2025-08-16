@@ -1,5 +1,5 @@
-import type { MetaFunction } from "@remix-run/react";
 import React from "react";
+import type { MetaFunction } from "react-router";
 import { PageTitle } from "~/components";
 import AnchorLink from "~/components/anchorLink";
 import { getSeo, getUrl } from "~/utils/seo";

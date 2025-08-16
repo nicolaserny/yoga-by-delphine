@@ -1,6 +1,6 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Link } from "@remix-run/react";
 import React from "react";
+import { Link } from "react-router";
 import Button from "../button";
 
 const NavLink: React.FC<{

@@ -63,6 +63,9 @@ typings/
 /public/build
 /.netlify
 
+# React Router 7
+.react-router/
+
 old-side/
 generated
 build
