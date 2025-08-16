@@ -1,5 +1,4 @@
-import type { MetaDescriptor } from "@netlify/remix-runtime";
-import type { Location } from "@remix-run/react";
+import { type MetaDescriptor, type Location } from "react-router";
 
 const defaultTitle = "Yoga by Delphine";
 const defautDescription =

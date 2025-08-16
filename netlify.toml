@@ -3,7 +3,7 @@ command = "pnpm run build && pnpm run lint && pnpm run typecheck"
 publish = "build/client"
 
 [dev]
-command = "npm run dev"
+command = "pnpm run dev"
 framework = "vite"
 
 [[headers]]

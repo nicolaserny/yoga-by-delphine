@@ -1,4 +1,4 @@
-import { type ActionFunctionArgs, redirect } from "@netlify/remix-runtime";
+import { type ActionFunctionArgs, redirect } from "react-router";
 import invariant from "tiny-invariant";
 import { createCheckoutUrl } from "~/models/checkout.server";
 

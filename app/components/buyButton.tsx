@@ -1,6 +1,6 @@
-import { Form } from "@remix-run/react";
 import clsx from "clsx";
 import React, { useState } from "react";
+import { Form } from "react-router";
 import Button from "./button";
 
 const BuyButton: React.FC<{
