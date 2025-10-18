@@ -1,20 +1,21 @@
-import type { MetaDescriptor } from "@netlify/remix-runtime";
-import type { Location } from "@remix-run/react";
+import { type MetaDescriptor, type Location } from "react-router";
 
 const defaultTitle = "Yoga by Delphine";
-const defautDescription =
+const defaultDescription =
   "Je suis Delphine Leblanc, professeur de Yoga - Réservez vos cours de hatha yoga, vinyasa, yoga-balles et running yoga - 2 options : en ligne sur Zoom ou en studio sur Paris";
 export const siteUrl = "https://www.yogabydelphine.com";
 
-export function getSeo(metadata: {
+interface SeoMetadata {
   title?: string;
   description?: string;
   url: string;
-}): MetaDescriptor[] {
+}
+
+export function getSeo(metadata: SeoMetadata): MetaDescriptor[] {
   const title = metadata.title
     ? `${metadata.title} - ${defaultTitle}`
     : defaultTitle;
-  const description = metadata.description || defautDescription;
+  const description = metadata.description || defaultDescription;
   return [
     { title },
     { name: "description", content: description },
@@ -38,7 +39,7 @@ export function getSeo(metadata: {
   ];
 }
 
-export function getUrl(location: Location) {
+export function getUrl(location: Location): string {
   const pathname = location.pathname;
   return `${siteUrl}${pathname === "/" ? "" : pathname}`;
 }

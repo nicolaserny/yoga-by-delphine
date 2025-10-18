@@ -1,8 +1,8 @@
-import type { MetaFunction } from "@remix-run/react";
+import type { MetaFunction, Location } from "react-router";
 import { LandingBlock, YogaInfoBlock } from "~/components";
 import { getSeo, getUrl } from "~/utils/seo";
 
-export const meta: MetaFunction = ({ location }) => {
+export const meta: MetaFunction = ({ location }: { location: Location }) => {
   return [
     ...getSeo({
       title: "Pratiquer le yoga avec Delphine Leblanc",

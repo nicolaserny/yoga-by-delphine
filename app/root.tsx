@@ -1,12 +1,12 @@
-import type { LinksFunction } from "@netlify/remix-runtime";
 import {
+  type LinksFunction,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
   useLocation,
-} from "@remix-run/react";
+} from "react-router";
 import { Layout } from "./components";
 import styles from "./tailwind.css?url";
 import { getUrl } from "./utils/seo";

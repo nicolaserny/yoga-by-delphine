@@ -1,5 +1,5 @@
-import { type MetaFunction, useNavigate } from "@remix-run/react";
 import React from "react";
+import { type MetaFunction, useNavigate } from "react-router";
 import { PageTitle } from "../components";
 import Button from "~/components/button";
 import Input from "~/components/input";

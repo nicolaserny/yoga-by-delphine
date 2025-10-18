@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import fetch from "@remix-run/web-fetch";
 import { setConfig, buildImageUrl } from "cloudinary-build-url";
 import { images } from "~/images";
 

@@ -1,5 +1,5 @@
-import type { MetaFunction } from "@remix-run/react";
 import React from "react";
+import type { MetaFunction } from "react-router";
 import { BlurrableImage, PageTitle } from "~/components";
 import AnchorLink from "~/components/anchorLink";
 import { blurDataUrls } from "~/generated/blurDataUrls";

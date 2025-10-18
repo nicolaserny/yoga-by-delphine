@@ -21,6 +21,7 @@ export default tseslint.config(
       "**/coverage/**",
       "**/.netlify/**",
       "**/app/generated/**",
+      "**/.react-router/**",
     ],
   },
   {

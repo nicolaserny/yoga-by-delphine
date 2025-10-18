@@ -1,4 +1,4 @@
-import { postToShopify } from "~/utils/shopify.server";
+import { postToAdminShopify, postToShopify } from "~/utils/shopify.server";
 
 type ShopifyCheckout = {
   cartCreate: { cart: { id: string; checkoutUrl: string } };
@@ -45,6 +45,52 @@ export async function createCheckoutUrl({
       },
     );
     return response?.cartCreate.cart.checkoutUrl;
+  } catch (error) {
+    console.error(error);
+    return undefined;
+  }
+}
+
+type ShopifyDraftOrder = {
+  draftOrderCreate: { draftOrder: { id: string; invoiceUrl: string } };
+};
+
+type ShopifyDraftOrderInput = {
+  input: { lineItems: Array<{ variantId: string; quantity: number }> };
+};
+
+export async function createDraftInvoice({
+  shopifyId,
+}: {
+  shopifyId: string;
+  buyerIP?: string;
+}) {
+  try {
+    const response = await postToAdminShopify<
+      ShopifyDraftOrder,
+      ShopifyDraftOrderInput
+    >({
+      query: `
+      mutation draftOrderCreate($input: DraftOrderInput!) {
+        draftOrderCreate(input: $input) {
+          draftOrder {
+            id
+            invoiceUrl
+          }
+        }
+      }
+      `,
+      variables: {
+        input: {
+          lineItems: [{ variantId: shopifyId, quantity: 1 }],
+        },
+      },
+    });
+
+    if (!response?.draftOrderCreate.draftOrder.invoiceUrl) {
+      throw new Error("No checkout URL returned");
+    }
+    return response?.draftOrderCreate.draftOrder.invoiceUrl;
   } catch (error) {
     console.error(error);
     return undefined;
