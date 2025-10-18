@@ -5,6 +5,7 @@ export const meta: MetaFunction = ({ location }) => [
   ...getSeo({ title: "Erreur", url: getUrl(location) }),
 ];
 
+// Modern error boundary with better UX
 function ErrorRoute() {
   return (
     <main className="width-constraints">
