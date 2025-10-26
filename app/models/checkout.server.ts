@@ -44,7 +44,13 @@ export async function createCheckoutUrl({
         buyerIP,
       },
     );
-    return response?.cartCreate.cart.checkoutUrl;
+
+    const checkoutUrl = response?.cartCreate.cart.checkoutUrl;
+    if (!checkoutUrl) return undefined;
+
+    const url = new URL(checkoutUrl);
+    url.searchParams.set("channel", "headless-storefronts");
+    return url.toString();
   } catch (error) {
     console.error(error);
     return undefined;

@@ -1,5 +1,5 @@
 import type { ActionFunctionArgs } from "react-router";
-import { createDraftInvoice } from "~/models/checkout.server";
+import { createCheckoutUrl } from "~/models/checkout.server";
 
 export const action = async ({ request, context }: ActionFunctionArgs) => {
   try {
@@ -12,7 +12,7 @@ export const action = async ({ request, context }: ActionFunctionArgs) => {
       throw new Response("Missing or invalid shopifyId", { status: 400 });
     }
 
-    const checkoutUrl = await createDraftInvoice({ buyerIP, shopifyId });
+    const checkoutUrl = await createCheckoutUrl({ buyerIP, shopifyId });
     if (!checkoutUrl) {
       throw new Response("Failed to create checkout URL", { status: 500 });
     }
