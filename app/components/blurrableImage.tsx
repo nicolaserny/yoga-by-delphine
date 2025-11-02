@@ -46,6 +46,7 @@ function BlurrableImage({
     };
   }, []);
 
+  // eslint-disable-next-line react-hooks/refs
   const jsImgEl = React.cloneElement(img, {
     ref: jsImgElRef,
     className: clsx(img.props.className, "transition-opacity", {
