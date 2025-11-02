@@ -51,27 +51,27 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
               </NavLink>
             </li>
             <li>
-              <NavLink to="/schedule/" onDismiss={onDismiss}>
+              <NavLink to="/schedule" onDismiss={onDismiss}>
                 Programme
               </NavLink>
             </li>
             <li>
-              <NavLink to="/gift-cards/" onDismiss={onDismiss}>
+              <NavLink to="/gift-cards" onDismiss={onDismiss}>
                 Cartes-cadeaux
               </NavLink>
             </li>
             <li>
-              <NavLink to="/videos/" onDismiss={onDismiss}>
+              <NavLink to="/videos" onDismiss={onDismiss}>
                 Vidéos
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about/" onDismiss={onDismiss}>
+              <NavLink to="/about" onDismiss={onDismiss}>
                 A propos
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact/" onDismiss={onDismiss}>
+              <NavLink to="/contact" onDismiss={onDismiss}>
                 Contact
               </NavLink>
             </li>
@@ -80,7 +80,7 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
                 as={Link}
                 variant="outline"
                 colorScheme="red"
-                to="/schedule/"
+                to="/schedule"
                 onClick={onDismiss}
                 className="mt-3 ml-12"
                 responsive={false}

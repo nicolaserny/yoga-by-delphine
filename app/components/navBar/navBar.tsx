@@ -43,26 +43,26 @@ const NavBar = () => {
           <StyledNavLink to="/">Accueil</StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/schedule/">Programme</StyledNavLink>
+          <StyledNavLink to="/schedule">Programme</StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/gift-cards/">Cartes-cadeaux</StyledNavLink>
+          <StyledNavLink to="/gift-cards">Cartes-cadeaux</StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/videos/">Vidéos</StyledNavLink>
+          <StyledNavLink to="/videos">Vidéos</StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/about/">A propos</StyledNavLink>
+          <StyledNavLink to="/about">A propos</StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/contact/">Contact</StyledNavLink>
+          <StyledNavLink to="/contact">Contact</StyledNavLink>
         </li>
         <li>
           <Button
             as={Link}
             variant="outline"
             colorScheme="red"
-            to="/schedule/"
+            to="/schedule"
             prefetch="intent"
             className="mt-2 lg:mt-0"
             responsive={false}

@@ -38,7 +38,7 @@ export default function GifCardRoute() {
         </p>
         <p>
           Pour toute autre question,{" "}
-          <AnchorLink as={Link} to="/contact/">
+          <AnchorLink as={Link} to="/contact">
             contacter-moi
           </AnchorLink>
           .
