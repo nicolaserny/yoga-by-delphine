@@ -1,7 +1,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 	<url>
 		<loc>
-			https://www.yogabydelphine.com/about/
+			https://www.yogabydelphine.com/about
 		</loc>
 		<changefreq>
 			weekly
@@ -12,7 +12,7 @@
 	</url>
 	<url>
 		<loc>
-			https://www.yogabydelphine.com/contact/
+			https://www.yogabydelphine.com/contact
 		</loc>
 		<changefreq>
 			weekly
@@ -23,7 +23,7 @@
 	</url>
     <url>
         <loc>
-            https://www.yogabydelphine.com/videos/
+            https://www.yogabydelphine.com/videos
         </loc>
         <changefreq>
             daily
@@ -34,7 +34,7 @@
     </url>
 	<url>
 		<loc>
-			https://www.yogabydelphine.com/gift-cards/
+			https://www.yogabydelphine.com/gift-cards
 		</loc>
 		<changefreq>
 			daily
@@ -56,7 +56,7 @@
 	</url>
 	<url>
 		<loc>
-			https://www.yogabydelphine.com/schedule/
+			https://www.yogabydelphine.com/schedule
 		</loc>
 		<changefreq>
 			daily
@@ -67,7 +67,7 @@
 	</url>
 	<url>
 		<loc>
-			https://www.yogabydelphine.com/yoga-balles/
+			https://www.yogabydelphine.com/yoga-balles
 		</loc>
 		<changefreq>
 			weekly

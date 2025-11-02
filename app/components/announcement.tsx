@@ -11,7 +11,7 @@ const Announcement = () => (
         colorScheme="white"
         size="base"
         responsive={false}
-        to="/schedule/"
+        to="/schedule"
         prefetch="intent"
         className="group"
       >

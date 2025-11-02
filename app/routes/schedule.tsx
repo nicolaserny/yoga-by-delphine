@@ -39,7 +39,7 @@ function ScheduleRoute() {
         <p>
           Pour obtenir un <span className="font-medium">cours d’essai</span>, ou{" "}
           <span className="font-medium">des cours privés</span>{" "}
-          <AnchorLink as={Link} to="/contact/">
+          <AnchorLink as={Link} to="/contact">
             contacter-moi
           </AnchorLink>
           .

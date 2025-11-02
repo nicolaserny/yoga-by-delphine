@@ -34,7 +34,7 @@ const LandingBlock = () => (
               as={Link}
               variant="solid"
               colorScheme="red"
-              to="/schedule/"
+              to="/schedule"
               prefetch="intent"
               className="mt-4"
               size="large"

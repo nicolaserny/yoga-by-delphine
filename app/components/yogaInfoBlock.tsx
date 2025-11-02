@@ -61,7 +61,7 @@ const YogaInfoBlock = () => {
       description2: (
         <span>
           Le cours dure généralement 1 heure, et nécessite un peu de matériel.{" "}
-          <AnchorLink as={Link} to="/yoga-balles/" prefetch="intent">
+          <AnchorLink as={Link} to="/yoga-balles" prefetch="intent">
             En savoir plus...
           </AnchorLink>
         </span>
