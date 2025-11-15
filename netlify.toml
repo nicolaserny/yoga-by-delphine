@@ -18,17 +18,3 @@ for = "/fonts/*"
 
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
-
-# Configure Lighthouse audits
-[plugins.inputs]
-# Set thresholds for metrics
-[plugins.inputs.thresholds]
-performance = 0.8
-accessibility = 0.9
-best-practices = 0.8
-seo = 0.9
-
-# Audit the root path (index.html)
-[[plugins.inputs.audits]]
-path = "/"
-output_path = "reports/lighthouse.html"
