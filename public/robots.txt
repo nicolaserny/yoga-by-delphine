@@ -1,5 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /__manifest
+Disallow: /$
 
 Sitemap: https://www.yogabydelphine.com/sitemap.xml
 

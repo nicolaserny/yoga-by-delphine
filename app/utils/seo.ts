@@ -41,5 +41,7 @@ export function getSeo(metadata: SeoMetadata): MetaDescriptor[] {
 
 export function getUrl(location: Location): string {
   const pathname = location.pathname;
-  return `${siteUrl}${pathname === "/" ? "" : pathname}`;
+  // Remove trailing slash
+  const normalizedPath = pathname.replace(/\/$/, "");
+  return `${siteUrl}${normalizedPath}`;
 }
