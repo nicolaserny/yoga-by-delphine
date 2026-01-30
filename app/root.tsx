@@ -29,13 +29,6 @@ export const links: LinksFunction = () => [
   {
     rel: "preload",
     as: "font",
-    href: "/fonts/merriweather-v22-latin-700.woff2",
-    type: "font/woff2",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "preload",
-    as: "font",
     href: "/fonts/montserrat-v15-latin-500.woff2",
     type: "font/woff2",
     crossOrigin: "anonymous",

@@ -12,3 +12,5 @@ export { default as BuyButton } from "./buyButton";
 export { default as Announcement } from "./announcement";
 export { default as GiftCard } from "./giftCard";
 export { default as BlurrableImage } from "./blurrableImage";
+export { default as BenefitsSection } from "./benefitsSection";
+export { default as ClassFormatSection } from "./classFormatSection";

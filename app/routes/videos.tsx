@@ -71,7 +71,7 @@ function videos() {
         </p>
         <Button
           variant="solid"
-          colorScheme="red"
+          colorScheme="purple"
           as="a"
           target="_blank"
           rel="noreferrer noopener"

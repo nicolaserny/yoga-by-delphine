@@ -79,7 +79,7 @@ const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
               <Button
                 as={Link}
                 variant="outline"
-                colorScheme="red"
+                colorScheme="purple"
                 to="/schedule"
                 onClick={onDismiss}
                 className="mt-3 ml-12"

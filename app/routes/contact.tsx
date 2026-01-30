@@ -120,7 +120,7 @@ function ContactRoute() {
               <Button
                 variant="solid"
                 size="large"
-                colorScheme="red"
+                colorScheme="purple"
                 type="submit"
               >
                 Envoyer
