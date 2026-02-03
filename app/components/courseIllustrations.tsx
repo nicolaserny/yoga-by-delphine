@@ -133,7 +133,7 @@ export const VinyasaYogaIllustration = ({ className }: IllustrationProps) => (
 export const RunningYogaIllustration = ({ className }: IllustrationProps) => (
   <svg
     className={className}
-    aria-label="Illustration Running yoga"
+    aria-label="Illustration Yoga pour runner"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 386 338"
     fill="none"

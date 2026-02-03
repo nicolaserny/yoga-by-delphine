@@ -84,7 +84,7 @@ const YogaInfoBlock = () => {
       ),
     },
     {
-      title: "Running yoga",
+      title: "Yoga pour runner",
       description:
         "Combinez yoga et course à pied : des postures spécifiques sur tapis suivies d'une session en extérieur pour une expérience complète, ouvert à tous niveaux.",
       illustration: RunningYogaIllustration,

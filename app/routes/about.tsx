@@ -91,7 +91,7 @@ function About() {
               </StyledLi>
               <StyledLi>
                 <StyledLink href="https://www.running-yogis.com">
-                  Running yoga
+                  Yoga pour runner
                 </StyledLink>{" "}
                 avec Bénédicte Opsomer
               </StyledLi>
