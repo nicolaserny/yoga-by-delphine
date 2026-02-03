@@ -24,6 +24,7 @@ const benefits = [
 const BenefitsSection = () => (
   <section className="bg-purple-100 py-[96px]">
     <div className="width-constraints px-4 sm:px-8 lg:px-[120px]">
+      <h2 className="sr-only">Les bienfaits du yoga</h2>
       <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
         {benefits.map((benefit) => (
           <div
