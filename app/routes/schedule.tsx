@@ -48,6 +48,7 @@ function ScheduleRoute() {
 
       <div className="mb-3 lg:mb-5">
         <BookingSection
+          id="online"
           title="En ligne"
           description={
             <span>
@@ -68,6 +69,7 @@ function ScheduleRoute() {
           )}
         />
         <BookingSection
+          id="studio"
           title="En studio"
           description={
             <>
@@ -79,7 +81,7 @@ function ScheduleRoute() {
           courses={courses.filter((course) => course.category === "studio")}
           noCoursesMessage={
             <span>
-              Information et inscription auprès de l’association{" "}
+              Information et inscription auprès de l'association{" "}
               <AnchorLink
                 href="https://asepgi92.fr/yoga/"
                 target="_blank"

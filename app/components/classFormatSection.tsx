@@ -47,7 +47,7 @@ const ClassFormatSection = () => {
             ]}
             buttonText="Voir les cours en ligne"
             buttonVariant="solid"
-            buttonHref="/schedule"
+            buttonHref="/schedule#online"
           />
 
           <ClassFormatCard
@@ -70,7 +70,7 @@ const ClassFormatSection = () => {
             ]}
             buttonText="Voir le planning studio"
             buttonVariant="outline"
-            buttonHref="/schedule"
+            buttonHref="/schedule#studio"
           />
         </div>
       </div>
