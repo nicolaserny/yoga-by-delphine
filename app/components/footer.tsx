@@ -1,85 +1,169 @@
-const Footer = () => (
-  <footer className="bg-white">
-    <div className="width-constraints py-6">
-      <div className="flex items-center justify-center gap-4 pb-3">
-        <a
-          href="https://www.instagram.com/delphineleblancyoga/"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="text-purple-500 transition-colors hover:text-purple-700"
+import { Link } from "react-router";
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    {
+      href: "https://www.instagram.com/delphineleblancyoga/",
+      label: "Instagram de Delphine",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          className="h-5 w-5"
         >
-          <svg
-            width="25"
-            height="26"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path
-              d="M7.257 0C3.26 0 0 3.39 0 7.547v10.906C0 22.61 3.26 26 7.257 26h10.486C21.74 26 25 22.61 25 18.453V7.547C25 3.39 21.74 0 17.743 0H7.257zm0 2h10.486c2.956 0 5.334 2.469 5.334 5.547v10.906c0 3.074-2.374 5.547-5.334 5.547H7.257c-2.956 0-5.334-2.469-5.334-5.547V7.547C1.923 4.473 4.297 2 7.257 2zm12.455 2c-.797 0-1.443.672-1.443 1.5S18.915 7 19.712 7c.796 0 1.442-.672 1.442-1.5S20.508 4 19.712 4zM12.5 6c-3.707 0-6.73 3.145-6.73 7s3.023 7 6.73 7c3.707 0 6.73-3.145 6.73-7s-3.023-7-6.73-7zm0 2c2.667 0 4.808 2.227 4.808 5s-2.141 5-4.808 5-4.808-2.227-4.808-5S9.833 8 12.5 8z"
-              className="fill-current"
-            />
-          </svg>
-          <span className="sr-only">Instagram de Delphine</span>
-        </a>
-        <a
-          href="https://www.youtube.com/@delphineleblancyoga"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="text-purple-500 transition-colors hover:text-purple-700"
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+            className="fill-current"
+          />
+        </svg>
+      ),
+    },
+    {
+      href: "https://www.youtube.com/@delphineleblancyoga",
+      label: "Chaine YouTube de Delphine",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          className="h-5 w-5"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="35"
-            height="26"
-            fill="none"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <path
-              className="fill-current"
-              d="M34.124 4.61a4.358 4.358 0 0 0-3.075-3.075C28.335.8 17.429.8 17.429.8S6.525.8 3.81 1.535A4.357 4.357 0 0 0 .735 4.609 44.979 44.979 0 0 0 .001 13a44.98 44.98 0 0 0 .734 8.39 4.357 4.357 0 0 0 3.075 3.076c2.714.734 13.62.734 13.62.734s10.905 0 13.619-.734a4.358 4.358 0 0 0 3.075-3.075c.506-2.768.752-5.577.734-8.39a44.987 44.987 0 0 0-.734-8.392Zm-20.18 13.619V7.77l9.05 5.23-9.05 5.228Z"
-            />
-          </svg>
-          <span className="sr-only">Chaine YouTube de Delphine</span>
-        </a>
-        <a
-          href="https://www.facebook.com/delphineleblancyoga"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="text-purple-500 transition-colors hover:text-purple-700"
+          <path
+            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+            className="fill-current"
+          />
+        </svg>
+      ),
+    },
+    {
+      href: "https://www.facebook.com/delphineleblancyoga",
+      label: "Page Facebook de Delphine",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          className="h-5 w-5"
         >
-          <svg
-            width="25"
-            height="26"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <g clipPath="url(#clipFacebook)">
-              <path
-                d="M20 .5H5c-2.757 0-5 2.243-5 5v15c0 2.757 2.243 5 5 5h15c2.757 0 5-2.243 5-5v-15c0-2.757-2.243-5-5-5zM19.5 9H18c-1.073 0-1.5.252-1.5 1v1.5h3l-.5 3h-2.5v10H13v-10h-1.5v-3H13V10c0-2.338.79-4 3.5-4 1.451 0 3 .5 3 .5V9z"
-                className="fill-current"
-              />
-            </g>
-            <defs>
-              <clipPath id="clipFacebook">
-                <path
-                  fill="#fff"
-                  transform="translate(0 .5)"
-                  d="M0 0h25v25H0z"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-          <span className="sr-only">Page Facebook de Delphine</span>
-        </a>
+          <path
+            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+            className="fill-current"
+          />
+        </svg>
+      ),
+    },
+  ];
+
+  const courseLinks = [
+    { to: "/schedule", label: "Programme" },
+    { to: "/gift-cards", label: "Cartes-cadeaux" },
+    { to: "/yoga-balles", label: "Yoga aux balles" },
+  ];
+
+  const discoverLinks = [
+    { to: "/about", label: "À propos" },
+    { to: "/videos", label: "Vidéos" },
+    { to: "/contact", label: "Contact" },
+  ];
+
+  return (
+    <footer
+      className="to-purple-1000 relative w-full bg-gradient-to-b from-purple-900 pt-16 pb-8"
+      role="contentinfo"
+      aria-label="Footer"
+    >
+      {/* Decorative top border */}
+      <div
+        className="absolute top-0 left-1/2 h-px w-[80%] max-w-4xl -translate-x-1/2 bg-gradient-to-r from-transparent via-purple-300 to-transparent"
+        aria-hidden="true"
+      />
+
+      <div className="width-constraints">
+        <div className="grid grid-cols-1 gap-12 border-b border-white/10 pb-12 md:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr] lg:gap-16">
+          {/* Brand Column */}
+          <div className="md:col-span-2 lg:col-span-1 lg:pr-8">
+            <div className="mb-4">
+              <span className="font-sans text-xl font-semibold text-white lg:text-2xl">
+                Yoga <span className="text-purple-300">by</span> Delphine
+              </span>
+            </div>
+            <p className="mb-6 max-w-md text-sm leading-relaxed text-white/70 lg:text-base">
+              Le yoga qui vous fait bouger, respirer et briller
+            </p>
+
+            {/* Social Links */}
+            <div
+              className="flex items-center gap-3"
+              aria-label="Réseaux sociaux"
+            >
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white/80 transition-all duration-300 ease-out hover:scale-110 hover:border-transparent hover:bg-purple-400 hover:text-white focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900 focus-visible:outline-none"
+                  aria-label={social.label}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation - Cours */}
+          <nav aria-label="Navigation des cours">
+            <h3 className="mb-5 text-sm font-semibold tracking-wide text-white uppercase">
+              Cours
+            </h3>
+            <ul className="space-y-3">
+              {courseLinks.map((link) => (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    className="inline-block rounded-sm text-sm text-white/60 transition-all duration-300 hover:pl-1 hover:text-white focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900 focus-visible:outline-none lg:text-base"
+                    prefetch="intent"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Navigation - Découvrir */}
+          <nav aria-label="Navigation de découverte">
+            <h3 className="mb-5 text-sm font-semibold tracking-wide text-white uppercase">
+              Découvrir
+            </h3>
+            <ul className="space-y-3">
+              {discoverLinks.map((link) => (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    className="inline-block rounded-sm text-sm text-white/60 transition-all duration-300 hover:pl-1 hover:text-white focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900 focus-visible:outline-none lg:text-base"
+                    prefetch="intent"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="flex flex-col items-center justify-center gap-4 pt-6 sm:flex-row sm:justify-between">
+          <p className="text-center text-xs text-white/50 sm:text-left lg:text-sm">
+            © {currentYear} Yoga by Delphine. Tous droits réservés.
+          </p>
+        </div>
       </div>
-      <p className="text-center text-xs font-normal text-gray-600">
-        © YogaByDelphine {new Date().getFullYear()}
-      </p>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;
