@@ -378,7 +378,6 @@ export const StudioIllustration = ({ className }: IllustrationProps) => (
     viewBox="0 0 703 476"
     fill="none"
     preserveAspectRatio="xMidYMid meet"
-    style={{ transform: "scaleX(-1)" }}
   >
     <path
       fill="#E4D6FA"
