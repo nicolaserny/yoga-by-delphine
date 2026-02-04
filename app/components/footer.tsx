@@ -60,7 +60,7 @@ const Footer = () => {
   const courseLinks = [
     { to: "/schedule", label: "Programme" },
     { to: "/gift-cards", label: "Cartes-cadeaux" },
-    { to: "/yoga-balles", label: "Yoga aux balles" },
+    { to: "/yoga-balles", label: "Yoga-balles" },
   ];
 
   const discoverLinks = [
