@@ -22,10 +22,10 @@ const benefits = [
 ];
 
 const BenefitsSection = () => (
-  <section className="bg-purple-100 py-[96px]">
-    <div className="width-constraints px-4 sm:px-8 lg:px-[120px]">
+  <section className="-mx-8 bg-purple-100 py-16 md:py-20 lg:-mx-20 lg:py-24 xl:mx-0">
+    <div className="width-constraints px-8 md:px-12 lg:px-20 xl:px-10 2xl:px-0">
       <h2 className="sr-only">Les bienfaits du yoga</h2>
-      <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
         {benefits.map((benefit) => (
           <div
             key={benefit.title}

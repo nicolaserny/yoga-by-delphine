@@ -93,9 +93,9 @@ const YogaInfoBlock = () => {
   ];
 
   return (
-    <section className="bg-white py-12 md:py-16 lg:py-20">
+    <section className="-mx-8 bg-white py-12 md:py-16 lg:-mx-20 lg:py-20 xl:mx-0">
       <h2 className="sr-only">Les styles de yoga proposés</h2>
-      <div className="flex flex-col items-center gap-8 md:gap-12 lg:gap-16">
+      <div className="flex flex-col items-center gap-8 px-8 md:gap-10 md:px-12 lg:gap-16 lg:px-20 xl:px-10 2xl:px-0">
         {yogaTypes.map((yogaType) => (
           <CourseItem
             key={yogaType.title}

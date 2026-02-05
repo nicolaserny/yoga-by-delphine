@@ -71,95 +71,97 @@ const Footer = () => {
 
   return (
     <footer
-      className="to-purple-1000 relative w-full bg-gradient-to-b from-purple-900 pt-16 pb-8"
+      className="to-purple-1000 relative w-full bg-gradient-to-b from-purple-900 pt-12 pb-6 md:pt-16 md:pb-8"
       role="contentinfo"
       aria-label="Footer"
     >
       {/* Decorative top border */}
       <div
-        className="absolute top-0 left-1/2 h-px w-[80%] max-w-4xl -translate-x-1/2 bg-gradient-to-r from-transparent via-purple-300 to-transparent"
+        className="absolute top-0 left-1/2 h-px w-[90%] max-w-4xl -translate-x-1/2 bg-gradient-to-r from-transparent via-purple-300 to-transparent lg:w-[80%]"
         aria-hidden="true"
       />
 
-      <div className="width-constraints">
-        <div className="grid grid-cols-1 gap-12 border-b border-white/10 pb-12 md:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr] lg:gap-16">
-          {/* Brand Column */}
-          <div className="md:col-span-2 lg:col-span-1 lg:pr-8">
-            <div className="mb-4">
-              <span className="font-sans text-xl font-semibold text-white lg:text-2xl">
-                Yoga <span className="text-purple-300">by</span> Delphine
-              </span>
-            </div>
-            <p className="mb-6 max-w-md text-sm leading-relaxed text-white/70 lg:text-base">
-              Le yoga qui vous fait bouger, respirer et briller
-            </p>
+      <div className="mx-8 lg:mx-20 xl:mx-0">
+        <div className="width-constraints">
+          <div className="grid grid-cols-1 gap-8 border-b border-white/10 pb-8 md:grid-cols-[1.5fr_1fr] md:gap-10 lg:grid-cols-[1.8fr_1fr_1fr] lg:gap-16">
+            {/* Brand Column */}
+            <div>
+              <div className="mb-3 md:mb-4">
+                <span className="font-sans text-xl font-semibold text-white lg:text-2xl">
+                  Yoga <span className="text-purple-300">by</span> Delphine
+                </span>
+              </div>
+              <p className="mb-4 max-w-md text-sm leading-relaxed text-white/70 md:mb-6 lg:text-base">
+                Le yoga qui vous fait bouger, respirer et briller
+              </p>
 
-            {/* Social Links */}
-            <div
-              className="flex items-center gap-3"
-              aria-label="Réseaux sociaux"
-            >
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white/80 transition-all duration-300 ease-out hover:scale-110 hover:border-transparent hover:bg-purple-400 hover:text-white focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900 focus-visible:outline-none"
-                  aria-label={social.label}
-                >
-                  {social.icon}
-                </a>
-              ))}
+              {/* Social Links */}
+              <div
+                className="flex items-center gap-3"
+                aria-label="Réseaux sociaux"
+              >
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white/80 transition-all duration-300 ease-out hover:scale-110 hover:border-transparent hover:bg-purple-400 hover:text-white focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900 focus-visible:outline-none lg:h-11 lg:w-11"
+                    aria-label={social.label}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
             </div>
+
+            {/* Navigation - Cours */}
+            <nav aria-label="Navigation des cours">
+              <h3 className="mb-5 text-xs font-semibold tracking-wide text-white uppercase lg:text-sm">
+                Cours
+              </h3>
+              <ul className="space-y-3">
+                {courseLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="inline-block rounded-sm text-sm text-white/60 transition-all duration-300 hover:pl-1 hover:text-white focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900 focus-visible:outline-none md:text-base"
+                      prefetch="intent"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* Navigation - Découvrir */}
+            <nav aria-label="Navigation de découverte">
+              <h3 className="mb-5 text-xs font-semibold tracking-wide text-white uppercase lg:text-sm">
+                Découvrir
+              </h3>
+              <ul className="space-y-3">
+                {discoverLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="inline-block rounded-sm text-sm text-white/60 transition-all duration-300 hover:pl-1 hover:text-white focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900 focus-visible:outline-none md:text-base"
+                      prefetch="intent"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
-          {/* Navigation - Cours */}
-          <nav aria-label="Navigation des cours">
-            <h3 className="mb-5 text-sm font-semibold tracking-wide text-white uppercase">
-              Cours
-            </h3>
-            <ul className="space-y-3">
-              {courseLinks.map((link) => (
-                <li key={link.to}>
-                  <Link
-                    to={link.to}
-                    className="inline-block rounded-sm text-sm text-white/60 transition-all duration-300 hover:pl-1 hover:text-white focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900 focus-visible:outline-none lg:text-base"
-                    prefetch="intent"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Navigation - Découvrir */}
-          <nav aria-label="Navigation de découverte">
-            <h3 className="mb-5 text-sm font-semibold tracking-wide text-white uppercase">
-              Découvrir
-            </h3>
-            <ul className="space-y-3">
-              {discoverLinks.map((link) => (
-                <li key={link.to}>
-                  <Link
-                    to={link.to}
-                    className="inline-block rounded-sm text-sm text-white/60 transition-all duration-300 hover:pl-1 hover:text-white focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-900 focus-visible:outline-none lg:text-base"
-                    prefetch="intent"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-
-        {/* Footer Bottom */}
-        <div className="flex flex-col items-center justify-center gap-4 pt-6 sm:flex-row sm:justify-between">
-          <p className="text-center text-xs text-white/50 sm:text-left lg:text-sm">
-            © {currentYear} Yoga by Delphine. Tous droits réservés.
-          </p>
+          {/* Footer Bottom */}
+          <div className="flex flex-col items-center justify-center gap-3 pt-6 sm:flex-row sm:justify-between md:gap-4">
+            <p className="text-center text-xs text-white/50 sm:text-left lg:text-sm">
+              © {currentYear} Yoga by Delphine. Tous droits réservés.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
