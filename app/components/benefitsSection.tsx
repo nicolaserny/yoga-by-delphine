@@ -29,11 +29,11 @@ const BenefitsSection = () => (
         {benefits.map((benefit) => (
           <div
             key={benefit.title}
-            className="flex w-full max-w-[340px] flex-col items-center text-center"
+            className="flex w-full flex-col items-center text-center sm:max-w-[340px]"
           >
-            <benefit.Icon className="mb-8 size-[60px] text-purple-600" />
-            <div className="flex flex-col gap-[18px]">
-              <h3 className="font-sans text-2xl font-semibold text-gray-900">
+            <benefit.Icon className="mb-8 size-12 text-purple-600 sm:size-[60px]" />
+            <div className="flex flex-col gap-4 lg:gap-5">
+              <h3 className="font-sans text-2xl font-semibold text-balance text-gray-900">
                 {benefit.title}
               </h3>
               <p className="font-sans text-base leading-relaxed text-gray-800">

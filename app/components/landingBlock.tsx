@@ -7,7 +7,7 @@ const LandingBlock = () => (
     <div className="flex flex-col items-center gap-8 py-12 md:gap-10 md:py-16 lg:flex-row lg:items-center lg:gap-12 lg:py-20 xl:gap-24 xl:py-24">
       <div className="flex flex-1 flex-col lg:flex-4">
         <div className="flex grow flex-col justify-center">
-          <h1 className="font-sans text-3xl leading-[1.1] font-bold text-gray-900 md:text-4xl lg:text-5xl">
+          <h1 className="font-sans text-3xl leading-[1.1] font-bold text-balance text-gray-900 md:text-4xl lg:text-5xl">
             Le yoga qui vous fait bouger, respirer et briller
           </h1>
           <p className="mt-6 max-w-[610px] text-left font-sans text-lg leading-relaxed text-gray-800">
@@ -21,7 +21,7 @@ const LandingBlock = () => (
               colorScheme="purple"
               to="/schedule"
               prefetch="intent"
-              className="mt-6 w-full sm:mt-8 sm:w-auto"
+              className="mt-6 sm:mt-8"
               size="hero"
             >
               Réserver votre cours
