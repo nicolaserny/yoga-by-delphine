@@ -14,7 +14,7 @@ const ClassFormatSection = () => {
       <div className="width-constraints px-8 md:px-12 lg:px-20 xl:px-10 2xl:px-0">
         <h2
           id="class-formats-heading"
-          className="mb-3 text-center font-sans text-2xl leading-normal font-semibold text-gray-900 md:mb-4 md:text-[30px]"
+          className="mb-3 text-center font-sans text-2xl leading-normal font-semibold text-balance text-gray-900 md:mb-4 md:text-[30px]"
         >
           Formats de cours
         </h2>

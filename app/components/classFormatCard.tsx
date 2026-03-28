@@ -22,10 +22,10 @@ const ClassFormatCard = ({
   buttonHref,
 }: ClassFormatCardProps) => {
   return (
-    <article className="flex flex-col rounded-xl bg-white p-8 shadow-lg">
+    <article className="flex flex-col rounded-xl bg-white p-6 shadow-lg md:p-8">
       {/* Header */}
       <div className="mb-6">
-        <h3 className="font-sans text-2xl font-semibold text-gray-900">
+        <h3 className="font-sans text-xl font-semibold text-gray-900 md:text-2xl lg:text-[30px]">
           {title}
         </h3>
       </div>
