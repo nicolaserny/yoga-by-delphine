@@ -42,17 +42,8 @@ const CourseItem = ({
 
   return (
     <div className="flex w-full max-w-[868px] flex-col items-center justify-center gap-6 md:flex-row md:gap-12 lg:gap-24">
-      {imageRight ? (
-        <>
-          <div className="order-2 md:order-1">{textContent}</div>
-          <div className="order-1 md:order-2">{imageContent}</div>
-        </>
-      ) : (
-        <>
-          {imageContent}
-          {textContent}
-        </>
-      )}
+      <div className={imageRight ? "md:order-2" : undefined}>{textContent}</div>
+      <div>{imageContent}</div>
     </div>
   );
 };
