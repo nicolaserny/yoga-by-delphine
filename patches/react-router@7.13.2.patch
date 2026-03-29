@@ -1,0 +1,26 @@
+diff --git a/dist/development/chunk-UALY5CBT.mjs b/dist/development/chunk-UALY5CBT.mjs
+index b3499fae90e41252d10b93064d3958a5a18209d9..17b9b1f8cbb801ee74ae723489c87c1b25d690b8 100644
+--- a/dist/development/chunk-UALY5CBT.mjs
++++ b/dist/development/chunk-UALY5CBT.mjs
+@@ -1405,7 +1405,7 @@ async function handleManifestRequest(build, routes, url) {
+     }
+     return Response.json(patches, {
+       headers: {
+-        "Cache-Control": "public, max-age=31536000, immutable"
++        "Cache-Control": "public, max-age=0, must-revalidate", "CDN-Cache-Control": "public, max-age=31536000", "Netlify-Vary": "query"
+       }
+     });
+   }
+diff --git a/dist/development/index.js b/dist/development/index.js
+index 968f3bd1b6507f4d3c1184c926b05ca64009dece..10826e68e479da7abcd66ab37252fa72daef9704 100644
+--- a/dist/development/index.js
++++ b/dist/development/index.js
+@@ -1503,7 +1503,7 @@ async function handleManifestRequest(build, routes, url) {
+     }
+     return Response.json(patches, {
+       headers: {
+-        "Cache-Control": "public, max-age=31536000, immutable"
++        "Cache-Control": "public, max-age=0, must-revalidate", "CDN-Cache-Control": "public, max-age=31536000", "Netlify-Vary": "query"
+       }
+     });
+   }
