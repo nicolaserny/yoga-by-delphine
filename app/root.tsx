@@ -9,7 +9,7 @@ import {
 } from "react-router";
 import { Layout } from "./components";
 import styles from "./tailwind.css?url";
-import { getUrl } from "./utils/seo";
+import { getUrl, siteUrl } from "./utils/seo";
 
 export const links: LinksFunction = () => [
   {
@@ -98,6 +98,46 @@ export default function App() {
           dangerouslySetInnerHTML={{
             __html: `
         window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) } `,
+          }}
+        />
+        <script
+          key="schema-markup"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Yoga by Delphine",
+              description: "Cours de yoga en ligne et en studio à Paris",
+              image: `${siteUrl}/ogimage.png`,
+              url: siteUrl,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "64 promenade du Verger",
+                addressLocality: "Issy-les-Moulineaux",
+                postalCode: "92130",
+                addressCountry: "FR",
+              },
+              founder: {
+                "@type": "Person",
+                name: "Delphine Leblanc",
+              },
+              priceRange: "€€",
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "08:00",
+                  closes: "20:00",
+                },
+              ],
+            }),
           }}
         />
       </head>
