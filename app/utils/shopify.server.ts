@@ -28,6 +28,7 @@ export async function postToShopify<ResponseDataType, VariablesType = object>({
   const storefrontAccessToken = getValueFromEnv(
     "SHOPIFY_DELEGATE_ACCESS_TOKEN",
   );
+  console.log(process.env);
   invariant(storefrontAccessToken, "The storefront api token is required");
   const shopName = getValueFromEnv("SHOP_NAME");
   invariant(shopName, "The shop name is required");
