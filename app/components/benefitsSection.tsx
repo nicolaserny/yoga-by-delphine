@@ -33,7 +33,7 @@ const BenefitsSection = () => (
           >
             <benefit.Icon className="mb-8 size-12 text-purple-600 sm:size-[60px]" />
             <div className="flex flex-col gap-4 lg:gap-5">
-              <h3 className="font-sans text-2xl font-semibold text-balance text-gray-900">
+              <h3 className="font-sans text-xl font-semibold text-balance text-gray-900 md:text-2xl">
                 {benefit.title}
               </h3>
               <p className="font-sans text-base leading-relaxed text-gray-800">
