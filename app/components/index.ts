@@ -14,3 +14,4 @@ export { default as GiftCard } from "./giftCard";
 export { default as BlurrableImage } from "./blurrableImage";
 export { default as BenefitsSection } from "./benefitsSection";
 export { default as ClassFormatSection } from "./classFormatSection";
+export { default as NavigationProgress } from "./NavigationProgress";

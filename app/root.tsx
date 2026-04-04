@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
   useLocation,
 } from "react-router";
-import { Layout } from "./components";
+import { Layout, NavigationProgress } from "./components";
 import styles from "./tailwind.css?url";
 import { getUrl, siteUrl } from "./utils/seo";
 
@@ -142,6 +142,7 @@ export default function App() {
         />
       </head>
       <body className="overflow-x-hidden">
+        <NavigationProgress />
         <Layout>
           <Outlet />
         </Layout>
