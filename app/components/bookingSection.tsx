@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { compareAsc } from "date-fns";
 import React from "react";
 import Course from "./course";
@@ -12,10 +13,14 @@ const BookingSection: React.FC<{
   description: string | React.ReactElement;
   courses: YogaProduct[];
   noCoursesMessage?: string | React.ReactElement;
-}> = ({ title, description, courses, noCoursesMessage }) => (
+  id?: string;
+}> = ({ title, description, courses, noCoursesMessage, id }) => (
   <>
     <Separator />
-    <section className="mt-3 lg:mt-4 lg:flex lg:flex-row">
+    <section
+      id={id}
+      className={clsx("mt-3 lg:mt-4 lg:flex lg:flex-row", id && "scroll-mt-8")}
+    >
       <div className="mb-2 w-full lg:mb-0 lg:w-1/3 lg:pr-10">
         <h2 className="text-lg leading-normal font-semibold text-gray-800 lg:text-xl">
           {title}

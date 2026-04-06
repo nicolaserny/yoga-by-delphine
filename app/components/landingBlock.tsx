@@ -1,55 +1,36 @@
 import { Link } from "react-router";
 import Button from "./button";
 import Illustration from "./illustration";
-import Quote from "./quote";
 
 const LandingBlock = () => (
   <div className="width-constraints">
-    <div className="flex items-stretch justify-between pt-10 pb-16 xl:pt-0">
-      <div className="flex flex-col sm:w-3/5 sm:pr-6 lg:w-1/2 xl:pr-2">
+    <div className="flex flex-col items-center gap-8 py-12 md:gap-10 md:py-16 lg:flex-row lg:items-center lg:gap-12 lg:py-20 xl:gap-24 xl:py-24">
+      <div className="flex flex-1 flex-col lg:flex-4">
         <div className="flex grow flex-col justify-center">
-          <h1 className="text-left font-serif text-3xl leading-tight font-bold text-gray-800 lg:text-4xl xl:text-5xl">
-            Pratiquer le yoga <br />
-            <span className="text-left font-serif text-3xl leading-tight font-bold text-purple-600 lg:text-4xl xl:text-5xl">
-              avec Delphine Leblanc
-            </span>
+          <h1 className="font-sans text-3xl leading-[1.1] font-bold text-balance text-gray-900 md:text-4xl lg:text-5xl">
+            Le yoga qui vous fait bouger, respirer et briller
           </h1>
-          <p className="mt-3 text-left font-sans text-base leading-relaxed font-normal text-gray-700">
-            Retrouvez votre alignement naturel et vivez avec cet alignement sur
-            tous les plans : physique, énergétique, mental et émotionnel.
-          </p>
-          <p className="mt-3 text-left font-sans text-base leading-relaxed font-normal text-gray-700">
-            Attendez-vous à avoir la tête en bas, les mains par terre, les
-            jambes levées le tout sans prise de tête et dans la bonne humeur.
-          </p>
-          <p className="mt-3 text-left font-sans text-base leading-relaxed font-normal text-gray-700">
-            Les cours sont pour tout le monde. Pas besoin d'être souple ou
-            athlétique.{" "}
-            <span className="font-medium text-gray-800">
-              Venez comme vous êtes!
-            </span>
+          <p className="mt-6 max-w-[610px] text-left font-sans text-lg leading-relaxed text-gray-800">
+            Plongez dans la pratique de yoga dynamique de Delphine Leblanc et
+            découvrez comment elle peut transformer votre vie.
           </p>
           <div className="flex">
             <Button
               as={Link}
               variant="solid"
-              colorScheme="red"
+              colorScheme="purple"
               to="/schedule"
               prefetch="intent"
-              className="mt-4"
-              size="large"
+              className="mt-6 sm:mt-8"
+              size="hero"
             >
-              Réserver un cours
+              Réserver votre cours
             </Button>
           </div>
         </div>
-        <Quote className="hidden xl:block" />
       </div>
-      <div className="hidden sm:inline-block sm:w-2/5 lg:ml-3 lg:w-1/2">
-        <Illustration className="w-full" />
-      </div>
+      <Illustration className="w-full max-w-md self-center lg:flex-3" />
     </div>
-    <Quote className="mb-5 md:mb-8 lg:mb-16 xl:mb-0 xl:hidden" />
   </div>
 );
 

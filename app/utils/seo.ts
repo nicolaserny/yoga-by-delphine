@@ -2,7 +2,7 @@ import { type MetaDescriptor, type Location } from "react-router";
 
 const defaultTitle = "Yoga by Delphine";
 const defaultDescription =
-  "Je suis Delphine Leblanc, professeur de Yoga - Réservez vos cours de hatha yoga, vinyasa, yoga-balles et running yoga - 2 options : en ligne sur Zoom ou en studio sur Paris";
+  "Réservez vos cours de yoga en ligne sur Zoom ou en studio à Paris. Hatha, vinyasa, yoga-balles et yoga pour runner avec Delphine Leblanc.";
 export const siteUrl = "https://www.yogabydelphine.com";
 
 interface SeoMetadata {
@@ -31,6 +31,7 @@ export function getSeo(metadata: SeoMetadata): MetaDescriptor[] {
     { name: "twitter:description", content: description },
     { name: "twitter:image", content: `${siteUrl}/ogimage.png` },
     { name: "twitter:alt", content: title },
+    { property: "og:type", content: "website" },
     { property: "og:image", content: `${siteUrl}/ogimage.png` },
     { property: "og:image:secure_url", content: `${siteUrl}/ogimage.png` },
     { property: "og:url", content: metadata.url },

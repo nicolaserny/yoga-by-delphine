@@ -1,137 +1,104 @@
-import React from "react";
 import { Link } from "react-router";
 import AnchorLink from "./anchorLink";
-import CourseDescription, {
-  type CourseDescriptionProps,
-} from "./courseDescription";
-import { images } from "~/images";
+import {
+  HathaYogaIllustration,
+  VinyasaYogaIllustration,
+  RunningYogaIllustration,
+  YogaBallesIllustration,
+} from "./courseIllustrations";
 
-const SubSection: React.FC<
-  {
-    title: string;
-    elements: Array<CourseDescriptionProps>;
-  } & React.HTMLAttributes<HTMLDivElement>
-> = ({ title, elements, className }) => (
-  <div
-    className={`-mx-8 py-5 md:py-8 lg:-mx-20 lg:py-16 xl:-mx-10 2xl:mx-0 ${className}`}
-  >
-    <section className="width-constraints px-8 lg:px-20 xl:px-10 2xl:px-0">
-      <h2 className="text-xl font-semibold text-gray-800 lg:text-2xl">
+interface CourseItemProps {
+  title: string;
+  description: React.ReactNode;
+  illustration: React.ComponentType<{ className?: string }>;
+  imageRight?: boolean;
+  link?: React.ReactNode;
+}
+
+const CourseItem = ({
+  title,
+  description,
+  illustration: Illustration,
+  imageRight = false,
+  link,
+}: CourseItemProps) => {
+  const imageContent = (
+    <Illustration className="w-full max-w-[386px] flex-1 shrink-0" />
+  );
+
+  const textContent = (
+    <div
+      className={`flex flex-1 flex-col gap-3 md:gap-4 lg:gap-[18px] ${imageRight ? "md:items-end md:text-right" : "md:items-start"}`}
+    >
+      <h3 className="font-sans text-xl leading-normal font-semibold text-gray-900 md:text-2xl lg:text-[30px]">
         {title}
-      </h2>
-      <div className="mt-4 w-full md:mt-8 md:grid md:grid-flow-row-dense md:grid-cols-2 md:items-center md:gap-x-8 md:gap-y-12 lg:mt-12 lg:gap-x-12 xl:gap-x-24">
-        {elements.map((element) => (
-          <CourseDescription
-            key={element.title}
-            title={element.title}
-            description={element.description}
-            description2={element.description2}
-            image={element.image}
-            imageRight={element.imageRight}
-          />
-        ))}
-      </div>
-    </section>
-  </div>
-);
+      </h3>
+      <p className="max-w-[386px] font-sans text-base leading-relaxed text-gray-800">
+        {description}
+        {link && <span className="ml-1">{link}</span>}
+      </p>
+    </div>
+  );
+
+  return (
+    <div className="flex w-full max-w-[868px] flex-col items-center justify-center gap-6 md:flex-row md:gap-12 lg:gap-24">
+      <div className={imageRight ? "md:order-2" : undefined}>{textContent}</div>
+      <div>{imageContent}</div>
+    </div>
+  );
+};
 
 const YogaInfoBlock = () => {
-  const yogaDetails = [
+  const yogaTypes: CourseItemProps[] = [
     {
       title: "Hatha yoga",
       description:
-        "Le rythme est lent, on prend le temps d'explorer les postures physiques, les ressentis, en y restant un certain temps.",
-      description2:
-        "Le cours comprend un échauffement des articulations et une préparation respiratoire, éventuellement un enchaînement de postures sur le souffle (type salutations au soleil), puis viennent des postures plus statiques. Il se termine sur un temps d’intégration (savasana) et selon le thème du cours, une assise en méditation ou un pranayama (travail sur le souffle). ",
-      image: images["course-1"],
+        "Dans un rythme lent, le cours se concentre sur l'exploration des postures et des sensations. Il se conclut par un moment d'intégration (savasana).",
+      illustration: HathaYogaIllustration,
     },
     {
       title: "Vinyasa yoga",
       description:
-        "Le cours est un mouvement permanent, sans fin, emmené par le souffle. On suit un thème en relation avec l’énergie du moment (saison, événement...).",
-      description2:
-        "L’accent est mis sur des mouvements fonctionnels, respectant les articulations. Le cours se termine sur un temps d’intégration (savasana) et selon le thème du cours, une assise en méditation ou un pranayama (travail sur le souffle).",
-      image: images["course-2"],
-      imageRight: false,
+        "Un enchaînement fluide de postures guidé par le souffle, axé sur des mouvements fonctionnels et en harmonie avec l'énergie du moment.",
+      illustration: VinyasaYogaIllustration,
+      imageRight: true,
     },
     {
       title: "Yoga-balles",
       description:
-        "Le yoga-balles est une méthode simple et efficace qui vous permet de prendre votre santé en charge en apprenant à utiliser des balles en caoutchouc flexibles et adhérentes pour masser, pétrir et étirer vos muscles et tissus conjonctifs. Ce type de yoga convient à tous, même aux femmes enceintes et aux personnes à mobilité réduite. ",
-      description2: (
-        <span>
-          Le cours dure généralement 1 heure, et nécessite un peu de matériel.{" "}
-          <AnchorLink as={Link} to="/yoga-balles" prefetch="intent">
-            En savoir plus...
-          </AnchorLink>
-        </span>
+        "Une technique douce avec des balles flexibles pour masser et étirer vos muscles, adaptée à tous, y compris aux futures mamans et personnes à mobilité réduite.",
+      illustration: YogaBallesIllustration,
+      link: (
+        <AnchorLink as={Link} to="/yoga-balles" prefetch="intent">
+          En savoir plus...
+        </AnchorLink>
       ),
-      image: images["course-yoga-balles"],
     },
     {
-      title: "Running yoga",
+      title: "Yoga pour runner",
       description:
-        "Un temps sur tapis, un temps en baskets, ou comment améliorer et apprendre à courir grâce au yoga.",
-      description2:
-        "Le cours commence sur le tapis de yoga, au sol. On prend le temps de se connecter au souffle pour détendre, animer, ouvrir et renforcer le corps. Les postures et mouvements sont spécialement étudiés pour le geste de la course à pied. La deuxième partie du cours, en extérieur, permet d’intégrer le travail sur tapis en condition de course à pied. Le cours s’adresse à tout le monde, et surtout à celles et ceux qui souhaitent se mettre ou remettre à la course à pied.",
-      image: images["course-3"],
-      imageRight: false,
+        "Combinez yoga et course à pied : des postures spécifiques sur tapis suivies d'une session en extérieur pour une expérience complète, ouvert à tous niveaux.",
+      illustration: RunningYogaIllustration,
+      imageRight: true,
     },
   ];
-  const courses = [
-    {
-      title: "Cours en ligne sur zoom",
-      description: (
-        <span>
-          Les cours ont lieu via la plateforme{" "}
-          <AnchorLink
-            href="https://zoom.us"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Zoom
-          </AnchorLink>
-          , en direct. Un lien vers la salle virtuelle vous sera envoyé sur
-          l’email utilisé lors de la réservation (pas besoin de créer un compte
-          pour participer). Le lien Zoom s’ouvre dans un navigateur internet, ou
-          l’application Zoom. L’idéal est de pouvoir installer votre appareil de
-          manière à ce que je vous voie pratiquer.
-        </span>
-      ),
-      description2:
-        "Pour le cours en lui même, ayez une tenue confortable et un tapis de yoga ou fitness. Des briques de yoga ou tout autre accessoire pour rendre l’assise ou la position allongée confortable peuvent être utiles.",
-      image: images["course-4"],
-    },
-    {
-      title: "Cours en studio",
-      description: (
-        <>
-          Adresse du studio: <br />
-          <span className="font-semibold text-gray-700">
-            64 promenade du Verger, 92130 Issy-les-Moulineaux
-          </span>
-        </>
-      ),
-      description2: (
-        <>
-          Il est préférable de venir avec votre tapis de yoga personnel, il
-          concentre votre énergie. La salle propose des briques et des
-          couvertures.
-        </>
-      ),
-      image: images["course-5"],
-      imageRight: false,
-    },
-  ];
+
   return (
-    <>
-      <SubSection
-        title="Les styles de yoga proposés"
-        elements={yogaDetails}
-        className="bg-white"
-      />
-      <SubSection title="Les différents types de cours" elements={courses} />
-    </>
+    <section className="-mx-8 bg-white py-12 md:py-16 lg:-mx-20 lg:py-20 xl:mx-0">
+      <h2 className="sr-only">Les styles de yoga proposés</h2>
+      <div className="flex flex-col items-center gap-8 px-8 md:gap-10 md:px-12 lg:gap-16 lg:px-20 xl:px-10 2xl:px-0">
+        {yogaTypes.map((yogaType) => (
+          <CourseItem
+            key={yogaType.title}
+            title={yogaType.title}
+            description={yogaType.description}
+            illustration={yogaType.illustration}
+            imageRight={yogaType.imageRight}
+            link={yogaType.link}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 

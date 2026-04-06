@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink, Link } from "react-router";
 import Button from "../button";
 import MobileMenu from "./mobileMenu";
@@ -11,7 +11,7 @@ const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `mr-4 mb-3 p-1 text-xl lg:mb-0 lg:text-lg xl:mr-6 ${
+        `mr-4 mb-3 p-1 font-sans text-xl lg:mb-0 lg:text-lg xl:mr-6 ${
           isActive
             ? "relative font-semibold after:absolute after:bottom-[3px] after:left-[4px] after:m-0 after:block after:h-[2px] after:w-[calc(100%_-_0.5rem)] after:bg-purple-600 after:content-[''] hover:text-gray-800"
             : "font-medium hover:text-gray-900"
@@ -26,12 +26,24 @@ const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
 
 const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const burgerButtonRef = useRef<HTMLButtonElement>(null);
+  const closedByMouseRef = useRef(false);
+
+  const handleDismiss = () => {
+    setShowMobileMenu(false);
+    if (closedByMouseRef.current) {
+      closedByMouseRef.current = false;
+      requestAnimationFrame(() => {
+        burgerButtonRef.current?.blur();
+      });
+    }
+  };
 
   return (
     <nav className="relative flex w-full flex-nowrap items-center lg:items-baseline">
       <div className="shrink-0 grow">
         <Link to="/">
-          <span className="inline-block text-left align-baseline text-xl font-semibold text-gray-800 lg:text-2xl">
+          <span className="inline-block text-left align-baseline font-sans text-xl font-semibold text-gray-800 lg:text-2xl">
             Yoga <span className="text-purple-600">by</span> Delphine
           </span>
         </Link>
@@ -61,18 +73,19 @@ const NavBar = () => {
           <Button
             as={Link}
             variant="outline"
-            colorScheme="red"
+            colorScheme="purple"
             to="/schedule"
             prefetch="intent"
             className="mt-2 lg:mt-0"
             responsive={false}
-            size="large"
+            size="base"
           >
             Réserver
           </Button>
         </li>
       </ul>
       <button
+        ref={burgerButtonRef}
         className={`relative grow-0 self-end focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 xl:hidden`}
         onClick={() => setShowMobileMenu(true)}
       >
@@ -92,7 +105,8 @@ const NavBar = () => {
       </button>
       <MobileMenu
         isOpen={showMobileMenu}
-        onDismiss={() => setShowMobileMenu(false)}
+        onDismiss={handleDismiss}
+        closedByMouseRef={closedByMouseRef}
       />
     </nav>
   );
