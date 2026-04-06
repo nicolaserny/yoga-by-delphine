@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink, Link } from "react-router";
 import Button from "../button";
 import MobileMenu from "./mobileMenu";
@@ -26,6 +26,18 @@ const StyledNavLink: React.FC<{ to: string; children: React.ReactNode }> = ({
 
 const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const burgerButtonRef = useRef<HTMLButtonElement>(null);
+  const closedByMouseRef = useRef(false);
+
+  const handleDismiss = () => {
+    setShowMobileMenu(false);
+    if (closedByMouseRef.current) {
+      closedByMouseRef.current = false;
+      requestAnimationFrame(() => {
+        burgerButtonRef.current?.blur();
+      });
+    }
+  };
 
   return (
     <nav className="relative flex w-full flex-nowrap items-center lg:items-baseline">
@@ -73,6 +85,7 @@ const NavBar = () => {
         </li>
       </ul>
       <button
+        ref={burgerButtonRef}
         className={`relative grow-0 self-end focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 xl:hidden`}
         onClick={() => setShowMobileMenu(true)}
       >
@@ -92,7 +105,8 @@ const NavBar = () => {
       </button>
       <MobileMenu
         isOpen={showMobileMenu}
-        onDismiss={() => setShowMobileMenu(false)}
+        onDismiss={handleDismiss}
+        closedByMouseRef={closedByMouseRef}
       />
     </nav>
   );

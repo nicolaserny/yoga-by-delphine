@@ -18,13 +18,23 @@ const NavLink: React.FC<{
   </Link>
 );
 
-const MobileMenu: React.FC<{ isOpen: boolean; onDismiss: () => void }> = ({
-  isOpen,
-  onDismiss,
-}) => {
+const MobileMenu: React.FC<{
+  isOpen: boolean;
+  onDismiss: () => void;
+  closedByMouseRef: React.RefObject<boolean>;
+}> = ({ isOpen, onDismiss, closedByMouseRef }) => {
   return (
     <Dialog open={isOpen} onClose={onDismiss} className="z-50">
-      <div className="fixed inset-0 bg-white">
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+      <div
+        className="fixed inset-0 bg-white"
+        onMouseDown={() => {
+          closedByMouseRef.current = true;
+        }}
+        onTouchStart={() => {
+          closedByMouseRef.current = true;
+        }}
+      >
         <DialogPanel aria-label="Menu">
           <button
             className={`fixed top-6 right-8 -m-3 p-3 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 lg:top-12 lg:right-[5rem]`}
