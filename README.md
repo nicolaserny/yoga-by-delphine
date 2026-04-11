@@ -1,50 +1,126 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ba16e192-ec1f-4eb7-a751-634ec2312acc/deploy-status)](https://app.netlify.com/sites/yoga-by-delphine/deploys)
+![Node Version](https://img.shields.io/badge/node-22.x-green)
+![React Version](https://img.shields.io/badge/react-19-blue)
+![React Router](https://img.shields.io/badge/react--router-v7-orange)
+![TypeScript](https://img.shields.io/badge/typescript-5.9-blue)
+![Tailwind CSS](https://img.shields.io/badge/tailwind-v4-38B2AC)
 
-# Yoga by Delphine website
+<h1 align="center">🧘 Yoga by Delphine</h1>
 
-This is the website for [yogabydelphine.com](http://www.yogabydelphine.com/).
+<p align="center">
+  <strong>Book online and in-studio yoga courses</strong><br>
+  <em>Available in French 🇫🇷</em>
+</p>
 
-You can book online and in-studio yoga courses (only available in french).
+<p align="center">
+  <a href="http://www.yogabydelphine.com/">🌐 Visit Website</a> •
+  <a href="https://www.figma.com/file/wioiqeZX8Z0hOK0UsHxMAG/YogaByDelphine?node-id=4%3A10">🎨 View Design</a>
+</p>
 
-![yogabydelphine](./screenshot.png)
+---
 
-This site is based on the following stack:
+<p align="center">
+  <img src="./screenshot.png" alt="Yoga by Delphine Website" width="800">
+</p>
 
-- [Remix](https://remix.run/): full stack web framework
-- [Shopify](https://www.shopify.com/) for the e-commerce part
-- [Netlify](https://www.netlify.com/) for CI/CD/hosting + serverless functions
-- [Cloudinary](https://cloudinary.com/) to manage images
-- [Tailwindcss](https://tailwindcss.com/)
+## ✨ Features
 
-## Design
+- 🧘 **Online & In-Studio Classes** - Book yoga sessions your way
+- 🎁 **Gift Cards** - Purchase and redeem yoga gift cards
+- 📅 **Course Schedule** - View upcoming classes and availability
+- 📧 **Contact Form** - Get in touch directly through the site
+- 🛒 **Shopify Integration** - Secure e-commerce powered by Shopify
+- ⚡ **Fast Performance** - Optimized images and edge caching
+- 📱 **Responsive Design** - Works beautifully on all devices
 
-You can find the website design in Figma [here](https://www.figma.com/file/wioiqeZX8Z0hOK0UsHxMAG/YogaByDelphine?node-id=4%3A10)
+## 🚀 Tech Stack
 
-## Development
+| Technology                                    | Purpose                                   |
+| --------------------------------------------- | ----------------------------------------- |
+| [React Router v7](https://reactrouter.com/)   | Full stack web framework (formerly Remix) |
+| [React 19](https://react.dev/)                | UI library                                |
+| [TypeScript](https://www.typescriptlang.org/) | Type-safe JavaScript                      |
+| [Shopify](https://www.shopify.com/)           | E-commerce backend                        |
+| [Netlify](https://www.netlify.com/)           | CI/CD, hosting & edge functions           |
+| [Cloudinary](https://cloudinary.com/)         | Image management and optimization         |
+| [Tailwind CSS v4](https://tailwindcss.com/)   | Utility-first CSS framework               |
 
-> **NOTE:** a Shopify partner account is required.
+## 📁 Project Structure
 
-- Clone the repo:
-
-```bash
-$ git clone https://github.com/nicolaserny/yoga-by-delphine.git
+```
+app/
+├── components/     # Reusable UI components
+├── routes/         # React Router route definitions
+├── models/         # Data fetching (Shopify API)
+├── utils/          # Helper functions
+├── generated/      # Auto-generated files
+└── root.tsx        # App entry point
 ```
 
-- Install [pnpm](https://pnpm.io/)
+## ⚙️ Prerequisites
 
-- Go to the project directory and install dependencies:
+Before you begin, ensure you have:
 
-```bash
-$ cd yoga-by-delphine && pnpm install
-```
+- ✅ Node.js 22.x
+- ✅ pnpm 10.x (package manager)
+- ✅ Shopify partner account
 
-- Configure env variables by creating a _.env_ file (use the template file)
-- Run the development server:
+## 🛠️ Available Scripts
 
-```bash
-$ pnpm run dev
-```
+| Command              | Description                                  |
+| -------------------- | -------------------------------------------- |
+| `pnpm run dev`       | Start development server                     |
+| `pnpm run build`     | Production build (includes lint & typecheck) |
+| `pnpm run lint`      | Run ESLint                                   |
+| `pnpm run typecheck` | TypeScript type checking                     |
 
-## License
+## 🔐 Environment Variables
 
-[MIT License](https://raw.githubusercontent.com/nicolaserny/yoga-by-delphine/master/LICENSE)
+Copy `.env.TEMPLATE` to `.env` and configure:
+
+| Variable                        | Description                         |
+| ------------------------------- | ----------------------------------- |
+| `SHOP_NAME`                     | Shopify store name (e.g., my-store) |
+| `SHOPIFY_STOREFRONT_API_TOKEN`  | Storefront API access token         |
+| `SHOPIFY_ADMIN_API_PASSWORD`    | Admin API password                  |
+| `SHOPIFY_DELEGATE_ACCESS_TOKEN` | Storefront delegate access token    |
+
+## 💻 Development
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/nicolaserny/yoga-by-delphine.git
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   cd yoga-by-delphine && pnpm install
+   ```
+
+3. **Configure environment variables**
+
+   Create an `.env` file from the template:
+
+   ```bash
+   cp .env.TEMPLATE .env
+   ```
+
+4. **Run the development server**
+
+   ```bash
+   pnpm run dev
+   ```
+
+   The site will be available at `http://localhost:5173`
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+<p align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/nicolaserny">Nicolas Erny</a></sub>
+</p>
