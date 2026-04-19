@@ -1,0 +1,26 @@
+diff --git a/dist/development/chunk-BFXCU3MI.mjs b/dist/development/chunk-BFXCU3MI.mjs
+index 0000000000000000000000000000000000000000..0000000000000000000000000000000000000000 100644
+--- a/dist/development/chunk-BFXCU3MI.mjs
++++ b/dist/development/chunk-BFXCU3MI.mjs
+@@ -1416,7 +1416,7 @@ async function handleManifestRequest(build, routes, url) {
+     }
+     return Response.json(patches, {
+       headers: {
+-        "Cache-Control": "public, max-age=31536000, immutable"
++        "Cache-Control": "public, max-age=0, must-revalidate", "CDN-Cache-Control": "public, max-age=31536000", "Netlify-Vary": "query"
+       }
+     });
+   }
+diff --git a/dist/development/index.js b/dist/development/index.js
+index 0000000000000000000000000000000000000000..0000000000000000000000000000000000000000 100644
+--- a/dist/development/index.js
++++ b/dist/development/index.js
+@@ -1514,7 +1514,7 @@ async function handleManifestRequest(build, routes, url) {
+     }
+     return Response.json(patches, {
+       headers: {
+-        "Cache-Control": "public, max-age=31536000, immutable"
++        "Cache-Control": "public, max-age=0, must-revalidate", "CDN-Cache-Control": "public, max-age=31536000", "Netlify-Vary": "query"
+       }
+     });
+   }

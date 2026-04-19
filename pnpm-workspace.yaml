@@ -1,8 +1,13 @@
 ignoredBuiltDependencies:
   - puppeteer
+  - sharp
 
 onlyBuiltDependencies:
+  - "@parcel/watcher"
   - esbuild
+  - husky
+  - sharp
+  - unrs-resolver
 
 patchedDependencies:
-  react-router@7.14.0: patches/react-router@7.14.0.patch
+  react-router@7.14.1: patches/react-router@7.14.1.patch
