@@ -11,8 +11,8 @@ export function createActionArgs(
 ): ActionFunctionArgs {
   return {
     request,
-    unstable_url: new URL(request.url),
-    unstable_pattern: "/",
+    url: new URL(request.url),
+    pattern: "/",
     params: options.params ?? {},
     context: options.context ?? {},
   };
@@ -24,8 +24,8 @@ export function createLoaderArgs(
 ): LoaderFunctionArgs {
   return {
     request,
-    unstable_url: new URL(request.url),
-    unstable_pattern: "/",
+    url: new URL(request.url),
+    pattern: "/",
     params: options.params ?? {},
     context: options.context ?? {},
   };
