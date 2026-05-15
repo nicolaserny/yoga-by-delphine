@@ -13,6 +13,8 @@
         "start": "pnpm run dev",
         "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint . --max-warnings 0",
         "typecheck": "react-router typegen && tsc --noEmit",
+        "test": "vitest run",
+        "test:coverage": "vitest run --coverage",
         "generateBlurDataUrls": "tsx ./tools/generateBlurDataUrls.ts ./app/generated/blurDataUrls.ts"
     },
     "dependencies": {
@@ -38,9 +40,13 @@
         "@react-router/dev": "^7.14.1",
         "@tailwindcss/aspect-ratio": "0.4.2",
         "@tailwindcss/vite": "^4.2.2",
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.2",
+        "@testing-library/user-event": "^14.6.1",
         "@types/react": "19.2.14",
         "@types/react-dom": "19.2.3",
         "@types/source-map-support": "0.5.10",
+        "@vitest/coverage-v8": "^4.1.6",
         "eslint": "9.39.2",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-import-x": "^4.16.2",
@@ -49,7 +55,9 @@
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^7.1.1",
         "globals": "^17.5.0",
+        "happy-dom": "^17.0.0",
         "husky": "9.1.7",
+        "msw": "^2.13.4",
         "prettier": "3.8.3",
         "prettier-plugin-tailwindcss": "0.7.2",
         "pretty-quick": "4.2.2",
@@ -58,7 +66,8 @@
         "tsx": "4.21.0",
         "typescript": "6.0.3",
         "typescript-eslint": "^8.58.2",
-        "vite": "8.0.8"
+        "vite": "8.0.8",
+        "vitest": "^4.1.6"
     },
     "packageManager": "pnpm@10.33.0",
     "keywords": [

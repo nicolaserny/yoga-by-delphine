@@ -31,7 +31,7 @@ type ShopifyProduct = {
   variants: ShopifyEdges<{ priceV2: { amount: string }; id: string }>;
 };
 
-type AllShopifyCourseData = {
+export type AllShopifyCourseData = {
   products: ShopifyEdges<ShopifyProduct>;
 };
 
