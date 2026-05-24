@@ -41,3 +41,9 @@ Default triage labels: needs-triage, needs-info, ready-for-agent, ready-for-huma
 ### Domain docs
 
 Single-context layout. See `docs/agents/domain.md`.
+
+### Writing tests
+
+Follow the project's testing structure (Vitest + RTL + MSW). See
+`.claude/skills/write-route-tests/SKILL.md` for the procedure and
+`docs/adr/0001-testing-strategy.md` for the rationale.
