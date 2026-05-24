@@ -1,8 +1,8 @@
-diff --git a/dist/development/chunk-2UH5WJXA.mjs b/dist/development/chunk-2UH5WJXA.mjs
-index 0000000000000000000000000000000000000000..0000000000000000000000000000000000000000 100644
---- a/dist/development/chunk-2UH5WJXA.mjs
-+++ b/dist/development/chunk-2UH5WJXA.mjs
-@@ -1416,7 +1416,7 @@ async function handleManifestRequest(build, routes, url) {
+diff --git a/dist/development/chunk-RJYABSBD.mjs b/dist/development/chunk-RJYABSBD.mjs
+index e420790bc073b61fd4744696c219ba7f0dcf2fb8..20440a878d3b4a3020124fa20dd1c708f88bbfb5 100644
+--- a/dist/development/chunk-RJYABSBD.mjs
++++ b/dist/development/chunk-RJYABSBD.mjs
+@@ -1435,7 +1435,7 @@ async function handleManifestRequest(build, dataRoutes, branches, url) {
      }
      return Response.json(patches, {
        headers: {
@@ -12,10 +12,10 @@ index 0000000000000000000000000000000000000000..00000000000000000000000000000000
      });
    }
 diff --git a/dist/development/index.js b/dist/development/index.js
-index 0000000000000000000000000000000000000000..0000000000000000000000000000000000000000 100644
+index a0fcebcaa120d3c09ca824902c1a9f19c3291ed2..c38a73c70a4df5b420e68f88b29de1112af8a0cd 100644
 --- a/dist/development/index.js
 +++ b/dist/development/index.js
-@@ -1514,7 +1514,7 @@ async function handleManifestRequest(build, routes, url) {
+@@ -1534,7 +1534,7 @@ async function handleManifestRequest(build, dataRoutes, branches, url) {
      }
      return Response.json(patches, {
        headers: {

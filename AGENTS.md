@@ -6,7 +6,8 @@
 - **Dev**: `pnpm run dev`
 - **Lint**: `pnpm run lint`
 - **Typecheck**: `pnpm run typecheck`
-- **No test framework configured**
+- **Test**: `pnpm run test` (Vitest + React Testing Library + MSW)
+- **Test Watch**: `pnpm run test -- --watch`
 
 ## Code Style
 
@@ -26,3 +27,23 @@
 - **Deployment**: Netlify with edge functions
 - **State**: React hooks (useState, useEffect), no external state management
 - **Node.js**: Version 22.x required
+
+## Agent skills
+
+### Issue tracker
+
+Issues tracked in GitHub (`nicolaserny/yoga-by-delphine`). See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default triage labels: needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout. See `docs/agents/domain.md`.
+
+### Writing tests
+
+Follow the project's testing structure (Vitest + RTL + MSW). See
+`.claude/skills/write-route-tests/SKILL.md` for the procedure and
+`docs/adr/0001-testing-strategy.md` for the rationale.

@@ -1,5 +1,5 @@
 [build]
-command = "pnpm run build && pnpm run lint && pnpm run typecheck"
+command = "pnpm run build && pnpm run lint && pnpm run typecheck && pnpm run test:coverage"
 publish = "build/client"
 
 [dev]

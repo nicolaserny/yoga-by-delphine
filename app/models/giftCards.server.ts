@@ -7,7 +7,7 @@ export type GiftCardType = {
   price: number;
 };
 
-type AllShopifyGiftCardData = {
+export type AllShopifyGiftCardData = {
   products: ShopifyEdges<{
     id: string;
     title: string;

@@ -2,7 +2,7 @@
   "include": ["**/*.ts", "**/*.tsx", ".react-router/types/**/*"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
-    "types": ["vite/client"],
+    "types": ["vite/client", "vitest/globals"],
     "rootDirs": [".", "./.react-router/types"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
