@@ -8,7 +8,7 @@ async function callActionAndExpectStatus(
   expectedStatus: number,
 ) {
   try {
-    await action(createActionArgs(request, { context: { ip: "127.0.0.1" } }));
+    await action(createActionArgs(request, { ip: "127.0.0.1" }));
     throw new Error("expected action to throw a Response");
   } catch (error) {
     expect(error).toBeInstanceOf(Response);
@@ -27,7 +27,7 @@ describe("api.checkout action", () => {
     });
 
     const response = await action(
-      createActionArgs(request, { context: { ip: "127.0.0.1" } }),
+      createActionArgs(request, { ip: "127.0.0.1" }),
     );
 
     expect(response.status).toBe(302);

@@ -8,7 +8,7 @@ describe("gift-cards loader", () => {
   it("returns gift cards parsed from Shopify API matching the shared fixture", async () => {
     const result = await loader(
       createLoaderArgs(new Request("http://localhost/gift-cards"), {
-        context: { ip: "127.0.0.1" },
+        ip: "127.0.0.1",
       }),
     );
 
@@ -20,7 +20,7 @@ describe("gift-cards loader", () => {
 
     const result = await loader(
       createLoaderArgs(new Request("http://localhost/gift-cards"), {
-        context: { ip: "127.0.0.1" },
+        ip: "127.0.0.1",
       }),
     );
 

@@ -1,8 +1,21 @@
-import type { ActionFunctionArgs, LoaderFunctionArgs } from "react-router";
+import {
+  RouterContextProvider,
+  type ActionFunctionArgs,
+  type LoaderFunctionArgs,
+} from "react-router";
+import { netlifyRouterContext } from "~/utils/netlify-context";
 
 interface Options {
-  context?: Record<string, unknown>;
+  ip?: string;
   params?: Record<string, string>;
+}
+
+function createContext(ip?: string): RouterContextProvider {
+  const context = new RouterContextProvider();
+  if (ip) {
+    context.set(netlifyRouterContext, { ip });
+  }
+  return context;
 }
 
 export function createActionArgs(
@@ -14,7 +27,7 @@ export function createActionArgs(
     url: new URL(request.url),
     pattern: "/",
     params: options.params ?? {},
-    context: options.context ?? {},
+    context: createContext(options.ip),
   };
 }
 
@@ -27,6 +40,6 @@ export function createLoaderArgs(
     url: new URL(request.url),
     pattern: "/",
     params: options.params ?? {},
-    context: options.context ?? {},
+    context: createContext(options.ip),
   };
 }
