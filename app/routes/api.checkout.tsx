@@ -1,9 +1,10 @@
 import type { ActionFunctionArgs } from "react-router";
 import { createCheckoutUrl } from "~/models/checkout.server";
+import { getBuyerIP } from "~/utils/netlify-context";
 
 export const action = async ({ request, context }: ActionFunctionArgs) => {
   try {
-    const buyerIP = (context.ip as string) || undefined;
+    const buyerIP = getBuyerIP(context);
     const formData = await request.formData();
     const shopifyId = formData.get("shopifyId");
 

@@ -8,7 +8,7 @@ describe("schedule loader", () => {
   it("returns courses parsed from Shopify API matching the shared fixture", async () => {
     const result = await loader(
       createLoaderArgs(new Request("http://localhost/schedule"), {
-        context: { ip: "127.0.0.1" },
+        ip: "127.0.0.1",
       }),
     );
 
@@ -20,7 +20,7 @@ describe("schedule loader", () => {
 
     const result = await loader(
       createLoaderArgs(new Request("http://localhost/schedule"), {
-        context: { ip: "127.0.0.1" },
+        ip: "127.0.0.1",
       }),
     );
 

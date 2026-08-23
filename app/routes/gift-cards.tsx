@@ -7,10 +7,11 @@ import {
 import { PageTitle, GiftCard } from "../components";
 import AnchorLink from "~/components/anchorLink";
 import { getGiftCardsFromApi } from "~/models/giftCards.server";
+import { getBuyerIP } from "~/utils/netlify-context";
 import { getSeo, getUrl } from "~/utils/seo";
 
 export const loader = async ({ context }: LoaderFunctionArgs) => {
-  const buyerIP = (context.ip as string) || undefined;
+  const buyerIP = getBuyerIP(context);
   const giftCards = await getGiftCardsFromApi(buyerIP);
   return giftCards;
 };

@@ -22,6 +22,9 @@ export default tseslint.config(
       "**/.netlify/**",
       "**/app/generated/**",
       "**/.react-router/**",
+      "**/.design-sync/**",
+      "**/.ds-sync/**",
+      "**/ds-bundle/**",
     ],
   },
   {

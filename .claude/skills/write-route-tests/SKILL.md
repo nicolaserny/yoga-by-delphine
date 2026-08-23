@@ -21,8 +21,9 @@ Tests live next to their source under `app/`.
 ## Helpers — always reuse, never hand-roll
 
 - Loaders/actions: `createLoaderArgs` / `createActionArgs` from
-  `test/utils/createDataFunctionArgs.ts`. Pass `{ context: { ip: "127.0.0.1" } }`
-  when the data function reads the IP.
+  `test/utils/createDataFunctionArgs.ts`. Pass `{ ip: "127.0.0.1" }`
+  when the data function reads the IP (via `getBuyerIP` from
+  `~/utils/netlify-context`).
 - Components: `render`, `screen`, `waitFor`, `within`, `userEvent` from
   `test/test-utils.tsx`. `render(ui, { path, loader: () => fixture })` — never
   mock `react-router` or build your own router.
