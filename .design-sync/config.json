@@ -1,0 +1,38 @@
+{
+  "pkg": "yoga-by-delphine",
+  "globalName": "YogaByDelphine",
+  "projectId": "402b6b1a-4b71-45e9-992b-3b10341c19fa",
+  "shape": "package",
+  "entry": "./.design-sync/entry.tsx",
+  "srcDir": "app/components",
+  "tsconfig": "./tsconfig.json",
+  "cssEntry": "./.design-sync/tailwind-compiled.css",
+  "buildCmd": "./.ds-sync/node_modules/.bin/tailwindcss -i .design-sync/tailwind-input.css -o .design-sync/tailwind-compiled.css",
+  "provider": { "component": "DesignProvider" },
+  "readmeHeader": ".design-sync/conventions.md",
+  "overrides": {
+    "GiftCard": { "cardMode": "column" }
+  },
+  "dtsPropsFor": {
+    "Button": "/** Element rendered (defaults to `button`). Pass `as={Link}` for routing. */\n  as?: React.ElementType;\n  children: React.ReactNode;\n  /** Visual style. */\n  variant: \"solid\" | \"outline\" | \"link\";\n  colorScheme: \"purple\" | \"gray\" | \"white\";\n  size?: \"small\" | \"base\" | \"large\" | \"xlarge\" | \"hero\";\n  /** Bump the font size up at larger breakpoints (default true). */\n  responsive?: boolean;\n  className?: string;\n  /** Plus any attributes valid on the rendered element. */\n  [key: string]: unknown;",
+    "Input": "className?: string;\n  type?: string;\n  name?: string;\n  value?: string | number;\n  defaultValue?: string | number;\n  placeholder?: string;\n  disabled?: boolean;\n  required?: boolean;\n  readOnly?: boolean;\n  onChange?: React.ChangeEventHandler<HTMLInputElement>;\n  ref?: React.Ref<HTMLInputElement>;\n  /** Plus any standard <input> attribute. */\n  [key: string]: unknown;",
+    "Textarea": "className?: string;\n  name?: string;\n  value?: string | number;\n  defaultValue?: string | number;\n  placeholder?: string;\n  rows?: number;\n  disabled?: boolean;\n  required?: boolean;\n  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;\n  ref?: React.Ref<HTMLTextAreaElement>;\n  /** Plus any standard <textarea> attribute. */\n  [key: string]: unknown;",
+    "Label": "className?: string;\n  htmlFor?: string;\n  children?: React.ReactNode;\n  ref?: React.Ref<HTMLLabelElement>;\n  /** Plus any standard <label> attribute. */\n  [key: string]: unknown;",
+    "Quote": "/** Quote renders a fixed testimonial; only layout props are accepted. */\n  className?: string;\n  [key: string]: unknown;",
+    "AnchorLink": "/** Element rendered (defaults to `a`). Pass `as={Link}` for routing. */\n  as?: React.ElementType;\n  children: React.ReactNode;\n  size?: \"small\" | \"base\" | \"large\" | \"xlarge\" | \"hero\";\n  responsive?: boolean;\n  href?: string;\n  /** Plus any attributes valid on the rendered element. */\n  [key: string]: unknown;",
+    "Announcement": "/** Announcement renders a fixed promotional banner and takes no props. */",
+    "ClassFormatCard": "title: string;\n  details: React.ReactNode;\n  /** Illustration component rendered above the feature list. */\n  illustration: React.ComponentType<{ className?: string }>;\n  features: string[];\n  buttonText: string;\n  buttonVariant: \"solid\" | \"outline\";\n  buttonHref: string;",
+    "GiftCard": "giftCard: {\n    shopifyId: string;\n    title: string;\n    description: string;\n    price: number;\n  };"
+  },
+  "componentSrcMap": {
+    "Button": "app/components/button.tsx",
+    "Input": "app/components/input.tsx",
+    "Textarea": "app/components/textarea.tsx",
+    "Label": "app/components/label.tsx",
+    "Quote": "app/components/quote.tsx",
+    "AnchorLink": "app/components/anchorLink.tsx",
+    "Announcement": "app/components/announcement.tsx",
+    "ClassFormatCard": "app/components/classFormatCard.tsx",
+    "GiftCard": "app/components/giftCard.tsx"
+  }
+}

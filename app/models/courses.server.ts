@@ -5,11 +5,7 @@ import { postToShopify, type ShopifyEdges } from "~/utils/shopify.server";
 
 export type CourseType = "REGULAR" | "SUBSCRIPTION" | "CARD";
 export type CourseCategory =
-  | "online"
-  | "studio"
-  | "other_private"
-  | "other_subscription"
-  | "park";
+  "online" | "studio" | "other_private" | "other_subscription" | "park";
 
 export type YogaProduct = {
   id: string;

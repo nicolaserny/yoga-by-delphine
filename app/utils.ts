@@ -7,5 +7,5 @@ export function useMatchesData(id: string) {
     () => matchingRoutes.find((route) => route.id === id),
     [matchingRoutes, id],
   );
-  return route?.data as Record<string, unknown> | undefined;
+  return route?.loaderData as Record<string, unknown> | undefined;
 }

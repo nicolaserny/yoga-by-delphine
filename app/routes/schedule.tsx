@@ -8,10 +8,11 @@ import { BookingSection, PageTitle } from "../components";
 import AnchorLink from "~/components/anchorLink";
 import { type YogaProduct, getCoursesFromApi } from "~/models/courses.server";
 import { parseCourseDate } from "~/utils/date";
+import { getBuyerIP } from "~/utils/netlify-context";
 import { getSeo, getUrl } from "~/utils/seo";
 
 export const loader = async ({ context }: LoaderFunctionArgs) => {
-  const buyerIP = (context.ip as string) || undefined;
+  const buyerIP = getBuyerIP(context);
   const courses = await getCoursesFromApi(buyerIP);
   return courses;
 };

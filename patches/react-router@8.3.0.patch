@@ -1,0 +1,26 @@
+diff --git a/dist/development/lib/server-runtime/server.js b/dist/development/lib/server-runtime/server.js
+index b26a9e0fd2cd05e9dc3b14c0a450812a8d6c949f..d5c0669edb598f085e83fb2e100c1ed50d1b3511 100644
+--- a/dist/development/lib/server-runtime/server.js
++++ b/dist/development/lib/server-runtime/server.js
+@@ -195,7 +195,7 @@ async function handleManifestRequest(build, dataRoutes, branches, url) {
+ 				if (route) patches[routeId] = route;
+ 			}
+ 		}
+-		return Response.json(patches, { headers: { "Cache-Control": "public, max-age=31536000, immutable" } });
++		return Response.json(patches, { headers: { "Cache-Control": "public, max-age=0, must-revalidate", "CDN-Cache-Control": "public, max-age=31536000", "Netlify-Vary": "query" } });
+ 	}
+ 	return new Response("Invalid Request", { status: 400 });
+ }
+diff --git a/dist/production/lib/server-runtime/server.js b/dist/production/lib/server-runtime/server.js
+index b26a9e0fd2cd05e9dc3b14c0a450812a8d6c949f..d5c0669edb598f085e83fb2e100c1ed50d1b3511 100644
+--- a/dist/production/lib/server-runtime/server.js
++++ b/dist/production/lib/server-runtime/server.js
+@@ -195,7 +195,7 @@ async function handleManifestRequest(build, dataRoutes, branches, url) {
+ 				if (route) patches[routeId] = route;
+ 			}
+ 		}
+-		return Response.json(patches, { headers: { "Cache-Control": "public, max-age=31536000, immutable" } });
++		return Response.json(patches, { headers: { "Cache-Control": "public, max-age=0, must-revalidate", "CDN-Cache-Control": "public, max-age=31536000", "Netlify-Vary": "query" } });
+ 	}
+ 	return new Response("Invalid Request", { status: 400 });
+ }
