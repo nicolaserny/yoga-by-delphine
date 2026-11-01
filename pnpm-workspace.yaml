@@ -14,5 +14,9 @@ shamefullyHoist: true
 minimumReleaseAgeExclude:
   - cron-parser@5.10.3
 
+peerDependencyRules:
+  allowedVersions:
+    eslint: "10"
+
 patchedDependencies:
   react-router@8.5.1: patches/react-router@8.5.1.patch
