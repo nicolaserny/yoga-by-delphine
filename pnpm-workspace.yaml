@@ -1,13 +1,18 @@
-ignoredBuiltDependencies:
-  - msw
-  - puppeteer
-  - sharp
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+  husky: true
+  msw: false
+  puppeteer: false
+  sharp: true
+  unrs-resolver: true
 
-onlyBuiltDependencies:
-  - "@parcel/watcher"
-  - esbuild
-  - husky
-  - sharp
-  - unrs-resolver
+shamefullyHoist: true
+
+# cron-parser 5.10.3 is a Netlify transitive dependency published less than
+# 24h ago. Remove this exclusion once it has aged past the default window.
+minimumReleaseAgeExclude:
+  - cron-parser@5.10.3
+
 patchedDependencies:
   react-router@8.5.1: patches/react-router@8.5.1.patch

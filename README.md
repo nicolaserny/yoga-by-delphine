@@ -62,7 +62,7 @@ app/
 Before you begin, ensure you have:
 
 - ✅ Node.js 22.x
-- ✅ pnpm 10.x (package manager)
+- ✅ pnpm 12.x (package manager)
 - ✅ Shopify partner account
 
 ## 🛠️ Available Scripts
