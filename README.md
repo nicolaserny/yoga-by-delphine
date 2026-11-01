@@ -65,6 +65,10 @@ Before you begin, ensure you have:
 - ✅ pnpm 12.x (package manager)
 - ✅ Shopify partner account
 
+> **TypeScript:** TypeScript 7 is used for `tsc` (via the `@typescript/native`
+> alias), while `typescript` stays on 6.x so typescript-eslint and editor
+> tooling keep the classic compiler API until TypeScript 7 exposes one.
+
 ## 🛠️ Available Scripts
 
 | Command              | Description                                  |
