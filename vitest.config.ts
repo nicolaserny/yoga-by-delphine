@@ -9,6 +9,16 @@ export default defineConfig({
   },
   test: {
     environment: "happy-dom",
+    environmentOptions: {
+      happyDOM: {
+        settings: {
+          fetch: {
+            disableSameOriginPolicy: true,
+          },
+          handleDisabledFileLoadingAsSuccess: true,
+        },
+      },
+    },
     globals: true,
     setupFiles: ["test/setup.ts"],
     include: ["app/**/*.test.{ts,tsx}"],
