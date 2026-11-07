@@ -64,7 +64,7 @@ export default tseslint.config(
   {
     files: ["**/*.tsx", "**/*.jsx"],
     plugins: {
-      react: (await import("eslint-plugin-react")).default,
+      "@eslint-react": (await import("@eslint-react/eslint-plugin")).default,
     },
     languageOptions: {
       parser: (await import("typescript-eslint")).parser,
@@ -73,7 +73,7 @@ export default tseslint.config(
       },
     },
     rules: {
-      "react/jsx-key": WARN,
+      "@eslint-react/no-missing-key": WARN,
     },
   },
   {
