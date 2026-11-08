@@ -6,8 +6,16 @@ import Button from "./button";
 const BuyButton: React.FC<{
   shopifyId: string;
   withLeftPadding?: boolean;
+  variant?: "link" | "solid";
+  ariaLabel?: string;
   children: React.ReactNode;
-}> = ({ shopifyId, withLeftPadding = true, children }) => {
+}> = ({
+  shopifyId,
+  withLeftPadding = true,
+  variant = "link",
+  ariaLabel,
+  children,
+}) => {
   const [isBuying, setIsBuying] = useState(false);
   const submitHandler = () => {
     setIsBuying(true);
@@ -24,16 +32,23 @@ const BuyButton: React.FC<{
   return (
     <Form action="/api/checkout" onSubmit={submitHandler} method="POST">
       <input type="hidden" name="shopifyId" value={shopifyId} />
-      {!isBuying && (
-        <div className={clsx(withLeftPadding && "pl-5")}>
-          <Button type="submit" variant="link" colorScheme="purple">
-            {children}
-          </Button>
-        </div>
-      )}
-      {isBuying && (
-        <div className="text-base font-medium xl:text-lg">En cours...</div>
-      )}
+      <div className={clsx(variant === "link" && withLeftPadding && "pl-5")}>
+        <Button
+          type="submit"
+          variant={variant}
+          colorScheme="purple"
+          aria-label={isBuying ? undefined : ariaLabel}
+          aria-busy={isBuying}
+          disabled={isBuying}
+          className={clsx(
+            "disabled:cursor-wait",
+            variant === "solid" &&
+              "min-h-11 min-w-36 text-center whitespace-nowrap disabled:bg-purple-100 disabled:text-purple-800",
+          )}
+        >
+          {isBuying ? "En cours..." : children}
+        </Button>
+      </div>
     </Form>
   );
 };
