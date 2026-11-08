@@ -5,10 +5,27 @@ import Course from "./course";
 import type { YogaProduct } from "~/models/courses.server";
 import { getValidCourseDate } from "~/utils/date";
 
-type CourseGroup = { key: string; label?: string; courses: YogaProduct[] };
+type CourseGroup = {
+  key: string;
+  label: string;
+  /** Heading kept for the document outline but hidden visually. */
+  srOnlyLabel?: boolean;
+  courses: YogaProduct[];
+};
+
+function getUndatedLabel(courses: YogaProduct[]): string {
+  if (courses.every((c) => c.type === "CARD")) {
+    return "Cartes";
+  }
+  if (courses.every((c) => c.category === "other_private")) {
+    return "Cours privés";
+  }
+  return "Cartes et formules";
+}
 
 /**
- * Undated items (cards, private lessons) come first without heading, then one
+ * Undated items (cards, private lessons) come first under a visually hidden
+ * heading, then one
  * group per month: the monthly subscription first, then sessions by date.
  */
 function groupCourses(courses: YogaProduct[]): CourseGroup[] {
@@ -25,7 +42,18 @@ function groupCourses(courses: YogaProduct[]): CourseGroup[] {
   }
   const groups: CourseGroup[] = [];
   if (undated.length > 0) {
-    groups.push({ key: "undated", courses: undated });
+    // Cards first, then the rest in a deterministic (alphabetical) order.
+    undated.sort(
+      (a, b) =>
+        Number(b.type === "CARD") - Number(a.type === "CARD") ||
+        a.title.localeCompare(b.title, "fr"),
+    );
+    groups.push({
+      key: "undated",
+      label: getUndatedLabel(undated),
+      srOnlyLabel: true,
+      courses: undated,
+    });
   }
   [...byMonth.keys()].sort().forEach((key) => {
     const items = byMonth.get(key) ?? [];
@@ -76,7 +104,11 @@ const BookingSection: React.FC<{
         <div className="lg:sticky lg:top-28">
           <h2 className="flex items-center gap-2.5 text-xl leading-normal font-semibold text-gray-900 lg:text-2xl">
             {title}
-            <span className="rounded-full bg-purple-100 px-2.5 py-0.5 text-sm font-semibold text-purple-800">
+            <span
+              aria-hidden="true"
+              title={`${courses.length} cours dans cette section`}
+              className="rounded-full bg-purple-100 px-2.5 py-0.5 text-sm font-semibold text-purple-800"
+            >
               {courses.length}
             </span>
           </h2>
@@ -95,7 +127,9 @@ const BookingSection: React.FC<{
         )}
         {groups.map((group) => (
           <React.Fragment key={group.key}>
-            {group.label && (
+            {group.srOnlyLabel ? (
+              <h3 className="sr-only">{group.label}</h3>
+            ) : (
               <h3 className="mt-3 border-b-2 border-purple-100 pb-2 text-sm font-bold tracking-wider text-purple-800 uppercase first:mt-0">
                 {group.label}
               </h3>

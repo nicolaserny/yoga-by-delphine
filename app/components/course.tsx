@@ -33,7 +33,14 @@ function formatTagLabel(course: YogaProduct) {
   if (course.category === "other_private") {
     return "Privé";
   }
-  return course.type === "CARD" ? "Carte" : "Abo";
+  switch (course.type) {
+    case "CARD":
+      return "Carte";
+    case "SUBSCRIPTION":
+      return "Abo";
+    default:
+      return "Cours";
+  }
 }
 
 function formatPeriod(course: YogaProduct, date: Date | null) {
@@ -165,6 +172,9 @@ const Course: React.FC<{ course: YogaProduct; hideBuy?: boolean }> = ({
         <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-sm leading-normal text-gray-700">
           {isSession && date && (
             <MetaItem icon={<ClockIcon />}>
+              <span className="sr-only">
+                {format(date, "EEEE d MMMM yyyy 'à' ", { locale: fr })}
+              </span>
               {format(date, "HH'h'mm", { locale: fr })}
             </MetaItem>
           )}

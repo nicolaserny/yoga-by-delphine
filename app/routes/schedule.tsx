@@ -119,11 +119,11 @@ function ScheduleRoute() {
         </InfoCard>
       </div>
 
-      <div className="bg-light/95 sticky top-0 z-10 -mx-8 mt-6 border-b border-gray-200 px-8 py-3 backdrop-blur lg:-mx-20 lg:px-20 xl:-mx-10 xl:px-10">
+      <div className="bg-light/95 sticky top-0 z-10 -mx-8 mt-6 border-b border-gray-200 py-3 backdrop-blur lg:-mx-20 xl:-mx-10 2xl:mx-0">
         <div
           role="group"
           aria-label="Filtrer les cours"
-          className="flex [scrollbar-width:none] gap-2 overflow-x-auto"
+          className="flex snap-x scroll-px-8 [scrollbar-width:none] gap-2 overflow-x-auto px-8 lg:scroll-px-20 lg:px-20 xl:scroll-px-10 xl:px-10 2xl:scroll-px-0 2xl:px-0"
         >
           {filters.map(({ id, label }) => (
             <button
@@ -131,7 +131,7 @@ function ScheduleRoute() {
               type="button"
               aria-pressed={filter === id}
               onClick={() => setFilter(id)}
-              className={`min-h-11 shrink-0 rounded-full border px-4 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:outline-hidden ${
+              className={`min-h-11 shrink-0 snap-start rounded-full border px-4 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:outline-hidden ${
                 filter === id
                   ? "border-purple-600 bg-purple-600 font-semibold text-white"
                   : "border-gray-300 bg-white text-gray-800 hover:border-purple-600 hover:text-purple-700"
