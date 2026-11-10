@@ -57,10 +57,4 @@
   --min-height-real: calc(100vh - theme("margin.24"));
 
   --grid-template-rows-layout: 46px minmax(auto, 1fr) auto;
-
-  --grid-template-columns-coursesm: minmax(0, 1fr) auto;
-  --grid-template-columns-courselg: minmax(max-content, 200px) minmax(0, 1fr)
-    auto;
-  --grid-template-columns-course: 70px minmax(max-content, 240px) minmax(0, 1fr)
-    auto;
 }
