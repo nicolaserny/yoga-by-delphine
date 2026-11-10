@@ -12,13 +12,11 @@ classes** over a fixed brand token scale. Components are imported from
   render unstyled. The default font family is Montserrat (`--font-sans`).
 - **Router context.** Several components render react-router elements and must
   be inside a react-router router:
-  - `Announcement` (renders a `Link`) and `GiftCard` (renders a `Form`) always
-    need it.
+  - `Announcement` (renders a `Link`) always needs it.
   - `Button` and `AnchorLink` need it **only when** you pass `as={Link}`; with
     the default element (`button` / `a`, e.g. `href="…"`) they need nothing.
   - `ClassFormatCard` renders its CTA as `Button as={Link}`, so it needs it too.
-    Render these inside the app's router. `GiftCard`'s `Form` posts to
-    `/api/checkout` (Shopify checkout) — a data router is required for that path.
+    Render these inside the app's router.
 
 ## Styling idiom — Tailwind utilities + brand tokens
 
@@ -53,7 +51,8 @@ shadow`. The brand has no dark theme.
 - **`ClassFormatCard`** — marketing card: `title`, `details`, `illustration`
   (a component), `features: string[]`, `buttonText`, `buttonVariant`,
   `buttonHref`.
-- **`GiftCard`** — `giftCard: { shopifyId, title, description, price }`.
+- **`GiftCard`** — decorative card visual (`aria-hidden`): `price: number`,
+  optional `className`. Pair it with a `BuyButton` for checkout.
 
 Read each component's `<Name>.d.ts` for the full prop contract and
 `<Name>.prompt.md` for usage. The compiled stylesheets to read before styling

@@ -16,7 +16,7 @@ data/Cloudinary and aren't design-system parts.
   AND in `cfg.componentSrcMap` together.
 - **Provider** = `DesignProvider` in the barrel: a react-router **data** memory
   router that renders the card as its catch-all route. Required because
-  `GiftCard`→`BuyButton` renders `<Form>` (needs a data router) and
+  `BuyButton` renders `<Form>` (needs a data router) and
   `Announcement`/`ClassFormatCard` render `<Link>`. A plain `MemoryRouter` is
   NOT enough (`useSubmit must be used within a data router`).
 - **CSS** is compiled standalone by `.design-sync/build-css.sh` (= `cfg.buildCmd`)
@@ -54,4 +54,4 @@ unknown`).
   fresh clone (`cd .ds-sync && npm i && npx playwright install chromium`).
 - Components are real app code importing `react-router`, `clsx`, etc. A breaking
   upgrade of `react-router` (Form/Link API) could break the provider or
-  `GiftCard`/`Announcement` previews.
+  `Announcement` previews.
