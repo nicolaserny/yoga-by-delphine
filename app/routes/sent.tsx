@@ -1,55 +1,146 @@
-import type { MetaFunction } from "react-router";
+import { Link, type MetaFunction } from "react-router";
+import Button from "~/components/button";
 import { getSeo, getUrl } from "~/utils/seo";
 
 export const meta: MetaFunction = ({ location }) => [
   ...getSeo({ title: "Message envoyé", url: getUrl(location) }),
 ];
 
+const steps = [
+  {
+    title: "Message reçu",
+    description: "Votre message vient de m'être transmis.",
+  },
+  {
+    title: "Je le lis",
+    description: "Je prends le temps de répondre à votre demande.",
+  },
+  {
+    title: "Vous recevez ma réponse",
+    description: "Directement dans votre boîte e-mail.",
+  },
+];
+
+const moreLinks = [
+  { to: "/schedule", label: "Programme des cours" },
+  { to: "/videos", label: "Vidéos de yoga" },
+  { to: "/gift-cards", label: "Cartes-cadeaux" },
+];
+
+function CheckIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M4 12.5l5 5L20 6.5" />
+    </svg>
+  );
+}
+
 function SentRoute() {
   return (
     <main className="width-constraints">
-      <div className="my-3 flex h-full w-full flex-col items-center justify-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 570 511.675"
-          className="mx-6 w-40 md:w-56 lg:w-64"
-        >
-          <path
-            d="M565 195.675a.997.997 0 01-.572-.18L287.87 2.893a5.015 5.015 0 00-5.729.01L7.574 195.494a1 1 0 01-1.148-1.638L280.993 1.264a7.022 7.022 0 018.02-.013L565.57 193.854a1 1 0 01-.572 1.82z"
-            fill="#3f3d56"
-          />
-          <path
-            fill="#e6e6e6"
-            d="M23.264 202.502L285.276 8.319l264 208-250.5 148.5-136-31L23.264 202.502z"
-          />
-          <path
-            d="M174.256 456.541H44.816a6.047 6.047 0 110-12.095h129.44a6.047 6.047 0 110 12.095zM91.256 430.541h-46.44a6.047 6.047 0 110-12.095h46.44a6.047 6.047 0 110 12.095z"
-            className="fill-purple-600"
-          />
-          <path
-            d="M288.96 310.66a7.564 7.564 0 01-2.869-.563l-161.59-67.048V33.175a7.008 7.008 0 017-7h310a7.008 7.008 0 017 7v210.02l-.305.13-156.28 66.74a7.616 7.616 0 01-2.956.594z"
-            fill="#fff"
-          />
-          <path
-            d="M288.96 311.159a8.072 8.072 0 01-3.06-.599L124 243.383V33.175a7.509 7.509 0 017.5-7.5h310a7.509 7.509 0 017.5 7.5v210.35l-156.887 67a8.11 8.11 0 01-3.153.634zM126 242.047l160.663 66.664a6.118 6.118 0 004.668-.028l155.67-66.478V33.175a5.507 5.507 0 00-5.5-5.5h-310a5.507 5.507 0 00-5.5 5.5z"
-            fill="#3f3d56"
-          />
-          <path
-            d="M563 193.675h-.2L448 242.695l-157.07 67.07a5.066 5.066 0 01-3.88.02L125 242.555l-117.62-48.8-.18-.08H7a7.008 7.008 0 00-7 7v304a7.008 7.008 0 007 7h556a7.008 7.008 0 007-7v-304a7.008 7.008 0 00-7-7zm5 311a5.002 5.002 0 01-5 5H7a5.002 5.002 0 01-5-5v-304a5.011 5.011 0 014.81-5L125 244.715l161.28 66.92a7.12 7.12 0 005.44-.03L448 244.865l115.2-49.19a5.016 5.016 0 014.8 5z"
-            fill="#3f3d56"
-          />
-          <path
-            d="M287.345 251.147a27.499 27.499 0 01-16.546-5.496l-.296-.222-62.31-47.708a27.683 27.683 0 1133.673-43.949l40.36 30.948 95.379-124.387a27.682 27.682 0 0138.813-5.124l-.593.806.608-.794a27.714 27.714 0 015.124 38.814L309.369 240.343a27.694 27.694 0 01-22.024 10.804z"
-            className="fill-purple-600"
-          />
-        </svg>
-        <div className="mt-6 font-semibold text-gray-800 sm:text-xl md:text-2xl lg:text-4xl">
-          Merci pour le message
+      <section className="grid items-center gap-8 pt-10 pb-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:pt-16 lg:pb-16">
+        <div>
+          <span className="inline-flex items-center gap-2 rounded-full bg-purple-100 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-purple-700 uppercase">
+            <CheckIcon className="h-4 w-4" />
+            Message envoyé
+          </span>
+          <h1 className="mt-5 text-3xl leading-tight font-semibold text-gray-800 md:text-4xl lg:text-5xl">
+            Merci pour le message
+          </h1>
+          <p className="mt-5 max-w-md text-base leading-relaxed text-gray-700">
+            Votre message est bien arrivé. Je le lis avec attention et je
+            reviens vers vous dès que possible.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button as={Link} to="/" variant="solid" colorScheme="purple">
+              Retour à l&apos;accueil
+            </Button>
+            <Button
+              as={Link}
+              to="/schedule"
+              variant="outline"
+              colorScheme="purple"
+            >
+              Voir le programme
+            </Button>
+          </div>
         </div>
-        <div className="font-semibold text-purple-600 sm:text-lg md:text-xl lg:text-2xl">
-          Je vous répondrai rapidement
+
+        <div className="rounded-xl bg-white px-6 py-7 shadow lg:px-8 lg:py-9">
+          <h2 className="mb-5 text-sm font-semibold tracking-wide text-gray-700 uppercase">
+            Et maintenant ?
+          </h2>
+          <ol>
+            {steps.map((step, index) => {
+              const isDone = index === 0;
+              const isLast = index === steps.length - 1;
+              return (
+                <li
+                  key={step.title}
+                  className={`relative flex gap-4 ${isLast ? "" : "pb-6"}`}
+                >
+                  {!isLast && (
+                    <span
+                      className="absolute top-10 bottom-0 left-[19px] w-0.5 bg-gray-200"
+                      aria-hidden="true"
+                    />
+                  )}
+                  <span
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-base font-semibold ${
+                      isDone
+                        ? "border-purple-600 bg-purple-600 text-white"
+                        : "border-gray-300 bg-white text-gray-700"
+                    }`}
+                    aria-hidden="true"
+                  >
+                    {isDone ? (
+                      <CheckIcon className="h-[18px] w-[18px]" />
+                    ) : (
+                      index + 1
+                    )}
+                  </span>
+                  <div>
+                    <h3 className="mt-2 text-base font-semibold text-gray-800">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm leading-normal text-gray-700">
+                      {step.description}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
         </div>
-      </div>
+      </section>
+
+      <nav
+        aria-label="À découvrir en attendant"
+        className="grid gap-3 pb-16 md:grid-cols-3"
+      >
+        {moreLinks.map((link) => (
+          <Link
+            key={link.to}
+            to={link.to}
+            prefetch="intent"
+            className="flex min-h-14 items-center justify-between rounded-xl bg-white px-5 py-4 text-base font-semibold text-gray-800 shadow-sm transition-shadow hover:shadow-md focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:outline-none"
+          >
+            {link.label}
+            <span className="text-purple-600" aria-hidden="true">
+              →
+            </span>
+          </Link>
+        ))}
+      </nav>
     </main>
   );
 }
