@@ -1,7 +1,8 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import Button from "../button";
+import MenuIcon from "./menuIcon";
 
 const NavLink: React.FC<{
   children: React.ReactNode;
@@ -23,8 +24,24 @@ const MobileMenu: React.FC<{
   onDismiss: () => void;
   closedByMouseRef: React.RefObject<boolean>;
 }> = ({ isOpen, onDismiss, closedByMouseRef }) => {
+  // Starts as a burger, then morphs into an X once mounted (and back on close).
+  const [shown, setShown] = useState(false);
+  useEffect(() => {
+    if (!isOpen) return;
+    const id = requestAnimationFrame(() => setShown(true));
+    return () => {
+      cancelAnimationFrame(id);
+      setShown(false);
+    };
+  }, [isOpen]);
+
   return (
-    <Dialog open={isOpen} onClose={onDismiss} className="z-50">
+    <Dialog
+      transition
+      open={isOpen}
+      onClose={onDismiss}
+      className="z-50 transition duration-300 ease-out data-closed:opacity-0 motion-reduce:transition-none"
+    >
       {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
         className="fixed inset-0 bg-white"
@@ -40,18 +57,7 @@ const MobileMenu: React.FC<{
             className={`fixed top-6 right-8 -m-3 p-3 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 lg:top-12 lg:right-[5rem]`}
             onClick={onDismiss}
           >
-            <svg
-              width="35"
-              height="35"
-              viewBox="0 0 46 46"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M24.848 23.056L36.112 34.32l-1.792 1.792-11.264-11.264-11.264 11.264L10 34.32l11.264-11.264L10 11.792 11.792 10l11.264 11.264L34.32 10l1.792 1.792-11.264 11.264z"
-                className="fill-gray-800"
-              />
-            </svg>
+            <MenuIcon open={shown} />
             <span className="sr-only">Menu</span>
           </button>
           <ul className={`block list-none pt-24`}>
