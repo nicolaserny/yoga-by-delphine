@@ -53,9 +53,6 @@
   --color-red-900: #8a041a;
   --color-red-1000: #610316;
 
-  --min-height-realsm: calc(100vh - theme("margin.20"));
-  --min-height-real: calc(100vh - theme("margin.24"));
-
   --grid-template-rows-layout: 46px minmax(auto, 1fr) auto;
 
   --animate-breathe: breathe 6s ease-in-out infinite;
