@@ -3,6 +3,11 @@ import { coursesShopifyResponse } from "~/../test/fixtures/shopify/coursesRespon
 import { giftCardsShopifyResponse } from "~/../test/fixtures/shopify/giftCardsResponse";
 
 export const handlers = [
+  // Netlify form submissions are posted to a static file (see contact route)
+  http.post(
+    "*/favicon-32x32.png",
+    () => new HttpResponse(null, { status: 200 }),
+  ),
   http.post(
     "https://:shopName.myshopify.com/api/:version/graphql.json",
     async ({ request }) => {
