@@ -55,7 +55,7 @@
 
   --grid-template-rows-layout: 46px minmax(auto, 1fr) auto;
 
-  --animate-breathe: breathe 6s ease-in-out infinite;
+  --animate-breathe: breathe 6s ease-in-out infinite backwards;
 
   @keyframes breathe {
     0%,
