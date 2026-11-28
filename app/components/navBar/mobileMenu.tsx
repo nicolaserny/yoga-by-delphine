@@ -40,7 +40,7 @@ const MobileMenu: React.FC<{
       transition
       open={isOpen}
       onClose={onDismiss}
-      className="z-50 transition duration-300 ease-out data-closed:opacity-0 motion-reduce:transition-none"
+      className="relative z-50 transition duration-300 ease-out data-closed:opacity-0 motion-reduce:transition-none"
     >
       {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div

@@ -13,10 +13,26 @@ shamefullyHoist: true
 # 24h ago. Remove this exclusion once it has aged past the default window.
 minimumReleaseAgeExclude:
   - cron-parser@5.10.3
+  - "@eslint-react/ast@5.30.7"
+  - "@eslint-react/core@5.30.7"
+  - "@eslint-react/eslint-plugin@5.30.7"
+  - "@eslint-react/eslint@5.30.7"
+  - "@eslint-react/jsx@5.30.7"
+  - "@eslint-react/shared@5.30.7"
+  - "@eslint-react/var@5.30.7"
+  - eslint-plugin-react-dom@5.30.7
+  - eslint-plugin-react-jsx@5.30.7
+  - eslint-plugin-react-naming-convention@5.30.7
+  - eslint-plugin-react-rsc@5.30.7
+  - eslint-plugin-react-web-api@5.30.7
+  - eslint-plugin-react-x@5.30.7
+  - "@eslint/config-array@0.23.7"
+  - "@netlify/vite-plugin@3.1.0"
+  - eslint@10.16.0
 
 peerDependencyRules:
   allowedVersions:
     eslint: "10"
 
 patchedDependencies:
-  react-router@8.5.1: patches/react-router@8.5.1.patch
+  react-router@8.5.3: patches/react-router@8.5.3.patch
